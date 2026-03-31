@@ -1,0 +1,275 @@
+---
+const faqs = [
+  {
+    q: 'How quickly will I see results from working with BGS?',
+    a: 'Most clients begin seeing measurable performance improvements within the first 30 days. Paid ad campaigns typically generate data within the first week, allowing us to optimise rapidly. For brand and organic strategies, meaningful traction typically builds within 60–90 days. We\'ll always set clear expectations and milestones before we start.',
+  },
+  {
+    q: 'Do you work with brands outside the UAE?',
+    a: 'Absolutely. While we\'re headquartered in Dubai\'s UAE Free Zone, we operate globally — with active clients across the UK, USA, Europe, KSA, and Southeast Asia. Our team is built for cross-border growth, and we understand regional nuances in consumer behaviour, platforms, and compliance.',
+  },
+  {
+    q: 'What is the minimum budget to get started with BGS?',
+    a: 'Our full-service engagements typically start from $5,000/month, which includes strategy, creative, and execution. For brands with a specific need (e.g., ad management only or a brand build), we offer focused packages. The best first step is a free discovery call — we\'ll assess your goals and recommend the right investment level.',
+  },
+  {
+    q: 'Do you offer individual services, or is it full-service only?',
+    a: 'Both. While our most successful client relationships are full-service (where we own the entire growth engine), we also offer standalone services including paid advertising, social media management, branding, web builds, and AI marketing. Many clients start with one service and expand as they see results.',
+  },
+  {
+    q: 'What does "AI-powered marketing" actually mean in practice?',
+    a: 'It means AI is embedded throughout our process — not bolted on as a buzzword. We use AI for predictive audience modelling, creative testing at scale, automated reporting, dynamic content personalisation, chatbot funnels, and workflow automation. The result: campaigns that learn faster, content that scales further, and more hours saved for your team.',
+  },
+  {
+    q: 'How do you measure and report on performance?',
+    a: 'Every client gets a live dashboard tracking the KPIs that matter most to their business — ROAS, CAC, revenue, lead volume, conversion rates, and more. We send weekly performance snapshots and hold monthly strategy reviews. You\'ll always know exactly what\'s working, what\'s being tested, and what\'s coming next.',
+  },
+  {
+    q: 'What industries and markets do you specialise in?',
+    a: 'We\'ve driven results across fashion & luxury retail, B2B SaaS, real estate & property development, e-commerce, professional services, hospitality, and health & wellness. If your brand has a compelling offer and ambition to grow, we can build a strategy around it — regardless of industry.',
+  },
+  {
+    q: 'What does the onboarding process look like?',
+    a: 'After the discovery call, we conduct a full audit of your existing marketing — ads, brand, website, funnels, and data. Within two weeks, we deliver a tailored growth strategy. Week three is creative production and campaign setup. By week four, we\'re live and optimising. The whole process is smooth, transparent, and built around your schedule.',
+  },
+];
+---
+
+<section class="section faq-section" id="faq">
+  <!-- Background accent -->
+  <div class="faq-bg-glow" aria-hidden="true"></div>
+
+  <div class="container faq-inner">
+    <!-- Left: Header -->
+    <div class="faq-header reveal-left">
+      <p class="section-label">Got Questions?</p>
+      <h2 class="faq-title">
+        Everything You<br />
+        Need to <span class="text-gold-gradient">Know</span>
+      </h2>
+      <p class="faq-sub">
+        We believe in complete transparency. If something isn't answered here,
+        we're one call away.
+      </p>
+      <a href="/contact" class="btn-gold faq-cta">
+        Book a Free Call
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+
+      <!-- Trust note -->
+      <div class="faq-trust">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold-primary)" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <span>No pitch. No pressure. Just a genuine conversation about your goals.</span>
+      </div>
+    </div>
+
+    <!-- Right: Accordion -->
+    <div class="faq-accordion reveal-right">
+      {faqs.map((item, i) => (
+        <div class="faq-item" data-faq-item>
+          <button
+            class="faq-question"
+            aria-expanded="false"
+            data-faq-trigger
+          >
+            <span>{item.q}</span>
+            <span class="faq-icon" aria-hidden="true">
+              <svg class="icon-plus" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              <svg class="icon-minus" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer" data-faq-answer>
+            <p>{item.a}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .faq-section {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .faq-bg-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(201, 168, 76, 0.04) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  /* ── Layout ──────────────────────────────────────────────── */
+  .faq-inner {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    gap: 5rem;
+    align-items: start;
+  }
+
+  /* ── Left header ─────────────────────────────────────────── */
+  .section-label {
+    font-family: var(--font-display);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold-primary);
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  .faq-title {
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+    margin-bottom: 1.25rem;
+    color: var(--text-primary);
+  }
+
+  .faq-sub {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.75;
+    margin-bottom: 2rem;
+    max-width: 36ch;
+  }
+
+  .faq-cta {
+    display: inline-flex;
+    margin-bottom: 1.75rem;
+  }
+
+  .faq-trust {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    color: var(--text-dim);
+    line-height: 1.55;
+  }
+
+  .faq-trust svg { flex-shrink: 0; margin-top: 1px; }
+
+  /* ── Accordion ───────────────────────────────────────────── */
+  .faq-accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .faq-item {
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .faq-item:first-child {
+    border-top: 1px solid var(--border-subtle);
+  }
+
+  .faq-question {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.25rem 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    color: var(--text-primary);
+    font-family: var(--font-display);
+    font-size: 0.95rem;
+    font-weight: 600;
+    line-height: 1.45;
+    letter-spacing: -0.01em;
+    transition: color 0.2s;
+  }
+
+  .faq-question:hover { color: var(--gold-primary); }
+
+  .faq-question[aria-expanded="true"] { color: var(--gold-primary); }
+
+  .faq-icon {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    background: rgba(201, 168, 76, 0.06);
+    border: 1px solid var(--border-subtle);
+    color: var(--gold-primary);
+    transition: background 0.2s, transform 0.3s;
+    margin-top: 0.1rem;
+  }
+
+  .faq-question[aria-expanded="true"] .faq-icon {
+    background: rgba(201, 168, 76, 0.12);
+    transform: rotate(180deg);
+  }
+
+  .icon-plus  { display: block; }
+  .icon-minus { display: none; }
+
+  .faq-question[aria-expanded="true"] .icon-plus  { display: none; }
+  .faq-question[aria-expanded="true"] .icon-minus { display: block; }
+
+  .faq-answer {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.35s ease;
+  }
+
+  .faq-answer p {
+    padding: 0 0 1.5rem;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.8;
+  }
+
+  /* ── Responsive ──────────────────────────────────────────── */
+  @media (max-width: 1024px) {
+    .faq-inner {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    .faq-sub { max-width: none; }
+  }
+</style>
+
+<script>
+  document.querySelectorAll('[data-faq-item]').forEach(item => {
+    const trigger = item.querySelector('[data-faq-trigger]') as HTMLButtonElement;
+    const answer  = item.querySelector('[data-faq-answer]') as HTMLElement;
+
+    if (!trigger || !answer) return;
+
+    trigger.addEventListener('click', () => {
+      const isOpen = trigger.getAttribute('aria-expanded') === 'true';
+
+      // Close all others
+      document.querySelectorAll('[data-faq-trigger]').forEach(t => {
+        const a = t.closest('[data-faq-item]')?.querySelector('[data-faq-answer]') as HTMLElement;
+        t.setAttribute('aria-expanded', 'false');
+        if (a) a.style.maxHeight = '0';
+      });
+
+      // Toggle this one
+      if (!isOpen) {
+        trigger.setAttribute('aria-expanded', 'true');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      }
+    });
+  });
+</script>

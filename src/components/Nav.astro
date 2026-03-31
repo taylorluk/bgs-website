@@ -1,0 +1,278 @@
+---
+const navLinks = [
+  { label: 'Home', href: '/' },
+  { label: 'Services', href: '/services' },
+  { label: 'Work', href: '/work' },
+  { label: 'Blog', href: '/blog' },
+  { label: 'Offers', href: '/offers', highlight: true },
+  { label: 'About', href: '/about' },
+  { label: 'Contact', href: '/contact' },
+];
+---
+
+<header id="main-nav" class="nav-wrapper">
+  <nav class="container nav-inner">
+    <!-- Logo -->
+    <a href="/" class="nav-logo" aria-label="BGS Technologies Home">
+      <img
+        src="/BGS_Logo_white_and_black_4-removebg-preview.png"
+        alt="BGS Logo"
+        class="logo-img"
+        width="40"
+        height="40"
+      />
+      <div class="logo-wordmark">
+        <span class="logo-bgs">BGS</span>
+        <span class="logo-pipe" aria-hidden="true"></span>
+        <span class="logo-tech">Marketing | Tech | AI</span>
+      </div>
+    </a>
+
+    <!-- Desktop Links -->
+    <ul class="nav-links" role="list">
+      {navLinks.map(link => (
+        <li>
+          <a href={link.href} class={`nav-link${link.highlight ? ' nav-link--offers' : ''}`}>
+            {link.highlight && <span class="offers-dot" aria-hidden="true"></span>}
+            {link.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+
+    <!-- CTA -->
+    <a href="/contact" class="btn-gold nav-cta">Book a Call</a>
+
+    <!-- Mobile Hamburger -->
+    <button id="menu-toggle" class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="mobile-menu" aria-hidden="true">
+    <ul role="list">
+      {navLinks.map(link => (
+        <li><a href={link.href} class={`mobile-link${link.highlight ? ' mobile-link--offers' : ''}`}>
+          {link.label}{link.highlight && <span class="mobile-offers-badge">Free Offers</span>}
+        </a></li>
+      ))}
+      <li><a href="/contact" class="btn-gold" style="width: 100%; justify-content: center; margin-top: 1rem;">Book a Call</a></li>
+    </ul>
+  </div>
+</header>
+
+<style>
+  .nav-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    transition: background 0.3s, backdrop-filter 0.3s, border-color 0.3s;
+    border-bottom: 1px solid transparent;
+  }
+
+  :global(.nav-scrolled) {
+    background: rgba(7, 12, 30, 0.85) !important;
+    backdrop-filter: blur(16px) !important;
+    -webkit-backdrop-filter: blur(16px) !important;
+    border-color: var(--border-subtle) !important;
+  }
+
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+    gap: 2rem;
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    flex-shrink: 0;
+    transition: opacity 0.2s;
+  }
+  .nav-logo:hover { opacity: 0.88; }
+
+  /* Logo image */
+  .logo-img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    flex-shrink: 0;
+    filter: brightness(0) invert(1);
+    transition: filter 0.3s;
+  }
+  .nav-logo:hover .logo-img {
+    filter: brightness(0) invert(1) sepia(1) saturate(3) hue-rotate(5deg);
+  }
+
+  /* Wordmark */
+  .logo-wordmark {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+  }
+
+  .logo-bgs {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.25rem;
+    background: linear-gradient(135deg, #E8D48A 0%, var(--gold-primary) 50%, #B8922E 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 0.08em;
+    line-height: 1;
+  }
+
+  .logo-pipe {
+    display: block;
+    width: 1px;
+    height: 16px;
+    background: linear-gradient(to bottom, transparent, rgba(201,168,76,0.4), transparent);
+    flex-shrink: 0;
+  }
+
+  .logo-tech {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    line-height: 1;
+  }
+
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 0.25rem;
+    margin: 0 auto;
+  }
+
+  .nav-link {
+    padding: 0.5rem 1rem;
+    color: var(--text-muted);
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: color 0.2s, background 0.2s;
+    letter-spacing: 0.01em;
+  }
+
+  .nav-link:hover {
+    color: var(--text-primary);
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .nav-cta {
+    padding: 0.6rem 1.4rem;
+    font-size: 0.875rem;
+    flex-shrink: 0;
+  }
+
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+  }
+
+  .menu-toggle span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--text-primary);
+    border-radius: 2px;
+    transition: transform 0.3s, opacity 0.3s;
+  }
+
+  .mobile-menu {
+    display: none;
+    padding: 1rem 1.5rem 2rem;
+    background: rgba(7, 12, 30, 0.97);
+    border-top: 1px solid var(--border-subtle);
+  }
+
+  .mobile-menu ul { list-style: none; }
+  .mobile-link {
+    display: block;
+    padding: 0.85rem 0;
+    color: var(--text-muted);
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 1.05rem;
+    text-decoration: none;
+    border-bottom: 1px solid var(--border-subtle);
+    transition: color 0.2s;
+  }
+  .mobile-link:hover { color: var(--text-primary); }
+
+  /* Offers nav highlight */
+  .nav-link--offers {
+    color: var(--gold-primary) !important;
+    position: relative;
+  }
+  .nav-link--offers:hover {
+    background: rgba(201, 168, 76, 0.08) !important;
+  }
+  .offers-dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: var(--gold-primary);
+    border-radius: 50%;
+    margin-right: 5px;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+    animation: offersPulse 1.8s ease-in-out infinite;
+  }
+  @keyframes offersPulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(0.7); }
+  }
+  .mobile-link--offers { color: var(--gold-primary) !important; }
+  .mobile-offers-badge {
+    display: inline-block;
+    margin-left: 0.6rem;
+    padding: 0.1rem 0.5rem;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background: rgba(201, 168, 76, 0.15);
+    border: 1px solid rgba(201, 168, 76, 0.3);
+    color: var(--gold-primary);
+    border-radius: 4px;
+    vertical-align: middle;
+  }
+
+  @media (max-width: 768px) {
+    .nav-links, .nav-cta { display: none; }
+    .menu-toggle { display: flex; }
+    .mobile-menu { display: block; }
+    .mobile-menu[aria-hidden="true"] { display: none; }
+  }
+</style>
+
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+
+  toggle?.addEventListener('click', () => {
+    const isOpen = menu?.getAttribute('aria-hidden') === 'false';
+    menu?.setAttribute('aria-hidden', isOpen ? 'true' : 'false');
+    toggle.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+  });
+</script>

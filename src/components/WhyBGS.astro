@@ -1,0 +1,244 @@
+---
+const differentiators = [
+  {
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>`,
+    title: 'Global Reach from Dubai',
+    desc: 'Headquartered in the UAE Free Zone — a gateway to the Middle East, Europe, and beyond. We deliver globally with regional precision.',
+  },
+  {
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M18 2v4h4"/></svg>`,
+    title: 'AI-Native by Design',
+    desc: "We don't bolt-on AI as an afterthought. Every service is built around intelligent systems, automation, and data-driven decision making.",
+  },
+  {
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>`,
+    title: 'Full-Service, One Team',
+    desc: 'Strategy, creative, performance, and tech — all under one roof. No agency fragmentation. No coordination gaps.',
+  },
+  {
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>`,
+    title: 'Results You Can Measure',
+    desc: 'Every engagement is anchored to KPIs that matter — leads, revenue, CAC, ROAS. We obsess over outcomes, not outputs.',
+  },
+];
+---
+
+<section class="section why-bgs" id="why-bgs">
+  <div class="container why-inner">
+    <!-- Left: Visual -->
+    <div class="why-visual reveal-left">
+      <div class="visual-card">
+        <div class="visual-glow"></div>
+        <div class="visual-content">
+          <div class="visual-stat">
+            <span class="count-up" data-target="300" data-suffix="%" data-prefix="">0%</span>
+            <p>Average ROAS<br />for paid clients</p>
+          </div>
+          <hr class="gold-line" style="margin: 1.5rem 0;" />
+          <div class="visual-tags">
+            <span class="tag">Strategy</span>
+            <span class="tag tag--gold">Performance</span>
+            <span class="tag">Creative</span>
+            <span class="tag tag--purple">AI-Powered</span>
+            <span class="tag">Automation</span>
+          </div>
+          <div class="visual-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Dubai · UAE Free Zone
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Copy -->
+    <div class="why-copy">
+      <p class="section-label reveal">Why BGS Technologies</p>
+      <h2 class="why-title reveal">
+        The Agency Built<br />
+        for <span class="text-aurora-gradient">What's Next</span>
+      </h2>
+      <p class="why-sub reveal">
+        We're not a traditional agency playing catch-up with technology.
+        We were built from the ground up to harness AI, automation, and data
+        to deliver results that compound.
+      </p>
+
+      <div class="differentiators stagger-children">
+        {differentiators.map(d => (
+          <div class="diff-item">
+            <div class="diff-icon">
+              <Fragment set:html={d.icon} />
+            </div>
+            <div class="diff-text">
+              <h4>{d.title}</h4>
+              <p>{d.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="why-cta reveal">
+        <a href="/about" class="btn-ghost">Meet the Team</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .why-inner {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 5rem;
+    align-items: center;
+  }
+
+  /* ── Visual Card ───────────────────────────────────────────────────────────── */
+  .visual-card {
+    position: relative;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: 20px;
+    padding: 2.5rem;
+    overflow: hidden;
+  }
+
+  .visual-glow {
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(201, 168, 76, 0.15) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .visual-content { position: relative; z-index: 1; }
+
+  .visual-stat span {
+    font-family: var(--font-display);
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    font-weight: 700;
+    color: var(--gold-primary);
+    line-height: 1;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  .visual-stat p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .visual-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .tag {
+    padding: 0.3rem 0.75rem;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-subtle);
+    border-radius: 100px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    font-family: var(--font-display);
+  }
+
+  .tag--gold { border-color: var(--border-gold); color: var(--gold-primary); }
+  .tag--purple { border-color: rgba(123, 63, 160, 0.4); color: var(--purple-light); }
+
+  .visual-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    font-family: var(--font-display);
+    font-weight: 600;
+    color: var(--gold-primary);
+    padding: 0.4rem 0.75rem;
+    background: rgba(201, 168, 76, 0.08);
+    border: 1px solid var(--border-gold);
+    border-radius: 6px;
+  }
+
+  /* ── Copy ──────────────────────────────────────────────────────────────────── */
+  .section-label {
+    font-family: var(--font-display);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold-primary);
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  .why-title {
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    margin-bottom: 1.25rem;
+    line-height: 1.1;
+  }
+
+  .why-sub {
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1.75;
+    margin-bottom: 2.5rem;
+  }
+
+  .differentiators {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .diff-item {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .diff-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    background: rgba(201, 168, 76, 0.08);
+    border: 1px solid var(--border-subtle);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: var(--gold-primary);
+  }
+
+  .diff-text h4 {
+    font-family: var(--font-display);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.3rem;
+    letter-spacing: -0.01em;
+  }
+
+  .diff-text p {
+    color: var(--text-muted);
+    font-size: 0.875rem;
+    line-height: 1.65;
+  }
+
+  @media (max-width: 1024px) {
+    .why-inner { grid-template-columns: 1fr; gap: 3rem; }
+    .why-visual { order: 2; }
+  }
+
+  @media (max-width: 640px) {
+    .why-inner { gap: 2rem; }
+    .visual-stats { gap: 1rem; }
+    .why-diff { gap: 0.75rem; }
+  }
+</style>

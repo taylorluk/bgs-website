@@ -1,0 +1,148 @@
+@import "tailwindcss";
+
+/* ─── Design Tokens ─────────────────────────────────────────────────────────── */
+:root {
+  --bg-void:      #070C1E;
+  --bg-surface:   #0D1B3E;
+  --bg-elevated:  #132244;
+  --blue-primary: #1A3A8A;
+  --blue-mid:     #1E4DB7;
+  --gold-primary: #C9A84C;
+  --gold-light:   #E2C97E;
+  --gold-dim:     #A07830;
+  --purple-glow:  #7B3FA0;
+  --purple-light: #9B59D4;
+  --pink-energy:  #C44080;
+  --amber-warm:   #D4704A;
+  --text-primary: #F0F4FF;
+  --text-muted:   #8A9CC2;
+  --text-dim:     #4A5A82;
+  --border-subtle: rgba(201, 168, 76, 0.15);
+  --border-gold:   rgba(201, 168, 76, 0.4);
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body:    'DM Sans', sans-serif;
+}
+
+/* ─── Base ──────────────────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+
+body {
+  background-color: var(--bg-void);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--bg-void); }
+::-webkit-scrollbar-thumb { background: var(--gold-dim); border-radius: 3px; }
+::selection { background: rgba(201, 168, 76, 0.25); }
+
+/* ─── Layout ────────────────────────────────────────────────────────────────── */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+@media (min-width: 768px) { .container { padding: 0 3rem; } }
+
+.section { padding: 5rem 0; }
+@media (min-width: 1024px) { .section { padding: 7rem 0; } }
+
+/* ─── Gradient Text ─────────────────────────────────────────────────────────── */
+.text-gold-gradient {
+  background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold-primary) 50%, var(--gold-dim) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.text-aurora-gradient {
+  background: linear-gradient(135deg, var(--purple-light) 0%, var(--pink-energy) 50%, var(--amber-warm) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ─── Buttons ───────────────────────────────────────────────────────────────── */
+.btn-gold {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 2rem;
+  background: linear-gradient(135deg, var(--gold-primary), var(--gold-light));
+  color: #070C1E;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: opacity 0.2s, transform 0.2s, box-shadow 0.2s;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.btn-gold:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 30px rgba(201, 168, 76, 0.35);
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 2rem;
+  background: transparent;
+  color: var(--text-primary);
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 0.95rem;
+  border-radius: 6px;
+  border: 1px solid var(--border-gold);
+  text-decoration: none;
+  transition: background 0.2s, border-color 0.2s, transform 0.2s;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.btn-ghost:hover {
+  background: rgba(201, 168, 76, 0.08);
+  border-color: var(--gold-primary);
+  transform: translateY(-1px);
+}
+
+/* ─── Card ──────────────────────────────────────────────────────────────────── */
+.card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+.card:hover {
+  border-color: var(--border-gold);
+  box-shadow: 0 0 30px rgba(201, 168, 76, 0.08);
+  transform: translateY(-3px);
+}
+
+/* ─── Divider ───────────────────────────────────────────────────────────────── */
+.gold-line {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold-primary), transparent);
+  border: none;
+  margin: 0;
+}
+
+/* ─── GSAP Reveal starters (set via JS so content is visible without JS) ───── */
+.js-ready .reveal       { opacity: 0; transform: translateY(30px); }
+.js-ready .reveal-left  { opacity: 0; transform: translateX(-40px); }
+.js-ready .reveal-right { opacity: 0; transform: translateX(40px); }
+.js-ready .stagger-children > * { opacity: 0; transform: translateY(25px); }

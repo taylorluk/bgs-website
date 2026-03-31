@@ -1,0 +1,524 @@
+---
+// 12 testimonials split across 3 columns (4 each) — each column is doubled for seamless loop
+const col1 = [
+  {
+    quote: "BGS transformed our entire digital presence. Within 90 days our ROAS was 4× what we achieved with our previous agency. The AI-driven creative testing alone was a game changer.",
+    name: "Sarah Al-Mansouri",
+    title: "CMO",
+    company: "Luxe Retail Group",
+    region: "Dubai, UAE",
+    stars: 5,
+    platform: "Google",
+  },
+  {
+    quote: "The paid ads team understood our product instantly. We went from burning budget with no results to a 6× return within the first month. I wish we'd found BGS two years earlier.",
+    name: "Priya Nair",
+    title: "Marketing Director",
+    company: "FitFuel Nutrition",
+    region: "Abu Dhabi, UAE",
+    stars: 5,
+    platform: "Clutch",
+  },
+  {
+    quote: "What impressed me most was the speed. Website designed and live within 24 hours, ad campaigns running the same day. No other agency moves at this pace without sacrificing quality.",
+    name: "Luca Ferretti",
+    title: "CEO",
+    company: "Strada Milano",
+    region: "Milan, Italy",
+    stars: 5,
+    platform: "Google",
+  },
+  {
+    quote: "Our Google reviews went from 3.4 to 4.9 stars in 8 weeks using their automation. The impact on walk-ins was immediate. Simple, powerful, exactly what we needed.",
+    name: "Ahmed Al-Rashid",
+    title: "Operations Manager",
+    company: "Oasis Hospitality Group",
+    region: "Dubai, UAE",
+    stars: 5,
+    platform: "Google",
+  },
+];
+
+const col2 = [
+  {
+    quote: "What sets BGS apart is that they think like business owners. They understood our growth targets and built a system — not just a campaign. Leads are up 8× in 6 months.",
+    name: "James Whitfield",
+    title: "Founder & CEO",
+    company: "NovaTech SaaS",
+    region: "London, UK",
+    stars: 5,
+    platform: "Clutch",
+  },
+  {
+    quote: "They set up our entire CRM and automation in a week. Follow-ups, pipelines, booking calendars — everything we were doing manually is now automatic. We've saved 20+ hours per week.",
+    name: "Yuki Tanaka",
+    title: "Head of Operations",
+    company: "Zenith Consulting",
+    region: "Singapore",
+    stars: 5,
+    platform: "Google",
+  },
+  {
+    quote: "The AI receptionist handles 80% of our inbound enquiries without any human input. It qualifies leads, answers questions, and books calls — at 2am on a Sunday if needed.",
+    name: "Sophie Laurent",
+    title: "Founder",
+    company: "Maison Beauty",
+    region: "Paris, France",
+    stars: 5,
+    platform: "Google",
+  },
+  {
+    quote: "Our ecommerce store went from $12K to $84K monthly revenue in three months. BGS rebuilt our entire funnel — new site, new ads, new email flows. The results speak for themselves.",
+    name: "Marcus Thompson",
+    title: "E-Commerce Director",
+    company: "ThreadHouse Apparel",
+    region: "New York, USA",
+    stars: 5,
+    platform: "Clutch",
+  },
+];
+
+const col3 = [
+  {
+    quote: "From branding to paid ads to automation — they handled everything seamlessly. Our Dubai launch exceeded every expectation. World-class team, incredibly responsive.",
+    name: "Omar Khalid",
+    title: "Head of Marketing",
+    company: "Crest Developments",
+    region: "Riyadh, KSA",
+    stars: 5,
+    platform: "Google",
+  },
+  {
+    quote: "BGS built our brand identity from scratch — logo, fonts, tone of voice, the whole system. Then they launched our Meta campaigns and we hit profitability in week one. Extraordinary.",
+    name: "Fatima Al-Zaabi",
+    title: "Co-Founder",
+    company: "Safa Wellness Studio",
+    region: "Dubai, UAE",
+    stars: 5,
+    platform: "Google",
+  },
+  {
+    quote: "I've worked with five agencies across three countries. BGS is the first one that treats my business like their own. Transparent reporting, proactive ideas, real ownership of results.",
+    name: "Daniel Osei",
+    title: "Managing Director",
+    company: "Beacon Capital Partners",
+    region: "Accra, Ghana",
+    stars: 5,
+    platform: "Clutch",
+  },
+  {
+    quote: "The SEO audit they delivered for free was better than reports I've paid thousands for. Detailed, actionable, and delivered in 24 hours. We immediately knew BGS was different.",
+    name: "Ren Yamamoto",
+    title: "Growth Lead",
+    company: "Hiro Digital",
+    region: "Tokyo, Japan",
+    stars: 5,
+    platform: "Google",
+  },
+];
+
+const columns = [col1, col2, col3];
+const directions = ['up', 'down', 'up'];
+const speeds = ['38s', '44s', '32s']; // slightly varied for organic feel
+---
+
+<section class="section t-section" id="testimonials">
+  <!-- Background -->
+  <div class="t-bg" aria-hidden="true">
+    <div class="t-bg-glow t-bg-glow--1"></div>
+    <div class="t-bg-glow t-bg-glow--2"></div>
+  </div>
+
+  <div class="container t-container">
+    <!-- Header -->
+    <div class="t-header reveal">
+      <p class="t-eyebrow">Client Voices</p>
+      <h2 class="t-title">
+        Trusted by Brands<br />
+        <span class="text-gold-gradient">Around the World</span>
+      </h2>
+      <p class="t-sub">
+        Real results. Real relationships. Here's what our clients say — unedited.
+      </p>
+      <!-- Aggregate stats -->
+      <div class="t-stats">
+        <div class="t-stat">
+          <span class="t-stat-num">50+</span>
+          <span class="t-stat-label">Brands Scaled</span>
+        </div>
+        <div class="t-stat-sep"></div>
+        <div class="t-stat">
+          <span class="t-stat-num">4.9★</span>
+          <span class="t-stat-label">Average Rating</span>
+        </div>
+        <div class="t-stat-sep"></div>
+        <div class="t-stat">
+          <span class="t-stat-num">15+</span>
+          <span class="t-stat-label">Countries</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll wall -->
+    <div class="t-wall">
+      <!-- Top & bottom fade masks -->
+      <div class="t-mask t-mask--top" aria-hidden="true"></div>
+      <div class="t-mask t-mask--bottom" aria-hidden="true"></div>
+
+      {columns.map((col, ci) => (
+        <div class="t-col">
+          <div
+            class={`t-stream t-stream--${directions[ci]}`}
+            style={`animation-duration: ${speeds[ci]};`}
+          >
+            {/* Original + duplicate for seamless loop */}
+            {[...col, ...col].map((t, i) => (
+              <article class="t-card" aria-label={`Testimonial from ${t.name}`}>
+                <!-- Quote mark -->
+                <div class="t-bigquote" aria-hidden="true">"</div>
+
+                <!-- Stars + platform -->
+                <div class="t-card-top">
+                  <div class="t-stars" aria-label={`${t.stars} stars`}>
+                    {Array.from({ length: t.stars }).map(() => (
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    ))}
+                  </div>
+                  <span class={`t-platform t-platform--${t.platform.toLowerCase()}`}>{t.platform}</span>
+                </div>
+
+                <!-- Quote -->
+                <blockquote class="t-quote">"{t.quote}"</blockquote>
+
+                <!-- Author -->
+                <div class="t-author">
+                  <div class="t-avatar">
+                    {t.name.split(' ').map((n: string) => n[0]).join('')}
+                  </div>
+                  <div class="t-info">
+                    <strong class="t-name">{t.name}</strong>
+                    <span class="t-role">{t.title}, {t.company}</span>
+                    <span class="t-region">
+                      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                      {t.region}
+                    </span>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .t-section {
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* ── Background ───────────────────────────────────────────── */
+  .t-bg { position: absolute; inset: 0; pointer-events: none; }
+  .t-bg-glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(90px);
+    pointer-events: none;
+  }
+  .t-bg-glow--1 {
+    width: 500px; height: 500px;
+    top: 10%; left: -100px;
+    background: radial-gradient(circle, rgba(123,63,160,0.06) 0%, transparent 70%);
+  }
+  .t-bg-glow--2 {
+    width: 500px; height: 500px;
+    bottom: 10%; right: -100px;
+    background: radial-gradient(circle, rgba(201,168,76,0.05) 0%, transparent 70%);
+  }
+
+  /* ── Layout ───────────────────────────────────────────────── */
+  .t-container {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    gap: 5rem;
+    align-items: center;
+  }
+
+  /* ── Header ───────────────────────────────────────────────── */
+  .t-header { /* sticky-ish left column */ }
+
+  .t-eyebrow {
+    font-family: var(--font-display);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold-primary);
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  .t-title {
+    font-size: clamp(2rem, 3vw, 2.9rem);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+  }
+
+  .t-sub {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    max-width: 36ch;
+  }
+
+  .t-stats {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+  }
+
+  .t-stat { display: flex; flex-direction: column; gap: 0.15rem; }
+
+  .t-stat-num {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--gold-light), var(--gold-primary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -0.02em;
+  }
+
+  .t-stat-label {
+    font-size: 0.72rem;
+    color: var(--text-dim);
+    font-family: var(--font-display);
+    letter-spacing: 0.04em;
+  }
+
+  .t-stat-sep {
+    width: 1px; height: 36px;
+    background: var(--border-subtle);
+    flex-shrink: 0;
+  }
+
+  /* ── Wall ─────────────────────────────────────────────────── */
+  .t-wall {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    height: 600px;
+    overflow: hidden;
+  }
+
+  /* Fade masks */
+  .t-mask {
+    position: absolute;
+    left: 0; right: 0;
+    z-index: 2;
+    pointer-events: none;
+    height: 120px;
+  }
+  .t-mask--top {
+    top: 0;
+    background: linear-gradient(to bottom, var(--bg-void) 0%, transparent 100%);
+  }
+  .t-mask--bottom {
+    bottom: 0;
+    background: linear-gradient(to top, var(--bg-void) 0%, transparent 100%);
+  }
+
+  /* ── Column & stream ──────────────────────────────────────── */
+  .t-col {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .t-stream {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  .t-stream--up   { animation-name: tScrollUp; }
+  .t-stream--down { animation-name: tScrollDown; }
+
+  /* Pause on hover of the entire wall */
+  .t-wall:hover .t-stream { animation-play-state: paused; }
+
+  @keyframes tScrollUp {
+    from { transform: translateY(0); }
+    to   { transform: translateY(-50%); }
+  }
+  @keyframes tScrollDown {
+    from { transform: translateY(-50%); }
+    to   { transform: translateY(0); }
+  }
+
+  /* ── Card ─────────────────────────────────────────────────── */
+  .t-card {
+    background: rgba(13, 27, 62, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+    padding: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    flex-shrink: 0;
+  }
+
+  .t-card:hover {
+    border-color: rgba(201, 168, 76, 0.25);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.35), 0 0 0 1px rgba(201,168,76,0.08);
+    transform: scale(1.01);
+  }
+
+  /* Decorative large quote mark */
+  .t-bigquote {
+    position: absolute;
+    top: -8px; right: 12px;
+    font-family: Georgia, serif;
+    font-size: 5rem;
+    line-height: 1;
+    color: rgba(201, 168, 76, 0.08);
+    pointer-events: none;
+    user-select: none;
+    font-weight: 700;
+    transition: color 0.3s;
+  }
+  .t-card:hover .t-bigquote { color: rgba(201, 168, 76, 0.14); }
+
+  /* ── Card top row ─────────────────────────────────────────── */
+  .t-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .t-stars { display: flex; gap: 2px; }
+
+  .t-platform {
+    font-family: var(--font-display);
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.18rem 0.5rem;
+    border-radius: 4px;
+    border-width: 1px;
+    border-style: solid;
+  }
+  .t-platform--google {
+    color: #93c5fd;
+    background: rgba(30,77,183,0.12);
+    border-color: rgba(30,77,183,0.3);
+  }
+  .t-platform--clutch {
+    color: #fca5a5;
+    background: rgba(220,38,38,0.1);
+    border-color: rgba(220,38,38,0.25);
+  }
+
+  /* ── Quote ────────────────────────────────────────────────── */
+  .t-quote {
+    font-size: 0.82rem;
+    line-height: 1.75;
+    color: var(--text-muted);
+    font-style: italic;
+    position: relative;
+    z-index: 1;
+    flex: 1;
+  }
+
+  /* ── Author ───────────────────────────────────────────────── */
+  .t-author {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid rgba(255,255,255,0.05);
+  }
+
+  .t-avatar {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--purple-glow), var(--blue-primary));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.75rem;
+    color: var(--text-primary);
+    flex-shrink: 0;
+    border: 1px solid rgba(201,168,76,0.2);
+  }
+
+  .t-info { display: flex; flex-direction: column; gap: 0.1rem; }
+
+  .t-name {
+    font-family: var(--font-display);
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+
+  .t-role {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+  }
+
+  .t-region {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.67rem;
+    color: var(--text-dim);
+    font-family: var(--font-display);
+    letter-spacing: 0.03em;
+  }
+
+  /* ── Responsive ───────────────────────────────────────────── */
+  @media (max-width: 1200px) {
+    .t-container {
+      grid-template-columns: 300px 1fr;
+      gap: 3rem;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .t-container {
+      grid-template-columns: 1fr;
+    }
+    .t-header { text-align: center; }
+    .t-sub { max-width: none; }
+    .t-stats { justify-content: center; }
+    .t-wall { height: 500px; }
+  }
+
+  @media (max-width: 600px) {
+    .t-wall {
+      grid-template-columns: repeat(2, 1fr);
+      height: 450px;
+    }
+    .t-col:last-child { display: none; }
+  }
+</style>

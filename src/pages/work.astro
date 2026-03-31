@@ -1,0 +1,935 @@
+---
+import Layout from '../layouts/Layout.astro';
+import CTA from '../components/CTA.astro';
+
+const caseStudies = [
+  {
+    id: 1,
+    client: 'Luxe Retail Group',
+    category: 'E-Commerce + Paid Ads',
+    region: 'Dubai, UAE',
+    image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&h=600&q=80&auto=format&fit=crop',
+    logo: 'LR',
+    results: [
+      { metric: '412%', label: 'ROAS' },
+      { metric: '$284K', label: 'Monthly Revenue' },
+      { metric: '-67%', label: 'CAC' },
+    ],
+    tags: ['Meta Ads', 'Google Ads', 'Email Flows'],
+    description: 'Rebuilt their entire paid media strategy and email automation. Went from $68K to $284K monthly revenue in 4 months.',
+    accent: 'gold',
+  },
+  {
+    id: 2,
+    client: 'NovaTech SaaS',
+    category: 'B2B Marketing + CRM',
+    region: 'London, UK',
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&q=80&auto=format&fit=crop',
+    logo: 'NT',
+    results: [
+      { metric: '8×', label: 'Lead Volume' },
+      { metric: '42%', label: 'Close Rate' },
+      { metric: '6 Mo', label: 'To Target ARR' },
+    ],
+    tags: ['LinkedIn Ads', 'CRM Automation', 'Content'],
+    description: 'Designed and deployed a full B2B demand generation engine. 8× lead volume, 42% close rate within 6 months.',
+    accent: 'purple',
+  },
+  {
+    id: 3,
+    client: 'Crest Developments',
+    category: 'Real Estate Launch',
+    region: 'Riyadh, KSA',
+    image: 'https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&h=600&q=80&auto=format&fit=crop',
+    logo: 'CD',
+    results: [
+      { metric: '340', label: 'Qualified Leads' },
+      { metric: '48hrs', label: 'Campaign Launch' },
+      { metric: '22×', label: 'ROAS' },
+    ],
+    tags: ['Branding', 'Meta Ads', 'Landing Pages'],
+    description: 'Full brand identity + launch campaign for a premium residential development. 340 qualified leads in the first 30 days.',
+    accent: 'gold',
+  },
+  {
+    id: 4,
+    client: 'Safa Wellness Studio',
+    category: 'Brand + Social + Ads',
+    region: 'Dubai, UAE',
+    image: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=800&h=600&q=80&auto=format&fit=crop',
+    logo: 'SW',
+    results: [
+      { metric: '0→1,200', label: 'Monthly Clients' },
+      { metric: '4.9★', label: 'Google Rating' },
+      { metric: '3×', label: 'Revenue in 90 Days' },
+    ],
+    tags: ['Branding', 'Instagram Ads', 'Google Reviews'],
+    description: 'Built brand from scratch — identity, social presence, paid ads, and reviews automation. Zero to fully booked in 90 days.',
+    accent: 'pink',
+  },
+  {
+    id: 5,
+    client: 'ThreadHouse Apparel',
+    category: 'E-Commerce Scaling',
+    region: 'New York, USA',
+    image: 'https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=800&h=600&q=80&auto=format&fit=crop',
+    logo: 'TH',
+    results: [
+      { metric: '$12K→$84K', label: 'Monthly Revenue' },
+      { metric: '7×', label: 'ROAS' },
+      { metric: '600%', label: 'Revenue Growth' },
+    ],
+    tags: ['Meta Ads', 'TikTok Ads', 'Email Marketing'],
+    description: 'Rebuilt their Meta and TikTok ad strategy alongside a complete email flow redesign. From $12K to $84K monthly in 3 months.',
+    accent: 'blue',
+  },
+  {
+    id: 6,
+    client: 'Oasis Hospitality Group',
+    category: 'Reputation + Local SEO',
+    region: 'Dubai, UAE',
+    image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&h=600&q=80&auto=format&fit=crop',
+    logo: 'OH',
+    results: [
+      { metric: '3.4→4.9★', label: 'Google Rating' },
+      { metric: '+38%', label: 'Walk-In Traffic' },
+      { metric: '8 Wks', label: 'To Transform' },
+    ],
+    tags: ['Google Reviews', 'Local SEO', 'GBP Optimisation'],
+    description: 'Deployed reviews automation and local SEO overhaul across 4 venues. Rating went from 3.4 to 4.9 in 8 weeks.',
+    accent: 'green',
+  },
+];
+
+const processSteps = [
+  {
+    num: '01',
+    icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>`,
+    title: 'Diagnose',
+    desc: 'Deep audit of your brand, market, and current performance. We find the gaps and opportunities others miss.',
+  },
+  {
+    num: '02',
+    icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>`,
+    title: 'Strategise',
+    desc: 'Custom growth plan built for your specific market, goals, and budget. Channels, timelines, and KPIs defined clearly.',
+  },
+  {
+    num: '03',
+    icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>`,
+    title: 'Execute',
+    desc: 'Campaigns, systems, and creative go live fast. Full execution in days — not the 6-week onboarding nightmare.',
+  },
+  {
+    num: '04',
+    icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>`,
+    title: 'Scale',
+    desc: 'We optimise relentlessly. Double down on what works, unlock new channels. Results compound month over month.',
+  },
+];
+
+const testimonials = [
+  {
+    quote: "BGS completely transformed our approach to paid media. Within 4 months we went from barely breaking even to our strongest quarter ever. The team thinks like operators, not just marketers.",
+    name: "Sofia Andreou",
+    role: "CMO, Luxe Retail Group",
+    initials: "SA",
+    accent: "gold",
+  },
+  {
+    quote: "We'd tried three agencies before BGS. None of them came close to this level of strategic thinking. Our lead pipeline is unrecognisable — in the best possible way.",
+    name: "David Okonkwo",
+    role: "Founder, NovaTech SaaS",
+    initials: "DO",
+    accent: "purple",
+  },
+];
+---
+
+<Layout
+  title="Our Work — Case Studies | BGS Technologies"
+  description="Real results from real campaigns. See how BGS Technologies has scaled 50+ brands across e-commerce, SaaS, real estate, hospitality, and more."
+>
+
+  <!-- ── HERO ───────────────────────────────────────────────────────────────── -->
+  <section class="work-hero">
+    <div class="hero-orb hero-orb--purple" aria-hidden="true"></div>
+    <div class="hero-orb hero-orb--gold" aria-hidden="true"></div>
+    <div class="hero-orb hero-orb--pink" aria-hidden="true"></div>
+
+    <div class="container hero-inner">
+      <p class="eyebrow reveal">Client Results</p>
+      <h1 class="hero-headline reveal">
+        Proof Is in<br />
+        <span class="text-gold-gradient">the Numbers</span>
+      </h1>
+      <p class="hero-sub reveal">
+        Real campaigns. Real clients. Real results. Every case study below is from a brand
+        we've taken from where they were — to where they wanted to be.
+      </p>
+
+      <!-- Macro stats -->
+      <div class="macro-stats stagger-children">
+        <div class="macro-stat">
+          <p class="macro-value">50+</p>
+          <p class="macro-label">Brands Scaled</p>
+        </div>
+        <div class="macro-divider" aria-hidden="true"></div>
+        <div class="macro-stat">
+          <p class="macro-value">$10M+</p>
+          <p class="macro-label">Ad Spend Managed</p>
+        </div>
+        <div class="macro-divider" aria-hidden="true"></div>
+        <div class="macro-stat">
+          <p class="macro-value">300%</p>
+          <p class="macro-label">Avg ROAS Increase</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── MARQUEE RESULTS STRIP ──────────────────────────────────────────────── -->
+  <div class="marquee-section" aria-hidden="true">
+    <div class="marquee-track">
+      <div class="marquee-content">
+        <span class="marquee-item"><span class="marquee-accent">Luxe Retail:</span> $284K/mo revenue ↑</span>
+        <span class="marquee-sep">◆</span>
+        <span class="marquee-item"><span class="marquee-accent">NovaTech:</span> 8× lead volume</span>
+        <span class="marquee-sep">◆</span>
+        <span class="marquee-item"><span class="marquee-accent">ThreadHouse:</span> 600% revenue growth</span>
+        <span class="marquee-sep">◆</span>
+        <span class="marquee-item"><span class="marquee-accent">Safa Wellness:</span> 0 → fully booked in 90 days</span>
+        <span class="marquee-sep">◆</span>
+        <span class="marquee-item"><span class="marquee-accent">Crest Developments:</span> 340 qualified leads in 30 days</span>
+        <span class="marquee-sep">◆</span>
+        <span class="marquee-item"><span class="marquee-accent">Oasis Group:</span> 3.4 → 4.9★ Google Rating</span>
+        <span class="marquee-sep">◆</span>
+        <span class="marquee-item"><span class="marquee-accent">Luxe Retail:</span> 412% ROAS</span>
+        <span class="marquee-sep">◆</span>
+        <span class="marquee-item"><span class="marquee-accent">NovaTech:</span> 42% close rate</span>
+        <span class="marquee-sep">◆</span>
+      </div>
+      <!-- Duplicate for seamless loop -->
+      <div class="marquee-content" aria-hidden="true">
+        <span class="marquee-item"><span class="marquee-accent">Luxe Retail:</span> $284K/mo revenue ↑</span>
+        <span class="marquee-sep">◆</span>
+        <span class="marquee-item"><span class="marquee-accent">NovaTech:</span> 8× lead volume</span>
+        <span class="marquee-sep">◆</span>
+        <span class="marquee-item"><span class="marquee-accent">ThreadHouse:</span> 600% revenue growth</span>
+        <span class="marquee-sep">◆</span>
+        <span class="marquee-item"><span class="marquee-accent">Safa Wellness:</span> 0 → fully booked in 90 days</span>
+        <span class="marquee-sep">◆</span>
+        <span class="marquee-item"><span class="marquee-accent">Crest Developments:</span> 340 qualified leads in 30 days</span>
+        <span class="marquee-sep">◆</span>
+        <span class="marquee-item"><span class="marquee-accent">Oasis Group:</span> 3.4 → 4.9★ Google Rating</span>
+        <span class="marquee-sep">◆</span>
+        <span class="marquee-item"><span class="marquee-accent">Luxe Retail:</span> 412% ROAS</span>
+        <span class="marquee-sep">◆</span>
+        <span class="marquee-item"><span class="marquee-accent">NovaTech:</span> 42% close rate</span>
+        <span class="marquee-sep">◆</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── CASE STUDIES GRID ──────────────────────────────────────────────────── -->
+  <section class="cases-section section">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="eyebrow">Case Studies</p>
+        <h2 class="section-title">Results We're Proud Of</h2>
+        <p class="section-sub">Each case study below represents a full engagement — strategy, execution, and measurable outcomes.</p>
+      </div>
+
+      <div class="cases-grid stagger-children">
+        {caseStudies.map(cs => (
+          <article class={`case-card accent--${cs.accent}`}>
+            <!-- Image with overlays -->
+            <div class="case-image-wrap">
+              <img
+                src={cs.image}
+                alt={`${cs.client} case study`}
+                class="case-image"
+                loading="lazy"
+              />
+              <div class="case-image-overlay" aria-hidden="true"></div>
+
+              <!-- Badges on image -->
+              <div class="case-badges">
+                <div class="case-logo">{cs.logo}</div>
+                <span class="case-category-badge">{cs.category}</span>
+              </div>
+              <span class="case-region-badge">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                {cs.region}
+              </span>
+            </div>
+
+            <!-- Content -->
+            <div class="case-body">
+              <h3 class="case-client">{cs.client}</h3>
+              <p class="case-desc">{cs.description}</p>
+
+              <!-- Results pills -->
+              <div class="results-row">
+                {cs.results.map(r => (
+                  <div class="result-pill">
+                    <span class="result-metric">{r.metric}</span>
+                    <span class="result-label">{r.label}</span>
+                  </div>
+                ))}
+              </div>
+
+              <!-- Tags -->
+              <div class="case-tags">
+                {cs.tags.map(tag => (
+                  <span class="case-tag">{tag}</span>
+                ))}
+              </div>
+
+              <a href="/contact" class="case-link">
+                View Case Study
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROCESS TEASER ─────────────────────────────────────────────────────── -->
+  <section class="process-section">
+    <div class="container">
+      <div class="process-header reveal">
+        <p class="eyebrow">Our Approach</p>
+        <h2 class="process-title">How We Achieve Results</h2>
+      </div>
+      <div class="process-grid stagger-children">
+        {processSteps.map(step => (
+          <div class="process-step">
+            <div class="process-icon-wrap" set:html={step.icon} />
+            <div>
+              <p class="process-num">{step.num}</p>
+              <p class="process-step-title">{step.title}</p>
+              <p class="process-step-desc">{step.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TESTIMONIALS ───────────────────────────────────────────────────────── -->
+  <section class="testimonials-section section">
+    <div class="container">
+      <div class="testimonials-header reveal">
+        <p class="eyebrow">Client Voices</p>
+        <h2 class="section-title">What Our Clients Say</h2>
+      </div>
+      <div class="testimonials-grid stagger-children">
+        {testimonials.map(t => (
+          <blockquote class={`testi-card testi--${t.accent}`}>
+            <div class="testi-quote-mark">"</div>
+            <p class="testi-text">{t.quote}</p>
+            <footer class="testi-footer">
+              <div class={`testi-avatar testi-avatar--${t.accent}`}>{t.initials}</div>
+              <div>
+                <p class="testi-name">{t.name}</p>
+                <p class="testi-role">{t.role}</p>
+              </div>
+            </footer>
+          </blockquote>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA ───────────────────────────────────────────────────────────────── -->
+  <CTA />
+
+</Layout>
+
+<style>
+  /* ── HERO ─────────────────────────────────────────────────────────────────── */
+  .work-hero {
+    position: relative;
+    padding-top: 72px;
+    min-height: 440px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: var(--bg-void);
+    text-align: center;
+  }
+
+  .hero-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    pointer-events: none;
+  }
+  .hero-orb--purple {
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(123, 63, 160, 0.22) 0%, transparent 70%);
+    top: -160px; left: -80px;
+  }
+  .hero-orb--gold {
+    width: 300px; height: 300px;
+    background: radial-gradient(circle, rgba(201, 168, 76, 0.14) 0%, transparent 70%);
+    bottom: -60px; left: 45%;
+    transform: translateX(-50%);
+  }
+  .hero-orb--pink {
+    width: 380px; height: 380px;
+    background: radial-gradient(circle, rgba(196, 64, 128, 0.14) 0%, transparent 70%);
+    top: -80px; right: -40px;
+  }
+
+  .hero-inner {
+    position: relative;
+    z-index: 1;
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .eyebrow {
+    font-family: var(--font-display);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--gold-primary);
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  .hero-headline {
+    font-size: clamp(2.6rem, 5.5vw, 4rem);
+    font-weight: 700;
+    line-height: 1.06;
+    letter-spacing: -0.03em;
+    margin-bottom: 1.2rem;
+  }
+
+  .hero-sub {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    line-height: 1.75;
+    max-width: 52ch;
+    margin: 0 auto 3rem;
+  }
+
+  /* Macro stats */
+  .macro-stats {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: 16px;
+    padding: 2rem 3rem;
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  .macro-stat {
+    flex: 1;
+    text-align: center;
+  }
+
+  .macro-value {
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold-primary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.1;
+    margin-bottom: 0.3rem;
+  }
+
+  .macro-label {
+    font-size: 0.82rem;
+    color: var(--text-dim);
+    font-family: var(--font-display);
+    font-weight: 500;
+    letter-spacing: 0.02em;
+  }
+
+  .macro-divider {
+    width: 1px;
+    height: 48px;
+    background: var(--border-subtle);
+    flex-shrink: 0;
+    margin: 0 1.5rem;
+  }
+
+  /* ── MARQUEE ──────────────────────────────────────────────────────────────── */
+  .marquee-section {
+    overflow: hidden;
+    background: var(--bg-surface);
+    border-top: 1px solid var(--border-subtle);
+    border-bottom: 1px solid var(--border-subtle);
+    padding: 0.85rem 0;
+  }
+
+  .marquee-track {
+    display: flex;
+    width: max-content;
+    animation: marquee-scroll 38s linear infinite;
+  }
+  .marquee-track:hover { animation-play-state: paused; }
+
+  @keyframes marquee-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  .marquee-content {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0 1.5rem;
+    white-space: nowrap;
+  }
+
+  .marquee-item {
+    font-family: var(--font-display);
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-muted);
+  }
+
+  .marquee-accent {
+    color: var(--gold-primary);
+    font-weight: 600;
+  }
+
+  .marquee-sep {
+    color: var(--text-dim);
+    font-size: 0.6rem;
+    opacity: 0.6;
+  }
+
+  /* ── CASE STUDIES GRID ────────────────────────────────────────────────────── */
+  .cases-section {
+    background: var(--bg-void);
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 3.5rem;
+  }
+
+  .section-title {
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-top: 0.6rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .section-sub {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    max-width: 52ch;
+    margin: 0 auto;
+  }
+
+  .cases-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.75rem;
+  }
+
+  /* Case card */
+  .case-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+  }
+
+  /* Accent border-top on hover per colour */
+  .case-card.accent--gold:hover  { border-color: rgba(201, 168, 76, 0.5); box-shadow: 0 0 50px rgba(201, 168, 76, 0.12); transform: translateY(-5px); }
+  .case-card.accent--purple:hover{ border-color: rgba(123, 63, 160, 0.5); box-shadow: 0 0 50px rgba(123, 63, 160, 0.14); transform: translateY(-5px); }
+  .case-card.accent--pink:hover  { border-color: rgba(196, 64, 128, 0.5); box-shadow: 0 0 50px rgba(196, 64, 128, 0.12); transform: translateY(-5px); }
+  .case-card.accent--blue:hover  { border-color: rgba(26, 100, 200, 0.5); box-shadow: 0 0 50px rgba(26, 100, 200, 0.12); transform: translateY(-5px); }
+  .case-card.accent--green:hover { border-color: rgba(20, 160, 130, 0.5); box-shadow: 0 0 50px rgba(20, 160, 130, 0.12); transform: translateY(-5px); }
+
+  /* Image */
+  .case-image-wrap {
+    position: relative;
+    height: 260px;
+    overflow: hidden;
+  }
+
+  .case-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.55s ease;
+  }
+  .case-card:hover .case-image { transform: scale(1.05); }
+
+  .case-image-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(7, 12, 30, 0.3) 0%, rgba(7, 12, 30, 0.7) 100%);
+  }
+
+  /* Badges on image */
+  .case-badges {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .case-logo {
+    width: 36px; height: 36px;
+    border-radius: 8px;
+    background: rgba(7, 12, 30, 0.8);
+    border: 1px solid rgba(255,255,255,0.15);
+    backdrop-filter: blur(8px);
+    font-family: var(--font-display);
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .case-category-badge {
+    background: rgba(7, 12, 30, 0.8);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 100px;
+    padding: 0.28rem 0.7rem;
+    font-family: var(--font-display);
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    white-space: nowrap;
+  }
+
+  .case-region-badge {
+    position: absolute;
+    bottom: 0.85rem;
+    right: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    background: rgba(7, 12, 30, 0.8);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 100px;
+    padding: 0.25rem 0.65rem;
+    font-size: 0.72rem;
+    color: var(--text-dim);
+    font-family: var(--font-display);
+    font-weight: 500;
+  }
+
+  /* Body */
+  .case-body {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 0.9rem;
+  }
+
+  .case-client {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: -0.015em;
+  }
+
+  .case-desc {
+    font-size: 0.87rem;
+    color: var(--text-muted);
+    line-height: 1.65;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  /* Results row */
+  .results-row {
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+  }
+
+  .result-pill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 0.5rem 0.75rem;
+    min-width: 64px;
+    flex: 1;
+  }
+
+  .result-metric {
+    font-family: var(--font-display);
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.1;
+    white-space: nowrap;
+  }
+
+  .result-label {
+    font-size: 0.68rem;
+    color: var(--text-dim);
+    font-family: var(--font-display);
+    font-weight: 500;
+    text-align: center;
+    margin-top: 0.2rem;
+    line-height: 1.3;
+  }
+
+  /* Accent result pill colours */
+  .accent--gold  .result-metric { color: var(--gold-light); }
+  .accent--purple .result-metric { color: var(--purple-light); }
+  .accent--pink  .result-metric { color: #e06fa0; }
+  .accent--blue  .result-metric { color: #6ea6f0; }
+  .accent--green .result-metric { color: #4ecdc4; }
+
+  /* Tags */
+  .case-tags {
+    display: flex;
+    gap: 0.45rem;
+    flex-wrap: wrap;
+  }
+
+  .case-tag {
+    background: transparent;
+    border: 1px solid var(--border-subtle);
+    border-radius: 100px;
+    padding: 0.22rem 0.6rem;
+    font-size: 0.72rem;
+    color: var(--text-dim);
+    font-family: var(--font-display);
+    font-weight: 500;
+  }
+
+  /* Link */
+  .case-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: var(--font-display);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--gold-primary);
+    text-decoration: none;
+    margin-top: auto;
+    transition: color 0.2s, gap 0.2s;
+  }
+  .case-link:hover {
+    color: var(--gold-light);
+    gap: 0.6rem;
+  }
+
+  /* ── PROCESS TEASER ───────────────────────────────────────────────────────── */
+  .process-section {
+    background: var(--bg-surface);
+    border-top: 1px solid var(--border-subtle);
+    padding: 5rem 0;
+  }
+
+  .process-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .process-title {
+    font-size: clamp(1.6rem, 2.8vw, 2.4rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-top: 0.6rem;
+  }
+
+  .process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    border: 1px solid var(--border-subtle);
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  .process-step {
+    padding: 2rem 1.75rem;
+    border-right: 1px solid var(--border-subtle);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background: var(--bg-elevated);
+    transition: background 0.3s;
+  }
+  .process-step:last-child { border-right: none; }
+  .process-step:hover { background: var(--bg-surface); }
+
+  .process-icon-wrap {
+    width: 44px; height: 44px;
+    background: rgba(201, 168, 76, 0.08);
+    border: 1px solid var(--border-subtle);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold-primary);
+    flex-shrink: 0;
+  }
+
+  .process-num {
+    font-family: var(--font-display);
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--gold-primary);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 0.1rem;
+  }
+
+  .process-step-title {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.4rem;
+  }
+
+  .process-step-desc {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.65;
+  }
+
+  /* ── TESTIMONIALS ─────────────────────────────────────────────────────────── */
+  .testimonials-section {
+    background: var(--bg-void);
+  }
+
+  .testimonials-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.75rem;
+  }
+
+  .testi-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: 16px;
+    padding: 2rem;
+    position: relative;
+  }
+
+  .testi-card.testi--gold  { border-left: 3px solid var(--gold-primary); }
+  .testi-card.testi--purple { border-left: 3px solid var(--purple-glow); }
+
+  .testi-quote-mark {
+    font-family: Georgia, serif;
+    font-size: 5rem;
+    line-height: 1;
+    position: absolute;
+    top: 0.25rem;
+    left: 1.5rem;
+    opacity: 0.2;
+    color: var(--gold-primary);
+  }
+  .testi-card.testi--purple .testi-quote-mark { color: var(--purple-light); }
+
+  .testi-text {
+    font-size: 0.97rem;
+    line-height: 1.75;
+    color: var(--text-primary);
+    font-style: italic;
+    padding-top: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .testi-footer {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .testi-avatar {
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-display);
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: white;
+    flex-shrink: 0;
+  }
+  .testi-avatar--gold   { background: linear-gradient(135deg, var(--gold-primary), var(--gold-light)); color: #070C1E; }
+  .testi-avatar--purple { background: linear-gradient(135deg, var(--purple-glow), var(--purple-light)); }
+
+  .testi-name {
+    font-family: var(--font-display);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+
+  .testi-role {
+    font-size: 0.8rem;
+    color: var(--text-dim);
+    margin-top: 0.1rem;
+  }
+
+  /* ── RESPONSIVE ─────────────────────────────────────────────────────────────*/
+  @media (max-width: 1100px) {
+    .cases-grid { grid-template-columns: repeat(2, 1fr); }
+    .process-grid { grid-template-columns: repeat(2, 1fr); }
+    .process-step:nth-child(2) { border-right: none; }
+    .process-step:nth-child(3) { border-right: 1px solid var(--border-subtle); border-top: 1px solid var(--border-subtle); }
+    .process-step:nth-child(4) { border-right: none; border-top: 1px solid var(--border-subtle); }
+  }
+
+  @media (max-width: 768px) {
+    .macro-stats { padding: 1.5rem; gap: 0; }
+    .macro-divider { margin: 0 1rem; }
+    .testimonials-grid { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 640px) {
+    .cases-grid { grid-template-columns: 1fr; }
+    .process-grid { grid-template-columns: 1fr; }
+    .process-step { border-right: none; border-bottom: 1px solid var(--border-subtle); }
+    .process-step:last-child { border-bottom: none; }
+    .process-step:nth-child(3),
+    .process-step:nth-child(4) { border-right: none; }
+    .macro-stats { flex-direction: column; gap: 1.5rem; padding: 1.75rem 1.5rem; }
+    .macro-divider { width: 60px; height: 1px; margin: 0 auto; }
+  }
+</style>

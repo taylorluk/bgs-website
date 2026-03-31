@@ -1,0 +1,500 @@
+---
+const projects = [
+  {
+    brand: 'Luxe Mode Dubai',
+    category: 'Fashion & Retail',
+    region: 'UAE & KSA',
+    service: 'Paid Ads · Branding · Content',
+    result: '420% ROAS',
+    resultSub: '3.2× revenue in 6 months',
+    image: 'https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=700&h=900&q=80&auto=format&fit=crop',
+    accent: 'gold',
+  },
+  {
+    brand: 'Crest Developments',
+    category: 'Real Estate',
+    region: 'Dubai & MENA',
+    service: 'Lead Gen · Funnels · CRM',
+    result: '2,400+ Leads',
+    resultSub: 'Across 12 countries in 90 days',
+    image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=700&h=900&q=80&auto=format&fit=crop',
+    accent: 'purple',
+  },
+  {
+    brand: 'NovaTech SaaS',
+    category: 'B2B Software',
+    region: 'Global',
+    service: 'Performance Ads · SEO · Automation',
+    result: '8× Lead Volume',
+    resultSub: '60% reduction in CAC',
+    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=700&h=900&q=80&auto=format&fit=crop',
+    accent: 'blue',
+  },
+  {
+    brand: 'Ember & Oak',
+    category: 'F&B / Hospitality',
+    region: 'Dubai, UAE',
+    service: 'Social Media · Influencer · Brand',
+    result: '180% Bookings',
+    resultSub: 'Sold out 3 months on launch',
+    image: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=700&h=900&q=80&auto=format&fit=crop',
+    accent: 'amber',
+  },
+  {
+    brand: 'Vela Wellness',
+    category: 'Health & Wellness',
+    region: 'UAE & UK',
+    service: 'Full-Service · AI Content · Funnels',
+    result: '5× Online Revenue',
+    resultSub: '22K new customers in year one',
+    image: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=700&h=900&q=80&auto=format&fit=crop',
+    accent: 'pink',
+  },
+  {
+    brand: 'Solaris Hotels',
+    category: 'Luxury Hospitality',
+    region: 'Dubai & Maldives',
+    service: 'Paid Media · Creative · Web',
+    result: '92% Occupancy',
+    resultSub: '340% increase in direct bookings',
+    image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=700&h=900&q=80&auto=format&fit=crop',
+    accent: 'gold',
+  },
+  {
+    brand: 'Atlas Commerce',
+    category: 'E-Commerce',
+    region: 'UK & Europe',
+    service: 'Meta Ads · Google · Email',
+    result: '$2.1M Revenue',
+    resultSub: 'Generated in first 12 months',
+    image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=700&h=900&q=80&auto=format&fit=crop',
+    accent: 'purple',
+  },
+  {
+    brand: 'Meridian Capital',
+    category: 'Financial Services',
+    region: 'MENA & Europe',
+    service: 'Brand · LinkedIn · Content',
+    result: '3× AUM Growth',
+    resultSub: 'Brand authority built in 8 months',
+    image: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=700&h=900&q=80&auto=format&fit=crop',
+    accent: 'blue',
+  },
+];
+
+const accentColors: Record<string, string> = {
+  gold:   'rgba(201,168,76,',
+  purple: 'rgba(123,63,160,',
+  blue:   'rgba(30,77,183,',
+  amber:  'rgba(212,112,74,',
+  pink:   'rgba(196,64,128,',
+};
+---
+
+<section class="section showcase-section" id="work">
+  <!-- Header -->
+  <div class="container showcase-header reveal">
+    <div class="header-left">
+      <p class="section-label">Our Work</p>
+      <h2 class="showcase-title">
+        Brands We've Helped<br />
+        <span class="text-gold-gradient">Scale & Dominate</span>
+      </h2>
+    </div>
+    <div class="header-right">
+      <p class="showcase-sub">
+        Real brands. Real results. Scroll through a selection of
+        campaigns we've built, scaled, and optimised across industries and markets.
+      </p>
+      <a href="/work" class="btn-ghost showcase-cta">
+        View All Case Studies
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- Scroll hint -->
+  <div class="container scroll-hint reveal">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    <span>Drag to explore</span>
+  </div>
+
+  <!-- Horizontal scroll track -->
+  <div class="showcase-track-wrap">
+    <div class="showcase-track" id="showcase-track">
+      {/* Render cards twice for seamless infinite loop */}
+      {[...projects, ...projects].map((p, i) => (
+        <div class={`showcase-card showcase-card--${p.accent}`} aria-hidden={i >= projects.length ? 'true' : 'false'}>
+          <!-- Image -->
+          <div class="sc-image-wrap">
+            <img
+              src={p.image}
+              alt={p.brand}
+              class="sc-image"
+              loading="lazy"
+              decoding="async"
+            />
+            <!-- Gradient overlay -->
+            <div class="sc-overlay"></div>
+
+            <!-- Top badge -->
+            <div class="sc-top">
+              <span class="sc-category">{p.category}</span>
+              <span class="sc-region">{p.region}</span>
+            </div>
+
+            <!-- Bottom content -->
+            <div class="sc-bottom">
+              <div class="sc-result-block">
+                <span class={`sc-result sc-result--${p.accent}`}>{p.result}</span>
+                <span class="sc-result-sub">{p.resultSub}</span>
+              </div>
+              <h3 class="sc-brand">{p.brand}</h3>
+              <p class="sc-service">{p.service}</p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Fade edges -->
+    <div class="fade-left"  aria-hidden="true"></div>
+    <div class="fade-right" aria-hidden="true"></div>
+  </div>
+</section>
+
+<style>
+  .showcase-section {
+    overflow: hidden;
+  }
+
+  /* ── Header ──────────────────────────────────────────────── */
+  .showcase-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: flex-end;
+    margin-bottom: 1.5rem;
+  }
+
+  .section-label {
+    font-family: var(--font-display);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold-primary);
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  .showcase-title {
+    font-size: clamp(1.9rem, 3.5vw, 3rem);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+    color: var(--text-primary);
+  }
+
+  .showcase-sub {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.75;
+    margin-bottom: 1.5rem;
+    max-width: 44ch;
+  }
+
+  .showcase-cta {
+    display: inline-flex;
+  }
+
+  /* Scroll hint */
+  .scroll-hint {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: var(--font-display);
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--text-dim);
+    letter-spacing: 0.05em;
+    margin-bottom: 2rem;
+  }
+
+  /* ── Track ───────────────────────────────────────────────── */
+  .showcase-track-wrap {
+    position: relative;
+    width: 100%;
+  }
+
+  .showcase-track {
+    display: flex;
+    gap: 1.25rem;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    padding: 0.5rem 0 2rem;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    cursor: grab;
+    user-select: none;
+    /* No padding-left so the seamless loop works correctly */
+  }
+
+  .showcase-track::-webkit-scrollbar { display: none; }
+  .showcase-track.dragging { cursor: grabbing; }
+
+  /* Fade edges */
+  .fade-left, .fade-right {
+    position: absolute;
+    top: 0; bottom: 0;
+    width: 80px;
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  .fade-left {
+    left: 0;
+    background: linear-gradient(to right, var(--bg-void), transparent);
+  }
+
+  .fade-right {
+    right: 0;
+    background: linear-gradient(to left, var(--bg-void), transparent);
+  }
+
+  /* ── Card ────────────────────────────────────────────────── */
+  .showcase-card {
+    flex-shrink: 0;
+    width: 300px;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid var(--border-subtle);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .showcase-card:hover {
+    transform: translateY(-6px) scale(1.01);
+  }
+
+  .showcase-card--gold:hover  { border-color: rgba(201,168,76,0.35);  box-shadow: 0 24px 64px rgba(201,168,76,0.1); }
+  .showcase-card--purple:hover { border-color: rgba(123,63,160,0.35); box-shadow: 0 24px 64px rgba(123,63,160,0.1); }
+  .showcase-card--blue:hover   { border-color: rgba(30,77,183,0.35);  box-shadow: 0 24px 64px rgba(30,77,183,0.1); }
+  .showcase-card--amber:hover  { border-color: rgba(212,112,74,0.35); box-shadow: 0 24px 64px rgba(212,112,74,0.1); }
+  .showcase-card--pink:hover   { border-color: rgba(196,64,128,0.35); box-shadow: 0 24px 64px rgba(196,64,128,0.1); }
+
+  /* Image wrap */
+  .sc-image-wrap {
+    position: relative;
+    height: 440px;
+  }
+
+  .sc-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+  }
+
+  .showcase-card:hover .sc-image {
+    transform: scale(1.05);
+  }
+
+  /* Overlay — stronger gradient at bottom for text legibility */
+  .sc-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(7,12,30,0.15) 0%,
+      rgba(7,12,30,0.1)  30%,
+      rgba(7,12,30,0.75) 65%,
+      rgba(7,12,30,0.97) 100%
+    );
+  }
+
+  /* Top badges */
+  .sc-top {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    right: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+
+  .sc-category {
+    font-family: var(--font-display);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-primary);
+    background: rgba(7,12,30,0.55);
+    border: 1px solid rgba(255,255,255,0.12);
+    padding: 0.25rem 0.65rem;
+    border-radius: 6px;
+    backdrop-filter: blur(8px);
+  }
+
+  .sc-region {
+    font-family: var(--font-display);
+    font-size: 0.65rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    background: rgba(7,12,30,0.55);
+    border: 1px solid rgba(255,255,255,0.08);
+    padding: 0.25rem 0.65rem;
+    border-radius: 6px;
+    backdrop-filter: blur(8px);
+    white-space: nowrap;
+  }
+
+  /* Bottom content */
+  .sc-bottom {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    padding: 1.5rem;
+  }
+
+  .sc-result-block {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .sc-result {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  .sc-result--gold   { color: var(--gold-primary); }
+  .sc-result--purple { color: var(--purple-light); }
+  .sc-result--blue   { color: #60a5fa; }
+  .sc-result--amber  { color: #fb923c; }
+  .sc-result--pink   { color: #f472b6; }
+
+  .sc-result-sub {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    font-family: var(--font-display);
+    font-weight: 500;
+    line-height: 1.3;
+  }
+
+  .sc-brand {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: -0.01em;
+    margin-bottom: 0.3rem;
+  }
+
+  .sc-service {
+    font-size: 0.72rem;
+    color: var(--text-dim);
+    font-family: var(--font-display);
+    font-weight: 500;
+  }
+
+  /* ── Responsive ──────────────────────────────────────────── */
+  @media (max-width: 768px) {
+    .showcase-header {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .showcase-card { width: 260px; }
+    .sc-image-wrap { height: 380px; }
+
+    .showcase-track {
+      padding-left: 1.5rem;
+    }
+  }
+</style>
+
+<script>
+  const track = document.getElementById('showcase-track') as HTMLElement | null;
+  if (!track) throw new Error('No track');
+
+  const SPEED = 0.6; // px per frame
+  let paused  = false;
+  let isDown  = false;
+  let startX  = 0;
+  let startScroll = 0;
+  let rafId: number;
+
+  // Auto-scroll: when we reach the halfway point (one full set of cards),
+  // jump back to 0 so the loop is seamless.
+  function autoScroll() {
+    if (!paused && !isDown) {
+      track.scrollLeft += SPEED;
+      // Seamless loop: halfway = one copy of the card list
+      const half = track.scrollWidth / 2;
+      if (track.scrollLeft >= half) {
+        track.scrollLeft -= half;
+      }
+    }
+    rafId = requestAnimationFrame(autoScroll);
+  }
+
+  rafId = requestAnimationFrame(autoScroll);
+
+  // Pause on hover
+  track.addEventListener('mouseenter', () => { paused = true; });
+  track.addEventListener('mouseleave', () => {
+    paused = false;
+    isDown = false;
+    track.classList.remove('dragging');
+  });
+
+  // Drag to scroll manually
+  track.addEventListener('mousedown', e => {
+    isDown = true;
+    paused = true;
+    track.classList.add('dragging');
+    startX     = e.pageX - track.offsetLeft;
+    startScroll = track.scrollLeft;
+  });
+
+  track.addEventListener('mouseup', () => {
+    isDown = false;
+    // Resume auto-scroll after brief delay so it doesn't jump
+    setTimeout(() => { if (!track.matches(':hover')) paused = false; }, 800);
+    track.classList.remove('dragging');
+  });
+
+  track.addEventListener('mousemove', e => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x    = e.pageX - track.offsetLeft;
+    const walk = (x - startX) * 1.5;
+    track.scrollLeft = startScroll - walk;
+  });
+
+  // Touch support
+  let touchStartX = 0;
+  let touchStartScroll = 0;
+
+  track.addEventListener('touchstart', e => {
+    paused = true;
+    touchStartX = e.touches[0].pageX;
+    touchStartScroll = track.scrollLeft;
+  }, { passive: true });
+
+  track.addEventListener('touchmove', e => {
+    const dx = touchStartX - e.touches[0].pageX;
+    track.scrollLeft = touchStartScroll + dx;
+  }, { passive: true });
+
+  track.addEventListener('touchend', () => {
+    setTimeout(() => { paused = false; }, 1000);
+  });
+</script>

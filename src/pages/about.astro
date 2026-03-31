@@ -1,0 +1,1323 @@
+---
+import Layout from '../layouts/Layout.astro';
+import CTA from '../components/CTA.astro';
+
+const values = [
+  {
+    num: '01',
+    title: 'Results First. Always.',
+    body: "We measure success in revenue, market share, and ROAS — not impressions or vanity metrics. Every decision we make is traced back to one question: does this grow your business?",
+    accent: 'gold',
+  },
+  {
+    num: '02',
+    title: 'Speed Without Compromise.',
+    body: "Great work and fast work are not mutually exclusive. We move at startup velocity with enterprise-level precision. You'll see meaningful results within 30 days — not 30 weeks.",
+    accent: 'purple',
+  },
+  {
+    num: '03',
+    title: 'Radical Ownership.',
+    body: "Your goals are our goals. We don't clock in and clock out. We think about your brand at 11pm because we genuinely care about the outcome — as if it's our own money on the line.",
+    accent: 'blue',
+  },
+  {
+    num: '04',
+    title: 'Transparent Thinking.',
+    body: "No black boxes. No agency jargon. We tell you exactly what we're doing, why we're doing it, and what it's achieving. Complete visibility, always — because trust is built in the details.",
+    accent: 'gold',
+  },
+  {
+    num: '05',
+    title: 'AI-Native by Design.',
+    body: "AI isn't a feature we bolted on — it's embedded in how we think. Every campaign, every workflow, every creative output is amplified by AI that learns and compounds over time.",
+    accent: 'purple',
+  },
+  {
+    num: '06',
+    title: 'Global by Default.',
+    body: "We've scaled brands across 15+ countries from our Dubai base. Our thinking is never constrained by geography — your market is wherever your customers are.",
+    accent: 'blue',
+  },
+];
+
+const stats = [
+  { val: 50, suffix: '+', label: 'Brands Scaled' },
+  { val: 15, suffix: '+', label: 'Countries Served' },
+  { val: 300, suffix: '%', label: 'Avg ROAS Increase' },
+  { val: 10, suffix: 'M+', prefix: '$', label: 'Ad Spend Managed' },
+  { val: 4.9, suffix: '★', label: 'Client Rating' },
+  { val: 48, suffix: 'hrs', label: 'Avg Onboarding Time' },
+];
+
+const process = [
+  {
+    step: '01',
+    title: 'Deep Discovery',
+    body: 'In the first 48 hours we go deep on your brand, audience, competitors, and current performance. We find the gaps others miss.',
+    icon: '🔍',
+  },
+  {
+    step: '02',
+    title: 'Growth Blueprint',
+    body: "We map your exact path from where you are to where you want to go — channels, budgets, timelines, and KPIs. No guesswork.",
+    icon: '🗺️',
+  },
+  {
+    step: '03',
+    title: 'Rapid Launch',
+    body: 'Campaigns, systems, and creative go live fast. Expect full execution within days, not the 6-week onboarding nightmare other agencies give you.',
+    icon: '🚀',
+  },
+  {
+    step: '04',
+    title: 'Compound & Scale',
+    body: 'We optimise relentlessly. Double down on what works. Unlock new channels. Your results compound month over month — by design.',
+    icon: '📈',
+  },
+];
+
+const team = [
+  {
+    name: 'Luke Taylor',
+    role: 'Founder & CEO',
+    bio: 'Serial entrepreneur and marketing strategist with a decade of experience scaling brands across the Middle East, Europe, and beyond.',
+    image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&q=80&auto=format&fit=crop&fit=faces',
+    accent: 'gold',
+    linkedin: 'https://www.linkedin.com/company/bgs-technologies',
+  },
+  {
+    name: 'Aisha Rahman',
+    role: 'Head of Performance Marketing',
+    bio: 'Former Google and Meta partner with 8 years optimising paid campaigns at scale. She has managed over $5M in ad spend across MENA and Europe.',
+    image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&h=400&q=80&auto=format&fit=crop&fit=faces',
+    accent: 'purple',
+    linkedin: 'https://www.linkedin.com/company/bgs-technologies',
+  },
+  {
+    name: 'Marco Bellini',
+    role: 'Creative Director',
+    bio: 'Award-winning designer and brand strategist who has built visual identities for luxury, hospitality, and technology brands across 12 countries.',
+    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&q=80&auto=format&fit=crop&fit=faces',
+    accent: 'blue',
+    linkedin: 'https://www.linkedin.com/company/bgs-technologies',
+  },
+  {
+    name: 'Yasmine Al-Farsi',
+    role: 'Head of AI & Automation',
+    bio: 'AI engineer and automation architect who builds the intelligent systems that give BGS clients an unfair advantage — from chatbots to predictive targeting.',
+    image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&q=80&auto=format&fit=crop&fit=faces',
+    accent: 'gold',
+    linkedin: 'https://www.linkedin.com/company/bgs-technologies',
+  },
+];
+
+const accentMap: Record<string, { text: string; bg: string; border: string }> = {
+  gold:   { text: 'var(--gold-primary)',  bg: 'rgba(201,168,76,0.08)',  border: 'rgba(201,168,76,0.2)' },
+  purple: { text: '#a78bfa',              bg: 'rgba(123,63,160,0.1)',   border: 'rgba(123,63,160,0.25)' },
+  blue:   { text: '#93c5fd',              bg: 'rgba(30,77,183,0.08)',   border: 'rgba(30,77,183,0.2)' },
+};
+---
+
+<Layout
+  title="About BGS Technologies — Dubai's Premier Growth Agency"
+  description="Learn how BGS Technologies was built to make elite marketing accessible to every ambitious brand. Our story, our values, and the team behind your results."
+>
+  <!-- ══════════════════════════════════════════════════════════
+       HERO
+  ══════════════════════════════════════════════════════════ -->
+  <section class="about-hero">
+    <!-- Background elements -->
+    <div class="hero-bg" aria-hidden="true">
+      <div class="hero-orb hero-orb--1"></div>
+      <div class="hero-orb hero-orb--2"></div>
+      <div class="hero-grid"></div>
+    </div>
+
+    <div class="container hero-inner">
+      <!-- Left: copy -->
+      <div class="hero-copy">
+        <div class="hero-eyebrow reveal">
+          <span class="eyebrow-line"></span>
+          <span>Our Story</span>
+        </div>
+
+        <h1 class="hero-headline reveal">
+          We Build Brands<br />
+          <span class="text-gold-gradient">the Market Can't<br />Ignore.</span>
+        </h1>
+
+        <p class="hero-sub reveal">
+          Born in Dubai. Built for the world. Obsessed with your results.
+          BGS Technologies is a full-service growth agency that combines
+          elite strategy, AI-powered execution, and creative that actually converts.
+        </p>
+
+        <div class="hero-badges reveal">
+          <span class="hero-badge">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            UAE Licensed & Regulated
+          </span>
+          <span class="hero-badge">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            15+ Countries Served
+          </span>
+          <span class="hero-badge">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            4.9★ Client Rated
+          </span>
+        </div>
+
+        <div class="hero-actions reveal">
+          <a href="/contact" class="btn-gold">
+            Book a Free Strategy Call
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#our-story" class="btn-ghost">
+            Our Story
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: image -->
+      <div class="hero-visual reveal-right">
+        <div class="hero-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=900&h=700&q=85&auto=format&fit=crop"
+            alt="Dubai skyline — BGS Technologies HQ"
+            class="hero-img"
+            loading="eager"
+            decoding="async"
+          />
+          <div class="hero-img-overlay"></div>
+
+          <!-- Floating stat cards -->
+          <div class="float-card float-card--1">
+            <span class="fc-val">$10M+</span>
+            <span class="fc-label">Ad Spend Managed</span>
+          </div>
+          <div class="float-card float-card--2">
+            <span class="fc-val">300%</span>
+            <span class="fc-label">Avg ROAS Increase</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════
+       MANIFESTO STRIP
+  ══════════════════════════════════════════════════════════ -->
+  <section class="manifesto-section">
+    <div class="manifesto-inner">
+      <p class="manifesto-text reveal">
+        "Every ambitious brand deserves world-class marketing.
+        The kind that drives real revenue, builds lasting equity,
+        and compounds over time.<br />
+        <em>That's why BGS Technologies exists.</em>"
+      </p>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════
+       THE STORY
+  ══════════════════════════════════════════════════════════ -->
+  <section class="section story-section" id="our-story">
+    <div class="container story-grid">
+      <!-- Image side -->
+      <div class="story-img-col reveal-left">
+        <div class="story-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=800&h=700&q=80&auto=format&fit=crop"
+            alt="BGS Technologies team at work"
+            class="story-img"
+            loading="lazy"
+            decoding="async"
+          />
+          <div class="story-img-accent" aria-hidden="true"></div>
+          <!-- Dubai location badge -->
+          <div class="story-location">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s-8-5.7-8-12a8 8 0 1 1 16 0c0 6.3-8 12-8 12z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            Dubai, UAE
+          </div>
+        </div>
+      </div>
+
+      <!-- Copy side -->
+      <div class="story-copy reveal">
+        <p class="story-eyebrow">How It Started</p>
+        <h2 class="story-title">
+          A City That Doesn't<br />
+          <span class="text-gold-gradient">Accept Second Place.</span>
+        </h2>
+
+        <div class="story-body">
+          <p>
+            BGS Technologies was founded in Dubai — a city built on audacity. A city where
+            impossible becomes normal before breakfast. That energy didn't just influence us.
+            It defined us.
+          </p>
+          <p>
+            We saw too many great businesses fail not because their product was wrong, but
+            because their marketing was — average agencies, recycled strategies, zero accountability.
+            We believed there was a better way: an agency that thinks like an investor, moves
+            like a startup, and delivers like the world-class teams that only the Fortune 500
+            could previously afford.
+          </p>
+          <p>
+            So we built it. BGS Technologies is that agency — combining deep performance
+            expertise, proprietary AI tools, and creative that stops people mid-scroll.
+            Today we operate across 15+ countries, managing campaigns for brands that want
+            to dominate their category — not just participate in it.
+          </p>
+        </div>
+
+        <div class="story-milestones">
+          <div class="milestone">
+            <span class="milestone-year">2020</span>
+            <span class="milestone-event">Founded in Dubai</span>
+          </div>
+          <div class="milestone">
+            <span class="milestone-year">2021</span>
+            <span class="milestone-event">Expanded to MENA & Europe</span>
+          </div>
+          <div class="milestone">
+            <span class="milestone-year">2023</span>
+            <span class="milestone-event">AI capabilities launched</span>
+          </div>
+          <div class="milestone">
+            <span class="milestone-year">2024</span>
+            <span class="milestone-event">50+ brands, 15+ countries</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════
+       STATS
+  ══════════════════════════════════════════════════════════ -->
+  <section class="stats-bar-section">
+    <div class="container">
+      <div class="stats-bar stagger-children">
+        {stats.map((s) => (
+          <div class="stat-item">
+            <span
+              class="stat-val count-up"
+              data-target={s.val}
+              data-suffix={s.suffix}
+              data-prefix={s.prefix ?? ''}
+            >
+              {s.prefix ?? ''}{s.val}{s.suffix}
+            </span>
+            <span class="stat-label">{s.label}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════
+       VALUES
+  ══════════════════════════════════════════════════════════ -->
+  <section class="section values-section" id="values">
+    <div class="container">
+      <div class="values-header reveal">
+        <p class="section-eyebrow">What We Stand For</p>
+        <h2 class="values-title">
+          Six Principles That Drive<br />
+          <span class="text-aurora-gradient">Everything We Do</span>
+        </h2>
+      </div>
+
+      <div class="values-grid stagger-children">
+        {values.map((v) => (
+          <div class={`value-card value-card--${v.accent}`}>
+            <div class="value-num">{v.num}</div>
+            <h3 class="value-title">{v.title}</h3>
+            <p class="value-body">{v.body}</p>
+            <div class="value-line" aria-hidden="true"></div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════
+       PROCESS
+  ══════════════════════════════════════════════════════════ -->
+  <section class="section process-section" id="process">
+    <div class="container">
+      <div class="process-header reveal">
+        <p class="section-eyebrow">How We Work</p>
+        <h2 class="process-title">
+          From Day One to<br />
+          <span class="text-gold-gradient">Market Dominance.</span>
+        </h2>
+        <p class="process-sub">
+          No 6-week onboarding. No strategy decks that gather dust.
+          Just clear, fast, accountable execution from the moment you say yes.
+        </p>
+      </div>
+
+      <div class="process-steps stagger-children">
+        {process.map((p, i) => (
+          <div class="process-step">
+            <div class="step-connector" aria-hidden="true">
+              <div class="step-icon">{p.icon}</div>
+              {i < process.length - 1 && <div class="step-line"></div>}
+            </div>
+            <div class="step-body">
+              <span class="step-num">{p.step}</span>
+              <h3 class="step-title">{p.title}</h3>
+              <p class="step-desc">{p.body}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════
+       GLOBAL REACH
+  ══════════════════════════════════════════════════════════ -->
+  <section class="section global-section" id="global">
+    <div class="container global-inner">
+      <div class="global-copy reveal">
+        <p class="section-eyebrow">Global Reach</p>
+        <h2 class="global-title">
+          Dubai is Our Home.<br />
+          <span class="text-gold-gradient">The World is Our Market.</span>
+        </h2>
+        <p class="global-body">
+          We work with brands across the UAE, GCC, UK, Europe, North America,
+          Africa, and Southeast Asia. Geography has never limited what we can
+          build for you — our strategies are global from day one.
+        </p>
+        <div class="global-regions">
+          {['UAE & GCC', 'United Kingdom', 'Europe', 'North America', 'Africa', 'Southeast Asia'].map(r => (
+            <span class="global-region">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="var(--gold-primary)" stroke="none"><circle cx="12" cy="12" r="10"/></svg>
+              {r}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      <div class="global-visual reveal-right">
+        <div class="globe-card">
+          <div class="globe-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=700&h=500&q=80&auto=format&fit=crop"
+              alt="Global business operations"
+              class="globe-img"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="globe-overlay"></div>
+          </div>
+          <div class="globe-stats">
+            <div class="globe-stat">
+              <span class="gs-val">15+</span>
+              <span class="gs-label">Countries</span>
+            </div>
+            <div class="globe-stat-divider"></div>
+            <div class="globe-stat">
+              <span class="gs-val">50+</span>
+              <span class="gs-label">Brands</span>
+            </div>
+            <div class="globe-stat-divider"></div>
+            <div class="globe-stat">
+              <span class="gs-val">3</span>
+              <span class="gs-label">Continents</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <CTA />
+</Layout>
+
+<style>
+  /* ══ HERO ═══════════════════════════════════════════════════ */
+  .about-hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 72px;
+    overflow: hidden;
+  }
+
+  .hero-bg { position: absolute; inset: 0; pointer-events: none; z-index: 0; }
+  .hero-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+  }
+  .hero-orb--1 {
+    width: 700px; height: 700px;
+    top: -200px; left: -200px;
+    background: radial-gradient(circle, rgba(201,168,76,0.07) 0%, transparent 70%);
+  }
+  .hero-orb--2 {
+    width: 600px; height: 600px;
+    bottom: -100px; right: -100px;
+    background: radial-gradient(circle, rgba(123,63,160,0.08) 0%, transparent 70%);
+  }
+  .hero-grid {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(201,168,76,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(201,168,76,0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(ellipse 70% 70% at 20% 50%, black 30%, transparent 100%);
+  }
+
+  .hero-inner {
+    position: relative; z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .hero-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-family: var(--font-display);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold-primary);
+    margin-bottom: 1.5rem;
+  }
+  .eyebrow-line {
+    display: block;
+    width: 32px; height: 1px;
+    background: var(--gold-primary);
+    opacity: 0.6;
+  }
+
+  .hero-headline {
+    font-size: clamp(2.5rem, 4.5vw, 4rem);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-sub {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    max-width: 46ch;
+    margin-bottom: 1.75rem;
+  }
+
+  .hero-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-bottom: 2rem;
+  }
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: var(--font-display);
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--gold-primary);
+    background: rgba(201,168,76,0.07);
+    border: 1px solid rgba(201,168,76,0.2);
+    border-radius: 100px;
+    padding: 0.3rem 0.85rem;
+  }
+  .hero-badge svg { flex-shrink: 0; }
+
+  .hero-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    font-family: var(--font-display);
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    text-decoration: none;
+    transition: color 0.2s, border-color 0.2s, gap 0.2s;
+  }
+  .btn-ghost:hover { color: var(--text-primary); border-color: rgba(255,255,255,0.25); gap: 0.75rem; }
+
+  /* Hero image */
+  .hero-visual { position: relative; }
+
+  .hero-img-wrap {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 40px 120px rgba(0,0,0,0.5);
+  }
+
+  .hero-img {
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .hero-img-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(135deg, rgba(7,12,30,0.3) 0%, rgba(7,12,30,0.1) 100%);
+  }
+
+  /* Floating stat cards */
+  .float-card {
+    position: absolute;
+    background: rgba(7,12,30,0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(201,168,76,0.25);
+    border-radius: 12px;
+    padding: 0.85rem 1.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    animation: floatBob 4s ease-in-out infinite alternate;
+  }
+  .float-card--1 { bottom: 2.5rem; left: -1.5rem; animation-delay: 0s; }
+  .float-card--2 { top: 2rem; right: -1.5rem; animation-delay: -2s; }
+
+  @keyframes floatBob {
+    from { transform: translateY(0px); }
+    to   { transform: translateY(-10px); }
+  }
+
+  .fc-val {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    background: linear-gradient(135deg, var(--gold-light), var(--gold-primary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .fc-label {
+    font-size: 0.68rem;
+    color: var(--text-dim);
+    font-family: var(--font-display);
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+  }
+
+  /* ══ MANIFESTO ═══════════════════════════════════════════════ */
+  .manifesto-section {
+    background: linear-gradient(135deg, rgba(201,168,76,0.06) 0%, rgba(123,63,160,0.06) 100%);
+    border-top: 1px solid rgba(201,168,76,0.1);
+    border-bottom: 1px solid rgba(201,168,76,0.1);
+    padding: 5rem 0;
+  }
+
+  .manifesto-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    text-align: center;
+  }
+
+  .manifesto-text {
+    font-family: var(--font-display);
+    font-size: clamp(1.3rem, 2.5vw, 2rem);
+    font-weight: 500;
+    line-height: 1.6;
+    letter-spacing: -0.01em;
+    color: var(--text-primary);
+    font-style: italic;
+    opacity: 0.9;
+  }
+
+  .manifesto-text em {
+    font-style: normal;
+    background: linear-gradient(135deg, var(--gold-light), var(--gold-primary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+  }
+
+  /* ══ STORY ═══════════════════════════════════════════════════ */
+  .story-section { background: var(--bg-void); }
+
+  .story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+  }
+
+  .story-img-col { position: relative; }
+  .story-img-wrap {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.07);
+  }
+  .story-img {
+    width: 100%;
+    height: 560px;
+    object-fit: cover;
+    display: block;
+  }
+  .story-img-accent {
+    position: absolute; inset: 0;
+    background: linear-gradient(to top, rgba(7,12,30,0.6) 0%, transparent 50%);
+  }
+  .story-location {
+    position: absolute;
+    bottom: 1.5rem; left: 1.5rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(7,12,30,0.8);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(201,168,76,0.25);
+    border-radius: 100px;
+    padding: 0.4rem 0.9rem;
+    font-family: var(--font-display);
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--gold-light);
+  }
+
+  .story-eyebrow {
+    font-family: var(--font-display);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold-primary);
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  .story-title {
+    font-size: clamp(2rem, 3vw, 2.8rem);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+    color: var(--text-primary);
+    margin-bottom: 2rem;
+  }
+
+  .story-body {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    margin-bottom: 2.5rem;
+  }
+  .story-body p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: var(--text-muted);
+  }
+
+  /* Milestones */
+  .story-milestones {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border-left: 1px solid rgba(201,168,76,0.2);
+    padding-left: 1.5rem;
+  }
+
+  .milestone {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    padding: 0.6rem 0;
+    position: relative;
+  }
+
+  .milestone::before {
+    content: '';
+    position: absolute;
+    left: -1.6rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--gold-primary);
+    border: 2px solid var(--bg-void);
+    box-shadow: 0 0 0 2px rgba(201,168,76,0.3);
+  }
+
+  .milestone-year {
+    font-family: var(--font-display);
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--gold-primary);
+    letter-spacing: 0.04em;
+    min-width: 36px;
+  }
+
+  .milestone-event {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-family: var(--font-display);
+  }
+
+  /* ══ STATS BAR ═══════════════════════════════════════════════ */
+  .stats-bar-section {
+    background: rgba(13,27,62,0.5);
+    border-top: 1px solid rgba(255,255,255,0.05);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    padding: 4rem 0;
+  }
+
+  .stats-bar {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0;
+  }
+
+  .stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 1.5rem 1rem;
+    border-right: 1px solid rgba(255,255,255,0.05);
+    text-align: center;
+  }
+  .stat-item:last-child { border-right: none; }
+
+  .stat-val {
+    font-family: var(--font-display);
+    font-size: 2.2rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    background: linear-gradient(135deg, var(--gold-light), var(--gold-primary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .stat-label {
+    font-size: 0.72rem;
+    color: var(--text-dim);
+    font-family: var(--font-display);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  /* ══ VALUES ══════════════════════════════════════════════════ */
+  .values-section { background: var(--bg-void); }
+
+  .section-eyebrow {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold-primary);
+    margin-bottom: 1rem;
+  }
+
+  .values-header {
+    text-align: center;
+    max-width: 52ch;
+    margin: 0 auto 4rem;
+  }
+
+  .values-title {
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+    color: var(--text-primary);
+  }
+
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.05);
+  }
+
+  .value-card {
+    background: var(--bg-void);
+    padding: 2.5rem 2rem;
+    position: relative;
+    transition: background 0.3s;
+    overflow: hidden;
+  }
+
+  .value-card:hover { background: rgba(13,27,62,0.6); }
+
+  .value-num {
+    font-family: var(--font-display);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    margin-bottom: 1.25rem;
+    display: block;
+  }
+
+  .value-card--gold   .value-num { color: var(--gold-primary); }
+  .value-card--purple .value-num { color: #a78bfa; }
+  .value-card--blue   .value-num { color: #93c5fd; }
+
+  .value-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    color: var(--text-primary);
+    margin-bottom: 0.85rem;
+    line-height: 1.3;
+  }
+
+  .value-body {
+    font-size: 0.85rem;
+    line-height: 1.75;
+    color: var(--text-muted);
+  }
+
+  .value-line {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+  }
+
+  .value-card--gold   .value-line { background: linear-gradient(to right, var(--gold-primary), transparent); }
+  .value-card--purple .value-line { background: linear-gradient(to right, #a78bfa, transparent); }
+  .value-card--blue   .value-line { background: linear-gradient(to right, #93c5fd, transparent); }
+  .value-card:hover .value-line { transform: scaleX(1); }
+
+  /* ══ PROCESS ═════════════════════════════════════════════════ */
+  .process-section {
+    background: linear-gradient(180deg, var(--bg-void) 0%, rgba(13,27,62,0.3) 50%, var(--bg-void) 100%);
+  }
+
+  .process-header {
+    text-align: center;
+    max-width: 52ch;
+    margin: 0 auto 5rem;
+  }
+
+  .process-title {
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+  }
+
+  .process-sub {
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+
+  .process-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    position: relative;
+  }
+
+  .process-step {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 0 2rem;
+    position: relative;
+  }
+
+  .process-step:first-child { padding-left: 0; }
+  .process-step:last-child  { padding-right: 0; }
+
+  .step-connector {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  .step-icon {
+    width: 56px; height: 56px;
+    border-radius: 14px;
+    background: rgba(13,27,62,0.8);
+    border: 1px solid rgba(201,168,76,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+    z-index: 1;
+    position: relative;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+
+  .process-step:hover .step-icon {
+    border-color: rgba(201,168,76,0.5);
+    box-shadow: 0 0 20px rgba(201,168,76,0.1);
+  }
+
+  .step-line {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right, rgba(201,168,76,0.3), rgba(201,168,76,0.05));
+    margin-left: 1rem;
+  }
+
+  .step-num {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    color: var(--gold-primary);
+    margin-bottom: 0.5rem;
+  }
+
+  .step-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    color: var(--text-primary);
+    margin-bottom: 0.65rem;
+    line-height: 1.3;
+  }
+
+  .step-desc {
+    font-size: 0.85rem;
+    line-height: 1.75;
+    color: var(--text-muted);
+  }
+
+  /* ══ TEAM ════════════════════════════════════════════════════ */
+  .team-section { background: var(--bg-void); }
+
+  .team-header {
+    text-align: center;
+    max-width: 52ch;
+    margin: 0 auto 4rem;
+  }
+
+  .team-title {
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+  }
+
+  .team-sub {
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+    margin-bottom: 3rem;
+  }
+
+  .team-card {
+    background: rgba(13,27,62,0.5);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+  }
+  .team-card:hover { transform: translateY(-5px); }
+
+  .team-card--gold:hover   { border-color: rgba(201,168,76,0.3);  box-shadow: 0 20px 50px rgba(201,168,76,0.08); }
+  .team-card--purple:hover { border-color: rgba(123,63,160,0.35); box-shadow: 0 20px 50px rgba(123,63,160,0.1); }
+  .team-card--blue:hover   { border-color: rgba(30,77,183,0.35);  box-shadow: 0 20px 50px rgba(30,77,183,0.1); }
+
+  .team-img-wrap {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+  }
+
+  .team-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+    transition: transform 0.5s;
+  }
+  .team-card:hover .team-img { transform: scale(1.05); }
+
+  .team-img-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to bottom, transparent 40%, rgba(13,27,62,0.8) 100%);
+  }
+
+  .team-info { padding: 1.25rem; }
+
+  .team-name-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .team-name {
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    color: var(--text-primary);
+    line-height: 1.2;
+    margin-bottom: 0.2rem;
+  }
+
+  .team-role {
+    font-family: var(--font-display);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    display: block;
+  }
+
+  .team-role--gold   { color: var(--gold-primary); }
+  .team-role--purple { color: #a78bfa; }
+  .team-role--blue   { color: #93c5fd; }
+
+  .team-linkedin {
+    width: 32px; height: 32px;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-dim);
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+    flex-shrink: 0;
+  }
+  .team-linkedin:hover { background: rgba(10,102,194,0.2); color: #93c5fd; border-color: rgba(10,102,194,0.3); }
+
+  .team-bio {
+    font-size: 0.78rem;
+    line-height: 1.7;
+    color: var(--text-muted);
+  }
+
+  /* Culture banner */
+  .culture-note { margin-top: 1rem; }
+
+  .culture-img-wrap {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.07);
+    height: 300px;
+  }
+
+  .culture-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .culture-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to right, rgba(7,12,30,0.85) 0%, rgba(7,12,30,0.4) 100%);
+  }
+
+  .culture-text {
+    position: absolute;
+    top: 50%; left: 4rem;
+    transform: translateY(-50%);
+    max-width: 55ch;
+  }
+
+  .culture-quote {
+    font-family: var(--font-display);
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    font-weight: 500;
+    line-height: 1.55;
+    color: var(--text-primary);
+    font-style: italic;
+    margin-bottom: 0.75rem;
+  }
+
+  .culture-attr {
+    font-family: var(--font-display);
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--gold-primary);
+    letter-spacing: 0.04em;
+  }
+
+  /* ══ GLOBAL ══════════════════════════════════════════════════ */
+  .global-section {
+    background: linear-gradient(180deg, var(--bg-void) 0%, rgba(13,27,62,0.3) 50%, var(--bg-void) 100%);
+  }
+
+  .global-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+  }
+
+  .global-title {
+    font-size: clamp(2rem, 3vw, 2.8rem);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+    color: var(--text-primary);
+    margin-bottom: 1.25rem;
+  }
+
+  .global-body {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+  }
+
+  .global-regions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+
+  .global-region {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: var(--font-display);
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    background: rgba(13,27,62,0.6);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 100px;
+    padding: 0.3rem 0.85rem;
+  }
+
+  .globe-card {
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.07);
+  }
+
+  .globe-img-wrap { position: relative; height: 340px; }
+
+  .globe-img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .globe-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to bottom, transparent 40%, rgba(13,27,62,1) 100%);
+  }
+
+  .globe-stats {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1.5rem 2rem;
+    background: rgba(13,27,62,0.8);
+    backdrop-filter: blur(12px);
+  }
+
+  .globe-stat { text-align: center; }
+
+  .gs-val {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    background: linear-gradient(135deg, var(--gold-light), var(--gold-primary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .gs-label {
+    font-size: 0.7rem;
+    color: var(--text-dim);
+    font-family: var(--font-display);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .globe-stat-divider {
+    width: 1px; height: 40px;
+    background: rgba(255,255,255,0.06);
+  }
+
+  /* ══ RESPONSIVE ══════════════════════════════════════════════ */
+  @media (max-width: 1100px) {
+    .team-grid { grid-template-columns: repeat(2, 1fr); }
+    .stats-bar { grid-template-columns: repeat(3, 1fr); }
+    .stat-item:nth-child(3) { border-right: none; }
+  }
+
+  @media (max-width: 900px) {
+    .hero-inner     { grid-template-columns: 1fr; gap: 3rem; }
+    .hero-img       { height: 360px; }
+    .float-card--1  { display: none; }
+    .float-card--2  { top: 1rem; right: 1rem; }
+    .story-grid     { grid-template-columns: 1fr; gap: 3rem; }
+    .story-img      { height: 360px; }
+    .process-steps  { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+    .step-line      { display: none; }
+    .global-inner   { grid-template-columns: 1fr; gap: 3rem; }
+    .values-grid    { grid-template-columns: 1fr 1fr; }
+    .culture-text   { left: 2rem; max-width: 80%; }
+  }
+
+  @media (max-width: 640px) {
+    .team-grid      { grid-template-columns: 1fr; }
+    .process-steps  { grid-template-columns: 1fr; }
+    .values-grid    { grid-template-columns: 1fr; }
+    .stats-bar      { grid-template-columns: repeat(2, 1fr); }
+    .stat-item:nth-child(2n) { border-right: none; }
+    .culture-text   { left: 1.5rem; right: 1.5rem; max-width: none; }
+    .culture-quote  { font-size: 0.9rem; }
+  }
+</style>

@@ -1,0 +1,1170 @@
+---
+import Layout from '../layouts/Layout.astro';
+import CTA from '../components/CTA.astro';
+
+const marketing = [
+  {
+    icon: '📈',
+    title: 'Paid Advertising',
+    tagline: 'Every dollar working harder than the last.',
+    desc: 'We build and manage high-performance paid campaigns across Meta, Google, TikTok, LinkedIn, and Snapchat. From audience architecture to creative strategy to bid optimisation — every lever pulled for maximum ROAS.',
+    deliverables: [
+      'Full campaign build — audiences, creatives, copy',
+      'Meta (Facebook & Instagram), Google, TikTok, LinkedIn',
+      'A/B creative testing & winning variant scaling',
+      'Retargeting and lookalike audience strategy',
+      'Weekly performance reporting & optimisation calls',
+      'Dynamic product ads & catalogue campaigns',
+    ],
+    result: '300% Avg ROAS Increase',
+    resultColor: 'gold',
+    tag: 'Most Popular',
+  },
+  {
+    icon: '📱',
+    title: 'Social Media Management',
+    tagline: 'Your brand, always present, always compelling.',
+    desc: 'We run your social channels like an in-house team — content calendars, creative production, community management, and growth strategy. Consistent, on-brand, and built to convert followers into customers.',
+    deliverables: [
+      'Monthly content calendars across all platforms',
+      'Short-form video production (Reels, TikToks, Shorts)',
+      'Graphic design, copywriting, and caption writing',
+      'Community management & DM response handling',
+      'Influencer collaboration and seeding strategy',
+      'Monthly analytics reports with growth insights',
+    ],
+    result: '5× Engagement Lift',
+    resultColor: 'blue',
+    tag: null,
+  },
+  {
+    icon: '🔍',
+    title: 'SEO & Local Search',
+    tagline: 'Rank higher. Get found. Convert more.',
+    desc: 'We engineer sustainable organic growth through technical SEO, content strategy, and local search dominance. Your brand appears where buyers are actively looking — before they find your competitors.',
+    deliverables: [
+      'Full technical SEO audit & implementation',
+      'Keyword research and competitive gap analysis',
+      'On-page SEO: titles, metas, structured data',
+      'Google Business Profile optimisation & management',
+      'Link building and authority development',
+      'Monthly content briefs for SEO-optimised articles',
+    ],
+    result: '3× Organic Traffic',
+    resultColor: 'green',
+    tag: null,
+  },
+  {
+    icon: '📧',
+    title: 'Email & SMS Marketing',
+    tagline: 'The highest-ROI channel — if done right.',
+    desc: "Email and SMS are where relationships are built and revenue is recovered. We design automated flows, campaign sequences, and reactivation campaigns that work while you sleep — turning your list into your most reliable revenue stream.",
+    deliverables: [
+      'Welcome & onboarding email sequences (5–12 emails)',
+      'Abandoned cart & browse recovery flows',
+      'Post-purchase and upsell automation',
+      'Re-engagement and win-back campaigns',
+      'SMS broadcast and automated flows',
+      'List segmentation and deliverability optimisation',
+    ],
+    result: '42% Open Rate Avg',
+    resultColor: 'gold',
+    tag: null,
+  },
+  {
+    icon: '🎨',
+    title: 'Branding & Creative',
+    tagline: "Your brand is your first impression. Make it unforgettable.",
+    desc: 'We build brands from the ground up or elevate what already exists. From visual identity to tone of voice to brand guidelines — we give your business the presence that commands attention and justifies premium pricing.',
+    deliverables: [
+      'Logo design and full visual identity system',
+      'Brand colour palette, typography, and iconography',
+      'Brand guidelines document (digital & print)',
+      'Tone of voice, messaging framework, and positioning',
+      'Marketing collateral: brochures, decks, social templates',
+      'Brand refresh and consistency audits',
+    ],
+    result: 'Premium Pricing Power',
+    resultColor: 'pink',
+    tag: null,
+  },
+  {
+    icon: '✍️',
+    title: 'Content Marketing',
+    tagline: 'Build authority. Attract buyers. Compound over time.',
+    desc: 'We create content that positions your brand as the definitive authority in your category. Blog posts, case studies, whitepapers, and video content — strategically designed to attract, educate, and convert your ideal customer.',
+    deliverables: [
+      'Content strategy and editorial calendar',
+      'SEO-optimised long-form blog articles (1,500–3,000 words)',
+      'Case studies and client success stories',
+      'Video scripts and short-form content',
+      'LinkedIn thought leadership and ghostwriting',
+      'Content distribution and amplification strategy',
+    ],
+    result: '8× More Inbound Leads',
+    resultColor: 'blue',
+    tag: null,
+  },
+  {
+    icon: '🌟',
+    title: 'Influencer & PR',
+    tagline: 'The right voice in the right room changes everything.',
+    desc: 'We identify, vet, and brief the influencers and media outlets that reach your exact customer. From nano-influencer seeding to major media placements — we build earned reach that no paid ad can replicate.',
+    deliverables: [
+      'Influencer identification, vetting, and outreach',
+      'Campaign briefs, contracts, and creator management',
+      'Gifting and product seeding campaigns',
+      'UGC collection, usage rights, and repurposing',
+      'PR strategy, press release writing, and media pitching',
+      'Campaign performance tracking and ROI reporting',
+    ],
+    result: '12× Earned Impressions',
+    resultColor: 'purple',
+    tag: null,
+  },
+  {
+    icon: '🌐',
+    title: 'Web Design & Development',
+    tagline: 'Your website should convert, not just look good.',
+    desc: 'We design and build high-converting websites, landing pages, and ecommerce stores — fast, mobile-first, and engineered for the one goal that matters: turning visitors into customers.',
+    deliverables: [
+      'Custom website design (mobile-first, pixel-perfect)',
+      'CRO-optimised landing pages',
+      'Ecommerce stores (Shopify, WooCommerce, custom)',
+      'Speed optimisation and Core Web Vitals compliance',
+      'Copywriting and content integration',
+      'Same-day launch option for urgent requirements',
+    ],
+    result: '4× Conversion Rate',
+    resultColor: 'gold',
+    tag: 'Same-Day Option',
+  },
+];
+
+const technology = [
+  {
+    icon: '⚙️',
+    title: 'CRM & Pipeline Setup',
+    tagline: 'Stop losing leads. Start closing them.',
+    desc: 'We deploy and fully configure GoHighLevel CRM with your custom pipelines, stages, and automation logic. Your sales process becomes a machine — trackable, repeatable, and scalable.',
+    deliverables: [
+      'GoHighLevel full setup and white-labelling',
+      'Custom pipeline and deal stage configuration',
+      'Lead capture form and landing page integration',
+      'Calendar booking system and appointment automation',
+      'Team onboarding and training (up to 10 users)',
+      'Ongoing CRM support and optimisation',
+    ],
+    result: '40% More Deals Closed',
+    resultColor: 'blue',
+    tag: 'Most Requested',
+  },
+  {
+    icon: '🔄',
+    title: 'Marketing Automation',
+    tagline: 'Your best salesperson never sleeps.',
+    desc: "We engineer end-to-end automation sequences that nurture leads, follow up on enquiries, book calls, send proposals, and close deals — all without human intervention at each step.",
+    deliverables: [
+      'Lead nurture sequences (email + SMS multi-step)',
+      'Trigger-based follow-up workflows',
+      'Lead scoring and CRM status automation',
+      'Missed call text-back and voicemail drop',
+      'Proposal and contract automation',
+      'Post-sale onboarding and upsell flows',
+    ],
+    result: '60% Faster Lead Response',
+    resultColor: 'gold',
+    tag: null,
+  },
+  {
+    icon: '🛒',
+    title: 'Ecommerce Development',
+    tagline: 'Your store, built to sell from day one.',
+    desc: 'From product catalogue setup to checkout optimisation to post-purchase flows — we build ecommerce stores that convert. Shopify, WooCommerce, or custom — we handle the full stack.',
+    deliverables: [
+      'Full ecommerce store design and development',
+      'Product catalogue setup and categorisation',
+      'Payment gateway and shipping integration',
+      'Abandoned cart and recovery automation',
+      'Upsell, cross-sell, and bundle features',
+      'Conversion rate optimisation and speed tuning',
+    ],
+    result: '600% Revenue Growth',
+    resultColor: 'green',
+    tag: null,
+  },
+  {
+    icon: '🔗',
+    title: 'Systems & API Integration',
+    tagline: 'Make your tools talk to each other.',
+    desc: 'Disconnected systems leak revenue and waste time. We integrate your CRM, ecommerce platform, ad accounts, payment systems, and communication tools into one seamless tech stack.',
+    deliverables: [
+      'CRM ↔ ad platform bidirectional sync',
+      'Payment gateway and accounting integrations',
+      'Zapier, Make (Integromat), and native API builds',
+      'Webhook configuration and event tracking',
+      'Third-party app integrations (Calendly, Stripe, etc.)',
+      'System health monitoring and error alerting',
+    ],
+    result: 'Zero Manual Data Entry',
+    resultColor: 'blue',
+    tag: null,
+  },
+  {
+    icon: '📊',
+    title: 'Analytics & Reporting Dashboards',
+    tagline: 'Know what\'s working before your competitors do.',
+    desc: 'We build real-time dashboards that give you complete visibility across every marketing channel, pipeline stage, and revenue metric — all in one place, explained in plain English.',
+    deliverables: [
+      'Custom Google Looker Studio or GHL dashboards',
+      'Cross-channel attribution and ROAS tracking',
+      'Lead source, conversion rate, and pipeline reporting',
+      'Revenue forecasting and trend visualisation',
+      'Automated weekly email reporting',
+      'KPI alerts and anomaly detection',
+    ],
+    result: '100% Data Visibility',
+    resultColor: 'purple',
+    tag: null,
+  },
+  {
+    icon: '⚡',
+    title: 'Landing Pages & Funnels',
+    tagline: 'Traffic without a funnel is money down the drain.',
+    desc: 'We design and build high-converting landing pages, sales funnels, and VSL pages that capture leads and drive immediate action. Every element tested and optimised for conversion.',
+    deliverables: [
+      'Lead generation and opt-in page design',
+      'Sales funnel architecture (TOFU → MOFU → BOFU)',
+      'Video sales letter (VSL) page builds',
+      'A/B testing framework and variant deployment',
+      'Heatmap and session recording setup',
+      'CRO audit and ongoing optimisation',
+    ],
+    result: '4× Lead Capture Rate',
+    resultColor: 'gold',
+    tag: null,
+  },
+];
+
+const ai = [
+  {
+    icon: '🤖',
+    title: 'AI Receptionist & Chatbots',
+    tagline: 'Your best employee — available 24/7, never sick.',
+    desc: "An AI that answers calls, responds to WhatsApp, qualifies leads with intelligent questions, books calendar appointments, and handles FAQs — all without a human in the loop. Deployed in 24 hours.",
+    deliverables: [
+      'Voice AI for inbound call handling',
+      'WhatsApp & SMS conversational AI',
+      'Website live chat bot with lead qualification',
+      'Intelligent FAQ handling and objection management',
+      'Calendar booking and appointment confirmation',
+      'CRM integration: every conversation logged automatically',
+    ],
+    result: '24/7 Lead Qualification',
+    resultColor: 'purple',
+    tag: '7 Days FREE',
+  },
+  {
+    icon: '✨',
+    title: 'AI Content at Scale',
+    tagline: '100× your content output without 100× the cost.',
+    desc: "Using proprietary AI systems trained on high-performing marketing content, we produce campaign copy, social posts, email sequences, ad headlines, and landing page content at a volume and speed no human team can match.",
+    deliverables: [
+      'AI-generated ad copy at scale (50+ variations)',
+      'Social media captions and hashtag sets',
+      'Email subject lines and body copy',
+      'Blog article first drafts and SEO outlines',
+      'Product descriptions at catalogue scale',
+      'Brand voice consistency layer across all outputs',
+    ],
+    result: '100× Output Volume',
+    resultColor: 'gold',
+    tag: null,
+  },
+  {
+    icon: '🎯',
+    title: 'Predictive Audience Targeting',
+    tagline: 'Find buyers before they know they\'re buying.',
+    desc: "Our AI analyses behavioural signals, purchase intent data, and lookalike patterns to map your highest-value customer segments before you spend a single dollar. Targeting that gets sharper every single day.",
+    deliverables: [
+      'AI-powered audience segmentation analysis',
+      'Intent signal identification across platforms',
+      'Lookalike modelling at 1%, 3%, and 5% expansion',
+      'Predictive CLV audience prioritisation',
+      'Cross-platform audience synchronisation',
+      'Weekly audience insight reports with recommendations',
+    ],
+    result: '3× Match Rate vs Manual',
+    resultColor: 'blue',
+    tag: null,
+  },
+  {
+    icon: '🧪',
+    title: 'AI Creative Testing',
+    tagline: 'Let data pick your winners. Automatically.',
+    desc: "We launch 50+ ad creative variations simultaneously — different hooks, visuals, CTAs, and formats — and use AI to identify winners within hours. The best performers scale automatically. Losers are cut before they waste budget.",
+    deliverables: [
+      'Multi-variate creative testing framework',
+      '50+ simultaneous ad variant launches',
+      'AI-powered winner identification (hours, not weeks)',
+      'Automated budget reallocation to top performers',
+      'Hook testing, visual testing, and CTA testing',
+      'Creative insight reports with actionable findings',
+    ],
+    result: '50+ Variants Tested Live',
+    resultColor: 'pink',
+    tag: 'Most Advanced',
+  },
+  {
+    icon: '📉',
+    title: 'Automated Reporting & Insights',
+    tagline: 'No more spreadsheets. Just answers.',
+    desc: "AI-generated reports that explain performance in plain English — what worked, what didn't, what to do next. Delivered automatically. No manual pulling, no agency delay, no confusion.",
+    deliverables: [
+      'Natural language performance summaries',
+      'Automated weekly and monthly report generation',
+      'Cross-channel attribution and revenue mapping',
+      'Anomaly detection and budget burn alerts',
+      'Competitor performance benchmarking',
+      'Executive dashboards with plain-English insights',
+    ],
+    result: '0 Hours on Manual Reports',
+    resultColor: 'green',
+    tag: null,
+  },
+  {
+    icon: '🔮',
+    title: 'Campaign Forecasting',
+    tagline: 'Know your ROI before you spend.',
+    desc: "Before you commit a single dollar, our AI models predict expected ROAS, CAC, conversion rates, and revenue outcomes based on your product, market, and historical data. Invest with confidence, not hope.",
+    deliverables: [
+      'Pre-launch ROAS and CAC modelling',
+      'Revenue scenario planning (conservative/base/optimistic)',
+      'Budget allocation recommendations by channel',
+      'Seasonal trend forecasting and campaign timing',
+      'Competitor spend intelligence and share of voice',
+      'Post-launch forecast vs actuals tracking',
+    ],
+    result: '92% Forecast Accuracy',
+    resultColor: 'purple',
+    tag: null,
+  },
+];
+
+type ResultColor = 'gold' | 'blue' | 'green' | 'pink' | 'purple';
+
+const resultColors: Record<ResultColor, { text: string; bg: string; border: string }> = {
+  gold:   { text: 'var(--gold-light)',  bg: 'rgba(201,168,76,0.1)',  border: 'rgba(201,168,76,0.25)' },
+  blue:   { text: '#93c5fd',            bg: 'rgba(30,77,183,0.1)',   border: 'rgba(30,77,183,0.25)' },
+  green:  { text: '#6ee7b7',            bg: 'rgba(16,185,129,0.1)',  border: 'rgba(16,185,129,0.2)' },
+  pink:   { text: '#f9a8d4',            bg: 'rgba(196,64,128,0.1)',  border: 'rgba(196,64,128,0.25)' },
+  purple: { text: '#c4b5fd',            bg: 'rgba(123,63,160,0.12)', border: 'rgba(123,63,160,0.3)' },
+};
+---
+
+<Layout
+  title="Services — Marketing, Technology & AI | BGS Technologies"
+  description="Full-service marketing, technology, and AI solutions for ambitious brands. Paid ads, branding, CRM, automation, AI content, and more — all under one roof."
+>
+
+  <!-- ══ HERO ══════════════════════════════════════════════════════════════════ -->
+  <section class="svc-hero">
+    <div class="svc-hero-bg" aria-hidden="true">
+      <div class="svc-orb svc-orb--1"></div>
+      <div class="svc-orb svc-orb--2"></div>
+      <div class="svc-orb svc-orb--3"></div>
+      <div class="svc-grid-lines"></div>
+    </div>
+
+    <div class="container svc-hero-inner">
+      <div class="reveal">
+        <p class="svc-eyebrow">What We Do</p>
+        <h1 class="svc-hero-title">
+          One Agency.<br />
+          <span class="text-gold-gradient">Every Edge You Need.</span>
+        </h1>
+        <p class="svc-hero-sub">
+          Marketing that performs. Technology that scales. AI that compounds.
+          Three integrated service pillars designed to take your brand from where it is
+          to where it should be — faster than you thought possible.
+        </p>
+      </div>
+
+      <!-- 3-level anchors -->
+      <nav class="svc-level-nav reveal" aria-label="Service levels">
+        <a href="#marketing" class="level-btn level-btn--gold">
+          <span class="level-num">01</span>
+          <span class="level-name">Marketing</span>
+          <span class="level-count">8 Services</span>
+        </a>
+        <a href="#technology" class="level-btn level-btn--blue">
+          <span class="level-num">02</span>
+          <span class="level-name">Technology</span>
+          <span class="level-count">6 Services</span>
+        </a>
+        <a href="#ai" class="level-btn level-btn--purple">
+          <span class="level-num">03</span>
+          <span class="level-name">Artificial Intelligence</span>
+          <span class="level-count">6 Services</span>
+        </a>
+      </nav>
+    </div>
+  </section>
+
+  <!-- ══ LEVEL 01: MARKETING ═══════════════════════════════════════════════════ -->
+  <section class="svc-level svc-level--marketing" id="marketing">
+    <div class="level-header">
+      <div class="container">
+        <div class="level-header-inner reveal">
+          <div class="level-tag level-tag--gold">
+            <span>01</span> Marketing
+          </div>
+          <h2 class="level-title">
+            Campaigns That Convert.<br />
+            <span class="text-gold-gradient">Brands That Endure.</span>
+          </h2>
+          <p class="level-sub">
+            From the first ad impression to the final purchase — and every touchpoint in between.
+            We cover every marketing channel with the depth of a specialist and the breadth of a full team.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="svc-grid stagger-children">
+        {marketing.map(svc => (
+          <article class="svc-card svc-card--marketing">
+            {svc.tag && <div class="svc-tag svc-tag--gold">{svc.tag}</div>}
+            <div class="svc-card-head">
+              <span class="svc-icon" aria-hidden="true">{svc.icon}</span>
+              <div>
+                <h3 class="svc-title">{svc.title}</h3>
+                <p class="svc-tagline">{svc.tagline}</p>
+              </div>
+            </div>
+            <p class="svc-desc">{svc.desc}</p>
+            <ul class="svc-deliverables">
+              {svc.deliverables.map(d => (
+                <li>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  {d}
+                </li>
+              ))}
+            </ul>
+            <div class="svc-card-footer">
+              <span
+                class="svc-result"
+                style={`color:${resultColors[svc.resultColor as ResultColor].text};background:${resultColors[svc.resultColor as ResultColor].bg};border-color:${resultColors[svc.resultColor as ResultColor].border}`}
+              >
+                {svc.result}
+              </span>
+              <a href="/contact" class="svc-cta svc-cta--gold">
+                Get Started
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ LEVEL 02: TECHNOLOGY ══════════════════════════════════════════════════ -->
+  <section class="svc-level svc-level--tech" id="technology">
+    <div class="level-header">
+      <div class="container">
+        <div class="level-header-inner reveal">
+          <div class="level-tag level-tag--blue">
+            <span>02</span> Technology
+          </div>
+          <h2 class="level-title">
+            Systems That Scale.<br />
+            <span style="background:linear-gradient(135deg,#93c5fd,#60a5fa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">
+              Tools That Work for You.
+            </span>
+          </h2>
+          <p class="level-sub">
+            The best marketing in the world leaks revenue without the right technology behind it.
+            We build the systems, automations, and integrations that turn your marketing engine into a revenue machine.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="svc-grid stagger-children">
+        {technology.map(svc => (
+          <article class="svc-card svc-card--tech">
+            {svc.tag && <div class="svc-tag svc-tag--blue">{svc.tag}</div>}
+            <div class="svc-card-head">
+              <span class="svc-icon" aria-hidden="true">{svc.icon}</span>
+              <div>
+                <h3 class="svc-title">{svc.title}</h3>
+                <p class="svc-tagline">{svc.tagline}</p>
+              </div>
+            </div>
+            <p class="svc-desc">{svc.desc}</p>
+            <ul class="svc-deliverables">
+              {svc.deliverables.map(d => (
+                <li>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  {d}
+                </li>
+              ))}
+            </ul>
+            <div class="svc-card-footer">
+              <span
+                class="svc-result"
+                style={`color:${resultColors[svc.resultColor as ResultColor].text};background:${resultColors[svc.resultColor as ResultColor].bg};border-color:${resultColors[svc.resultColor as ResultColor].border}`}
+              >
+                {svc.result}
+              </span>
+              <a href="/contact" class="svc-cta svc-cta--blue">
+                Get Started
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ LEVEL 03: AI ══════════════════════════════════════════════════════════ -->
+  <section class="svc-level svc-level--ai" id="ai">
+    <!-- Scanning beam -->
+    <div class="ai-scan" aria-hidden="true"></div>
+
+    <div class="level-header">
+      <div class="container">
+        <div class="level-header-inner reveal">
+          <div class="level-tag level-tag--purple">
+            <span>03</span> Artificial Intelligence
+          </div>
+          <h2 class="level-title">
+            Marketing That Thinks.<br />
+            <span class="text-aurora-gradient">Results That Compound.</span>
+          </h2>
+          <p class="level-sub">
+            AI isn't a feature we added — it's a capability we built from the ground up.
+            Our AI services give you an unfair advantage: more output, sharper targeting,
+            and insights that your competitors simply don't have access to.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="svc-grid stagger-children">
+        {ai.map(svc => (
+          <article class="svc-card svc-card--ai">
+            {svc.tag && <div class="svc-tag svc-tag--purple">{svc.tag}</div>}
+            <div class="svc-card-head">
+              <span class="svc-icon" aria-hidden="true">{svc.icon}</span>
+              <div>
+                <h3 class="svc-title">{svc.title}</h3>
+                <p class="svc-tagline">{svc.tagline}</p>
+              </div>
+            </div>
+            <p class="svc-desc">{svc.desc}</p>
+            <ul class="svc-deliverables">
+              {svc.deliverables.map(d => (
+                <li>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  {d}
+                </li>
+              ))}
+            </ul>
+            <div class="svc-card-footer">
+              <span
+                class="svc-result"
+                style={`color:${resultColors[svc.resultColor as ResultColor].text};background:${resultColors[svc.resultColor as ResultColor].bg};border-color:${resultColors[svc.resultColor as ResultColor].border}`}
+              >
+                {svc.result}
+              </span>
+              <a href="/contact" class="svc-cta svc-cta--purple">
+                Get Started
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ FULL-SERVICE BANNER ═══════════════════════════════════════════════════ -->
+  <section class="fullsvc-banner">
+    <div class="container fullsvc-inner reveal">
+      <div class="fullsvc-copy">
+        <p class="fullsvc-eyebrow">Can't Decide?</p>
+        <h2 class="fullsvc-title">
+          Let Us Run Everything.<br />
+          <span class="text-gold-gradient">The Full-Service Advantage.</span>
+        </h2>
+        <p class="fullsvc-desc">
+          Our most popular engagement — we become your embedded growth team.
+          Marketing, technology, and AI working in concert, all under one account manager,
+          one strategy, and one goal: making you the dominant brand in your market.
+        </p>
+        <div class="fullsvc-features">
+          {[
+            'Dedicated senior account manager',
+            'Monthly strategy sessions',
+            'Unlimited creative requests',
+            'All channels managed under one roof',
+            'Real-time reporting dashboard',
+            'Priority support & response times',
+          ].map(f => (
+            <div class="fs-feature">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--gold-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              {f}
+            </div>
+          ))}
+        </div>
+        <a href="/contact" class="btn-gold fullsvc-btn">
+          Get a Full-Service Quote
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+      <div class="fullsvc-stats">
+        {[
+          { val: '50+', label: 'Brands on Full-Service' },
+          { val: '4.9★', label: 'Average Client Rating' },
+          { val: '30', unit: 'Days', label: 'To First Results' },
+          { val: '0', label: 'Lock-In Contracts' },
+        ].map(s => (
+          <div class="fs-stat">
+            <span class="fs-val">{s.val}<em>{s.unit}</em></span>
+            <span class="fs-label">{s.label}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CTA />
+
+</Layout>
+
+<style>
+  /* ══ HERO ════════════════════════════════════════════════════ */
+  .svc-hero {
+    position: relative;
+    padding-top: 72px;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: var(--bg-void);
+  }
+
+  .svc-hero-bg { position: absolute; inset: 0; pointer-events: none; }
+  .svc-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+  }
+  .svc-orb--1 {
+    width: 600px; height: 600px;
+    top: -200px; left: -150px;
+    background: radial-gradient(circle, rgba(201,168,76,0.06) 0%, transparent 70%);
+  }
+  .svc-orb--2 {
+    width: 500px; height: 500px;
+    top: -100px; right: -100px;
+    background: radial-gradient(circle, rgba(123,63,160,0.07) 0%, transparent 70%);
+  }
+  .svc-orb--3 {
+    width: 400px; height: 400px;
+    bottom: -100px; left: 40%;
+    background: radial-gradient(circle, rgba(30,77,183,0.06) 0%, transparent 70%);
+  }
+  .svc-grid-lines {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(201,168,76,0.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(201,168,76,0.025) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(ellipse 80% 60% at 50% 50%, black 20%, transparent 100%);
+  }
+
+  .svc-hero-inner {
+    position: relative; z-index: 1;
+    text-align: center;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .svc-eyebrow {
+    font-family: var(--font-display);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold-primary);
+    display: block;
+    margin-bottom: 1.25rem;
+  }
+
+  .svc-hero-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    color: var(--text-primary);
+    margin-bottom: 1.25rem;
+  }
+
+  .svc-hero-sub {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    max-width: 56ch;
+    margin: 0 auto 3rem;
+  }
+
+  /* Level nav */
+  .svc-level-nav {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .level-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+    padding: 1.25rem 2rem;
+    border-radius: 14px;
+    border-width: 1px;
+    border-style: solid;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+    min-width: 180px;
+    background: rgba(13,27,62,0.5);
+  }
+
+  .level-btn:hover { transform: translateY(-3px); }
+
+  .level-btn--gold  { border-color: rgba(201,168,76,0.3); }
+  .level-btn--blue  { border-color: rgba(30,77,183,0.3); }
+  .level-btn--purple{ border-color: rgba(123,63,160,0.3); }
+
+  .level-btn--gold:hover  { background: rgba(201,168,76,0.08);  box-shadow: 0 10px 30px rgba(201,168,76,0.1); }
+  .level-btn--blue:hover  { background: rgba(30,77,183,0.08);   box-shadow: 0 10px 30px rgba(30,77,183,0.1); }
+  .level-btn--purple:hover{ background: rgba(123,63,160,0.1);   box-shadow: 0 10px 30px rgba(123,63,160,0.12); }
+
+  .level-num {
+    font-family: var(--font-display);
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    color: var(--text-dim);
+  }
+  .level-btn--gold   .level-num { color: var(--gold-primary); }
+  .level-btn--blue   .level-num { color: #93c5fd; }
+  .level-btn--purple .level-num { color: #c4b5fd; }
+
+  .level-name {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: -0.01em;
+  }
+
+  .level-count {
+    font-size: 0.7rem;
+    color: var(--text-dim);
+    font-family: var(--font-display);
+  }
+
+  /* ══ LEVEL SECTIONS ══════════════════════════════════════════ */
+  .svc-level { padding: 5rem 0 6rem; }
+
+  .svc-level--marketing { background: var(--bg-void); }
+  .svc-level--tech {
+    background: linear-gradient(180deg, #060c1f 0%, #080f26 50%, #060c1f 100%);
+    position: relative;
+  }
+  .svc-level--ai {
+    background: #040810;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* AI scanning beam */
+  .ai-scan {
+    position: absolute;
+    top: 0; left: -100%;
+    width: 60%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(123,63,160,0.03), transparent);
+    animation: aiScan 8s linear infinite;
+    pointer-events: none;
+  }
+  @keyframes aiScan {
+    from { left: -60%; }
+    to   { left: 110%; }
+  }
+
+  /* Level header */
+  .level-header { padding: 4rem 0 3rem; }
+
+  .level-header-inner {
+    max-width: 60ch;
+  }
+
+  .level-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-family: var(--font-display);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    padding: 0.3rem 0.85rem;
+    border-radius: 100px;
+    margin-bottom: 1.25rem;
+    border-width: 1px;
+    border-style: solid;
+  }
+
+  .level-tag--gold   { color: var(--gold-primary);  background: rgba(201,168,76,0.08);  border-color: rgba(201,168,76,0.25); }
+  .level-tag--blue   { color: #93c5fd;               background: rgba(30,77,183,0.1);   border-color: rgba(30,77,183,0.25); }
+  .level-tag--purple { color: #c4b5fd;               background: rgba(123,63,160,0.12); border-color: rgba(123,63,160,0.3); }
+
+  .level-title {
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+  }
+
+  .level-sub {
+    color: var(--text-muted);
+    font-size: 0.98rem;
+    line-height: 1.8;
+    max-width: 58ch;
+  }
+
+  /* ══ SERVICE GRID ════════════════════════════════════════════ */
+  .svc-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  /* ══ SERVICE CARD ════════════════════════════════════════════ */
+  .svc-card {
+    position: relative;
+    border-radius: 18px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    border-width: 1px;
+    border-style: solid;
+    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+  }
+
+  .svc-card:hover { transform: translateY(-4px); }
+
+  .svc-card--marketing {
+    background: rgba(13,27,62,0.45);
+    border-color: rgba(255,255,255,0.06);
+  }
+  .svc-card--marketing:hover {
+    border-color: rgba(201,168,76,0.25);
+    box-shadow: 0 20px 60px rgba(201,168,76,0.06);
+  }
+
+  .svc-card--tech {
+    background: rgba(8,15,38,0.7);
+    border-color: rgba(255,255,255,0.05);
+  }
+  .svc-card--tech:hover {
+    border-color: rgba(30,77,183,0.3);
+    box-shadow: 0 20px 60px rgba(30,77,183,0.08);
+  }
+
+  .svc-card--ai {
+    background: rgba(4,8,16,0.8);
+    border-color: rgba(123,63,160,0.12);
+  }
+  .svc-card--ai:hover {
+    border-color: rgba(123,63,160,0.35);
+    box-shadow: 0 20px 60px rgba(123,63,160,0.1);
+  }
+
+  /* Tag badge */
+  .svc-tag {
+    position: absolute;
+    top: 1.25rem; right: 1.25rem;
+    font-family: var(--font-display);
+    font-size: 0.6rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.22rem 0.6rem;
+    border-radius: 4px;
+    border-width: 1px;
+    border-style: solid;
+  }
+
+  .svc-tag--gold   { color: var(--gold-primary);  background: rgba(201,168,76,0.1);  border-color: rgba(201,168,76,0.3); }
+  .svc-tag--blue   { color: #93c5fd;               background: rgba(30,77,183,0.12); border-color: rgba(30,77,183,0.3); }
+  .svc-tag--purple { color: #c4b5fd;               background: rgba(123,63,160,0.14);border-color: rgba(123,63,160,0.35); }
+
+  /* Card head */
+  .svc-card-head {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .svc-icon {
+    font-size: 1.75rem;
+    line-height: 1;
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+  }
+
+  .svc-title {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: -0.015em;
+    color: var(--text-primary);
+    line-height: 1.2;
+    margin-bottom: 0.2rem;
+  }
+
+  .svc-tagline {
+    font-size: 0.8rem;
+    color: var(--text-dim);
+    font-style: italic;
+    line-height: 1.4;
+  }
+
+  /* Description */
+  .svc-desc {
+    font-size: 0.87rem;
+    line-height: 1.75;
+    color: var(--text-muted);
+  }
+
+  /* Deliverables */
+  .svc-deliverables {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+    flex: 1;
+  }
+
+  .svc-deliverables li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.55rem;
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    line-height: 1.45;
+  }
+
+  .svc-card--marketing .svc-deliverables li svg { color: var(--gold-primary); flex-shrink: 0; margin-top: 0.15rem; }
+  .svc-card--tech      .svc-deliverables li svg { color: #93c5fd;             flex-shrink: 0; margin-top: 0.15rem; }
+  .svc-card--ai        .svc-deliverables li svg { color: #c4b5fd;             flex-shrink: 0; margin-top: 0.15rem; }
+
+  /* Card footer */
+  .svc-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding-top: 0.85rem;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    margin-top: auto;
+    flex-wrap: wrap;
+  }
+
+  .svc-result {
+    font-family: var(--font-display);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    padding: 0.3rem 0.8rem;
+    border-radius: 6px;
+    border-width: 1px;
+    border-style: solid;
+  }
+
+  .svc-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: var(--font-display);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    transition: gap 0.2s;
+    padding: 0.45rem 1rem;
+    border-radius: 7px;
+    border-width: 1px;
+    border-style: solid;
+  }
+
+  .svc-cta:hover { gap: 0.65rem; }
+
+  .svc-cta--gold   { color: var(--gold-primary);  background: rgba(201,168,76,0.08);  border-color: rgba(201,168,76,0.25); }
+  .svc-cta--blue   { color: #93c5fd;               background: rgba(30,77,183,0.1);   border-color: rgba(30,77,183,0.25); }
+  .svc-cta--purple { color: #c4b5fd;               background: rgba(123,63,160,0.12); border-color: rgba(123,63,160,0.3); }
+
+  .svc-cta--gold:hover   { background: rgba(201,168,76,0.15); }
+  .svc-cta--blue:hover   { background: rgba(30,77,183,0.18); }
+  .svc-cta--purple:hover { background: rgba(123,63,160,0.2); }
+
+  /* ══ FULL SERVICE BANNER ═════════════════════════════════════ */
+  .fullsvc-banner {
+    background: linear-gradient(135deg, rgba(201,168,76,0.05) 0%, rgba(123,63,160,0.06) 50%, rgba(30,77,183,0.05) 100%);
+    border-top: 1px solid rgba(201,168,76,0.1);
+    border-bottom: 1px solid rgba(201,168,76,0.1);
+    padding: 6rem 0;
+  }
+
+  .fullsvc-inner {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 5rem;
+    align-items: center;
+  }
+
+  .fullsvc-eyebrow {
+    font-family: var(--font-display);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold-primary);
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  .fullsvc-title {
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+    color: var(--text-primary);
+    margin-bottom: 1.1rem;
+  }
+
+  .fullsvc-desc {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: var(--text-muted);
+    margin-bottom: 1.75rem;
+  }
+
+  .fullsvc-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.6rem;
+    margin-bottom: 2rem;
+  }
+
+  .fs-feature {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.83rem;
+    color: var(--text-muted);
+  }
+
+  .fullsvc-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  /* Stats side */
+  .fullsvc-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(201,168,76,0.1);
+  }
+
+  .fs-stat {
+    background: rgba(13,27,62,0.5);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+    text-align: center;
+  }
+
+  .fs-val {
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    background: linear-gradient(135deg, var(--gold-light), var(--gold-primary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+    display: flex;
+    align-items: baseline;
+    gap: 0.15rem;
+  }
+
+  .fs-val em {
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .fs-label {
+    font-size: 0.72rem;
+    color: var(--text-dim);
+    font-family: var(--font-display);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  /* ══ RESPONSIVE ══════════════════════════════════════════════ */
+  @media (max-width: 1024px) {
+    .fullsvc-inner { grid-template-columns: 1fr; gap: 3rem; }
+    .svc-level-nav { gap: 0.75rem; }
+    .level-btn { min-width: 150px; padding: 1rem 1.5rem; }
+  }
+
+  @media (max-width: 860px) {
+    .svc-grid { grid-template-columns: 1fr; }
+    .fullsvc-stats { grid-template-columns: repeat(2, 1fr); }
+    .fullsvc-features { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 600px) {
+    .svc-level-nav { flex-direction: column; align-items: center; }
+    .level-btn { width: 100%; max-width: 300px; }
+    .fullsvc-stats { grid-template-columns: 1fr 1fr; }
+    .svc-card { padding: 1.5rem; }
+    .level-header { padding: 3rem 0 2rem; }
+    .services-hero { min-height: auto; padding: 6rem 0 3rem; }
+    .hero-nav-btns { flex-direction: column; align-items: center; }
+    .level-btn { min-width: unset; }
+  }
+</style>

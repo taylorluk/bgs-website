@@ -1,0 +1,1103 @@
+---
+const capabilities = [
+  {
+    title: 'AI Content at Scale',
+    desc: 'Campaign copy, social posts, email sequences, and ad creatives generated in seconds — infinite output, consistent brand voice.',
+    stat: '100× Output',
+    image: 'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=700&h=500&q=80&auto=format&fit=crop',
+    accent: 'purple',
+  },
+  {
+    title: 'Predictive Audience Targeting',
+    desc: "AI maps your highest-value customers before you spend a single dollar — targeting that gets sharper every single day.",
+    stat: '3× Higher Match',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=700&h=500&q=80&auto=format&fit=crop',
+    accent: 'blue',
+  },
+  {
+    title: 'Creative Testing at Scale',
+    desc: 'Launch 50+ ad variations simultaneously. AI identifies winners in hours, not weeks — and keeps iterating automatically.',
+    stat: '50+ Variants Live',
+    image: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=700&h=500&q=80&auto=format&fit=crop',
+    accent: 'pink',
+  },
+  {
+    title: 'Smart Chatbots & Funnels',
+    desc: 'Conversational AI that qualifies leads, books calls, and closes sales 24/7 — your best salesperson never sleeps.',
+    stat: '24/7 Active',
+    image: 'https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=700&h=500&q=80&auto=format&fit=crop',
+    accent: 'gold',
+  },
+  {
+    title: 'Automated Reporting',
+    desc: "Real-time dashboards that explain performance in plain English. No more spreadsheet nightmares — just clarity.",
+    stat: '0 Manual Reports',
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=700&h=500&q=80&auto=format&fit=crop',
+    accent: 'purple',
+  },
+  {
+    title: 'Campaign Forecasting',
+    desc: 'AI predicts ROAS, CAC, and conversion rates before you launch. Know your outcome before you invest.',
+    stat: '92% Accuracy',
+    image: 'https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=700&h=500&q=80&auto=format&fit=crop',
+    accent: 'blue',
+  },
+];
+
+const terminalLines = [
+  { label: 'TASK', value: 'Generate Q4 campaign headlines for luxury brand' },
+  { label: 'AUDIENCE', value: '847,293 high-intent prospects identified' },
+  { label: 'OUTPUT', value: '"Stop Scrolling. Start Converting."', highlight: true },
+  { label: 'ENGAGEMENT', value: 'Predicted score: 9.4 / 10 ↑' },
+  { label: 'CTR FORECAST', value: '+38% above industry benchmark' },
+  { label: 'ROAS PREDICTION', value: '4.8× — confidence 94%' },
+  { label: 'OPTIMAL TIME', value: 'Tuesday 7:42 PM — 3 markets' },
+  { label: 'STATUS', value: 'Campaign live. AI optimising every 15 min.', pulse: true },
+];
+---
+
+<section class="ai-section" id="ai-services">
+  <!-- Animated neural grid background -->
+  <div class="ai-bg" aria-hidden="true">
+    <div class="neural-grid"></div>
+    <div class="scan-beam"></div>
+    <div class="ai-orb ai-orb--1"></div>
+    <div class="ai-orb ai-orb--2"></div>
+    <div class="ai-orb ai-orb--3"></div>
+  </div>
+
+  <div class="container ai-inner">
+
+    <!-- ── Header ─────────────────────────────────────────── -->
+    <div class="ai-header reveal">
+      <div class="ai-eyebrow">
+        <span class="pulse-ring"></span>
+        <span>AI-Powered Marketing</span>
+      </div>
+      <h2 class="ai-title">
+        Marketing That<br />
+        <span class="ai-gradient-text">Thinks for Itself</span>
+      </h2>
+      <p class="ai-sub">
+        AI isn't an add-on at BGS — it's the engine under every campaign.
+        Faster decisions. Sharper targeting. Creative that compounds.
+        Your brand, running at machine speed.
+      </p>
+    </div>
+
+    <!-- ── Terminal + Stats ──────────────────────────────── -->
+    <div class="ai-showcase">
+      <!-- Left: Terminal -->
+      <div class="terminal-wrap reveal-left">
+        <!-- Floating micro cards -->
+        <div class="float-stat float-stat--a">
+          <span class="fs-value">4.8×</span>
+          <span class="fs-label">Avg ROAS</span>
+        </div>
+        <div class="float-stat float-stat--b">
+          <span class="fs-value">94%</span>
+          <span class="fs-label">Forecast Accuracy</span>
+        </div>
+
+        <div class="terminal-card">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="td td--red"></span>
+              <span class="td td--yellow"></span>
+              <span class="td td--green"></span>
+            </div>
+            <span class="terminal-title">BGS AI Engine</span>
+            <span class="terminal-status">
+              <span class="status-dot"></span>
+              Active
+            </span>
+          </div>
+
+          <div class="terminal-body" id="terminal-body">
+            {terminalLines.map((line, i) => (
+              <div class={`t-line t-line--${i}`} style={`animation-delay: ${i * 0.18}s`}>
+                <span class="t-label">{line.label}</span>
+                <span class={`t-value${line.highlight ? ' t-value--highlight' : ''}${line.pulse ? ' t-value--pulse' : ''}`}>
+                  {line.value}
+                </span>
+              </div>
+            ))}
+            <div class="t-cursor"></div>
+          </div>
+
+          <!-- Progress bar -->
+          <div class="terminal-progress">
+            <div class="tp-header">
+              <span>Optimisation cycle</span>
+              <span class="tp-pct" id="tp-pct">0%</span>
+            </div>
+            <div class="tp-track">
+              <div class="tp-fill" id="tp-fill"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Copy + stats -->
+      <div class="ai-copy reveal-right">
+        <p class="ai-copy-label">Why AI Changes Everything</p>
+        <h3 class="ai-copy-title">
+          Your competitors are still doing it manually.
+        </h3>
+        <p class="ai-copy-body">
+          While traditional agencies iterate weekly, our AI optimises your
+          campaigns every hour — testing audiences, refining creative, and
+          compounding performance gains automatically.
+        </p>
+
+        <div class="ai-stats-list">
+          <div class="ai-stat-item">
+            <span class="asi-number">100×</span>
+            <span class="asi-text">More content produced vs. manual teams</span>
+          </div>
+          <div class="ai-stat-item">
+            <span class="asi-number">15m</span>
+            <span class="asi-text">Optimisation cycle — campaigns improve constantly</span>
+          </div>
+          <div class="ai-stat-item">
+            <span class="asi-number">-67%</span>
+            <span class="asi-text">Average reduction in customer acquisition cost</span>
+          </div>
+          <div class="ai-stat-item">
+            <span class="asi-number">94%</span>
+            <span class="asi-text">Accuracy on ROAS forecasting before launch</span>
+          </div>
+        </div>
+
+        <a href="/contact" class="btn-gold ai-cta">
+          Unlock AI Marketing
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- ── Capabilities showcase ──────────────────────────── -->
+    <div class="cap-showcase reveal">
+      <!-- Left: Interactive numbered list -->
+      <div class="cap-list" id="cap-list">
+        <div class="cap-list-header">
+          <p class="cap-label">Six AI Capabilities</p>
+          <h3 class="cap-list-title">The AI Stack Behind Your Growth</h3>
+        </div>
+
+        {capabilities.map((cap, i) => (
+          <button
+            class={`cap-item${i === 0 ? ' cap-item--active' : ''}`}
+            data-index={i}
+            data-accent={cap.accent}
+          >
+            <span class="cap-num">0{i + 1}</span>
+            <div class="cap-item-body">
+              <span class="cap-item-title">{cap.title}</span>
+              <span class="cap-item-desc">{cap.desc}</span>
+            </div>
+            <span class={`cap-item-stat cap-item-stat--${cap.accent}`}>{cap.stat}</span>
+            <!-- Progress bar for active item -->
+            <div class="cap-progress-bar">
+              <div class="cap-progress-fill"></div>
+            </div>
+          </button>
+        ))}
+      </div>
+
+      <!-- Right: Cinematic image panel -->
+      <div class="cap-panel" id="cap-panel">
+        {capabilities.map((cap, i) => (
+          <div class={`cap-slide${i === 0 ? ' cap-slide--active' : ''}`} data-slide={i}>
+            <img
+              src={cap.image}
+              alt={cap.title}
+              class="cap-slide-img"
+              loading={i === 0 ? 'eager' : 'lazy'}
+              decoding="async"
+            />
+            <div class="cap-slide-overlay"></div>
+
+            <!-- Floating accent glow -->
+            <div class={`cap-slide-glow cap-slide-glow--${cap.accent}`}></div>
+
+            <!-- Content -->
+            <div class="cap-slide-content">
+              <span class={`cap-slide-badge cap-slide-badge--${cap.accent}`}>{cap.stat}</span>
+              <h4 class="cap-slide-title">{cap.title}</h4>
+              <p class="cap-slide-desc">{cap.desc}</p>
+            </div>
+
+            <!-- Index indicator -->
+            <span class="cap-slide-num">0{i + 1} / 06</span>
+          </div>
+        ))}
+
+        <!-- Dot nav -->
+        <div class="cap-dots">
+          {capabilities.map((_, i) => (
+            <button
+              class={`cap-dot${i === 0 ? ' cap-dot--active' : ''}`}
+              data-dot={i}
+              aria-label={`Capability ${i + 1}`}
+            ></button>
+          ))}
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  /* ── Section base ─────────────────────────────────────── */
+  .ai-section {
+    position: relative;
+    padding: 8rem 0;
+    overflow: hidden;
+    background: #040810;
+  }
+
+  /* ── Background ───────────────────────────────────────── */
+  .ai-bg {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+  }
+
+  /* Neural grid */
+  .neural-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(123, 63, 160, 0.07) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(123, 63, 160, 0.07) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(ellipse 100% 100% at 50% 50%, black 40%, transparent 100%);
+  }
+
+  /* Scanning beam */
+  .scan-beam {
+    position: absolute;
+    top: 0; bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, transparent, rgba(155, 89, 212, 0.6), transparent);
+    animation: scanAcross 6s ease-in-out infinite;
+    filter: blur(3px);
+    box-shadow: 0 0 20px rgba(155, 89, 212, 0.5);
+  }
+
+  @keyframes scanAcross {
+    0%   { left: -5%; opacity: 0; }
+    10%  { opacity: 1; }
+    90%  { opacity: 1; }
+    100% { left: 105%; opacity: 0; }
+  }
+
+  /* Ambient orbs */
+  .ai-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(120px);
+    animation: orbFloat 14s ease-in-out infinite;
+  }
+
+  .ai-orb--1 {
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(123, 63, 160, 0.25) 0%, transparent 70%);
+    top: -200px; right: -150px;
+    animation-duration: 16s;
+  }
+
+  .ai-orb--2 {
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(196, 64, 128, 0.2) 0%, transparent 70%);
+    bottom: -100px; left: -100px;
+    animation-delay: -6s; animation-duration: 20s;
+  }
+
+  .ai-orb--3 {
+    width: 300px; height: 300px;
+    background: radial-gradient(circle, rgba(30, 77, 183, 0.2) 0%, transparent 70%);
+    top: 40%; left: 40%;
+    animation-delay: -10s; animation-duration: 18s;
+  }
+
+  @keyframes orbFloat {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33%       { transform: translate(4%, -5%) scale(1.08); }
+    66%       { transform: translate(-3%, 4%) scale(0.95); }
+  }
+
+  /* ── Layout ───────────────────────────────────────────── */
+  .ai-inner {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ── Header ───────────────────────────────────────────── */
+  .ai-header {
+    max-width: 60ch;
+    margin-bottom: 5rem;
+  }
+
+  .ai-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.4rem 1rem;
+    background: rgba(123, 63, 160, 0.1);
+    border: 1px solid rgba(123, 63, 160, 0.3);
+    border-radius: 100px;
+    font-family: var(--font-display);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--purple-light);
+    margin-bottom: 1.75rem;
+  }
+
+  .pulse-ring {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--purple-light);
+    position: relative;
+    flex-shrink: 0;
+  }
+
+  .pulse-ring::before {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    border-radius: 50%;
+    border: 1px solid var(--purple-light);
+    animation: ringPulse 2s ease-out infinite;
+  }
+
+  @keyframes ringPulse {
+    0%   { transform: scale(1); opacity: 0.8; }
+    100% { transform: scale(2.5); opacity: 0; }
+  }
+
+  .ai-title {
+    font-size: clamp(2.5rem, 5vw, 5rem);
+    font-weight: 700;
+    line-height: 1.06;
+    letter-spacing: -0.03em;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+  }
+
+  .ai-gradient-text {
+    background: linear-gradient(135deg, #9b59d4, #c44080, #7b3fa0, #60a5fa);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientShift 5s ease infinite;
+  }
+
+  @keyframes gradientShift {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  .ai-sub {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+
+  /* ── Showcase ─────────────────────────────────────────── */
+  .ai-showcase {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+    margin-bottom: 6rem;
+  }
+
+  /* ── Terminal ─────────────────────────────────────────── */
+  .terminal-wrap {
+    position: relative;
+  }
+
+  /* Floating micro stats */
+  .float-stat {
+    position: absolute;
+    z-index: 2;
+    background: rgba(7,12,30,0.85);
+    border: 1px solid rgba(123,63,160,0.35);
+    border-radius: 12px;
+    padding: 0.75rem 1.1rem;
+    backdrop-filter: blur(16px);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4), 0 0 20px rgba(123,63,160,0.1);
+  }
+
+  .float-stat--a {
+    top: -1.5rem;
+    right: -1.5rem;
+    animation: floatY 4s ease-in-out infinite;
+  }
+
+  .float-stat--b {
+    bottom: 2rem;
+    left: -2rem;
+    animation: floatY 5s ease-in-out infinite reverse;
+  }
+
+  @keyframes floatY {
+    0%, 100% { transform: translateY(0); }
+    50%       { transform: translateY(-8px); }
+  }
+
+  .fs-value {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--purple-light);
+    line-height: 1;
+    margin-bottom: 0.2rem;
+  }
+
+  .fs-label {
+    font-family: var(--font-display);
+    font-size: 0.65rem;
+    font-weight: 600;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  .terminal-card {
+    background: rgba(8, 5, 20, 0.9);
+    border: 1px solid rgba(123, 63, 160, 0.25);
+    border-radius: 16px;
+    overflow: hidden;
+    backdrop-filter: blur(20px);
+    box-shadow:
+      0 0 0 1px rgba(123, 63, 160, 0.1),
+      0 32px 80px rgba(0, 0, 0, 0.5),
+      inset 0 1px 0 rgba(255,255,255,0.04);
+  }
+
+  /* Terminal header */
+  .terminal-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.85rem 1.25rem;
+    background: rgba(123, 63, 160, 0.08);
+    border-bottom: 1px solid rgba(123, 63, 160, 0.15);
+  }
+
+  .terminal-dots {
+    display: flex;
+    gap: 5px;
+  }
+
+  .td {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+  }
+
+  .td--red    { background: #ff5f57; }
+  .td--yellow { background: #febc2e; }
+  .td--green  { background: #28c840; }
+
+  .terminal-title {
+    font-family: var(--font-display);
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    flex: 1;
+    text-align: center;
+    letter-spacing: 0.04em;
+  }
+
+  .terminal-status {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-family: var(--font-display);
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: #4ade80;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  .status-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: #4ade80;
+    animation: statusPulse 2s ease-in-out infinite;
+  }
+
+  @keyframes statusPulse {
+    0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(74,222,128,0.4); }
+    50%       { opacity: 0.7; box-shadow: 0 0 0 4px rgba(74,222,128,0); }
+  }
+
+  /* Terminal body */
+  .terminal-body {
+    padding: 1.5rem;
+    font-family: 'SF Mono', 'Fira Code', 'Courier New', monospace;
+    font-size: 0.78rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    min-height: 280px;
+  }
+
+  .t-line {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 0.75rem;
+    align-items: baseline;
+    opacity: 0;
+    animation: lineReveal 0.3s ease forwards;
+  }
+
+  @keyframes lineReveal {
+    from { opacity: 0; transform: translateX(-6px); }
+    to   { opacity: 1; transform: translateX(0); }
+  }
+
+  .t-label {
+    color: rgba(155, 89, 212, 0.7);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .t-value {
+    color: rgba(240, 244, 255, 0.75);
+    font-size: 0.78rem;
+    line-height: 1.4;
+  }
+
+  .t-value--highlight {
+    color: #e2c97e;
+    font-weight: 600;
+  }
+
+  .t-value--pulse {
+    color: #4ade80;
+    animation: textPulse 2s ease-in-out infinite;
+  }
+
+  @keyframes textPulse {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0.6; }
+  }
+
+  /* Blinking cursor */
+  .t-cursor {
+    width: 8px; height: 1rem;
+    background: var(--purple-light);
+    animation: blink 1s step-end infinite;
+    margin-top: 0.25rem;
+    border-radius: 1px;
+  }
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0; }
+  }
+
+  /* Progress bar */
+  .terminal-progress {
+    padding: 0.75rem 1.25rem 1rem;
+    border-top: 1px solid rgba(123, 63, 160, 0.12);
+  }
+
+  .tp-header {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--font-display);
+    font-size: 0.65rem;
+    font-weight: 600;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 0.5rem;
+  }
+
+  .tp-pct { color: var(--purple-light); }
+
+  .tp-track {
+    height: 3px;
+    background: rgba(123, 63, 160, 0.15);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+
+  .tp-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #7b3fa0, #9b59d4, #c44080);
+    border-radius: 2px;
+    width: 0%;
+    animation: fillBar 4s ease-in-out infinite alternate;
+    box-shadow: 0 0 8px rgba(155, 89, 212, 0.6);
+  }
+
+  @keyframes fillBar {
+    0%   { width: 15%; }
+    100% { width: 96%; }
+  }
+
+  /* ── Right copy ───────────────────────────────────────── */
+  .ai-copy-label {
+    font-family: var(--font-display);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--purple-light);
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  .ai-copy-title {
+    font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: var(--text-primary);
+    margin-bottom: 1.25rem;
+  }
+
+  .ai-copy-body {
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+  }
+
+  .ai-stats-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .ai-stat-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid rgba(123, 63, 160, 0.1);
+  }
+
+  .ai-stat-item:last-child { border-bottom: none; padding-bottom: 0; }
+
+  .asi-number {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--purple-light);
+    min-width: 70px;
+    line-height: 1;
+    flex-shrink: 0;
+  }
+
+  .asi-text {
+    color: var(--text-muted);
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+
+  .ai-cta { display: inline-flex; }
+
+  /* ── Capabilities showcase ───────────────────────────── */
+  .cap-showcase {
+    display: grid;
+    grid-template-columns: 1fr 1.15fr;
+    gap: 3rem;
+    align-items: stretch;
+    min-height: 540px;
+  }
+
+  /* ── Left list ────────────────────────────────────────── */
+  .cap-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .cap-list-header {
+    margin-bottom: 2rem;
+  }
+
+  .cap-label {
+    font-family: var(--font-display);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--purple-light);
+    margin-bottom: 0.6rem;
+    display: block;
+  }
+
+  .cap-list-title {
+    font-size: clamp(1.5rem, 2.5vw, 2.1rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--text-primary);
+    line-height: 1.15;
+  }
+
+  /* List items */
+  .cap-item {
+    position: relative;
+    display: grid;
+    grid-template-columns: 32px 1fr auto;
+    gap: 0.75rem;
+    align-items: start;
+    padding: 1rem 0;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    background: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    cursor: pointer;
+    text-align: left;
+    transition: background 0.2s;
+    overflow: hidden;
+  }
+
+  .cap-item:last-child { border-bottom: 1px solid rgba(255,255,255,0.05); }
+
+  .cap-item:hover { background: rgba(123,63,160,0.04); }
+
+  .cap-num {
+    font-family: var(--font-display);
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--text-dim);
+    letter-spacing: 0.04em;
+    padding-top: 0.15rem;
+    transition: color 0.3s;
+  }
+
+  .cap-item--active .cap-num { color: var(--purple-light); }
+
+  .cap-item-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .cap-item-title {
+    font-family: var(--font-display);
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    transition: color 0.3s;
+    line-height: 1.3;
+  }
+
+  .cap-item--active .cap-item-title { color: var(--text-primary); }
+
+  .cap-item-desc {
+    font-size: 0.78rem;
+    color: var(--text-dim);
+    line-height: 1.55;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, opacity 0.3s ease, margin-top 0.3s ease;
+    opacity: 0;
+    display: block;
+  }
+
+  .cap-item--active .cap-item-desc {
+    max-height: 80px;
+    opacity: 1;
+    margin-top: 0.4rem;
+  }
+
+  .cap-item-stat {
+    font-family: var(--font-display);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.2rem 0.55rem;
+    border-radius: 100px;
+    border: 1px solid;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s;
+    align-self: center;
+  }
+
+  .cap-item--active .cap-item-stat { opacity: 1; }
+
+  .cap-item-stat--purple { color: var(--purple-light);  background: rgba(123,63,160,0.1); border-color: rgba(123,63,160,0.3); }
+  .cap-item-stat--blue   { color: #93c5fd;               background: rgba(30,77,183,0.1);  border-color: rgba(30,77,183,0.3); }
+  .cap-item-stat--pink   { color: #f9a8d4;               background: rgba(196,64,128,0.1); border-color: rgba(196,64,128,0.3); }
+  .cap-item-stat--gold   { color: var(--gold-light);     background: rgba(201,168,76,0.1); border-color: rgba(201,168,76,0.3); }
+
+  /* Auto-progress bar */
+  .cap-progress-bar {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 1px;
+    background: rgba(123,63,160,0.15);
+    overflow: hidden;
+  }
+
+  .cap-progress-fill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, var(--purple-light), #c44080);
+    box-shadow: 0 0 6px rgba(155,89,212,0.5);
+  }
+
+  .cap-item--active .cap-progress-fill {
+    animation: capProgress 4s linear forwards;
+  }
+
+  @keyframes capProgress {
+    from { width: 0%; }
+    to   { width: 100%; }
+  }
+
+  /* ── Right panel ──────────────────────────────────────── */
+  .cap-panel {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(123,63,160,0.2);
+    background: #040206;
+    min-height: 460px;
+  }
+
+  /* Slides */
+  .cap-slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    pointer-events: none;
+  }
+
+  .cap-slide--active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .cap-slide-img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    filter: brightness(0.45) saturate(0.65);
+    transition: transform 8s ease, filter 0.6s ease;
+  }
+
+  .cap-slide--active .cap-slide-img {
+    transform: scale(1.04);
+  }
+
+  .cap-slide-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      135deg,
+      rgba(4,2,6,0.5) 0%,
+      transparent 50%,
+      rgba(4,2,6,0.7) 100%
+    );
+  }
+
+  /* Accent glow per colour */
+  .cap-slide-glow {
+    position: absolute;
+    bottom: -60px; right: -60px;
+    width: 280px; height: 280px;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.35;
+    pointer-events: none;
+  }
+
+  .cap-slide-glow--purple { background: radial-gradient(circle, rgba(123,63,160,1), transparent 70%); }
+  .cap-slide-glow--blue   { background: radial-gradient(circle, rgba(30,77,183,1), transparent 70%); }
+  .cap-slide-glow--pink   { background: radial-gradient(circle, rgba(196,64,128,1), transparent 70%); }
+  .cap-slide-glow--gold   { background: radial-gradient(circle, rgba(201,168,76,1), transparent 70%); }
+
+  /* Slide content */
+  .cap-slide-content {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    padding: 2rem;
+  }
+
+  .cap-slide-badge {
+    display: inline-block;
+    font-family: var(--font-display);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.25rem 0.7rem;
+    border-radius: 100px;
+    border: 1px solid;
+    margin-bottom: 0.9rem;
+  }
+
+  .cap-slide-badge--purple { color: var(--purple-light); background: rgba(123,63,160,0.15); border-color: rgba(123,63,160,0.4); }
+  .cap-slide-badge--blue   { color: #93c5fd;              background: rgba(30,77,183,0.15);  border-color: rgba(30,77,183,0.4); }
+  .cap-slide-badge--pink   { color: #f9a8d4;              background: rgba(196,64,128,0.15); border-color: rgba(196,64,128,0.4); }
+  .cap-slide-badge--gold   { color: var(--gold-light);    background: rgba(201,168,76,0.15); border-color: rgba(201,168,76,0.4); }
+
+  .cap-slide-title {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: -0.02em;
+    margin-bottom: 0.6rem;
+    line-height: 1.2;
+  }
+
+  .cap-slide-desc {
+    font-size: 0.85rem;
+    color: rgba(240,244,255,0.65);
+    line-height: 1.65;
+    max-width: 44ch;
+  }
+
+  /* Slide index number */
+  .cap-slide-num {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    font-family: var(--font-display);
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: rgba(255,255,255,0.25);
+    letter-spacing: 0.1em;
+  }
+
+  /* Dot nav */
+  .cap-dots {
+    position: absolute;
+    bottom: 1.25rem;
+    right: 1.25rem;
+    display: flex;
+    gap: 6px;
+    z-index: 2;
+  }
+
+  .cap-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.2);
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: background 0.3s, transform 0.3s;
+  }
+
+  .cap-dot--active {
+    background: var(--purple-light);
+    transform: scale(1.4);
+    box-shadow: 0 0 6px rgba(155,89,212,0.6);
+  }
+
+  /* ── Responsive ───────────────────────────────────────── */
+  @media (max-width: 1024px) {
+    .ai-showcase { grid-template-columns: 1fr; gap: 3rem; }
+    .float-stat--b { left: auto; right: -1rem; bottom: -1rem; }
+    .cap-showcase { grid-template-columns: 1fr; }
+    .cap-panel { min-height: 360px; }
+    .cap-list { order: 2; }
+    .cap-panel { order: 1; }
+  }
+
+  @media (max-width: 640px) {
+    .ai-section { padding: 5rem 0; }
+    .float-stat { display: none; }
+    .cap-panel { min-height: 300px; }
+  }
+</style>
+
+<script>
+  // ── Terminal progress bar counter ──────────────────────────
+  const pct = document.getElementById('tp-pct');
+  if (pct) {
+    let val = 0;
+    setInterval(() => {
+      val = (val + 0.4) % 97;
+      pct.textContent = Math.round(val) + '%';
+    }, 16);
+  }
+
+  // ── AI Capabilities interactive showcase ───────────────────
+  const CYCLE_MS = 4000;
+
+  const items  = Array.from(document.querySelectorAll('.cap-item'))  as HTMLElement[];
+  const slides = Array.from(document.querySelectorAll('.cap-slide')) as HTMLElement[];
+  const dots   = Array.from(document.querySelectorAll('.cap-dot'))   as HTMLElement[];
+
+  if (items.length && slides.length) {
+    let current   = 0;
+    let timer: ReturnType<typeof setInterval> | null = null;
+
+    function switchTo(idx: number) {
+      // Remove active from all
+      items[current].classList.remove('cap-item--active');
+      slides[current].classList.remove('cap-slide--active');
+      dots[current]?.classList.remove('cap-dot--active');
+
+      current = idx;
+
+      items[current].classList.add('cap-item--active');
+      slides[current].classList.add('cap-slide--active');
+      dots[current]?.classList.add('cap-dot--active');
+
+      // Restart progress bar animation
+      const fill = items[current].querySelector('.cap-progress-fill') as HTMLElement | null;
+      if (fill) {
+        fill.style.animation = 'none';
+        // Force reflow
+        void fill.offsetWidth;
+        fill.style.animation = '';
+      }
+    }
+
+    function startCycle() {
+      if (timer) clearInterval(timer);
+      timer = setInterval(() => {
+        switchTo((current + 1) % items.length);
+      }, CYCLE_MS);
+    }
+
+    // Click on list items
+    items.forEach((item, i) => {
+      item.addEventListener('click', () => {
+        switchTo(i);
+        startCycle(); // reset timer on manual click
+      });
+    });
+
+    // Click on dot nav
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', () => {
+        switchTo(i);
+        startCycle();
+      });
+    });
+
+    // Kick off auto-cycle
+    startCycle();
+  }
+</script>

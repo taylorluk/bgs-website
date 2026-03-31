@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" shape-rendering="geometricPrecision">
+  <defs>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="60%">
+      <stop offset="0%" stop-color="#E8D48A"/>
+      <stop offset="100%" stop-color="#C9A84C"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C9A84C"/>
+      <stop offset="100%" stop-color="#9A7A30"/>
+    </linearGradient>
+  </defs>
+  <!-- Dark background tile -->
+  <rect width="32" height="32" rx="7" fill="#070C1E"/>
+  <!-- Subtle gold border -->
+  <rect width="32" height="32" rx="7" fill="none" stroke="#C9A84C" stroke-width="0.8" stroke-opacity="0.45"/>
+  <!-- B letterform — top bowl -->
+  <path d="M9 7h8.2c2.65 0 4.8 2.0 4.8 4.5s-2.15 4.5-4.8 4.5H9V7z" fill="url(#g1)"/>
+  <!-- B letterform — bottom bowl (wider) -->
+  <path d="M9 16h8.8c2.87 0 5.2 2.15 5.2 4.75C23 23.35 20.67 25.5 17.8 25.5H9V16z" fill="url(#g2)"/>
+  <!-- Spine of the B -->
+  <rect x="9" y="7" width="2.2" height="18.5" rx="0.5" fill="url(#g1)"/>
+</svg>

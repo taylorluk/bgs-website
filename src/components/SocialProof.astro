@@ -1,0 +1,66 @@
+---
+const clients = [
+  'Acme Retail', 'NovaTech', 'Luminary Co.', 'Crest Capital',
+  'Zenith Media', 'Atlas Group', 'Pulse Digital', 'Orion Brands',
+  'Apex Corp', 'Vega Studios', 'Solaris Co.', 'Meridian Labs',
+];
+---
+
+<section class="social-proof">
+  <hr class="gold-line" />
+  <div class="marquee-track">
+    <div class="marquee-inner">
+      {[...clients, ...clients].map(name => (
+        <span class="client-logo">{name}</span>
+      ))}
+    </div>
+  </div>
+  <hr class="gold-line" />
+</section>
+
+<style>
+  .social-proof {
+    overflow: hidden;
+    padding: 0;
+  }
+
+  .marquee-track {
+    overflow: hidden;
+    padding: 1.5rem 0;
+  }
+
+  .marquee-inner {
+    display: flex;
+    gap: 3rem;
+    animation: marquee 30s linear infinite;
+    white-space: nowrap;
+    width: max-content;
+  }
+
+  .marquee-inner:hover { animation-play-state: paused; }
+
+  .client-logo {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    transition: color 0.3s;
+    flex-shrink: 0;
+    padding: 0.25rem 1rem;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    cursor: default;
+  }
+
+  .client-logo:hover {
+    color: var(--gold-primary);
+    border-color: var(--border-subtle);
+  }
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+</style>

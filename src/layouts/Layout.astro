@@ -1,0 +1,183 @@
+---
+import '../styles/global.css';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+  canonical?: string;
+}
+
+const {
+  title = 'BGS Technologies — Full-Service Marketing Agency | Dubai',
+  description = 'BGS Technologies is a world-class full-service marketing agency based in Dubai. We deliver performance marketing, branding, web, AI services, and more — globally.',
+  canonical,
+} = Astro.props;
+
+const canonicalURL = canonical ?? new URL(Astro.url.pathname, 'https://www.bgstech.ae').href;
+const ogImage = 'https://www.bgstech.ae/og-image.png';
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'MarketingAgency',
+  name: 'BGS Technologies',
+  url: 'https://www.bgstech.ae',
+  logo: 'https://www.bgstech.ae/BGS Logo white and black_4.png',
+  description,
+  telephone: '+971521456818',
+  email: 'hello@bgstech.ae',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: '205, Damas Tower, 2nd Al Maktoum Road, Riggat Al Buteen',
+    addressLocality: 'Deira, Dubai',
+    addressCountry: 'AE',
+  },
+  sameAs: [
+    'https://www.linkedin.com/company/bgs-technologies',
+    'https://www.instagram.com/bgstechnologies',
+  ],
+  areaServed: 'Worldwide',
+};
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="robots" content="index, follow" />
+    <title>{title}</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/BGS_Logo_white_and_black_4-removebg-preview.png" />
+    <link rel="apple-touch-icon" href="/BGS_Logo_white_and_black_4-removebg-preview.png" />
+
+    <!-- Canonical -->
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Google Fonts — preconnect first, then single link request -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:site_name" content="BGS Technologies" />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="en_AE" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <meta name="theme-color" content="#070C1E" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  </head>
+  <body>
+    <Nav />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+
+    <!-- GSAP -->
+    <script>
+      import { gsap } from 'gsap';
+      import { ScrollTrigger } from 'gsap/ScrollTrigger';
+      gsap.registerPlugin(ScrollTrigger);
+
+      // Reveal animations
+      document.addEventListener('DOMContentLoaded', () => {
+        // Mark html as JS-ready so CSS can apply initial hidden states
+        document.documentElement.classList.add('js-ready');
+
+        const reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+        reveals.forEach((el) => {
+          ScrollTrigger.create({
+            trigger: el,
+            start: 'top 88%',
+            onEnter: () => {
+              gsap.to(el, {
+                opacity: 1,
+                x: 0,
+                y: 0,
+                duration: 0.8,
+                ease: 'power3.out',
+              });
+            },
+          });
+        });
+
+        // Stagger children with .stagger-children class
+        document.querySelectorAll('.stagger-children').forEach((container) => {
+          const children = container.children;
+          ScrollTrigger.create({
+            trigger: container,
+            start: 'top 85%',
+            onEnter: () => {
+              gsap.to(children, {
+                opacity: 1,
+                y: 0,
+                duration: 0.6,
+                stagger: 0.12,
+                ease: 'power3.out',
+              });
+            },
+          });
+        });
+
+        // Count-up for stats
+        document.querySelectorAll('.count-up').forEach((el) => {
+          const target = parseFloat(el.getAttribute('data-target') || '0');
+          const suffix = el.getAttribute('data-suffix') || '';
+          const prefix = el.getAttribute('data-prefix') || '';
+          ScrollTrigger.create({
+            trigger: el,
+            start: 'top 85%',
+            once: true,
+            onEnter: () => {
+              gsap.fromTo(
+                { val: 0 },
+                { val: target },
+                {
+                  duration: 2,
+                  ease: 'power2.out',
+                  onUpdate: function () {
+                    const v = this.targets()[0].val;
+                    el.textContent = prefix + (Number.isInteger(target) ? Math.round(v) : v.toFixed(1)) + suffix;
+                  },
+                }
+              );
+            },
+          });
+        });
+
+        // Nav scroll behavior
+        const nav = document.getElementById('main-nav');
+        if (nav) {
+          ScrollTrigger.create({
+            start: 'top -60px',
+            onUpdate: (self) => {
+              if (self.progress > 0) {
+                nav.classList.add('nav-scrolled');
+              } else {
+                nav.classList.remove('nav-scrolled');
+              }
+            },
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

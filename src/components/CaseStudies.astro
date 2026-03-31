@@ -1,0 +1,276 @@
+---
+const cases = [
+  {
+    industry: 'E-Commerce',
+    client: 'Fashion Retail Brand',
+    region: 'UAE & KSA',
+    challenge: 'Scaling revenue beyond local market with limited budget.',
+    result: '420% ROAS',
+    resultSub: 'in 90 days via Meta & Google Ads',
+    metric1: { value: '420%', label: 'ROAS' },
+    metric2: { value: '3.2×', label: 'Revenue Growth' },
+    tag: 'Paid Ads',
+    tagColor: 'var(--gold-primary)',
+  },
+  {
+    industry: 'SaaS / Tech',
+    client: 'B2B Software Company',
+    region: 'Global',
+    challenge: 'Low brand awareness and high CAC in a competitive market.',
+    result: '60% CAC Reduction',
+    resultSub: 'through AI-powered targeting & creative testing',
+    metric1: { value: '60%', label: 'Lower CAC' },
+    metric2: { value: '8×', label: 'Lead Volume' },
+    tag: 'AI Marketing',
+    tagColor: 'var(--purple-light)',
+  },
+  {
+    industry: 'Real Estate',
+    client: 'Dubai Property Developer',
+    region: 'MENA & Europe',
+    challenge: 'Attracting international investors with a weak digital presence.',
+    result: '2,400+ Qualified Leads',
+    resultSub: 'across 12 countries in 6 months',
+    metric1: { value: '2.4K+', label: 'Qualified Leads' },
+    metric2: { value: '12', label: 'Countries Reached' },
+    tag: 'Full-Service',
+    tagColor: 'var(--pink-energy)',
+  },
+];
+---
+
+<section class="section case-studies" id="work">
+  <div class="container">
+    <div class="cs-header reveal">
+      <p class="section-label">Featured Work</p>
+      <h2 class="cs-title">
+        Results That<br />
+        <span class="text-gold-gradient">Speak for Themselves</span>
+      </h2>
+      <p class="cs-sub">
+        Real campaigns, real results. We measure success in revenue, not vanity metrics.
+      </p>
+    </div>
+
+    <div class="cs-grid stagger-children">
+      {cases.map(c => (
+        <div class="cs-card card">
+          <div class="cs-card-top">
+            <div class="cs-meta">
+              <span class="cs-tag" style={`color: ${c.tagColor}; border-color: ${c.tagColor}40; background: ${c.tagColor}10`}>{c.tag}</span>
+              <span class="cs-region">{c.region}</span>
+            </div>
+            <p class="cs-industry">{c.industry}</p>
+            <h3 class="cs-client">{c.client}</h3>
+          </div>
+
+          <div class="cs-challenge">
+            <p class="challenge-label">Challenge</p>
+            <p class="challenge-text">{c.challenge}</p>
+          </div>
+
+          <div class="cs-result">
+            <div class="result-glow" style={`background: radial-gradient(circle, ${c.tagColor}15 0%, transparent 70%)`}></div>
+            <strong class="result-value">{c.result}</strong>
+            <p class="result-sub">{c.resultSub}</p>
+          </div>
+
+          <div class="cs-metrics">
+            <div class="cs-metric">
+              <strong>{c.metric1.value}</strong>
+              <span>{c.metric1.label}</span>
+            </div>
+            <div class="cs-metric-divider"></div>
+            <div class="cs-metric">
+              <strong>{c.metric2.value}</strong>
+              <span>{c.metric2.label}</span>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div class="cs-footer reveal">
+      <a href="/work" class="btn-ghost">View All Case Studies</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .section-label {
+    font-family: var(--font-display);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold-primary);
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  .cs-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .cs-title {
+    font-size: clamp(2rem, 4vw, 3.25rem);
+    margin-bottom: 1rem;
+  }
+
+  .cs-sub {
+    color: var(--text-muted);
+    max-width: 46ch;
+    margin: 0 auto;
+    font-size: 1.05rem;
+    line-height: 1.7;
+  }
+
+  .cs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    margin-bottom: 3rem;
+  }
+
+  .cs-card {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cs-card-top { display: flex; flex-direction: column; gap: 0.5rem; }
+
+  .cs-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .cs-tag {
+    padding: 0.25rem 0.6rem;
+    border: 1px solid;
+    border-radius: 100px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    font-family: var(--font-display);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .cs-region {
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    font-family: var(--font-display);
+  }
+
+  .cs-industry {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    font-weight: 500;
+    letter-spacing: 0.03em;
+  }
+
+  .cs-client {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+
+  .cs-challenge { background: var(--bg-elevated); border-radius: 8px; padding: 1rem; }
+
+  .challenge-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-bottom: 0.4rem;
+    font-family: var(--font-display);
+  }
+
+  .challenge-text {
+    color: var(--text-muted);
+    font-size: 0.875rem;
+    line-height: 1.6;
+  }
+
+  .cs-result {
+    position: relative;
+    padding: 1.25rem;
+    background: var(--bg-elevated);
+    border-radius: 10px;
+    border: 1px solid var(--border-subtle);
+    overflow: hidden;
+  }
+
+  .result-glow {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+
+  .result-value {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--gold-primary);
+    line-height: 1.1;
+    margin-bottom: 0.25rem;
+    position: relative;
+  }
+
+  .result-sub {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    line-height: 1.5;
+    position: relative;
+  }
+
+  .cs-metrics {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid var(--border-subtle);
+  }
+
+  .cs-metric {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .cs-metric strong {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1;
+  }
+
+  .cs-metric span {
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .cs-metric-divider {
+    width: 1px;
+    height: 32px;
+    background: var(--border-subtle);
+  }
+
+  .cs-footer { text-align: center; }
+
+  @media (max-width: 1024px) { .cs-grid { grid-template-columns: 1fr; max-width: 600px; margin-inline: auto; } }
+  @media (max-width: 768px)  { .cs-grid { grid-template-columns: 1fr; } }
+</style>
