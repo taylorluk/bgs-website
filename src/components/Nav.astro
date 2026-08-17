@@ -1,7 +1,8 @@
 ---
+import { marketing, technology, ai } from '../data/services.js';
+
 const navLinks = [
   { label: 'Home', href: '/' },
-  { label: 'Services', href: '/services' },
   { label: 'Work', href: '/work' },
   { label: 'Offers', href: '/offers', highlight: true },
   { label: 'About', href: '/about' },
@@ -30,6 +31,13 @@ const navLinks = [
 
     <!-- Desktop Links -->
     <ul class="nav-links" role="list">
+      <!-- Services mega menu trigger -->
+      <li class="nav-item-services" id="services-trigger">
+        <button class="nav-link nav-link--services" aria-expanded="false" aria-controls="mega-menu" aria-haspopup="true">
+          Services
+          <svg class="chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+      </li>
       {navLinks.map(link => (
         <li>
           <a href={link.href} class={`nav-link${link.highlight ? ' nav-link--offers' : ''}`}>
@@ -49,9 +57,123 @@ const navLinks = [
     </button>
   </nav>
 
+  <!-- ══ MEGA MENU ══════════════════════════════════════════════════════════ -->
+  <div id="mega-menu" class="mega-menu" aria-hidden="true" role="region" aria-label="Services menu">
+    <div class="container mega-inner">
+
+      <!-- Marketing column -->
+      <div class="mega-col">
+        <div class="mega-col-header mega-col-header--gold">
+          <span class="mega-col-num">01</span>
+          <span class="mega-col-label">Marketing</span>
+        </div>
+        <ul role="list" class="mega-list">
+          {marketing.map(svc => (
+            <li>
+              <a href={`/services/${svc.slug}`} class="mega-link">
+                <span class="mega-icon" aria-hidden="true">{svc.icon}</span>
+                <span class="mega-link-text">
+                  <span class="mega-link-title">{svc.title}</span>
+                  <span class="mega-link-tagline">{svc.tagline}</span>
+                </span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Technology column -->
+      <div class="mega-col">
+        <div class="mega-col-header mega-col-header--blue">
+          <span class="mega-col-num">02</span>
+          <span class="mega-col-label">Technology</span>
+        </div>
+        <ul role="list" class="mega-list">
+          {technology.map(svc => (
+            <li>
+              <a href={`/services/${svc.slug}`} class="mega-link">
+                <span class="mega-icon" aria-hidden="true">{svc.icon}</span>
+                <span class="mega-link-text">
+                  <span class="mega-link-title">{svc.title}</span>
+                  <span class="mega-link-tagline">{svc.tagline}</span>
+                </span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- AI column -->
+      <div class="mega-col">
+        <div class="mega-col-header mega-col-header--purple">
+          <span class="mega-col-num">03</span>
+          <span class="mega-col-label">Artificial Intelligence</span>
+        </div>
+        <ul role="list" class="mega-list">
+          {ai.map(svc => (
+            <li>
+              <a href={`/services/${svc.slug}`} class="mega-link">
+                <span class="mega-icon" aria-hidden="true">{svc.icon}</span>
+                <span class="mega-link-text">
+                  <span class="mega-link-title">{svc.title}</span>
+                  <span class="mega-link-tagline">{svc.tagline}</span>
+                </span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Footer bar -->
+    <div class="mega-footer">
+      <div class="container">
+        <a href="/services" class="mega-all-link">
+          View all 20 services
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
   <!-- Mobile Menu -->
   <div id="mobile-menu" class="mobile-menu" aria-hidden="true">
     <ul role="list">
+      <!-- Mobile Services accordion -->
+      <li class="mobile-services-item">
+        <button id="mobile-services-btn" class="mobile-link mobile-link--accordion" aria-expanded="false">
+          Services
+          <svg class="mobile-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div id="mobile-services-panel" class="mobile-services-panel" aria-hidden="true">
+          <div class="mobile-svc-group">
+            <p class="mobile-svc-group-label mobile-svc-group-label--gold">01 · Marketing</p>
+            {marketing.map(svc => (
+              <a href={`/services/${svc.slug}`} class="mobile-svc-link">
+                <span aria-hidden="true">{svc.icon}</span> {svc.title}
+              </a>
+            ))}
+          </div>
+          <div class="mobile-svc-group">
+            <p class="mobile-svc-group-label mobile-svc-group-label--blue">02 · Technology</p>
+            {technology.map(svc => (
+              <a href={`/services/${svc.slug}`} class="mobile-svc-link">
+                <span aria-hidden="true">{svc.icon}</span> {svc.title}
+              </a>
+            ))}
+          </div>
+          <div class="mobile-svc-group">
+            <p class="mobile-svc-group-label mobile-svc-group-label--purple">03 · AI</p>
+            {ai.map(svc => (
+              <a href={`/services/${svc.slug}`} class="mobile-svc-link">
+                <span aria-hidden="true">{svc.icon}</span> {svc.title}
+              </a>
+            ))}
+          </div>
+          <a href="/services" class="mobile-svc-all">View all services →</a>
+        </div>
+      </li>
       {navLinks.map(link => (
         <li><a href={link.href} class={`mobile-link${link.highlight ? ' mobile-link--offers' : ''}`}>
           {link.label}{link.highlight && <span class="mobile-offers-badge">Free Offers</span>}
@@ -98,7 +220,6 @@ const navLinks = [
   }
   .nav-logo:hover { opacity: 0.88; }
 
-  /* Logo image */
   .logo-img {
     width: 40px;
     height: 40px;
@@ -111,7 +232,6 @@ const navLinks = [
     filter: brightness(0) invert(1) sepia(1) saturate(3) hue-rotate(5deg);
   }
 
-  /* Wordmark */
   .logo-wordmark {
     display: flex;
     align-items: center;
@@ -165,11 +285,30 @@ const navLinks = [
     border-radius: 6px;
     transition: color 0.2s, background 0.2s;
     letter-spacing: 0.01em;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
   }
-
   .nav-link:hover {
     color: var(--text-primary);
     background: rgba(255, 255, 255, 0.05);
+  }
+
+  /* Services button */
+  .nav-link--services {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  .nav-link--services[aria-expanded="true"] {
+    color: var(--text-primary);
+    background: rgba(255,255,255,0.05);
+  }
+  .nav-link--services[aria-expanded="true"] .chevron {
+    transform: rotate(180deg);
+  }
+  .chevron {
+    transition: transform 0.2s;
   }
 
   .nav-cta {
@@ -187,7 +326,6 @@ const navLinks = [
     cursor: pointer;
     padding: 0.5rem;
   }
-
   .menu-toggle span {
     display: block;
     width: 22px;
@@ -197,28 +335,7 @@ const navLinks = [
     transition: transform 0.3s, opacity 0.3s;
   }
 
-  .mobile-menu {
-    display: none;
-    padding: 1rem 1.5rem 2rem;
-    background: rgba(7, 12, 30, 0.97);
-    border-top: 1px solid var(--border-subtle);
-  }
-
-  .mobile-menu ul { list-style: none; }
-  .mobile-link {
-    display: block;
-    padding: 0.85rem 0;
-    color: var(--text-muted);
-    font-family: var(--font-display);
-    font-weight: 500;
-    font-size: 1.05rem;
-    text-decoration: none;
-    border-bottom: 1px solid var(--border-subtle);
-    transition: color 0.2s;
-  }
-  .mobile-link:hover { color: var(--text-primary); }
-
-  /* Offers nav highlight */
+  /* Offers highlight */
   .nav-link--offers {
     color: var(--gold-primary) !important;
     position: relative;
@@ -242,6 +359,215 @@ const navLinks = [
     0%, 100% { opacity: 1; transform: scale(1); }
     50% { opacity: 0.4; transform: scale(0.7); }
   }
+
+  /* ══ MEGA MENU ════════════════════════════════════════════════════════════ */
+  .mega-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(7, 12, 30, 0.97);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border-subtle);
+    z-index: 200;
+    opacity: 0;
+    transform: translateY(-8px);
+    pointer-events: none;
+    transition: opacity 0.22s ease, transform 0.22s ease;
+  }
+  .mega-menu[aria-hidden="false"] {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .mega-inner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    padding: 2rem 0 0;
+  }
+
+  .mega-col {
+    padding: 0 2rem 2rem;
+    border-right: 1px solid var(--border-subtle);
+  }
+  .mega-col:last-child { border-right: none; }
+
+  .mega-col-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .mega-col-num {
+    font-family: var(--font-display);
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+  }
+  .mega-col-label {
+    font-family: var(--font-display);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  .mega-col-header--gold  .mega-col-num,
+  .mega-col-header--gold  .mega-col-label { color: var(--gold-primary); }
+  .mega-col-header--blue  .mega-col-num,
+  .mega-col-header--blue  .mega-col-label { color: #93c5fd; }
+  .mega-col-header--purple .mega-col-num,
+  .mega-col-header--purple .mega-col-label { color: #c4b5fd; }
+
+  .mega-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+  }
+
+  .mega-link {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.55rem 0.75rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.15s;
+  }
+  .mega-link:hover { background: rgba(255,255,255,0.05); }
+
+  .mega-icon {
+    font-size: 1.1rem;
+    flex-shrink: 0;
+    line-height: 1.3;
+  }
+
+  .mega-link-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+  }
+  .mega-link-title {
+    font-family: var(--font-display);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    line-height: 1.2;
+  }
+  .mega-link-tagline {
+    font-size: 0.72rem;
+    color: var(--text-dim);
+    line-height: 1.35;
+  }
+
+  .mega-footer {
+    border-top: 1px solid var(--border-subtle);
+    padding: 0.9rem 0;
+  }
+  .mega-all-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--gold-primary);
+    font-family: var(--font-display);
+    font-size: 0.82rem;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    transition: gap 0.2s;
+  }
+  .mega-all-link:hover { gap: 0.65rem; }
+
+  /* ══ MOBILE MENU ══════════════════════════════════════════════════════════ */
+  .mobile-menu {
+    display: none;
+    padding: 1rem 1.5rem 2rem;
+    background: rgba(7, 12, 30, 0.97);
+    border-top: 1px solid var(--border-subtle);
+    max-height: 85vh;
+    overflow-y: auto;
+  }
+  .mobile-menu ul { list-style: none; }
+  .mobile-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.85rem 0;
+    color: var(--text-muted);
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 1.05rem;
+    text-decoration: none;
+    border-bottom: 1px solid var(--border-subtle);
+    transition: color 0.2s;
+    width: 100%;
+  }
+  .mobile-link:hover { color: var(--text-primary); }
+  .mobile-link--accordion {
+    background: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    cursor: pointer;
+    text-align: left;
+  }
+  .mobile-link--accordion[aria-expanded="true"] .mobile-chevron {
+    transform: rotate(180deg);
+  }
+  .mobile-chevron { transition: transform 0.2s; flex-shrink: 0; }
+
+  .mobile-services-panel {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.35s ease;
+  }
+  .mobile-services-panel[aria-hidden="false"] {
+    max-height: 1200px;
+  }
+
+  .mobile-svc-group { padding: 0.75rem 0 0.25rem; }
+  .mobile-svc-group-label {
+    font-family: var(--font-display);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    padding: 0 0.25rem;
+  }
+  .mobile-svc-group-label--gold   { color: var(--gold-primary); }
+  .mobile-svc-group-label--blue   { color: #93c5fd; }
+  .mobile-svc-group-label--purple { color: #c4b5fd; }
+
+  .mobile-svc-link {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.5rem 0.5rem;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background 0.15s, color 0.15s;
+  }
+  .mobile-svc-link:hover { background: rgba(255,255,255,0.05); color: var(--text-primary); }
+
+  .mobile-svc-all {
+    display: inline-block;
+    margin: 0.75rem 0.25rem 0.5rem;
+    color: var(--gold-primary);
+    font-family: var(--font-display);
+    font-size: 0.82rem;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
   .mobile-link--offers { color: var(--gold-primary) !important; }
   .mobile-offers-badge {
     display: inline-block;
@@ -267,12 +593,62 @@ const navLinks = [
 </style>
 
 <script>
+  // ── Mobile hamburger ────────────────────────────────────────────────────
   const toggle = document.getElementById('menu-toggle');
-  const menu = document.getElementById('mobile-menu');
+  const mobileMenu = document.getElementById('mobile-menu');
 
   toggle?.addEventListener('click', () => {
-    const isOpen = menu?.getAttribute('aria-hidden') === 'false';
-    menu?.setAttribute('aria-hidden', isOpen ? 'true' : 'false');
+    const isOpen = mobileMenu?.getAttribute('aria-hidden') === 'false';
+    mobileMenu?.setAttribute('aria-hidden', isOpen ? 'true' : 'false');
     toggle.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
   });
+
+  // ── Mobile services accordion ──────────────────────────────────────────
+  const mobileServicesBtn = document.getElementById('mobile-services-btn');
+  const mobileServicesPanel = document.getElementById('mobile-services-panel');
+
+  mobileServicesBtn?.addEventListener('click', () => {
+    const isOpen = mobileServicesPanel?.getAttribute('aria-hidden') === 'false';
+    mobileServicesPanel?.setAttribute('aria-hidden', isOpen ? 'true' : 'false');
+    mobileServicesBtn.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+  });
+
+  // ── Desktop mega menu ──────────────────────────────────────────────────
+  const servicesTrigger = document.getElementById('services-trigger');
+  const megaMenu = document.getElementById('mega-menu');
+  const servicesBtn = servicesTrigger?.querySelector('button');
+  let closeTimer: ReturnType<typeof setTimeout> | null = null;
+
+  function openMega() {
+    if (closeTimer) clearTimeout(closeTimer);
+    megaMenu?.setAttribute('aria-hidden', 'false');
+    servicesBtn?.setAttribute('aria-expanded', 'true');
+  }
+
+  function closeMega() {
+    closeTimer = setTimeout(() => {
+      megaMenu?.setAttribute('aria-hidden', 'true');
+      servicesBtn?.setAttribute('aria-expanded', 'false');
+    }, 120);
+  }
+
+  servicesTrigger?.addEventListener('mouseenter', openMega);
+  servicesTrigger?.addEventListener('mouseleave', closeMega);
+  megaMenu?.addEventListener('mouseenter', openMega);
+  megaMenu?.addEventListener('mouseleave', closeMega);
+
+  // Keyboard: Escape closes
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && megaMenu?.getAttribute('aria-hidden') === 'false') {
+      megaMenu.setAttribute('aria-hidden', 'true');
+      servicesBtn?.setAttribute('aria-expanded', 'false');
+      servicesBtn?.focus();
+    }
+  });
+
+  // Scroll detection
+  window.addEventListener('scroll', () => {
+    const nav = document.getElementById('main-nav');
+    nav?.classList.toggle('nav-scrolled', window.scrollY > 20);
+  }, { passive: true });
 </script>

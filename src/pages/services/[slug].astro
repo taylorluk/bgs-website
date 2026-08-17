@@ -1,0 +1,639 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CTA from '../../components/CTA.astro';
+import services, { pillarColors } from '../../data/services.js';
+
+export function getStaticPaths() {
+  return services.map((svc: any) => ({
+    params: { slug: svc.slug },
+    props: { svc },
+  }));
+}
+
+const { svc } = Astro.props;
+const related = services.filter((s: any) => s.pillar === svc.pillar && s.slug !== svc.slug).slice(0, 3);
+const meta = pillarColors[svc.pillar as keyof typeof pillarColors];
+
+const pillarNum: Record<string, string> = { Marketing: '01', Technology: '02', AI: '03' };
+const num = pillarNum[svc.pillar] ?? '01';
+---
+
+<Layout
+  title={svc.metaTitle ?? `${svc.title} — BGS Technologies`}
+  description={svc.metaDesc ?? svc.tagline}
+>
+
+  <!-- ══ HERO ════════════════════════════════════════════════════════════════ -->
+  <section class="sp-hero">
+    <div class="sp-hero-bg" aria-hidden="true" style={`background: ${meta.bgGrad};`}></div>
+
+    <div class="container sp-hero-inner reveal">
+      <!-- Breadcrumb -->
+      <nav class="sp-breadcrumb" aria-label="Breadcrumb">
+        <a href="/services">Services</a>
+        <span aria-hidden="true">›</span>
+        <span class={`sp-pillar-tag sp-pillar-tag--${meta.accent}`}>
+          {num} {svc.pillar}
+        </span>
+      </nav>
+
+      <div class="sp-hero-content">
+        <div class="sp-icon" aria-hidden="true">{svc.icon}</div>
+        <h1 class="sp-title">{svc.heroHeadline ?? svc.title}</h1>
+        <p class="sp-sub">{svc.heroSub ?? svc.tagline}</p>
+
+        <!-- Three stats -->
+        {(svc.stat1 || svc.stat2 || svc.stat3) && (
+          <div class="sp-stats">
+            {svc.stat1 && (
+              <div class="sp-stat">
+                <span class="sp-stat-val" style={`color:${meta.text}`}>{svc.stat1.value}</span>
+                <span class="sp-stat-label">{svc.stat1.label}</span>
+              </div>
+            )}
+            {svc.stat2 && (
+              <div class="sp-stat">
+                <span class="sp-stat-val" style={`color:${meta.text}`}>{svc.stat2.value}</span>
+                <span class="sp-stat-label">{svc.stat2.label}</span>
+              </div>
+            )}
+            {svc.stat3 && (
+              <div class="sp-stat">
+                <span class="sp-stat-val" style={`color:${meta.text}`}>{svc.stat3.value}</span>
+                <span class="sp-stat-label">{svc.stat3.label}</span>
+              </div>
+            )}
+          </div>
+        )}
+
+        <a href="/contact" class="btn-gold sp-hero-cta">
+          Get Started
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ INTRO ════════════════════════════════════════════════════════════════ -->
+  {svc.intro && (
+    <section class="sp-intro">
+      <div class="container sp-intro-inner reveal">
+        <div class="sp-intro-label">About This Service</div>
+        {svc.intro.split('\n\n').map((para: string) => (
+          <p class="sp-intro-para">{para}</p>
+        ))}
+      </div>
+    </section>
+  )}
+
+  <!-- ══ FEATURES ═════════════════════════════════════════════════════════════ -->
+  {svc.features && svc.features.length > 0 && (
+    <section class="sp-features">
+      <div class="container">
+        <div class="sp-section-header reveal">
+          <p class="sp-eyebrow">What's Included</p>
+          <h2 class="sp-section-title">
+            Everything You Get with<br />
+            <span style={`color:${meta.text}`}>{svc.title}</span>
+          </h2>
+        </div>
+        <div class="sp-features-grid stagger-children">
+          {svc.features.map((f: any) => (
+            <div class={`sp-feature-card sp-feature-card--${meta.accent}`}>
+              <div class="sp-feature-check" style={`background:${meta.glow};color:${meta.text}`} aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <h3 class="sp-feature-title">{f.title}</h3>
+              <p class="sp-feature-desc">{f.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- ══ PROCESS ══════════════════════════════════════════════════════════════ -->
+  {svc.process && svc.process.length > 0 && (
+    <section class="sp-process">
+      <div class="container">
+        <div class="sp-section-header reveal">
+          <p class="sp-eyebrow">How It Works</p>
+          <h2 class="sp-section-title">Our Process</h2>
+        </div>
+        <div class="sp-process-steps stagger-children">
+          {svc.process.map((step: any, i: number) => (
+            <div class="sp-step">
+              <div class="sp-step-num" style={`color:${meta.text};border-color:${meta.border}`}>{step.step}</div>
+              <div class="sp-step-connector" aria-hidden="true"></div>
+              <div class="sp-step-body">
+                <h3 class="sp-step-title">{step.title}</h3>
+                <p class="sp-step-desc">{step.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- ══ CTA BLOCK ════════════════════════════════════════════════════════════ -->
+  <section class="sp-cta-section">
+    <div class="container">
+      <div class="sp-cta-inner reveal" style={`border-color:${meta.border};background:${meta.glow};`}>
+        <div class="sp-cta-copy">
+          <p class="sp-cta-eyebrow">Ready to get started?</p>
+          <h2 class="sp-cta-title">
+            {svc.cta ?? `Let's build your ${svc.title} strategy`}
+          </h2>
+          <p class="sp-cta-sub">Book a free strategy call — no pitch decks, no fluff. Just a clear plan for your business.</p>
+        </div>
+        <div class="sp-cta-actions">
+          <a href="/contact" class="btn-gold">
+            Book a Strategy Call
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="/services" class="sp-btn-secondary">View All Services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ FAQ ══════════════════════════════════════════════════════════════════ -->
+  {svc.faq && svc.faq.length > 0 && (
+    <section class="sp-faq">
+      <div class="container">
+        <div class="sp-section-header reveal">
+          <p class="sp-eyebrow">Common Questions</p>
+          <h2 class="sp-section-title">FAQ</h2>
+        </div>
+        <div class="sp-faq-list stagger-children">
+          {svc.faq.map((item: any) => (
+            <details class="sp-faq-item">
+              <summary class="sp-faq-q">
+                {item.q}
+                <svg class="sp-faq-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </summary>
+              <p class="sp-faq-a">{item.a}</p>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- ══ RELATED SERVICES ════════════════════════════════════════════════════ -->
+  {related.length > 0 && (
+    <section class="sp-related">
+      <div class="container">
+        <p class="sp-related-eyebrow">More {svc.pillar} Services</p>
+        <div class="sp-related-grid stagger-children">
+          {related.map((r: any) => (
+            <a href={`/services/${r.slug}`} class={`sp-rel-card sp-rel-card--${pillarColors[r.pillar as keyof typeof pillarColors].accent}`}>
+              <div class="sp-rel-head">
+                <span class="sp-rel-icon" aria-hidden="true">{r.icon}</span>
+                <div>
+                  <h3 class="sp-rel-title">{r.title}</h3>
+                  <p class="sp-rel-tagline">{r.tagline}</p>
+                </div>
+              </div>
+              <span
+                class="sp-rel-stat"
+                style={`color:${pillarColors[r.pillar as keyof typeof pillarColors].text};background:${pillarColors[r.pillar as keyof typeof pillarColors].glow};border-color:${pillarColors[r.pillar as keyof typeof pillarColors].border}`}
+              >
+                {r.stat1?.value} {r.stat1?.label}
+              </span>
+              <span class="sp-rel-arrow" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <CTA />
+
+</Layout>
+
+<style>
+  /* ══ HERO ══════════════════════════════════════════════════════════════════ */
+  .sp-hero {
+    position: relative;
+    padding: 9rem 0 5rem;
+    overflow: hidden;
+    background: var(--bg-void);
+  }
+  .sp-hero-bg {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+  .sp-hero-inner { position: relative; }
+
+  .sp-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 2.5rem;
+    font-family: var(--font-display);
+    font-size: 0.8rem;
+    color: var(--text-dim);
+  }
+  .sp-breadcrumb a {
+    color: var(--text-dim);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .sp-breadcrumb a:hover { color: var(--text-primary); }
+
+  .sp-pillar-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.2rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .sp-pillar-tag--gold   { color: var(--gold-primary); background: rgba(201,168,76,0.12); border: 1px solid rgba(201,168,76,0.25); }
+  .sp-pillar-tag--blue   { color: #93c5fd; background: rgba(30,77,183,0.12); border: 1px solid rgba(30,77,183,0.25); }
+  .sp-pillar-tag--purple { color: #c4b5fd; background: rgba(123,63,160,0.15); border: 1px solid rgba(123,63,160,0.3); }
+
+  .sp-hero-content { max-width: 760px; }
+
+  .sp-icon {
+    font-size: 3.5rem;
+    line-height: 1;
+    margin-bottom: 1.25rem;
+    display: block;
+  }
+
+  .sp-title {
+    font-size: clamp(2.25rem, 5vw, 3.75rem);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+  }
+
+  .sp-sub {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    max-width: 56ch;
+  }
+
+  .sp-stats {
+    display: flex;
+    gap: 2.5rem;
+    margin-bottom: 2.25rem;
+    flex-wrap: wrap;
+  }
+  .sp-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+  .sp-stat-val {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1;
+  }
+  .sp-stat-label {
+    font-family: var(--font-display);
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+  }
+
+  .sp-hero-cta { margin-top: 0.5rem; }
+
+  /* ══ INTRO ═════════════════════════════════════════════════════════════════ */
+  .sp-intro {
+    padding: 5rem 0;
+    background: var(--bg-surface);
+    border-top: 1px solid var(--border-subtle);
+  }
+  .sp-intro-inner { max-width: 720px; }
+
+  .sp-intro-label {
+    font-family: var(--font-display);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-bottom: 1.5rem;
+  }
+  .sp-intro-para {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    margin-bottom: 1.25rem;
+  }
+
+  /* ══ SECTION HEADER ════════════════════════════════════════════════════════ */
+  .sp-section-header { margin-bottom: 3rem; }
+  .sp-eyebrow {
+    font-family: var(--font-display);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-bottom: 0.75rem;
+  }
+  .sp-section-title {
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--text-primary);
+    line-height: 1.15;
+  }
+
+  /* ══ FEATURES ══════════════════════════════════════════════════════════════ */
+  .sp-features {
+    padding: 5rem 0 6rem;
+    background: var(--bg-void);
+  }
+
+  .sp-features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+
+  .sp-feature-card {
+    padding: 1.75rem;
+    border-radius: 16px;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    transition: border-color 0.25s, transform 0.25s;
+  }
+  .sp-feature-card--gold:hover   { border-color: rgba(201,168,76,0.3); transform: translateY(-2px); }
+  .sp-feature-card--blue:hover   { border-color: rgba(30,77,183,0.3);  transform: translateY(-2px); }
+  .sp-feature-card--purple:hover { border-color: rgba(123,63,160,0.35); transform: translateY(-2px); }
+
+  .sp-feature-check {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    flex-shrink: 0;
+  }
+
+  .sp-feature-title {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.01em;
+  }
+  .sp-feature-desc {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    line-height: 1.65;
+  }
+
+  /* ══ PROCESS ═══════════════════════════════════════════════════════════════ */
+  .sp-process {
+    padding: 5rem 0 6rem;
+    background: var(--bg-surface);
+    border-top: 1px solid var(--border-subtle);
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .sp-process-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    position: relative;
+  }
+
+  .sp-step { display: flex; flex-direction: column; gap: 1rem; }
+
+  .sp-step-num {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .sp-step-connector { display: none; }
+
+  .sp-step-title {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: -0.01em;
+  }
+  .sp-step-desc {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    line-height: 1.65;
+  }
+
+  /* ══ CTA BLOCK ════════════════════════════════════════════════════════════ */
+  .sp-cta-section { padding: 5rem 0 6rem; background: var(--bg-void); }
+
+  .sp-cta-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2.5rem;
+    padding: 2.5rem 3rem;
+    border-radius: 20px;
+    border: 1px solid;
+    flex-wrap: wrap;
+  }
+  .sp-cta-eyebrow {
+    font-family: var(--font-display);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-bottom: 0.6rem;
+  }
+  .sp-cta-title {
+    font-size: clamp(1.3rem, 2vw, 1.75rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--text-primary);
+    line-height: 1.2;
+    margin-bottom: 0.75rem;
+    max-width: 44ch;
+  }
+  .sp-cta-sub {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.65;
+    max-width: 42ch;
+  }
+  .sp-cta-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    flex-shrink: 0;
+  }
+  .sp-btn-secondary {
+    display: block;
+    text-align: center;
+    padding: 0.6rem 1rem;
+    color: var(--text-muted);
+    font-family: var(--font-display);
+    font-size: 0.85rem;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: color 0.2s, background 0.2s;
+  }
+  .sp-btn-secondary:hover { color: var(--text-primary); background: rgba(255,255,255,0.05); }
+
+  /* ══ FAQ ═══════════════════════════════════════════════════════════════════ */
+  .sp-faq {
+    padding: 5rem 0 6rem;
+    background: var(--bg-surface);
+    border-top: 1px solid var(--border-subtle);
+  }
+
+  .sp-faq-list { display: flex; flex-direction: column; gap: 0; max-width: 800px; }
+
+  .sp-faq-item {
+    border-bottom: 1px solid var(--border-subtle);
+  }
+  .sp-faq-item:first-child { border-top: 1px solid var(--border-subtle); }
+
+  .sp-faq-q {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.25rem 0;
+    cursor: pointer;
+    font-family: var(--font-display);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    list-style: none;
+    user-select: none;
+  }
+  .sp-faq-q::-webkit-details-marker { display: none; }
+  .sp-faq-q:hover { color: var(--text-primary); }
+  .sp-faq-chevron { flex-shrink: 0; color: var(--text-dim); transition: transform 0.2s; }
+  details[open] .sp-faq-chevron { transform: rotate(180deg); }
+
+  .sp-faq-a {
+    padding: 0 0 1.25rem;
+    color: var(--text-muted);
+    font-size: 0.92rem;
+    line-height: 1.75;
+  }
+
+  /* ══ RELATED ══════════════════════════════════════════════════════════════ */
+  .sp-related {
+    padding: 5rem 0 6rem;
+    background: var(--bg-void);
+  }
+  .sp-related-eyebrow {
+    font-family: var(--font-display);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-bottom: 2rem;
+  }
+  .sp-related-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+  .sp-rel-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.75rem;
+    border-radius: 16px;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    text-decoration: none;
+    transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+    position: relative;
+  }
+  .sp-rel-card--gold:hover   { border-color: rgba(201,168,76,0.35); box-shadow: 0 12px 32px rgba(201,168,76,0.08); transform: translateY(-3px); }
+  .sp-rel-card--blue:hover   { border-color: rgba(30,77,183,0.35);  box-shadow: 0 12px 32px rgba(30,77,183,0.08);  transform: translateY(-3px); }
+  .sp-rel-card--purple:hover { border-color: rgba(123,63,160,0.4);  box-shadow: 0 12px 32px rgba(123,63,160,0.1); transform: translateY(-3px); }
+
+  .sp-rel-head { display: flex; align-items: flex-start; gap: 1rem; }
+  .sp-rel-icon { font-size: 1.75rem; flex-shrink: 0; line-height: 1; }
+  .sp-rel-title {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.2rem;
+    letter-spacing: -0.01em;
+  }
+  .sp-rel-tagline { font-size: 0.8rem; color: var(--text-dim); line-height: 1.4; }
+  .sp-rel-stat {
+    display: inline-block;
+    padding: 0.25rem 0.7rem;
+    border-radius: 6px;
+    border: 1px solid;
+    font-family: var(--font-display);
+    font-size: 0.75rem;
+    font-weight: 700;
+    align-self: flex-start;
+  }
+  .sp-rel-arrow {
+    position: absolute;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    color: var(--text-dim);
+    transition: color 0.2s, transform 0.2s;
+  }
+  .sp-rel-card:hover .sp-rel-arrow { color: var(--text-primary); transform: translateX(3px); }
+
+  /* ══ RESPONSIVE ════════════════════════════════════════════════════════════ */
+  @media (max-width: 1024px) {
+    .sp-process-steps { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 900px) {
+    .sp-features-grid { grid-template-columns: repeat(2, 1fr); }
+    .sp-related-grid  { grid-template-columns: repeat(2, 1fr); }
+    .sp-cta-inner { flex-direction: column; align-items: flex-start; padding: 2rem; }
+    .sp-cta-actions { flex-direction: row; align-items: center; }
+  }
+
+  @media (max-width: 600px) {
+    .sp-hero { padding: 7rem 0 3.5rem; }
+    .sp-features-grid { grid-template-columns: 1fr; }
+    .sp-process-steps { grid-template-columns: 1fr; }
+    .sp-related-grid  { grid-template-columns: 1fr; }
+    .sp-stats { gap: 1.5rem; }
+    .sp-cta-actions { flex-direction: column; }
+  }
+</style>
