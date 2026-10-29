@@ -84,11 +84,25 @@ const year = new Date().getFullYear();
     <div class="footer-legal">
       <a href="/privacy">Privacy Policy</a>
       <a href="/terms">Terms of Service</a>
+      <button type="button" class="footer-cookie-btn" onclick="window.bgsOpenCookieSettings && window.bgsOpenCookieSettings()">Cookie settings</button>
     </div>
   </div>
 </footer>
 
 <style>
+  .footer-cookie-btn {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .footer-cookie-btn:hover { color: var(--gold-light); }
+
   .footer {
     padding-top: 0;
     background: var(--bg-void);

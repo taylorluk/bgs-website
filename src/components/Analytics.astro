@@ -1,0 +1,88 @@
+---
+/**
+ * Google Analytics 4 with Consent Mode v2.
+ *
+ * Two things matter here:
+ *
+ * 1. The measurement ID comes from PUBLIC_GA_ID, never hardcoded. Set it in
+ *    Netlify's environment variables (and .env for local testing).
+ *
+ * 2. Consent defaults are declared BEFORE gtag.js loads, which is the whole
+ *    point of Consent Mode — tags fire in a cookieless mode until consent is
+ *    granted, rather than setting cookies and asking afterwards.
+ *
+ * Defaults are region-scoped: denied across the EEA, UK and Switzerland where
+ * prior consent is required, granted elsewhere. The banner lets anyone change
+ * it either way, so a UAE visitor can still opt out.
+ */
+const GA_ID = import.meta.env.PUBLIC_GA_ID;
+const isProd = import.meta.env.PROD;
+
+// Only ship the tag in production builds with an ID configured, so local and
+// preview traffic never pollutes the property.
+const enabled = Boolean(GA_ID) && isProd;
+---
+
+{enabled && (
+  <>
+    <script is:inline define:vars={{ GA_ID }}>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { window.dataLayer.push(arguments); }
+      window.gtag = gtag;
+
+      // Countries where prior consent is required before analytics storage.
+      const CONSENT_REQUIRED = [
+        'AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE',
+        'IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE',
+        'IS','LI','NO','GB','CH',
+      ];
+
+      gtag('consent', 'default', {
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        analytics_storage: 'denied',
+        functionality_storage: 'denied',
+        personalization_storage: 'denied',
+        security_storage: 'granted',
+        region: CONSENT_REQUIRED,
+        wait_for_update: 2000,
+      });
+
+      gtag('consent', 'default', {
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        analytics_storage: 'granted',
+        functionality_storage: 'granted',
+        personalization_storage: 'denied',
+        security_storage: 'granted',
+        wait_for_update: 2000,
+      });
+
+      // Re-apply a stored choice before the tag reports anything.
+      try {
+        const saved = localStorage.getItem('bgs-consent');
+        if (saved) {
+          const c = JSON.parse(saved);
+          gtag('consent', 'update', {
+            analytics_storage: c.analytics ? 'granted' : 'denied',
+            functionality_storage: c.analytics ? 'granted' : 'denied',
+            ad_storage: c.marketing ? 'granted' : 'denied',
+            ad_user_data: c.marketing ? 'granted' : 'denied',
+            ad_personalization: c.marketing ? 'granted' : 'denied',
+          });
+        }
+      } catch (e) {
+        // Private mode or blocked storage: fall through on the defaults above.
+      }
+
+      gtag('js', new Date());
+      gtag('config', GA_ID, {
+        anonymize_ip: true,
+        send_page_view: true,
+      });
+    </script>
+    <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}></script>
+  </>
+)}

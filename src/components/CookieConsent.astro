@@ -1,0 +1,164 @@
+---
+/**
+ * Consent banner driving Google Consent Mode v2.
+ *
+ * Accept and Decline carry equal visual weight deliberately — a banner that
+ * styles "accept" as the only real option is not valid consent under GDPR.
+ * Dismissing without choosing is not treated as consent either; the banner
+ * simply stays until a choice is made.
+ *
+ * Only rendered when analytics is actually configured, so the site does not
+ * ask for permission it has no use for.
+ */
+const enabled = Boolean(import.meta.env.PUBLIC_GA_ID) && import.meta.env.PROD;
+---
+
+{enabled && (
+  <div id="cookie-consent" class="cc" role="dialog" aria-labelledby="cc-title" aria-describedby="cc-body" hidden>
+    <div class="cc-inner">
+      <div class="cc-copy">
+        <p id="cc-title" class="cc-title">Cookies</p>
+        <p id="cc-body" class="cc-body">
+          We use analytics cookies to understand how this site is used. They are optional and
+          off until you allow them. See our <a href="/privacy">privacy policy</a>.
+        </p>
+      </div>
+      <div class="cc-actions">
+        <button type="button" id="cc-decline" class="cc-btn">Decline</button>
+        <button type="button" id="cc-accept" class="cc-btn">Allow analytics</button>
+      </div>
+    </div>
+  </div>
+)}
+
+{enabled && (
+  <script is:inline>
+    (function () {
+      const KEY = 'bgs-consent';
+      const el = document.getElementById('cookie-consent');
+      if (!el) return;
+
+      function read() {
+        try { return JSON.parse(localStorage.getItem(KEY) || 'null'); }
+        catch (e) { return null; }
+      }
+
+      function apply(choice) {
+        if (typeof window.gtag !== 'function') return;
+        window.gtag('consent', 'update', {
+          analytics_storage: choice.analytics ? 'granted' : 'denied',
+          functionality_storage: choice.analytics ? 'granted' : 'denied',
+          ad_storage: choice.marketing ? 'granted' : 'denied',
+          ad_user_data: choice.marketing ? 'granted' : 'denied',
+          ad_personalization: choice.marketing ? 'granted' : 'denied',
+        });
+      }
+
+      function save(choice) {
+        try { localStorage.setItem(KEY, JSON.stringify({ ...choice, at: new Date().toISOString() })); }
+        catch (e) { /* storage blocked: the choice applies for this page view only */ }
+        apply(choice);
+        el.hidden = true;
+      }
+
+      // Show only when no choice has been recorded.
+      if (!read()) el.hidden = false;
+
+      document.getElementById('cc-accept')?.addEventListener('click', function () {
+        save({ analytics: true, marketing: false });
+      });
+      document.getElementById('cc-decline')?.addEventListener('click', function () {
+        save({ analytics: false, marketing: false });
+      });
+
+      // Lets the footer link reopen the banner so a choice can be changed.
+      window.bgsOpenCookieSettings = function () { el.hidden = false; };
+    })();
+  </script>
+)}
+
+<style>
+  .cc {
+    position: fixed;
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    z-index: 9999;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-gold);
+    border-radius: 14px;
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.5);
+  }
+
+  .cc[hidden] { display: none; }
+
+  .cc-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding: 1.1rem 1.4rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .cc-title {
+    font-family: var(--font-display);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold-primary);
+    margin-bottom: 0.3rem;
+  }
+
+  .cc-body {
+    font-size: 0.88rem;
+    line-height: 1.5;
+    color: var(--text-muted);
+    margin: 0;
+  }
+
+  .cc-body a {
+    color: var(--gold-light);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .cc-actions {
+    display: flex;
+    gap: 0.6rem;
+    flex-shrink: 0;
+  }
+
+  /* Equal weight on both buttons — neither is styled as the default. */
+  .cc-btn {
+    font-family: var(--font-body);
+    font-size: 0.86rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    background: transparent;
+    border: 1px solid var(--border-gold);
+    border-radius: 8px;
+    padding: 0.6rem 1.15rem;
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease;
+    white-space: nowrap;
+  }
+
+  .cc-btn:hover {
+    background: rgba(201, 168, 76, 0.12);
+    border-color: var(--gold-primary);
+  }
+
+  .cc-btn:focus-visible {
+    outline: 2px solid var(--gold-light);
+    outline-offset: 2px;
+  }
+
+  @media (max-width: 720px) {
+    .cc-inner { flex-direction: column; align-items: stretch; gap: 1rem; }
+    .cc-actions { justify-content: stretch; }
+    .cc-btn { flex: 1; }
+  }
+</style>
