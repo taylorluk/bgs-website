@@ -10,7 +10,9 @@
  * Only rendered when analytics is actually configured, so the site does not
  * ask for permission it has no use for.
  */
-const enabled = Boolean(import.meta.env.PUBLIC_GA_ID) && import.meta.env.PROD;
+const enabled =
+  Boolean(import.meta.env.PUBLIC_GTM_ID || import.meta.env.PUBLIC_GA_ID) &&
+  import.meta.env.PROD;
 ---
 
 {enabled && (

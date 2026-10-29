@@ -1,0 +1,20 @@
+---
+/**
+ * GTM's noscript fallback. Must be the first thing inside <body>.
+ * Only meaningful for visitors without JavaScript; harmless otherwise.
+ */
+const GTM_ID = import.meta.env.PUBLIC_GTM_ID;
+const useGtm = Boolean(GTM_ID) && import.meta.env.PROD;
+---
+
+{useGtm && (
+  <noscript>
+    <iframe
+      src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+      height="0"
+      width="0"
+      style="display:none;visibility:hidden"
+      title="Google Tag Manager"
+    ></iframe>
+  </noscript>
+)}
