@@ -83,3 +83,39 @@ with analytics denied until accepted.
       → Define internal traffic (add `localhost`), then Admin → Data filters to
       activate it. Test hits from local builds on 29–30 October 2026 are in the
       property and should be filtered out.
+
+## PostHog
+
+Added 30 October 2026 via `npx @posthog/wizard`, then reworked. Runs alongside
+GA4 rather than instead of it — the GTM/GA4 exclusivity above does not apply.
+
+| | Value |
+|---|---|
+| `PUBLIC_POSTHOG_KEY` | project token (`phc_…`), public by design |
+| `PUBLIC_POSTHOG_HOST` | `https://us.i.posthog.com` |
+
+### What was changed from the wizard output
+
+The wizard's version called `posthog.init()` on load with no consent check, which
+contradicted the privacy policy. It also rewrote `netlify/functions/submit-lead.js`
+to emit OpenTelemetry logs, pulling five `@opentelemetry/*` packages into the
+lambda that handles lead submissions.
+
+- **Consent gating added.** PostHog initialises with `opt_out_capturing_by_default`
+  and `persistence: 'memory'`, so nothing is captured and no identifier is stored
+  until the visitor allows analytics. The banner calls `bgsApplyPostHogConsent()`
+  on both accept and decline. PostHog does not read Google Consent Mode, so it is
+  driven directly.
+- **Production guard added**, matching GA4 — nothing ships in dev or preview.
+- **Exception capture disabled.** The wizard enabled unhandled error and rejection
+  capture; error text can carry page data, so it is off until someone decides it
+  is wanted.
+- **Lead function reverted.** OpenTelemetry in a lambda on the revenue path is
+  real cold-start cost for log lines Netlify already captures from `console`.
+  If server-side events are wanted later, `posthog-node` is far lighter.
+- **Dependencies removed.** All five OTel packages and `posthog-js` — the
+  component uses PostHog's inline snippet, so nothing imported the npm package.
+
+Kept from the wizard: the `posthog.capture()` calls on the contact form, CTA form
+and newsletter form. They are guarded with `window.posthog?.` and are no-ops while
+opted out.

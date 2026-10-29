@@ -70,6 +70,7 @@ import { ORG } from '../consts.js';
     <li><strong>Hosting and infrastructure</strong> — our website host serves this site and processes form submissions.</li>
     <li><strong>Google Analytics</strong> — anonymised usage data, only where you have allowed analytics cookies.</li>
     <li><strong>Google Tag Manager</strong> — loads and governs the measurement tags on this site. It does not itself set analytics cookies.</li>
+    <li><strong>PostHog</strong> — product analytics measuring how pages and forms are used, only where you have allowed analytics cookies. Data is processed on PostHog's US infrastructure.</li>
     <li><strong>Advertising platforms</strong> — for campaigns we run on your behalf as a client; not for tracking visitors to this website.</li>
     <li><strong>Professional advisers</strong> — accountants and legal advisers where required.</li>
   </ul>
@@ -103,7 +104,7 @@ import { ORG } from '../consts.js';
   <h2>8. Cookies and tracking</h2>
   <p>
     This site uses cookies that are strictly necessary for it to function, and
-    <strong>Google Analytics 4</strong> to understand how the site is used.
+    <strong>Google Analytics 4</strong> and <strong>PostHog</strong> to understand how the site is used.
   </p>
   <p>
     Analytics cookies are optional. We use Google Consent Mode, which means analytics runs in a
@@ -111,6 +112,10 @@ import { ORG } from '../consts.js';
     denied by default and only enabled if you choose to allow it. Elsewhere it is enabled by
     default and you can turn it off at any time using the <strong>Cookie settings</strong> link in
     the footer of every page.
+  </p>
+  <p>
+    PostHog is held in an opted-out state with no stored identifier until you allow analytics,
+    and is opted back out immediately if you decline.
   </p>
   <p>
     We do not run advertising or personalisation cookies on this website. Your IP address is

@@ -646,3 +646,9 @@ const categoryColors: Record<string, string> = {
     .category-pills { gap: 0.4rem; }
   }
 </style>
+
+<script is:inline>
+  document.querySelector('.newsletter-form')?.addEventListener('submit', () => {
+    window.posthog?.capture('newsletter_subscribed');
+  });
+</script>

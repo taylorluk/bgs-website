@@ -279,3 +279,11 @@
     .cta-form-wrap { padding: 1.5rem; }
   }
 </style>
+
+<script is:inline>
+  document.querySelector('.cta-form')?.addEventListener('submit', () => {
+    window.posthog?.capture('lead_form_submitted', {
+      form_variant: 'cta',
+    });
+  });
+</script>

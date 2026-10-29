@@ -854,6 +854,10 @@ const schemas = [
       // Silent — show success regardless so user isn't blocked
     }
 
+    window.posthog?.capture('lead_form_submitted', {
+      form_variant: 'detailed_contact',
+    });
+
     // Show success state
     if (formCol) {
       formCol.innerHTML = `

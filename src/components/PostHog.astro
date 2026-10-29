@@ -1,0 +1,61 @@
+---
+/**
+ * PostHog, gated behind the same consent mechanism as GA4.
+ *
+ * The install wizard's default was to call posthog.init() on load, which sets
+ * cookies before asking. The privacy policy on this site states analytics
+ * cookies run only where the visitor has consented, so this version:
+ *
+ *  - only ships in production builds with a key configured, matching Analytics.astro
+ *  - starts with capturing opted OUT and persistence in memory, so nothing is
+ *    written to storage until a choice is made
+ *  - opts in only when the visitor has allowed analytics, via the same
+ *    `bgs-consent` key the banner writes
+ *
+ * PostHog is initialised either way so that `window.posthog` exists for the
+ * capture calls on the contact, CTA and blog forms; while opted out those
+ * calls are no-ops rather than errors.
+ */
+const apiKey = import.meta.env.PUBLIC_POSTHOG_KEY;
+const apiHost = import.meta.env.PUBLIC_POSTHOG_HOST;
+const enabled = Boolean(apiKey && apiHost) && import.meta.env.PROD;
+---
+
+{enabled && (
+  <script is:inline define:vars={{ apiKey, apiHost }}>
+    !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split('.');2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement('script')).type='text/javascript',p.crossOrigin='anonymous',p.async=!0,p.src=s.api_host+'/static/array.js',(r=t.getElementsByTagName('script')[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a='posthog',u.people=u.people||[],Object.defineProperty(u,'toString',{configurable:!0,enumerable:!0,writable:!0,value:function(t){var e='posthog';return'posthog'!==a&&(e+='.'+a),t||(e+=' (stub)'),e}}),Object.defineProperty(u.people,'toString',{configurable:!0,enumerable:!0,writable:!0,value:function(){return u.toString(1)+'.people (stub)'}}),o='capture captureLog identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys getNextSurveyStep onSessionId'.split(' '),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+
+    var bgsAnalyticsAllowed = false;
+    try {
+      var saved = localStorage.getItem('bgs-consent');
+      bgsAnalyticsAllowed = saved ? JSON.parse(saved).analytics === true : false;
+    } catch (e) {
+      // Blocked storage: stay opted out.
+    }
+
+    posthog.init(apiKey, {
+      api_host: apiHost,
+      // Nothing is captured and no cookie is written until consent is given.
+      opt_out_capturing_by_default: true,
+      persistence: bgsAnalyticsAllowed ? 'localStorage+cookie' : 'memory',
+      capture_pageview: true,
+      // Error capture can carry message text from the page; keep it off until
+      // someone decides it is wanted, and never capture console output.
+      capture_exceptions: false,
+    });
+
+    if (bgsAnalyticsAllowed) posthog.opt_in_capturing();
+
+    // Called by the consent banner when the visitor changes their mind.
+    window.bgsApplyPostHogConsent = function (allowed) {
+      if (!window.posthog || typeof window.posthog.opt_in_capturing !== 'function') return;
+      if (allowed) {
+        window.posthog.set_config({ persistence: 'localStorage+cookie' });
+        window.posthog.opt_in_capturing();
+      } else {
+        window.posthog.opt_out_capturing();
+        window.posthog.set_config({ persistence: 'memory' });
+      }
+    };
+  </script>
+)}

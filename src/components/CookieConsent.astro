@@ -11,8 +11,11 @@
  * ask for permission it has no use for.
  */
 const enabled =
-  Boolean(import.meta.env.PUBLIC_GTM_ID || import.meta.env.PUBLIC_GA_ID) &&
-  import.meta.env.PROD;
+  Boolean(
+    import.meta.env.PUBLIC_GTM_ID ||
+    import.meta.env.PUBLIC_GA_ID ||
+    import.meta.env.PUBLIC_POSTHOG_KEY,
+  ) && import.meta.env.PROD;
 ---
 
 {enabled && (
@@ -46,6 +49,10 @@ const enabled =
       }
 
       function apply(choice) {
+        // PostHog is opted in/out directly; it does not read Consent Mode.
+        if (typeof window.bgsApplyPostHogConsent === 'function') {
+          window.bgsApplyPostHogConsent(Boolean(choice.analytics));
+        }
         if (typeof window.gtag !== 'function') return;
         window.gtag('consent', 'update', {
           analytics_storage: choice.analytics ? 'granted' : 'denied',
