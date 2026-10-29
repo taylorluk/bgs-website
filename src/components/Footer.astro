@@ -1,4 +1,6 @@
 ---
+import BgsMark from '../assets/logo/bgs-mark-gold.svg';
+import { SOCIAL_PROFILES } from '../consts.js';
 const services = [
   { label: 'Paid Ads', href: '/services#marketing' },
   { label: 'Social Media & Content', href: '/services#marketing' },
@@ -18,6 +20,7 @@ const company = [
 ];
 
 const year = new Date().getFullYear();
+
 ---
 
 <footer class="footer">
@@ -27,12 +30,12 @@ const year = new Date().getFullYear();
     <!-- Brand -->
     <div class="footer-brand">
       <a href="/" class="footer-logo">
-        <img
-          src="/BGS_Logo_white_and_black_4-removebg-preview.png"
-          alt="BGS Logo"
+        <BgsMark
           class="footer-logo-img"
-          width="38"
-          height="38"
+          width={38}
+          height={38}
+          role="img"
+          aria-label="BGS Technologies"
         />
         <div class="footer-logo-text">
           <span class="logo-bgs">BGS</span>
@@ -42,15 +45,14 @@ const year = new Date().getFullYear();
       </a>
       <p class="footer-tagline">Where Strategy Meets Technology.<br />Built for growth. Engineered to last.</p>
       <div class="footer-socials">
-        <a href="#" aria-label="LinkedIn" class="social-link">in</a>
-        <a href="#" aria-label="Instagram" class="social-link">ig</a>
-        <a href="#" aria-label="X / Twitter" class="social-link">𝕏</a>
+        <a href={SOCIAL_PROFILES.linkedin} aria-label="BGS Technologies on LinkedIn" class="social-link" target="_blank" rel="noopener">in</a>
+        <a href={SOCIAL_PROFILES.instagram} aria-label="BGS Technologies on Instagram" class="social-link" target="_blank" rel="noopener">ig</a>
       </div>
     </div>
 
     <!-- Services -->
     <div class="footer-col">
-      <h4>Services</h4>
+      <h2>Services</h2>
       <ul>
         {services.map(s => <li><a href={s.href}>{s.label}</a></li>)}
       </ul>
@@ -58,7 +60,7 @@ const year = new Date().getFullYear();
 
     <!-- Company -->
     <div class="footer-col">
-      <h4>Company</h4>
+      <h2>Company</h2>
       <ul>
         {company.map(c => <li><a href={c.href}>{c.label}</a></li>)}
       </ul>
@@ -66,7 +68,7 @@ const year = new Date().getFullYear();
 
     <!-- Contact -->
     <div class="footer-col">
-      <h4>Contact</h4>
+      <h2>Contact</h2>
       <p class="footer-address">205, Damas Tower<br />2nd Al Maktoum Road<br />Riggat Al Buteen, Deira<br />Dubai, UAE</p>
       <a href="tel:+971521456818" class="footer-phone">+971 52 145 6818</a>
       <a href="https://wa.me/971521456818" class="footer-whatsapp" target="_blank" rel="noopener">
@@ -116,7 +118,6 @@ const year = new Date().getFullYear();
     height: 38px;
     object-fit: contain;
     flex-shrink: 0;
-    filter: brightness(0) invert(1);
   }
 
   .footer-logo-text {
@@ -184,7 +185,7 @@ const year = new Date().getFullYear();
   }
   .social-link:hover { border-color: var(--gold-primary); color: var(--gold-primary); }
 
-  .footer-col h4 {
+  .footer-col h2 {
     font-family: var(--font-display);
     font-size: 0.8rem;
     font-weight: 600;

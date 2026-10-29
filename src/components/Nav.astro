@@ -1,4 +1,5 @@
 ---
+import BgsMark from '../assets/logo/bgs-mark-gold.svg';
 import { marketing, technology, ai } from '../data/services.js';
 
 const navLinks = [
@@ -9,18 +10,19 @@ const navLinks = [
   { label: 'Blog', href: '/blog' },
   { label: 'Contact', href: '/contact' },
 ];
+
 ---
 
 <header id="main-nav" class="nav-wrapper">
   <nav class="container nav-inner">
     <!-- Logo -->
     <a href="/" class="nav-logo" aria-label="BGS Technologies Home">
-      <img
-        src="/BGS_Logo_white_and_black_4-removebg-preview.png"
-        alt="BGS Logo"
+      <BgsMark
         class="logo-img"
-        width="40"
-        height="40"
+        width={40}
+        height={40}
+        role="img"
+        aria-label="BGS Technologies"
       />
       <div class="logo-wordmark">
         <span class="logo-bgs">BGS</span>
@@ -225,11 +227,10 @@ const navLinks = [
     height: 40px;
     object-fit: contain;
     flex-shrink: 0;
-    filter: brightness(0) invert(1);
-    transition: filter 0.3s;
+    transition: opacity 0.3s;
   }
   .nav-logo:hover .logo-img {
-    filter: brightness(0) invert(1) sepia(1) saturate(3) hue-rotate(5deg);
+    opacity: 0.82;
   }
 
   .logo-wordmark {

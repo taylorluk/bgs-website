@@ -1,4 +1,5 @@
 ---
+import { imageDims } from '../lib/images.js';
 const projects = [
   {
     brand: 'Luxe Mode Dubai',
@@ -129,6 +130,8 @@ const accentColors: Record<string, string> = {
           <div class="sc-image-wrap">
             <img
               src={p.image}
+              width={imageDims(p.image).width}
+              height={imageDims(p.image).height}
               alt={p.brand}
               class="sc-image"
               loading="lazy"

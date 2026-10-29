@@ -1,4 +1,5 @@
 ---
+import { imageDims } from '../lib/images.js';
 const capabilities = [
   {
     title: 'AI Content at Scale',
@@ -211,6 +212,8 @@ const terminalLines = [
           <div class={`cap-slide${i === 0 ? ' cap-slide--active' : ''}`} data-slide={i}>
             <img
               src={cap.image}
+              width={imageDims(cap.image).width}
+              height={imageDims(cap.image).height}
               alt={cap.title}
               class="cap-slide-img"
               loading={i === 0 ? 'eager' : 'lazy'}

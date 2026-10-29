@@ -146,3 +146,30 @@ h1, h2, h3, h4, h5, h6 {
 .js-ready .reveal-left  { opacity: 0; transform: translateX(-40px); }
 .js-ready .reveal-right { opacity: 0; transform: translateX(40px); }
 .js-ready .stagger-children > * { opacity: 0; transform: translateY(25px); }
+
+/*
+  Above-the-fold entrance.
+
+  Hero content must NOT use .reveal: that holds it at opacity 0 until the GSAP
+  bundle has downloaded, parsed and run, which puts a ~112KB script on the
+  critical path of the LCP element. .enter animates transform only — opacity
+  stays 1 — so the hero paints with the HTML and LCP is unaffected.
+*/
+.enter {
+  animation: enter-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.enter-1 { animation-delay: 0.04s; }
+.enter-2 { animation-delay: 0.10s; }
+.enter-3 { animation-delay: 0.16s; }
+.enter-4 { animation-delay: 0.22s; }
+.enter-5 { animation-delay: 0.28s; }
+
+@keyframes enter-up {
+  from { transform: translateY(18px); }
+  to   { transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .enter { animation: none; }
+}

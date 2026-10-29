@@ -1,10 +1,21 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { breadcrumbSchema } from '../lib/schema.js';
+
+const schemas = [
+  breadcrumbSchema([
+    { name: 'Home', path: '/' },
+    { name: 'Contact', path: '/contact' },
+  ]),
+];
+
 ---
 
 <Layout
   title="Contact BGS Technologies — Book a Free Strategy Call"
   description="Get in touch with BGS Technologies. Book a free 30-minute strategy call with our senior team. No commitment, no fluff — just a clear plan for your growth."
+
+  schemas={schemas}
 >
 
   <!-- ── PAGE HERO ─────────────────────────────────────────────────────────── -->

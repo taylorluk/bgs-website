@@ -1,0 +1,126 @@
+---
+import LegalLayout from '../layouts/LegalLayout.astro';
+import { ORG } from '../consts.js';
+---
+
+<LegalLayout
+  title="Privacy Policy | BGS Technologies"
+  description="How BGS Technologies collects, uses, stores and protects personal data submitted through bgstech.ae, and the rights you have over that data."
+  heading="Privacy Policy"
+  lastUpdated="29 October 2026"
+  lastUpdatedISO="2026-10-29"
+>
+  <p>
+    This Privacy Policy explains how <strong>{ORG.legalName}</strong> ("BGS Technologies", "we", "us")
+    collects, uses, stores and protects personal data when you use
+    <a href="https://bgstech.ae">bgstech.ae</a> or engage us for services.
+  </p>
+
+  <h2>1. Who we are</h2>
+  <p>
+    BGS Technologies is a marketing, technology and AI services company registered in the United Arab
+    Emirates, with offices at {ORG.streetAddress}, {ORG.addressLocality}, UAE. For any privacy question
+    or request, contact us at <a href={`mailto:${ORG.email}`}>{ORG.email}</a>.
+  </p>
+
+  <h2>2. What data we collect</h2>
+  <h3>Information you give us</h3>
+  <ul>
+    <li>Name, email address, phone number and company name submitted through our contact and offer forms.</li>
+    <li>The service you are interested in, your indicated budget range, how you heard about us, and any message you write.</li>
+    <li>Any information you share with us during a strategy call, in email, or over WhatsApp.</li>
+  </ul>
+
+  <h3>Information collected automatically</h3>
+  <ul>
+    <li>Standard server and request data such as IP address, browser type, device type and referring page.</li>
+    <li>Usage data about which pages you visit and how you arrived, where analytics are enabled.</li>
+  </ul>
+
+  <p>
+    We do not knowingly collect special categories of personal data, and we do not collect
+    data from children under 16.
+  </p>
+
+  <h2>3. How we use your data</h2>
+  <ul>
+    <li><strong>To respond to enquiries</strong> — contacting you about a strategy call, proposal or offer you requested.</li>
+    <li><strong>To deliver our services</strong> — managing campaigns, projects and reporting for clients.</li>
+    <li><strong>To improve the website</strong> — understanding which content and pages are useful.</li>
+    <li><strong>To send marketing communications</strong> — only where you have opted in, and with an unsubscribe link in every message.</li>
+    <li><strong>To meet legal obligations</strong> — including accounting, tax and regulatory requirements.</li>
+  </ul>
+
+  <h2>4. Legal bases for processing</h2>
+  <p>
+    Where the UAE Personal Data Protection Law (Federal Decree-Law No. 45 of 2021) or the EU/UK GDPR
+    applies, we rely on: your <strong>consent</strong> (marketing communications), the
+    <strong>performance of a contract</strong> (delivering services you have engaged us for), our
+    <strong>legitimate interests</strong> (responding to business enquiries and securing our site),
+    and <strong>legal obligation</strong> (record keeping).
+  </p>
+
+  <h2>5. Who we share data with</h2>
+  <p>
+    We do not sell your personal data. We share it only with service providers who process it on our
+    behalf under contract, including:
+  </p>
+  <ul>
+    <li><strong>CRM</strong> — enquiry details are stored in our customer relationship management platform.</li>
+    <li><strong>Hosting and infrastructure</strong> — our website host serves this site and processes form submissions.</li>
+    <li><strong>Analytics and advertising platforms</strong> — where enabled, to measure site and campaign performance.</li>
+    <li><strong>Professional advisers</strong> — accountants and legal advisers where required.</li>
+  </ul>
+  <p>
+    Some of these providers are located outside the UAE. Where data is transferred internationally, we
+    take reasonable steps to ensure it remains protected to a comparable standard.
+  </p>
+
+  <h2>6. How long we keep data</h2>
+  <p>
+    Enquiry data is retained for up to 24 months from your last interaction with us unless you ask us to
+    erase it sooner. Client records are retained for the duration of the engagement and for as long as
+    required afterwards for legal, tax and accounting purposes.
+  </p>
+
+  <h2>7. Your rights</h2>
+  <p>Subject to applicable law, you may request to:</p>
+  <ul>
+    <li>Access the personal data we hold about you.</li>
+    <li>Correct inaccurate or incomplete data.</li>
+    <li>Erase your data where we have no continuing lawful basis to keep it.</li>
+    <li>Restrict or object to how we process it.</li>
+    <li>Receive your data in a portable format.</li>
+    <li>Withdraw consent at any time, without affecting processing carried out before withdrawal.</li>
+  </ul>
+  <p>
+    To exercise any of these rights, email <a href={`mailto:${ORG.email}`}>{ORG.email}</a>. We respond to
+    verified requests within 30 days.
+  </p>
+
+  <h2>8. Cookies and tracking</h2>
+  <p>
+    This site uses cookies and similar technologies that are strictly necessary for it to function, and
+    may use analytics or advertising cookies where you have consented. You can block or delete cookies in
+    your browser settings; blocking strictly necessary cookies may affect how the site works.
+  </p>
+
+  <h2>9. Security</h2>
+  <p>
+    The site is served over HTTPS and we apply technical and organisational measures appropriate to the
+    risk, including access controls and encryption in transit. No method of transmission or storage is
+    completely secure, and we cannot guarantee absolute security.
+  </p>
+
+  <h2>10. Changes to this policy</h2>
+  <p>
+    We may update this policy from time to time. The "last updated" date above always reflects the
+    current version.
+  </p>
+
+  <h2>11. Contact</h2>
+  <p>
+    Questions or complaints about this policy or how we handle your data:
+    <a href={`mailto:${ORG.email}`}>{ORG.email}</a> or {ORG.telephone}.
+  </p>
+</LegalLayout>

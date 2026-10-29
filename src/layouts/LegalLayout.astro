@@ -1,0 +1,135 @@
+---
+import Layout from './Layout.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  heading: string;
+  lastUpdated: string;
+  lastUpdatedISO: string;
+}
+
+const { title, description, heading, lastUpdated, lastUpdatedISO } = Astro.props;
+---
+
+<Layout title={title} description={description}>
+  <div class="legal-page">
+    <div class="hero-orb orb--purple" aria-hidden="true"></div>
+    <div class="hero-orb orb--gold" aria-hidden="true"></div>
+
+    <div class="container legal-inner">
+      <h1 class="legal-heading">{heading}</h1>
+      <p class="legal-updated">
+        Last updated <time datetime={lastUpdatedISO}>{lastUpdated}</time>
+      </p>
+
+      <div class="legal-body">
+        <slot />
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .legal-page {
+    position: relative;
+    padding: 10rem 0 6rem;
+    overflow: hidden;
+  }
+
+  .hero-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(110px);
+    pointer-events: none;
+    opacity: 0.4;
+  }
+
+  .orb--purple {
+    width: 460px;
+    height: 460px;
+    background: var(--purple-glow);
+    top: -160px;
+    left: -140px;
+  }
+
+  .orb--gold {
+    width: 360px;
+    height: 360px;
+    background: var(--gold-dim);
+    top: 120px;
+    right: -160px;
+  }
+
+  .legal-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 820px;
+  }
+
+  .legal-heading {
+    font-family: var(--font-display);
+    font-size: clamp(2.2rem, 5vw, 3.4rem);
+    font-weight: 600;
+    line-height: 1.1;
+    color: var(--text-primary);
+    margin-bottom: 0.9rem;
+  }
+
+  .legal-updated {
+    color: var(--text-dim);
+    font-size: 0.9rem;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .legal-body :global(h2) {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 2.8rem 0 1rem;
+  }
+
+  .legal-body :global(h3) {
+    font-family: var(--font-display);
+    font-size: 1.08rem;
+    font-weight: 600;
+    color: var(--gold-light);
+    margin: 1.8rem 0 0.7rem;
+  }
+
+  .legal-body :global(p),
+  .legal-body :global(li) {
+    color: var(--text-muted);
+    line-height: 1.75;
+    font-size: 1rem;
+  }
+
+  .legal-body :global(p) {
+    margin-bottom: 1.1rem;
+  }
+
+  .legal-body :global(ul) {
+    margin: 0 0 1.4rem 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+  }
+
+  .legal-body :global(a) {
+    color: var(--gold-primary);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .legal-body :global(strong) {
+    color: var(--text-primary);
+    font-weight: 600;
+  }
+
+  @media (max-width: 768px) {
+    .legal-page { padding: 7rem 0 4rem; }
+  }
+</style>

@@ -1,0 +1,43 @@
+# https://bgstech.ae/robots.txt
+
+User-agent: *
+Allow: /
+
+# ── AI search crawlers ──────────────────────────────────────────────────────
+# These decide whether this site can be CITED in AI answers. They are distinct
+# from the training crawlers below — allowing one says nothing about the other.
+
+User-agent: OAI-SearchBot        # ChatGPT Search citability
+Allow: /
+
+User-agent: Claude-SearchBot     # Claude search citability
+Allow: /
+
+User-agent: PerplexityBot        # Perplexity AI search
+Allow: /
+
+User-agent: Applebot             # Siri / Spotlight / Safari discovery
+Allow: /
+
+# ── AI training crawlers ────────────────────────────────────────────────────
+# Allowed deliberately: broad model familiarity with the BGS brand is worth more
+# to an agency than withholding the content. Flip these to Disallow to opt out of
+# training without affecting the search citability granted above.
+
+User-agent: GPTBot               # OpenAI model training
+Allow: /
+
+User-agent: ClaudeBot            # Anthropic model training
+Allow: /
+
+User-agent: Google-Extended      # Gemini / Vertex training & grounding
+Allow: /
+
+User-agent: Applebot-Extended    # Apple Intelligence training
+Allow: /
+
+# Note: Googlebot governs Google Search, AI Overviews and AI Mode eligibility —
+# it is covered by the "*" rule above and must not be confused with
+# Google-Extended, which governs training/grounding only.
+
+Sitemap: https://bgstech.ae/sitemap-index.xml

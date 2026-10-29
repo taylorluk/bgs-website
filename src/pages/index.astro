@@ -13,9 +13,13 @@ import WorkShowcase from '../components/WorkShowcase.astro';
 import Testimonials from '../components/Testimonials.astro';
 import FAQ from '../components/FAQ.astro';
 import CTA from '../components/CTA.astro';
+import faqs from '../data/faqs.js';
+import { faqSchema } from '../lib/schema.js';
+
+const schemas = [faqSchema(faqs)];
 ---
 
-<Layout>
+<Layout schemas={schemas}>
   <Hero />
   <TrustBanner />
   <SocialProof />

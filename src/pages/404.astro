@@ -1,0 +1,143 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const suggestions = [
+  { label: 'Services',  href: '/services', desc: 'All 22 marketing, technology and AI services.' },
+  { label: 'Our Work',  href: '/work',     desc: 'Case studies and results from real client campaigns.' },
+  { label: 'Blog',      href: '/blog',     desc: 'Growth insights for UAE and global brands.' },
+  { label: 'Offers',    href: '/offers',   desc: 'Free trials, audits and strategy calls.' },
+];
+---
+
+<Layout
+  title="Page Not Found | BGS Technologies"
+  description="The page you are looking for does not exist. Browse our services, work and insights instead."
+>
+  <section class="nf">
+    <div class="hero-orb orb--purple" aria-hidden="true"></div>
+    <div class="hero-orb orb--gold" aria-hidden="true"></div>
+
+    <div class="container nf-inner">
+      <p class="nf-code">404</p>
+      <h1 class="nf-title">This page doesn't exist.</h1>
+      <p class="nf-sub">
+        The link may be outdated, or the page may have moved. Here's where most people go next.
+      </p>
+
+      <h2 class="nf-grid-heading">Popular pages</h2>
+      <div class="nf-grid">
+        {suggestions.map(s => (
+          <a href={s.href} class="nf-card">
+            <span class="nf-card-label">{s.label}</span>
+            <span class="nf-card-desc">{s.desc}</span>
+          </a>
+        ))}
+      </div>
+
+      <a href="/contact" class="btn-gold nf-cta">Book a Free Strategy Call</a>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .nf {
+    position: relative;
+    padding: 11rem 0 7rem;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  .hero-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(120px);
+    pointer-events: none;
+    opacity: 0.45;
+  }
+
+  .orb--purple { width: 480px; height: 480px; background: var(--purple-glow); top: -150px; left: -130px; }
+  .orb--gold   { width: 380px; height: 380px; background: var(--gold-dim);   bottom: -120px; right: -120px; }
+
+  .nf-inner { position: relative; z-index: 1; max-width: 760px; }
+
+  .nf-code {
+    font-family: var(--font-display);
+    font-size: clamp(4rem, 12vw, 7rem);
+    font-weight: 700;
+    line-height: 1;
+    background: linear-gradient(135deg, var(--gold-light), var(--gold-dim));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 0.4rem;
+  }
+
+  .nf-title {
+    font-family: var(--font-display);
+    font-size: clamp(1.7rem, 4vw, 2.6rem);
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+  }
+
+  .nf-sub {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 3rem;
+  }
+
+  .nf-grid-heading {
+    font-family: var(--font-display);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    text-align: left;
+    margin-bottom: 1rem;
+  }
+
+  .nf-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 3rem;
+    text-align: left;
+  }
+
+  .nf-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    padding: 1.3rem 1.4rem;
+    border: 1px solid var(--border-subtle);
+    border-radius: 14px;
+    background: rgba(19, 34, 68, 0.5);
+    transition: border-color 0.25s ease, transform 0.25s ease;
+  }
+
+  .nf-card:hover {
+    border-color: var(--border-gold);
+    transform: translateY(-3px);
+  }
+
+  .nf-card-label {
+    font-family: var(--font-display);
+    font-weight: 600;
+    color: var(--gold-light);
+  }
+
+  .nf-card-desc {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+
+  .nf-cta { display: inline-block; }
+
+  @media (max-width: 640px) {
+    .nf { padding: 8rem 0 4rem; }
+    .nf-grid { grid-template-columns: 1fr; }
+  }
+</style>

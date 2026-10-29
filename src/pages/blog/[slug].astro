@@ -1,6 +1,9 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import allPosts from '../../data/posts.js';
+import allServices from '../../data/services.js';
+import { relatedPosts, servicesForPost, isPillar, pillarFor, spokesOfPillar } from '../../lib/related.js';
+import { blogPostingSchema, breadcrumbSchema } from '../../lib/schema.js';
 
 export function getStaticPaths() {
   return allPosts.map((p: any) => ({ params: { slug: p.slug } }));
@@ -12,11 +15,35 @@ const { slug } = Astro.params;
 const post = posts.find(p => p.slug === slug);
 
 if (!post) return Astro.redirect('/blog');
+
+const path = `/blog/${post.slug}`;
+const related = relatedPosts(post, posts, 3);
+const relatedServices = servicesForPost(post, allServices, 4);
+
+const thisIsPillar = isPillar(post);
+const pillarSlug = pillarFor(post);
+const pillarPost = pillarSlug ? posts.find(p => p.slug === pillarSlug) : null;
+const guideSpokes = thisIsPillar ? spokesOfPillar(post, posts) : [];
+
+const formatDate = (iso: string) =>
+  new Date(iso).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+
+const schemas = [
+  blogPostingSchema(post, path),
+  breadcrumbSchema([
+    { name: 'Home', path: '/' },
+    { name: 'Blog', path: '/blog' },
+    { name: post.title, path },
+  ]),
+];
 ---
 
 <Layout
-  title={`${post.title} | BGS Technologies Blog`}
+  title={`${post.metaTitle ?? post.title} | BGS`}
   description={post.excerpt}
+  ogImage={post.image}
+  ogType="article"
+  schemas={schemas}
 >
   <article class="post-page">
 
@@ -34,7 +61,15 @@ if (!post) return Astro.redirect('/blog');
         <div class="post-byline reveal">
           <span class="post-author">{post.author ?? 'BGS Marketing Team'}</span>
           <span class="byline-sep">·</span>
-          <span class="post-date">{post.date}</span>
+          <time class="post-date" datetime={post.datePublished}>{post.date}</time>
+          {post.dateModified && post.dateModified !== post.datePublished && (
+            <>
+              <span class="byline-sep">·</span>
+              <span class="post-updated">
+                Updated <time datetime={post.dateModified}>{formatDate(post.dateModified)}</time>
+              </span>
+            </>
+          )}
         </div>
       </div>
     </div>
@@ -44,9 +79,12 @@ if (!post) return Astro.redirect('/blog');
       <div class="post-cover reveal">
         <img
           src={post.image}
-          alt={post.title}
+          alt=""
           class="cover-img"
+          width="1200"
+          height="630"
           loading="eager"
+          fetchpriority="high"
         />
       </div>
     </div>
@@ -56,15 +94,37 @@ if (!post) return Astro.redirect('/blog');
       <div class="post-body">
         <p class="post-lead">{post.excerpt}</p>
 
+        {thisIsPillar && guideSpokes.length > 0 && (
+          <nav class="guide-contents" aria-labelledby="guide-contents-heading">
+            <p id="guide-contents-heading" class="guide-contents-label">In this guide series</p>
+            <ol class="guide-contents-list">
+              {guideSpokes.map((g: any) => (
+                <li>
+                  <a href={`/blog/${g.slug}`}>{g.title}</a>
+                  <span class="guide-contents-meta">{g.readTime}</span>
+                </li>
+              ))}
+            </ol>
+          </nav>
+        )}
+
+        {pillarPost && (
+          <aside class="pillar-link">
+            Part of our guide:
+            <a href={`/blog/${pillarPost.slug}`}>{pillarPost.title}</a>
+          </aside>
+        )}
+
         <div class="post-content" set:html={post.body} />
 
         <!-- Related topics CTA -->
         <div class="post-topics">
           <p class="topics-label">Related Services</p>
           <div class="topics-list">
-            <a href="/services" class="topic-tag">View All Services</a>
-            <a href="/offers" class="topic-tag">Current Offers</a>
-            <a href="/work" class="topic-tag">Our Work</a>
+            {relatedServices.map((s: any) => (
+              <a href={`/services/${s.slug}`} class="topic-tag">{s.title}</a>
+            ))}
+            <a href="/services" class="topic-tag">All Services</a>
           </div>
         </div>
       </div>
@@ -85,19 +145,163 @@ if (!post) return Astro.redirect('/blog');
         <div class="sidebar-card sidebar-card--services">
           <p class="sidebar-label">Our Services</p>
           <ul class="sidebar-links">
-            <li><a href="/services#marketing">Paid Advertising</a></li>
-            <li><a href="/services#marketing">Social Media</a></li>
-            <li><a href="/services#marketing">Branding & Creative</a></li>
-            <li><a href="/services#technology">CRM & Automation</a></li>
-            <li><a href="/services#ai">AI Marketing</a></li>
+            <li><a href="/services/paid-advertising">Paid Advertising</a></li>
+            <li><a href="/services/social-media-management">Social Media</a></li>
+            <li><a href="/services/branding-creative">Branding &amp; Creative</a></li>
+            <li><a href="/services/crm-pipeline-setup">CRM &amp; Automation</a></li>
+            <li><a href="/services/ai-receptionist-chatbots">AI Marketing</a></li>
           </ul>
         </div>
       </aside>
+    </div>
+    <!-- Related articles -->
+    <div class="container">
+      <section class="related" aria-labelledby="related-heading">
+        <h2 id="related-heading" class="related-heading">Keep reading</h2>
+        <div class="related-grid">
+          {related.map((r: any) => (
+            <a href={`/blog/${r.slug}`} class="related-card">
+              <span class="related-cat">{r.category}</span>
+              <span class="related-title">{r.title}</span>
+              <span class="related-meta">
+                <time datetime={r.datePublished}>{r.date}</time> · {r.readTime} read
+              </span>
+            </a>
+          ))}
+        </div>
+      </section>
     </div>
   </article>
 </Layout>
 
 <style>
+  /* Pillar / spoke relationship */
+  .guide-contents {
+    margin: 0 0 2.5rem;
+    padding: 1.5rem 1.7rem;
+    border: 1px solid var(--border-gold);
+    border-radius: 14px;
+    background: rgba(201, 168, 76, 0.05);
+  }
+
+  .guide-contents-label {
+    font-family: var(--font-display);
+    font-size: 0.74rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold-primary);
+    margin-bottom: 0.9rem;
+  }
+
+  .guide-contents-list {
+    margin: 0;
+    padding-left: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+  }
+
+  .guide-contents-list li { color: var(--text-dim); }
+
+  .guide-contents-list a {
+    color: var(--text-primary);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+  }
+
+  .guide-contents-list a:hover {
+    color: var(--gold-light);
+    border-bottom-color: var(--border-gold);
+  }
+
+  .guide-contents-meta {
+    font-size: 0.78rem;
+    color: var(--text-dim);
+    margin-left: 0.5rem;
+  }
+
+  .pillar-link {
+    margin: 0 0 2rem;
+    padding: 0.85rem 1.1rem;
+    border-left: 2px solid var(--gold-primary);
+    background: rgba(201, 168, 76, 0.04);
+    font-size: 0.9rem;
+    color: var(--text-muted);
+  }
+
+  .pillar-link a {
+    color: var(--gold-light);
+    margin-left: 0.4rem;
+  }
+
+  .post-updated {
+    color: var(--gold-primary);
+    font-size: 0.86rem;
+  }
+
+  /* Related articles */
+  .related {
+    margin-top: 5rem;
+    padding-top: 3rem;
+    border-top: 1px solid var(--border-subtle);
+  }
+
+  .related-heading {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 1.8rem;
+  }
+
+  .related-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+  }
+
+  .related-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    padding: 1.4rem;
+    border: 1px solid var(--border-subtle);
+    border-radius: 14px;
+    background: rgba(19, 34, 68, 0.45);
+    transition: border-color 0.25s ease, transform 0.25s ease;
+  }
+
+  .related-card:hover {
+    border-color: var(--border-gold);
+    transform: translateY(-3px);
+  }
+
+  .related-cat {
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gold-primary);
+  }
+
+  .related-title {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.35;
+    color: var(--text-primary);
+  }
+
+  .related-meta {
+    font-size: 0.8rem;
+    color: var(--text-dim);
+    margin-top: auto;
+  }
+
+  @media (max-width: 900px) {
+    .related-grid { grid-template-columns: 1fr; }
+  }
+
   .post-page { padding-bottom: 6rem; }
 
   /* Hero */

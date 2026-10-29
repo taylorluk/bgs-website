@@ -2,6 +2,9 @@
 import Layout from '../../layouts/Layout.astro';
 import CTA from '../../components/CTA.astro';
 import services, { pillarColors } from '../../data/services.js';
+import allPosts from '../../data/posts.js';
+import { postsForService } from '../../lib/related.js';
+import { serviceSchema, breadcrumbSchema, faqSchema } from '../../lib/schema.js';
 
 export function getStaticPaths() {
   return services.map((svc: any) => ({
@@ -16,11 +19,25 @@ const meta = pillarColors[svc.pillar as keyof typeof pillarColors];
 
 const pillarNum: Record<string, string> = { Marketing: '01', Technology: '02', AI: '03' };
 const num = pillarNum[svc.pillar] ?? '01';
+
+const path = `/services/${svc.slug}`;
+const relatedArticles = postsForService(svc, allPosts, 3);
+
+const schemas = [
+  serviceSchema(svc, path),
+  breadcrumbSchema([
+    { name: 'Home', path: '/' },
+    { name: 'Services', path: '/services' },
+    { name: svc.title, path },
+  ]),
+  ...(svc.faq?.length ? [faqSchema(svc.faq)] : []),
+];
 ---
 
 <Layout
   title={svc.metaTitle ?? `${svc.title} — BGS Technologies`}
   description={svc.metaDesc ?? svc.tagline}
+  schemas={schemas}
 >
 
   <!-- ══ HERO ════════════════════════════════════════════════════════════════ -->
@@ -212,11 +229,89 @@ const num = pillarNum[svc.pillar] ?? '01';
     </section>
   )}
 
+  <!-- ══ RELATED READING ═════════════════════════════════════════════════════ -->
+  {relatedArticles.length > 0 && (
+    <section class="sp-reading">
+      <div class="container">
+        <p class="sp-related-eyebrow">Insights on {svc.title}</p>
+        <div class="sp-reading-grid">
+          {relatedArticles.map((a: any) => (
+            <a href={`/blog/${a.slug}`} class="sp-reading-card">
+              <span class="sp-reading-cat">{a.category}</span>
+              <span class="sp-reading-title">{a.title}</span>
+              <span class="sp-reading-meta">
+                <time datetime={a.datePublished}>{a.date}</time> · {a.readTime} read
+              </span>
+            </a>
+          ))}
+        </div>
+        <a href="/blog" class="sp-reading-all">Read all insights →</a>
+      </div>
+    </section>
+  )}
+
   <CTA />
 
 </Layout>
 
 <style>
+  /* ══ RELATED READING ═══════════════════════════════════════════════════════ */
+  .sp-reading { padding: 4rem 0 1rem; }
+
+  .sp-reading-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+    margin-bottom: 1.6rem;
+  }
+
+  .sp-reading-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    padding: 1.4rem;
+    border: 1px solid var(--border-subtle);
+    border-radius: 14px;
+    background: rgba(19, 34, 68, 0.45);
+    transition: border-color 0.25s ease, transform 0.25s ease;
+  }
+
+  .sp-reading-card:hover {
+    border-color: var(--border-gold);
+    transform: translateY(-3px);
+  }
+
+  .sp-reading-cat {
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gold-primary);
+  }
+
+  .sp-reading-title {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.35;
+    color: var(--text-primary);
+  }
+
+  .sp-reading-meta {
+    font-size: 0.8rem;
+    color: var(--text-dim);
+    margin-top: auto;
+  }
+
+  .sp-reading-all {
+    color: var(--gold-primary);
+    font-size: 0.92rem;
+    font-weight: 500;
+  }
+
+  @media (max-width: 900px) {
+    .sp-reading-grid { grid-template-columns: 1fr; }
+  }
+
   /* ══ HERO ══════════════════════════════════════════════════════════════════ */
   .sp-hero {
     position: relative;

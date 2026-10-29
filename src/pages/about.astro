@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { breadcrumbSchema } from '../lib/schema.js';
 import CTA from '../components/CTA.astro';
 
 const values = [
@@ -117,11 +118,21 @@ const accentMap: Record<string, { text: string; bg: string; border: string }> = 
   purple: { text: '#a78bfa',              bg: 'rgba(123,63,160,0.1)',   border: 'rgba(123,63,160,0.25)' },
   blue:   { text: '#93c5fd',              bg: 'rgba(30,77,183,0.08)',   border: 'rgba(30,77,183,0.2)' },
 };
+
+const schemas = [
+  breadcrumbSchema([
+    { name: 'Home', path: '/' },
+    { name: 'About', path: '/about' },
+  ]),
+];
+
 ---
 
 <Layout
   title="About BGS Technologies — Dubai's Premier Growth Agency"
   description="Learn how BGS Technologies was built to make elite marketing accessible to every ambitious brand. Our story, our values, and the team behind your results."
+
+  schemas={schemas}
 >
   <!-- ══════════════════════════════════════════════════════════
        HERO
@@ -187,6 +198,8 @@ const accentMap: Record<string, { text: string; bg: string; border: string }> = 
             src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=900&h=700&q=85&auto=format&fit=crop"
             alt="Dubai skyline — BGS Technologies HQ"
             class="hero-img"
+            width="900"
+            height="700"
             loading="eager"
             decoding="async"
           />
@@ -232,6 +245,8 @@ const accentMap: Record<string, { text: string; bg: string; border: string }> = 
             src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=800&h=700&q=80&auto=format&fit=crop"
             alt="BGS Technologies team at work"
             class="story-img"
+            width="800"
+            height="700"
             loading="lazy"
             decoding="async"
           />
@@ -412,6 +427,8 @@ const accentMap: Record<string, { text: string; bg: string; border: string }> = 
               src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=700&h=500&q=80&auto=format&fit=crop"
               alt="Global business operations"
               class="globe-img"
+            width="700"
+            height="500"
               loading="lazy"
               decoding="async"
             />

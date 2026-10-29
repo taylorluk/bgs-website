@@ -1,20 +1,40 @@
 ---
+import { imageDims } from '../lib/images.js';
 import Layout from '../layouts/Layout.astro';
 import allPosts from '../data/posts.js';
+import { breadcrumbSchema, collectionPageSchema } from '../lib/schema.js';
 
 const posts = allPosts;
 
 const featuredPost = posts.find(p => p.featured);
 const gridPosts = posts.filter(p => !p.featured);
 
+const schemas = [
+  breadcrumbSchema([
+    { name: 'Home', path: '/' },
+    { name: 'Blog', path: '/blog' },
+  ]),
+  collectionPageSchema({
+    name: 'BGS Technologies Blog',
+    description: 'Marketing strategy, AI, paid ads, and branding insights from the BGS Technologies team.',
+    path: '/blog',
+    items: posts,
+    itemPath: (post: any) => `/blog/${post.slug}`,
+  }),
+];
+
 const categoryColors: Record<string, string> = {
   'Paid Advertising': 'gold',
-  'AI Technology': 'purple',
+  'AI & Technology': 'purple',
   'Branding': 'pink',
   'Automation': 'blue',
   'Marketing Strategy': 'teal',
   'E-Commerce': 'orange',
-  'Reputation': 'cyan',
+  'Content Marketing': 'cyan',
+  'Conversion Optimisation': 'orange',
+  'Marketing Automation': 'blue',
+  'Video Marketing': 'pink',
+  'Agency Insights': 'teal',
   'Lead Generation': 'gold',
   'SEO': 'teal',
   'Social Media': 'pink',
@@ -26,6 +46,7 @@ const categoryColors: Record<string, string> = {
 <Layout
   title="Blog — Growth Insights from BGS Technologies"
   description="Marketing strategy, AI, paid ads, and branding insights from the BGS Technologies team. Ideas that drive real business growth."
+  schemas={schemas}
 >
 
   <!-- ── HERO ───────────────────────────────────────────────────────────────── -->
@@ -64,6 +85,8 @@ const categoryColors: Record<string, string> = {
           <div class="featured-image-wrap">
             <img
               src={featuredPost.image}
+              width={imageDims(featuredPost.image).width}
+              height={imageDims(featuredPost.image).height}
               alt={featuredPost.title}
               class="featured-image"
               loading="eager"
@@ -83,7 +106,7 @@ const categoryColors: Record<string, string> = {
             <h2 class="featured-title">{featuredPost.title}</h2>
             <p class="featured-excerpt">{featuredPost.excerpt}</p>
             <div class="featured-footer">
-              <span class="post-date">{featuredPost.date}</span>
+              <time class="post-date" datetime={featuredPost.datePublished}>{featuredPost.date}</time>
               <span class="read-link">Read Article →</span>
             </div>
           </div>
@@ -103,6 +126,8 @@ const categoryColors: Record<string, string> = {
             <div class="post-image-wrap">
               <img
                 src={post.image}
+                width={imageDims(post.image).width}
+                height={imageDims(post.image).height}
                 alt={post.title}
                 class="post-image"
                 loading="lazy"
@@ -121,7 +146,7 @@ const categoryColors: Record<string, string> = {
               <h3 class="post-title">{post.title}</h3>
               <p class="post-excerpt">{post.excerpt}</p>
               <div class="post-footer">
-                <span class="post-date">{post.date}</span>
+                <time class="post-date" datetime={post.datePublished}>{post.date}</time>
                 <span class="read-link">Read →</span>
               </div>
             </div>

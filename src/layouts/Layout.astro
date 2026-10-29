@@ -2,43 +2,41 @@
 import '../styles/global.css';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
+import { DEFAULT_TITLE, DEFAULT_DESCRIPTION, DEFAULT_OG_IMAGE, SITE_NAME, absoluteUrl } from '../consts.js';
+import { organizationSchema, websiteSchema } from '../lib/schema.js';
 
 interface Props {
   title?: string;
   description?: string;
   canonical?: string;
+  /** Overrides the default social share image (blog posts pass their cover). */
+  ogImage?: string;
+  ogType?: string;
+  /** Extra JSON-LD nodes contributed by the page (Article, Service, FAQ, Breadcrumb…). */
+  schemas?: Record<string, unknown>[];
 }
 
 const {
-  title = 'BGS Technologies — Full-Service Marketing Agency | Dubai',
-  description = 'BGS Technologies is a world-class full-service marketing agency based in Dubai. We deliver performance marketing, branding, web, AI services, and more — globally.',
+  title = DEFAULT_TITLE,
+  description = DEFAULT_DESCRIPTION,
   canonical,
+  ogImage = DEFAULT_OG_IMAGE,
+  ogType = 'website',
+  schemas = [],
 } = Astro.props;
 
-const canonicalURL = canonical ?? new URL(Astro.url.pathname, 'https://www.bgstech.ae').href;
-const ogImage = 'https://www.bgstech.ae/og-image.png';
+const canonicalURL = canonical ?? absoluteUrl(Astro.url.pathname);
 
+// One @graph keeps the organisation defined once and referenced by @id from the
+// page-specific nodes, instead of repeating it in every block.
 const jsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'MarketingAgency',
-  name: 'BGS Technologies',
-  url: 'https://www.bgstech.ae',
-  logo: 'https://www.bgstech.ae/BGS Logo white and black_4.png',
-  description,
-  telephone: '+971521456818',
-  email: 'hello@bgstech.ae',
-  address: {
-    '@type': 'PostalAddress',
-    streetAddress: '205, Damas Tower, 2nd Al Maktoum Road, Riggat Al Buteen',
-    addressLocality: 'Deira, Dubai',
-    addressCountry: 'AE',
-  },
-  sameAs: [
-    'https://www.linkedin.com/company/bgs-technologies',
-    'https://www.instagram.com/bgstechnologies',
-  ],
-  areaServed: 'Worldwide',
+  '@graph': [organizationSchema(DEFAULT_DESCRIPTION), websiteSchema(), ...schemas],
 };
+
+// Only the weights the stylesheets actually use (was 11 faces across two families).
+const fontHref =
+  'https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Space+Grotesk:wght@500;600;700&display=swap';
 ---
 
 <!doctype html>
@@ -50,22 +48,30 @@ const jsonLd = {
     <meta name="robots" content="index, follow" />
     <title>{title}</title>
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/BGS_Logo_white_and_black_4-removebg-preview.png" />
-    <link rel="apple-touch-icon" href="/BGS_Logo_white_and_black_4-removebg-preview.png" />
+    <!-- Favicon — all generated from the brand mark SVG -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
     <!-- Canonical -->
     <link rel="canonical" href={canonicalURL} />
 
-    <!-- Google Fonts — preconnect first, then single link request -->
+    <!--
+      Google Fonts — loaded without blocking first paint. `display=swap` means text
+      renders in the fallback immediately, so deferring the stylesheet costs nothing
+      visually but removes a render-blocking third-party request from the critical path.
+    -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="preload" as="style" href={fontHref} />
+    <link rel="stylesheet" href={fontHref} media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href={fontHref} /></noscript>
 
     <!-- Open Graph -->
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={ogType} />
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:site_name" content="BGS Technologies" />
     <meta property="og:image" content={ogImage} />

@@ -2,6 +2,18 @@
 // timer: countdown target as offset from "now" in hours (rendered client-side)
 // spots: number of spots remaining shown as social proof
 // heat: 'fire' | 'lightning' | 'trending' | 'star' | 'guaranteed' — visual accent
+
+interface Props {
+  // On /offers this section is the page subject, so it carries the h1.
+  // On the homepage it is one section among many and stays an h2.
+  headingLevel?: 'h1' | 'h2';
+  showViewAll?: boolean;
+}
+
+const { headingLevel = 'h2', showViewAll = true } = Astro.props;
+const Heading = headingLevel;
+// Card titles sit one level below the section heading so no level is skipped.
+const CardHeading = headingLevel === 'h1' ? 'h2' : 'h3';
 const offers = [
   {
     heat: 'fire',
@@ -190,14 +202,16 @@ const offers = [
         <span class="offers-sub-label">Limited availability — slots fill fast</span>
       </div>
       <div class="offers-title-row">
-        <h2 class="offers-title">
+        <Heading class="offers-title">
           Try Us for <span class="text-gold-gradient">Free.</span><br />
           Pay When It Works.
-        </h2>
-        <a href="/offers" class="offers-view-all">
-          View All Offers
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
+        </Heading>
+        {showViewAll && (
+          <a href="/offers" class="offers-view-all">
+            View All Offers
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        )}
       </div>
     </div>
   </div>
@@ -227,7 +241,7 @@ const offers = [
 
           <!-- Icon + title -->
           <div class="ocard-icon" aria-hidden="true">{o.icon}</div>
-          <h3 class="ocard-title">{o.title}</h3>
+          <CardHeading class="ocard-title">{o.title}</CardHeading>
 
           <!-- Value -->
           <div class="ocard-value">{o.value}</div>
@@ -326,6 +340,7 @@ const offers = [
     gap: 2rem;
   }
 
+  h1.offers-title,
   .offers-title {
     font-size: clamp(1.9rem, 3.5vw, 3rem);
     font-weight: 700;
@@ -501,6 +516,7 @@ const offers = [
   }
 
   /* ── Title ────────────────────────────────────────────────── */
+  h2.ocard-title,
   .ocard-title {
     font-family: var(--font-display);
     font-size: 1rem;

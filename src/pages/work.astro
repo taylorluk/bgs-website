@@ -1,5 +1,7 @@
 ---
+import { imageDims } from '../lib/images.js';
 import Layout from '../layouts/Layout.astro';
+import { breadcrumbSchema } from '../lib/schema.js';
 import CTA from '../components/CTA.astro';
 
 const caseStudies = [
@@ -144,11 +146,21 @@ const testimonials = [
     accent: "purple",
   },
 ];
+
+const schemas = [
+  breadcrumbSchema([
+    { name: 'Home', path: '/' },
+    { name: 'Our Work', path: '/work' },
+  ]),
+];
+
 ---
 
 <Layout
   title="Our Work — Case Studies | BGS Technologies"
   description="Real results from real campaigns. See how BGS Technologies has scaled 50+ brands across e-commerce, SaaS, real estate, hospitality, and more."
+
+  schemas={schemas}
 >
 
   <!-- ── HERO ───────────────────────────────────────────────────────────────── -->
@@ -247,6 +259,8 @@ const testimonials = [
             <div class="case-image-wrap">
               <img
                 src={cs.image}
+                width={imageDims(cs.image).width}
+                height={imageDims(cs.image).height}
                 alt={`${cs.client} case study`}
                 class="case-image"
                 loading="lazy"

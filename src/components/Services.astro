@@ -1,4 +1,5 @@
 ---
+import { imageDims } from '../lib/images.js';
 const services = [
   {
     tag: 'Paid Media',
@@ -143,6 +144,8 @@ const services = [
           <div class="bento-img-wrap">
             <img
               src={svc.image}
+              width={imageDims(svc.image).width}
+              height={imageDims(svc.image).height}
               alt={svc.title}
               class="bento-img"
               loading="lazy"

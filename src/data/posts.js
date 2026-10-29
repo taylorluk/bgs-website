@@ -1,3 +1,5 @@
+import posts2026 from './posts-2026.js';
+
 const posts = [
   {
     slug: "complete-meta-ads-strategy-uae-brands-2026",
@@ -6,9 +8,11 @@ const posts = [
     title: "The Complete Meta Ads Strategy for UAE Brands in 2026",
     excerpt: "Master Meta advertising in the UAE with proven strategies for audience targeting, creative formats, and budget allocation that drive real results in 2026.",
     date: "31 March 2026",
+    datePublished: "2026-10-27",
     image: "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=1200&h=630&q=80&auto=format&fit=crop",
     featured: true,
     author: "BGS Marketing Team",
+    authorIsOrganization: true,
     body: `<p>Meta advertising remains the single most powerful paid channel for UAE brands targeting consumers — but the playbook has changed significantly. With iOS privacy updates fully baked in, AI-driven delivery now dominant, and creative fatigue hitting harder than ever, the brands winning on Meta in 2026 are doing things fundamentally differently. This guide covers exactly what they're doing.</p>
 
 <h2>Understanding the UAE Meta Landscape</h2>
@@ -46,14 +50,17 @@ const posts = [
   },
   {
     slug: "ai-receptionists-transforming-customer-service-dubai",
-    category: "AI Technology",
+    metaTitle: "AI Receptionists & Customer Service in Dubai",
+    category: "AI & Technology",
     readTime: "7 min",
     title: "How AI Receptionists Are Transforming Customer Service in Dubai",
     excerpt: "AI receptionists are helping Dubai businesses respond instantly 24/7, qualify leads automatically, and cut customer service costs by up to 60%. Here's what you need to know.",
     date: "24 March 2026",
+    datePublished: "2026-10-18",
     image: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=1200&h=630&q=80&auto=format&fit=crop",
     featured: false,
     author: "BGS Marketing Team",
+    authorIsOrganization: true,
     body: `<p>The phone rings at 11pm. It's a potential client enquiring about your services. Without an AI receptionist, they hear voicemail — and 78% of them will call a competitor before you open tomorrow. With one, they get an intelligent, natural conversation that qualifies their need, books a callback, and logs everything in your CRM. This is happening right now across Dubai, and the gap between businesses using it and those that aren't is growing fast.</p>
 
 <h2>What an AI Receptionist Actually Does</h2>
@@ -103,9 +110,11 @@ const posts = [
     title: "TikTok Advertising in the UAE: The Complete 2026 Guide",
     excerpt: "TikTok has 5 million+ active users in the UAE. This complete guide covers ad formats, targeting, creative best practices, and how to build profitable campaigns from scratch.",
     date: "17 March 2026",
+    datePublished: "2026-10-09",
     image: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=1200&h=630&q=80&auto=format&fit=crop",
     featured: false,
     author: "BGS Marketing Team",
+    authorIsOrganization: true,
     body: `<p>TikTok is no longer the platform brands dip their toe into — it's a primary performance channel. With over 5 million active users in the UAE and average daily usage exceeding 90 minutes, TikTok now delivers CPMs and CPAs that regularly beat Meta for the right product categories. The window to get in before competition drives up costs is closing. Here's how to run it properly.</p>
 
 <h2>TikTok's UAE Audience: Who You're Actually Reaching</h2>
@@ -144,14 +153,17 @@ const posts = [
   },
   {
     slug: "whatsapp-business-marketing-conversations-to-customers",
+    metaTitle: "WhatsApp Marketing: Turn Chats Into Customers",
     category: "Marketing Strategy",
     readTime: "7 min",
     title: "WhatsApp Business Marketing: How to Turn Conversations into Customers",
     excerpt: "WhatsApp has 97% penetration in the UAE. Learn how to use WhatsApp Business API, automation flows, and broadcast strategies to generate and close more leads.",
     date: "10 March 2026",
+    datePublished: "2026-09-30",
     image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1200&h=630&q=80&auto=format&fit=crop",
     featured: false,
     author: "BGS Marketing Team",
+    authorIsOrganization: true,
     body: `<p>WhatsApp has a 97% penetration rate in the UAE — it is, without question, the primary communication channel for both personal and professional conversations. Yet most businesses treat it as a reactive support tool rather than a proactive marketing and sales channel. That's a significant missed opportunity, and closing that gap is one of the highest-leverage moves any UAE brand can make right now.</p>
 
 <h2>WhatsApp Business vs. WhatsApp Business API: Know the Difference</h2>
@@ -199,14 +211,17 @@ const posts = [
   },
   {
     slug: "brand-identity-mistakes-costing-you-customers",
+    metaTitle: "7 Brand Identity Mistakes Costing You Customers",
     category: "Branding",
     readTime: "7 min",
     title: "7 Brand Identity Mistakes That Are Costing You Customers (And How to Fix Them)",
     excerpt: "Weak brand identity silently kills conversions. Discover the 7 most damaging branding mistakes UAE businesses make and the practical fixes that rebuild trust fast.",
     date: "3 March 2026",
+    datePublished: "2026-09-21",
     image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=1200&h=630&q=80&auto=format&fit=crop",
     featured: false,
     author: "BGS Marketing Team",
+    authorIsOrganization: true,
     body: `<p>Your brand identity is doing one of two things at every customer touchpoint: it's building trust or it's eroding it. There is no neutral. In a market as competitive as Dubai — where consumers are savvy, international, and have seen premium branding from the world's best — a weak or inconsistent brand identity is actively costing you customers, even when your product or service is excellent. Here are the seven mistakes we see most often, and exactly how to fix them.</p>
 
 <h2>Mistake 1: Inconsistency Across Touchpoints</h2>
@@ -241,14 +256,17 @@ const posts = [
   },
   {
     slug: "crm-automation-playbook-stop-losing-leads",
+    metaTitle: "CRM Automation Playbook: Stop Losing Leads",
     category: "Automation",
     readTime: "8 min",
     title: "The CRM Automation Playbook: How to Stop Losing Leads and Start Closing More",
     excerpt: "Most businesses lose 40–70% of leads to slow follow-up and poor systems. This CRM automation playbook shows you exactly how to fix your pipeline and close more deals.",
     date: "24 February 2026",
+    datePublished: "2026-09-11",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=630&q=80&auto=format&fit=crop",
     featured: false,
     author: "BGS Marketing Team",
+    authorIsOrganization: true,
     body: `<p>Here's a painful statistic: research from Harvard Business Review found that companies responding to leads within one hour are seven times more likely to have a meaningful conversation with a decision-maker than those that wait even 60 minutes. Most UAE businesses respond within hours — if at all. CRM automation doesn't just save time; it closes the gap between the lead you spent money generating and the customer you actually need to pay the bills.</p>
 
 <h2>Why Your Current Lead Process Is Failing</h2>
@@ -293,52 +311,117 @@ const posts = [
   },
   {
     slug: "digital-marketing-dubai-what-actually-works-2026",
+    metaTitle: "Digital Marketing in Dubai: What Works in 2026",
     category: "Marketing Strategy",
-    readTime: "8 min",
+    readTime: "14 min",
     title: "Digital Marketing in Dubai: What Actually Works in 2026",
     excerpt: "Cut through the noise with an honest breakdown of which digital marketing channels and strategies are delivering real ROI for Dubai businesses in 2026.",
     date: "17 February 2026",
+    datePublished: "2026-09-02",
+    dateModified: "2026-10-29",
     image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&h=630&q=80&auto=format&fit=crop",
     featured: false,
     author: "BGS Marketing Team",
-    body: `<p>Dubai is one of the most competitive digital marketing environments in the world. Every major global agency has a presence here, CPCs are among the highest in the MENA region, and consumers have been marketed to by world-class brands their entire lives. What cuts through in Manchester or Manila doesn't necessarily cut through in Marasi Drive. Here's an honest assessment of what's actually working in 2026 — no hype, no filler.</p>
+    authorIsOrganization: true,
+    body: `<p><strong>Digital marketing in Dubai is unusually competitive, unusually expensive, and unusually rewarding when it works.</strong> This guide is the overview: how the market actually behaves, which channels earn their place, what to budget, and how to tell whether what you are doing is working. Each section links to the detail underneath it.</p>
 
-<h2>Paid Social: Meta Still Leads, but the Creative Bar is High</h2>
-<p>Meta (Facebook + Instagram) remains the highest-reach paid channel for most B2C brands in Dubai. But the easy wins of 2020–2022 are gone. CPMs have risen significantly, competition is intense, and audiences have been conditioned to scroll past anything that looks or sounds like an ad.</p>
-<p>What's working: video-first creative shot in vertical format, UGC-style content from real customers or brand ambassadors, localised Arabic creative for GCC targeting, and Advantage+ campaign structures that let Meta's algorithm do the heavy lifting on audience selection. Brands investing in creative production — not just media buying — are seeing 3–5x the ROAS of brands running static banner ads.</p>
+<h2>What makes the Dubai market different?</h2>
+<p>Several things at once, and they compound.</p>
+<table>
+  <thead><tr><th>Factor</th><th>What it means for your marketing</th></tr></thead>
+  <tbody>
+    <tr><td>Very high digital adoption</td><td>Your audience is reachable online, and so is everyone else's — costs reflect that</td></tr>
+    <tr><td>Multilingual population</td><td>English-only marketing addresses part of the market; Arabic search is far less contested</td></tr>
+    <tr><td>Messaging-first behaviour</td><td>WhatsApp is where a great deal of business is actually transacted</td></tr>
+    <tr><td>High expat turnover</td><td>Audiences refresh constantly; retargeting pools and lookalikes decay faster</td></tr>
+    <tr><td>Friday–Saturday weekend</td><td>Scheduling built on Western assumptions misses peak hours</td></tr>
+    <tr><td>Ramadan and Eid</td><td>Several weeks a year where behaviour, costs and timing shift substantially</td></tr>
+    <tr><td>Dense, small geography</td><td>Local and radius targeting work in ways they cannot in larger markets</td></tr>
+  </tbody>
+</table>
+<p>The seasonal point is the one most often underestimated. Running the same campaigns through Ramadan that you ran in October is leaving a significant amount on the table — covered in <a href="/blog/ramadan-marketing-uae-strategy-that-converts">Ramadan marketing in the UAE</a>.</p>
 
-<h2>Google Search: Still the Closest Thing to a Sure Bet</h2>
-<p>For businesses where customers actively search for what you offer, Google Search advertising remains the most reliable channel in Dubai's digital mix. High commercial-intent keywords are expensive — "real estate Dubai," "digital marketing agency Dubai," "dentist JBR" all carry CPCs of AED 15–50+ — but the conversion intent is unmatched.</p>
-<p>The brands winning on Google in 2026 are those with excellent landing pages (not just website homepages), proper conversion tracking, and performance max campaigns supplemented by brand keyword protection. Search intent hasn't changed — people still Google what they need — but the competition for that attention is fierce and rewards quality scores heavily.</p>
+<h2>Which channels actually earn their place?</h2>
+<p>Not all of them, and not all at once. The sequence that works for most UAE businesses:</p>
+<ol>
+  <li><strong>Fix the destination first.</strong> Traffic to a page that does not convert is money spent proving your page does not convert. See <a href="/blog/landing-page-design-principles-uae">landing page design principles that convert in the UAE</a>.</li>
+  <li><strong>Capture existing demand.</strong> If people search for your category, search advertising and local SEO come first — you are harvesting intent, not creating it.</li>
+  <li><strong>Then create demand.</strong> Paid social, content and video build awareness where none exists.</li>
+  <li><strong>Then compound.</strong> SEO, content and owned audiences get cheaper over time while paid media does not.</li>
+</ol>
+<p>Most businesses invert this, starting with paid social because it is visible and fast, and wonder why the economics never improve. The full channel breakdown is in <a href="/blog/paid-advertising-uae-complete-guide">the complete guide to paid advertising in the UAE</a>.</p>
 
-<h2>WhatsApp: The Underutilised Revenue Channel</h2>
-<p>WhatsApp's 97% UAE penetration makes it categorically different from any other channel. It is not email. It is not SMS. It is the channel where UAE consumers have their most trusted personal communications — and when brands use it respectfully, with opt-in contacts and genuinely valuable messages, the engagement metrics are extraordinary.</p>
-<p>Brands running WhatsApp broadcast campaigns to warm, opted-in lists routinely report 80–90% open rates and 20–30% click-through rates. Compare that to email (20–25% open rate, 2–3% CTR) and the delta is striking. The channel requires discipline — over-messaging kills engagement fast — but for businesses that use it correctly, it's the highest-ROI communication tool available.</p>
+<h3>Where does organic search fit?</h3>
+<p>Slower and cheaper per acquisition over time. In a market this dense, local search in particular punches above its weight — a complete Google Business Profile and consistent business information do more for a Dubai business than most content programmes. See <a href="/blog/dubai-seo-how-to-rank-local-searches">Dubai SEO: how to actually rank for local searches</a>.</p>
+<p>There is also a genuine arbitrage available: English search in Dubai is fiercely contested while Arabic search for the same intents is not. Most competitors have ceded it entirely. We cover why in <a href="/blog/arabic-seo-uae-ranking-both-languages">Arabic SEO in the UAE</a>.</p>
 
-<h2>SEO: Long-Term Asset Building That Compounds</h2>
-<p>SEO is the channel most businesses in Dubai under-invest in relative to its long-term value. The reason: it takes 6–12 months to see meaningful results, which feels unacceptable in a culture oriented toward speed. But the businesses that started investing in SEO two years ago are now generating consistent, free, high-intent traffic that their paid-media-only competitors are spending thousands per month to buy.</p>
-<p>What's working for Dubai SEO in 2026: neighbourhood and area-specific landing pages (e.g., "digital marketing agency DIFC" rather than just "digital marketing agency Dubai"), E-E-A-T optimised content that demonstrates genuine expertise, and technical SEO foundations that let Google crawl and index efficiently. AI-generated content flooding the web has made authentic, experience-backed content more valuable, not less.</p>
+<h3>And content?</h3>
+<p>Content earns its keep when it answers questions buyers actually ask on the way to a decision — not when it chases volume. For a business starting from nothing, a small number of genuinely useful pieces beats a publishing schedule. See <a href="/blog/content-marketing-strategy-dubai-smes">building a content marketing strategy from zero for Dubai SMEs</a>.</p>
 
-<h2>Influencer and Creator Marketing: Matured and More Accountable</h2>
-<p>The Dubai influencer market has matured significantly. The era of paying a macro-influencer with 500k followers for a one-off post and hoping for the best is over — or it should be. What's replaced it: long-term partnerships with mid-tier creators (50k–200k followers) who have genuinely engaged, relevant audiences; performance-based deals tied to trackable links and promo codes; and UGC-focused collaborations where creator content is repurposed as paid media.</p>
-<p>The shift from vanity metrics (follower counts, likes) to actual business outcomes (promo code redemptions, link clicks, tracked sales) has made influencer marketing far more accountable — and far more valuable for the brands willing to work with that framework.</p>
+<h2>How should you set a budget?</h2>
+<p>Work backwards from unit economics, not forwards from a percentage of revenue. You need three numbers: what a customer is worth, what you can afford to pay to acquire one, and how many conversions a platform needs before it can optimise.</p>
+<p>That last constraint is the one that catches people. Every major ad platform learns from conversion data, and below roughly 30–50 conversion events a month there is not enough signal. A budget that cannot clear that floor on one channel is better spent on one channel than split across three. The detailed method is in <a href="/blog/how-to-build-marketing-budget-uae">how to build a marketing budget</a>.</p>
 
-<h2>The Integration Advantage</h2>
-<p>The brands growing fastest in Dubai in 2026 are not those with the biggest budgets on any single channel — they're the ones with the tightest integration between channels. Paid ads drive traffic to landing pages that capture WhatsApp opt-ins. Email nurtures those leads. Retargeting brings back non-converters. CRM automation ensures every lead gets followed up within minutes. SEO content builds organic reach that reduces paid media dependency over time.</p>
-<p>Each channel reinforces the others. Running any one of them in isolation produces mediocre results. Running them as an integrated system produces compounding growth.</p>
+<h2>How do you know whether it is working?</h2>
+<p>By measuring outcomes you can bank, not activity. The default dashboards of every platform foreground metrics that are easy to move and weakly connected to revenue.</p>
+<table>
+  <thead><tr><th>Report this</th><th>Not this</th></tr></thead>
+  <tbody>
+    <tr><td>Cost per acquisition</td><td>Cost per click</td></tr>
+    <tr><td>Revenue or qualified pipeline</td><td>Impressions and reach</td></tr>
+    <tr><td>Conversion rate by source</td><td>Aggregate traffic</td></tr>
+    <tr><td>Repeat purchase / retention</td><td>Followers</td></tr>
+    <tr><td>Blended CAC across channels</td><td>Platform-reported ROAS alone</td></tr>
+  </tbody>
+</table>
+<p>Platform-reported numbers are not neutral — each attributes generously to itself, which is why the sum of your dashboards usually exceeds actual revenue. Keep one source of truth outside the platforms. The metric set worth reporting is in <a href="/blog/performance-marketing-metrics-uae-business-owners">performance marketing metrics every UAE business owner should track</a>.</p>
 
-<p>BGS Technologies is a full-service digital marketing agency built specifically for the Dubai and UAE market. If you want a clear, honest view of what's working for businesses in your category right now, <a href="/contact" style="color:#C9A84C;text-decoration:underline;">get in touch</a>. No generic strategy slides — just a real conversation about your growth.</p>`
+<h2>Should you hire, outsource, or do it yourself?</h2>
+<table>
+  <thead><tr><th>Option</th><th>Works when</th><th>Fails when</th></tr></thead>
+  <tbody>
+    <tr><td>In-house</td><td>Consistent volume; it is someone's actual job</td><td>It is a fraction of someone's job</td></tr>
+    <tr><td>Agency</td><td>You need senior experience part-time and breadth</td><td>Nobody internally can approve work quickly</td></tr>
+    <tr><td>Freelancers</td><td>One well-defined specialism</td><td>You need strategy and coordination</td></tr>
+    <tr><td>DIY</td><td>Very early, learning the market</td><td>Opportunity cost exceeds the saving</td></tr>
+  </tbody>
+</table>
+<p>None of these fixes a weak offer. If your product does not convert, or you cannot service more demand, marketing amplifies the existing problem. On choosing a partner, see <a href="/blog/how-to-choose-digital-marketing-agency-dubai">how to choose a digital marketing agency in Dubai</a> and <a href="/blog/marketing-agency-cost-dubai-pricing-guide">what one actually costs</a>.</p>
+
+<h2>What is changing right now?</h2>
+<ul>
+  <li><strong>AI answers as a discovery surface.</strong> A growing share of searches end without a click. Being the cited source is becoming its own discipline — see <a href="/blog/ai-search-optimisation-uae-brands-geo">how UAE brands get cited by ChatGPT and AI Overviews</a>.</li>
+  <li><strong>Creative as the targeting lever.</strong> As platforms automate audience selection, creative increasingly determines who sees you.</li>
+  <li><strong>Measurement getting harder, not easier.</strong> Privacy changes have made browser-based tracking unreliable; server-side measurement is now table stakes.</li>
+  <li><strong>Automation as consistency, not headcount.</strong> The return is in follow-up that never gets forgotten — see <a href="/blog/marketing-automation-crm-uae-complete-guide">marketing automation and CRM for UAE businesses</a>.</li>
+</ul>
+<p>For what the previous cycle actually taught us, see <a href="/blog/digital-marketing-trends-2025-year-in-review">the trends that defined 2025</a>.</p>
+
+<h2>Where should you start?</h2>
+<ol>
+  <li><strong>Check your measurement is trustworthy.</strong> Everything downstream depends on it.</li>
+  <li><strong>Fix the destination</strong> before buying traffic for it.</li>
+  <li><strong>Pick one channel</strong> and fund it above the learning threshold.</li>
+  <li><strong>Give it ninety days</strong> before judging.</li>
+  <li><strong>Only then add a second.</strong></li>
+</ol>
+<p>This is unglamorous and it is what works. The businesses that struggle in this market are rarely the ones doing too little — they are usually doing six things at a quarter of the intensity each needs.</p>
+
+<p>If you want a specific read on where your marketing is losing money, <a href="/contact">book a free strategy call</a>. We will tell you if the answer is to spend less rather than more. See all <a href="/services">our services</a>.</p>`
   },
   {
     slug: "ecommerce-store-conversion-rate-1-percent-to-4-percent",
+    metaTitle: "Ecommerce Conversion Rate: From 1% to 4%",
     category: "E-Commerce",
     readTime: "8 min",
     title: "Why Your Ecommerce Store Converts at 1% — And How to Get to 4%",
     excerpt: "Average ecommerce conversion rates in the UAE are 1–2%. Discover the specific changes to UX, trust signals, checkout flow, and offers that push conversion rates to 4% and beyond.",
     date: "10 February 2026",
+    datePublished: "2026-08-24",
     image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&h=630&q=80&auto=format&fit=crop",
     featured: false,
     author: "BGS Marketing Team",
+    authorIsOrganization: true,
     body: `<p>If your ecommerce store converts at 1%, you are spending twice as much on customer acquisition as you need to. That's not hyperbole — it's arithmetic. A store converting at 2% with the same traffic and the same ad spend doubles its revenue. A store converting at 4% quadruples it. The gap between a 1% and a 4% conversion rate is not a small optimisation; it's the difference between a struggling store and a profitable one. Here's precisely how to close that gap.</p>
 
 <h2>Why UAE Ecommerce Conversion Rates Are Low (Usually)</h2>
@@ -395,14 +478,17 @@ const posts = [
   },
   {
     slug: "restaurant-google-reviews-3-4-to-4-9-stars-8-weeks",
+    metaTitle: "Restaurant Google Reviews: 3.4 to 4.9 Stars",
     category: "Lead Generation",
     readTime: "6 min",
     title: "How We Took a Restaurant From 3.4 to 4.9 Stars on Google in 8 Weeks",
     excerpt: "A Dubai restaurant was losing customers to bad reviews. We rebuilt their reputation strategy in 8 weeks and took them from 3.4 to 4.9 stars on Google. Here's exactly how.",
     date: "3 February 2026",
+    datePublished: "2026-08-15",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=630&q=80&auto=format&fit=crop",
     featured: false,
     author: "BGS Marketing Team",
+    authorIsOrganization: true,
     body: `<p>A restaurant client came to us with a painful problem. They had genuinely excellent food and service — their regulars loved them — but their Google rating sat at 3.4 stars from 47 reviews, many of them outdated and several reflecting issues that had long since been resolved. New customers were finding them online, seeing the rating, and choosing a competitor. They were losing business every single day to a number on a screen. In 8 weeks, we took them to 4.9 stars from 143 reviews. Here's the exact process.</p>
 
 <h2>Week 1–2: The Audit and the Foundation</h2>
@@ -445,14 +531,17 @@ const posts = [
   },
   {
     slug: "4x-meta-ads-roas-without-increasing-budget",
+    metaTitle: "How to 4× Meta Ads ROAS Without More Budget",
     category: "Paid Advertising",
     readTime: "8 min",
     title: "How to 4× Your Meta Ads ROAS Without Increasing Your Budget",
     excerpt: "More budget is rarely the answer. These proven Meta Ads optimisation techniques — creative testing, audience structure, and funnel alignment — can quadruple your ROAS from existing spend.",
     date: "27 January 2026",
+    datePublished: "2026-08-06",
     image: "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=1200&h=630&q=80&auto=format&fit=crop",
     featured: false,
     author: "BGS Marketing Team",
+    authorIsOrganization: true,
     body: `<p>When Meta ad performance disappoints, the instinctive response is to spend more. It's the wrong instinct. More budget poured into a broken setup delivers more expensive bad results. The brands consistently achieving 4–8x ROAS on Meta are doing it through systematic optimisation of what they already have — not through outspending competitors. Here's the methodology.</p>
 
 <h2>Diagnose Before You Optimise</h2>
@@ -497,14 +586,17 @@ const posts = [
   },
   {
     slug: "linkedin-advertising-uae-b2b-brands-complete-guide",
+    metaTitle: "LinkedIn Ads for UAE B2B: Campaign Setup Guide",
     category: "Social Media",
     readTime: "8 min",
     title: "The Complete Guide to LinkedIn Advertising for UAE B2B Brands",
     excerpt: "LinkedIn is the most powerful B2B advertising platform in the UAE. This guide covers audience targeting, ad formats, campaign strategy, and how to generate qualified pipeline.",
     date: "20 January 2026",
+    datePublished: "2026-07-28",
     image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1200&h=630&q=80&auto=format&fit=crop",
     featured: false,
     author: "BGS Marketing Team",
+    authorIsOrganization: true,
     body: `<p>LinkedIn is the only major advertising platform where you can target by job title, company size, industry, and seniority simultaneously — reaching exactly the decision-makers you need, not just people who might be interested in your industry. For B2B brands in the UAE selling services or products with deals valued at AED 10,000 or more, LinkedIn advertising is not optional — it's the most efficient path to enterprise pipeline. But it's also widely misused. Here's how to do it right.</p>
 
 <h2>Understanding the UAE LinkedIn Audience</h2>
@@ -542,14 +634,17 @@ const posts = [
   },
   {
     slug: "ai-generated-content-use-without-destroying-brand",
-    category: "AI Technology",
+    metaTitle: "AI Content Without Hurting Your Brand",
+    category: "AI & Technology",
     readTime: "7 min",
     title: "AI-Generated Content: How to Use It Without Destroying Your Brand",
     excerpt: "AI content tools can multiply your output, but used wrong they erase your brand voice and flood the internet with noise. Here's the framework for using AI content strategically.",
     date: "13 January 2026",
+    datePublished: "2026-07-19",
     image: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=1200&h=630&q=80&auto=format&fit=crop",
     featured: false,
     author: "BGS Marketing Team",
+    authorIsOrganization: true,
     body: `<p>Almost every marketing team is using AI writing tools now. The questions are whether they're using them intelligently, and whether the content coming out is building or eroding their brand. After two years of widespread AI content adoption, a clear pattern has emerged: brands using AI as a shortcut to volume are producing forgettable, generic content that performs poorly. Brands using AI as an accelerator for human expertise are producing more content, faster, with stronger results. The difference is the framework.</p>
 
 <h2>The Core Problem With Unguided AI Content</h2>
@@ -602,9 +697,11 @@ const posts = [
     title: "The 2026 Social Media Playbook for UAE Businesses",
     excerpt: "Social media strategy in the UAE has fundamentally changed. This 2026 playbook covers platform priorities, content formats, posting cadence, and how to build a following that converts.",
     date: "6 January 2026",
+    datePublished: "2026-07-10",
     image: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=1200&h=630&q=80&auto=format&fit=crop",
     featured: false,
     author: "BGS Marketing Team",
+    authorIsOrganization: true,
     body: `<p>Social media in the UAE is not the same as social media anywhere else. The audience is more international, more affluent, and more demanding — but also more engaged. UAE consumers follow brands they trust, share content they find genuinely useful or beautiful, and buy from brands that feel premium and real simultaneously. The playbook that worked in 2023 is not the playbook that works now. This is what's working in 2026.</p>
 
 <h2>Platform Priorities: Where to Focus Your Energy</h2>
@@ -655,14 +752,17 @@ const posts = [
   },
   {
     slug: "digital-marketing-trends-2025-year-in-review",
+    metaTitle: "Digital Marketing Trends That Defined 2025",
     category: "Marketing Strategy",
     readTime: "8 min",
     title: "Year in Review: The Digital Marketing Trends That Defined 2025",
     excerpt: "2025 was a pivotal year for digital marketing. From AI-first campaigns to the decline of third-party cookies, here's what changed and what it means for UAE businesses in 2026.",
     date: "30 December 2025",
+    datePublished: "2026-01-08",
     image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1200&h=630&q=80&auto=format&fit=crop",
     featured: false,
     author: "BGS Marketing Team",
+    authorIsOrganization: true,
     body: `<p>2025 was the year digital marketing stopped looking like what it was five years ago. The shifts that had been building — AI in creative and media buying, the collapse of third-party tracking, the rise of conversational commerce, the creator economy maturing into an actual media channel — hit critical mass simultaneously. As we close the year, here's an honest assessment of what changed, what it means, and how UAE brands need to think about 2026.</p>
 
 <h2>AI Moved From Experiment to Infrastructure</h2>
@@ -694,14 +794,17 @@ const posts = [
   },
   {
     slug: "ramadan-marketing-uae-strategy-that-converts",
+    metaTitle: "Ramadan Marketing UAE: A Strategy That Converts",
     category: "Marketing Strategy",
     readTime: "7 min",
     title: "Ramadan Marketing in the UAE: The Strategy That Actually Converts",
     excerpt: "Ramadan is the UAE's biggest commercial season. This strategy guide shows how to plan, create, and execute Ramadan campaigns that generate real revenue — not just impressions.",
     date: "23 December 2025",
+    datePublished: "2026-01-27",
     image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&h=630&q=80&auto=format&fit=crop",
     featured: false,
     author: "BGS Marketing Team",
+    authorIsOrganization: true,
     body: `<p>Ramadan is the most commercially significant period of the year for the UAE market — and one of the most mishandled in terms of marketing strategy. Brands either ignore the cultural moment entirely and run generic campaigns, or they slap a crescent moon on their regular assets and call it Ramadan content. Neither approach works. The brands driving real revenue during Ramadan are those who understand that the month represents a genuine shift in consumer behaviour, values, and purchase motivation — and who build their strategy accordingly.</p>
 
 <h2>Understanding Ramadan Consumer Behaviour in the UAE</h2>
@@ -752,14 +855,17 @@ const posts = [
   },
   {
     slug: "google-ads-vs-meta-ads-uae-business-2026",
+    metaTitle: "Google Ads vs Meta Ads for UAE Business 2026",
     category: "Paid Advertising",
     readTime: "7 min",
     title: "Google Ads vs. Meta Ads: Which Should Your UAE Business Use in 2026?",
     excerpt: "Google Ads or Meta Ads — or both? This no-nonsense comparison helps UAE businesses choose the right paid media channel based on their goals, audience, and budget in 2026.",
     date: "16 December 2025",
+    datePublished: "2026-06-22",
     image: "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=1200&h=630&q=80&auto=format&fit=crop",
     featured: false,
     author: "BGS Marketing Team",
+    authorIsOrganization: true,
     body: `<p>It's one of the most common questions we hear from UAE business owners starting to invest in paid advertising: Google or Meta? The short answer is that they solve different problems, and the best choice depends entirely on your specific business situation. The longer answer is this article — an honest breakdown of both platforms, with clear guidance on which to prioritise based on your category, budget, and stage of growth.</p>
 
 <h2>The Fundamental Difference: Intent vs. Discovery</h2>
@@ -814,9 +920,11 @@ const posts = [
     title: "Google Ads Smart Bidding Strategies for UAE Businesses",
     excerpt: "Stop wasting ad spend. Here's how UAE businesses can use Google's smart bidding tools to drive more conversions at lower cost.",
     date: "16 December 2025",
+    datePublished: "2026-07-01",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=630&q=80&auto=format&fit=crop",
     featured: false,
     author: "BGS Marketing Team",
+    authorIsOrganization: true,
     body: `<p>Google Ads remains one of the highest-ROI channels available to UAE businesses — but only when managed correctly. Too many companies in Dubai and across the Emirates are running campaigns on manual bidding strategies, leaving serious money on the table. Smart bidding, powered by Google's machine learning, can dramatically improve performance — but it needs to be set up and guided properly to work in the UAE's unique market context.</p>
 
 <h2>What Is Smart Bidding?</h2>
@@ -863,14 +971,17 @@ const posts = [
   },
   {
     slug: "content-marketing-strategy-dubai-smes",
+    metaTitle: "Content Marketing Strategy for Dubai SMEs",
     category: "Content Marketing",
     readTime: "7 min",
     title: "Building a Content Marketing Strategy from Zero for Dubai SMEs",
     excerpt: "A practical, step-by-step guide to building a content marketing engine that attracts, nurtures, and converts customers — without a huge budget.",
     date: "9 December 2025",
+    datePublished: "2026-06-12",
     image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1200&h=630&q=80&auto=format&fit=crop",
     featured: false,
     author: "BGS Marketing Team",
+    authorIsOrganization: true,
     body: `<p>Most Dubai SMEs know they should be doing content marketing. Very few are doing it well. The gap isn't usually budget — it's strategy. Without a clear framework, content creation becomes a random exercise: a blog post here, a LinkedIn article there, the occasional Instagram carousel. The result is a scattered digital footprint that generates little measurable return.</p>
 <p>This guide gives you the framework to build a content marketing strategy from zero — one that works for the pace and resources of a small to mid-sized UAE business.</p>
 
@@ -923,14 +1034,17 @@ const posts = [
   },
   {
     slug: "linkedin-b2b-lead-generation-uae",
+    metaTitle: "Organic LinkedIn Lead Generation in the UAE",
     category: "Social Media",
     readTime: "7 min",
     title: "How to Use LinkedIn for B2B Lead Generation in the UAE",
     excerpt: "LinkedIn is the UAE's most powerful B2B platform. Here's how to use it strategically to attract clients, build authority, and generate real pipeline.",
     date: "2 December 2025",
+    datePublished: "2026-06-03",
     image: "https://images.unsplash.com/photo-1611944212129-29977ae1398c?w=1200&h=630&q=80&auto=format&fit=crop",
     featured: false,
     author: "BGS Marketing Team",
+    authorIsOrganization: true,
     body: `<p>LinkedIn is where business gets done in the UAE. The country has one of the highest LinkedIn penetration rates per capita in the world, and the platform's professional-first environment makes it uniquely suited for B2B lead generation. Yet most UAE companies are massively underutilising it — posting sporadically, ignoring outreach, and failing to convert their network into actual pipeline.</p>
 <p>This guide covers the strategies that consistently generate B2B leads on LinkedIn for UAE-based businesses across every sector.</p>
 
@@ -973,14 +1087,17 @@ const posts = [
   },
   {
     slug: "landing-page-design-principles-uae",
+    metaTitle: "Landing Page Design That Converts in the UAE",
     category: "Web Design",
     readTime: "7 min",
     title: "Landing Page Design Principles That Convert in the UAE Market",
     excerpt: "A high-converting landing page in the UAE requires more than good design. Learn the principles that turn UAE traffic into real leads and customers.",
     date: "25 November 2025",
+    datePublished: "2026-05-25",
     image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=1200&h=630&q=80&auto=format&fit=crop",
     featured: false,
     author: "BGS Marketing Team",
+    authorIsOrganization: true,
     body: `<p>A landing page has one job: to convert a visitor into a lead or customer. Yet the majority of UAE businesses are sending paid and organic traffic to generic website pages, product pages, or homepages that weren't built with conversion in mind. The result is wasted ad spend and missed opportunities.</p>
 <p>Building a landing page that converts in the UAE market requires understanding both universal conversion principles and the specific expectations of a UAE audience. Here's what you need to know.</p>
 
@@ -1022,14 +1139,17 @@ const posts = [
   },
   {
     slug: "email-marketing-automation-sequences",
+    metaTitle: "Email Automation Sequences That Convert",
     category: "Email Marketing",
     readTime: "8 min",
     title: "Email Marketing Automation: Building Sequences That Nurture and Convert",
     excerpt: "Email automation is one of the highest-ROI marketing activities available. Learn how to build nurture sequences that turn cold leads into paying customers.",
     date: "18 November 2025",
+    datePublished: "2026-05-16",
     image: "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=1200&h=630&q=80&auto=format&fit=crop",
     featured: false,
     author: "BGS Marketing Team",
+    authorIsOrganization: true,
     body: `<p>For every AED 1 spent on email marketing, the average return is AED 42. No other digital channel comes close to that figure consistently. Yet email remains one of the most underutilised tools in the UAE marketing toolkit — particularly when it comes to automation. Most businesses send occasional newsletters and the odd promotional blast, and miss the enormous revenue opportunity sitting in their contact database.</p>
 <p>Email automation changes that. It lets you deliver the right message to the right person at exactly the right moment in their journey — without you having to manually send a single email.</p>
 
@@ -1083,14 +1203,17 @@ const posts = [
   },
   {
     slug: "local-seo-dubai-google-my-business",
+    metaTitle: "Local SEO Dubai: Google Business Profile Guide",
     category: "SEO",
     readTime: "7 min",
     title: "How to Win at Local SEO in Dubai: Google My Business and Beyond",
     excerpt: "Local SEO in Dubai is a competitive advantage most businesses are ignoring. Here's how to dominate Google's local results and drive foot traffic and leads.",
     date: "11 November 2025",
+    datePublished: "2026-05-07",
     image: "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1200&h=630&q=80&auto=format&fit=crop",
     featured: false,
     author: "BGS Marketing Team",
+    authorIsOrganization: true,
     body: `<p>When someone in Dubai types "digital marketing agency near me" or "best accountant in Business Bay," Google returns a local pack — three business listings with maps, reviews, and direct contact options. This local pack appears above the organic search results and captures over 40% of all clicks. If your business isn't in it, you're invisible to the most high-intent local searchers in your city.</p>
 <p>The good news: most Dubai businesses have done almost nothing to optimise their local SEO. That means the opportunity for competitive advantage is significant, and it doesn't require a massive budget to capture.</p>
 
@@ -1142,14 +1265,18 @@ const posts = [
   },
   {
     slug: "video-marketing-strategy-uae-2025",
+    metaTitle: "Video Marketing Strategy for UAE Brands",
     category: "Video Marketing",
     readTime: "7 min",
-    title: "Video Marketing Strategy for UAE Brands in 2025",
+    title: "Video Marketing Strategy for UAE Brands",
     excerpt: "Video is the dominant content format in the UAE. Here's how to build a video marketing strategy that builds brand awareness and drives real conversions.",
     date: "4 November 2025",
+    datePublished: "2026-04-28",
+    dateModified: "2026-10-29",
     image: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=1200&h=630&q=80&auto=format&fit=crop",
     featured: false,
     author: "BGS Marketing Team",
+    authorIsOrganization: true,
     body: `<p>The UAE has one of the highest rates of video consumption per capita in the world. Residents and visitors in the country spend more time watching online video than almost any other nation — and the appetite for short-form content on platforms like Instagram, TikTok, and YouTube Shorts has only accelerated in 2025. For marketers, this represents a massive, and largely underutilised, opportunity.</p>
 <p>But producing video without a strategy is just expensive noise. This guide outlines how UAE brands can build a video marketing strategy that actually moves the needle.</p>
 
@@ -1202,14 +1329,17 @@ const posts = [
   },
   {
     slug: "social-proof-reviews-testimonials-strategy",
+    metaTitle: "Social Proof: Reviews & Testimonials Strategy",
     category: "Conversion Optimisation",
     readTime: "7 min",
     title: "Social Proof Strategies: How to Generate and Use Reviews and Testimonials",
     excerpt: "Social proof is the most powerful trust signal in marketing. Here's how UAE businesses can systematically generate and deploy reviews and testimonials that convert.",
     date: "28 October 2025",
+    datePublished: "2026-04-19",
     image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=630&q=80&auto=format&fit=crop",
     featured: false,
     author: "BGS Marketing Team",
+    authorIsOrganization: true,
     body: `<p>People don't trust what brands say about themselves. They trust what other people say about brands. This is the fundamental principle behind social proof — and it's why a single genuine five-star review can do more for your business than a week of paid advertising.</p>
 <p>In the UAE, where business relationships are built heavily on trust and reputation, social proof is even more critical than in many other markets. Yet most businesses treat reviews and testimonials as an afterthought rather than a strategic asset. Here's how to change that.</p>
 
@@ -1260,14 +1390,17 @@ const posts = [
   },
   {
     slug: "performance-marketing-metrics-uae-business-owners",
-    category: "Performance Marketing",
+    metaTitle: "Performance Marketing Metrics for UAE Owners",
+    category: "Paid Advertising",
     readTime: "7 min",
     title: "Performance Marketing Metrics Every UAE Business Owner Should Track",
     excerpt: "If you're not tracking the right metrics, you're flying blind. Here are the performance marketing numbers every UAE business owner needs to understand and monitor.",
     date: "21 October 2025",
+    datePublished: "2026-04-10",
     image: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&q=80&auto=format&fit=crop",
     featured: false,
     author: "BGS Marketing Team",
+    authorIsOrganization: true,
     body: `<p>One of the most common conversations we have with UAE business owners goes like this: "We're spending AED 30,000 a month on marketing but we don't really know if it's working." The money is being spent. The agency is sending reports. But the business owner has no clear line of sight between marketing spend and business outcomes.</p>
 <p>This happens when marketing is measured by the wrong metrics. Likes, impressions, and click counts are comfortable to report but often disconnected from the metrics that actually determine whether a business grows. Here is the framework every UAE business owner should use to evaluate their marketing performance.</p>
 
@@ -1316,14 +1449,17 @@ const posts = [
   },
   {
     slug: "how-to-build-marketing-budget-uae",
-    category: "Strategy",
+    metaTitle: "How to Build a Marketing Budget in the UAE",
+    category: "Marketing Strategy",
     readTime: "8 min",
     title: "How to Build a Marketing Budget (And What to Actually Spend It On)",
     excerpt: "Most UAE businesses either underspend on marketing or waste their budget in the wrong places. Here's the practical framework for building and allocating a smart marketing budget.",
     date: "14 October 2025",
+    datePublished: "2026-04-01",
     image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&h=630&q=80&auto=format&fit=crop",
     featured: false,
     author: "BGS Marketing Team",
+    authorIsOrganization: true,
     body: `<p>Marketing budget conversations tend to go one of two ways. Either a business is spending too little — treating marketing as a cost to be minimised rather than an investment to be optimised — or they're spending without a plan, writing cheques to whoever convinces them first without a framework for evaluating ROI. Neither approach builds a sustainable, scalable business in the UAE's competitive market.</p>
 <p>Building a smart marketing budget requires understanding your business model, your growth stage, and which channels are most likely to deliver the outcomes you need. Here is the framework.</p>
 
@@ -1373,14 +1509,17 @@ const posts = [
   },
   {
     slug: "funnel-design-customer-journey-awareness-to-sale",
-    category: "Strategy",
+    metaTitle: "Funnel Design: Awareness to Sale Journey",
+    category: "Marketing Strategy",
     readTime: "7 min",
     title: "Funnel Design: Mapping the Customer Journey from Awareness to Sale",
     excerpt: "A well-designed marketing funnel turns strangers into customers systematically. Learn how to map and build the customer journey for your UAE business.",
     date: "7 October 2025",
+    datePublished: "2026-03-23",
     image: "https://images.unsplash.com/photo-1533750516457-a7f992034fec?w=1200&h=630&q=80&auto=format&fit=crop",
     featured: false,
     author: "BGS Marketing Team",
+    authorIsOrganization: true,
     body: `<p>Most businesses acquire customers accidentally. A prospect finds them on Google, the salesperson handles it well, and a sale happens. But when you ask what the process is for turning a cold stranger into a paying customer — there often isn't one. Marketing is reactive rather than systematic, and growth depends on luck as much as strategy.</p>
 <p>A well-designed marketing funnel changes this. It creates a repeatable, scalable system for moving prospects from first awareness of your brand through to a purchase decision — and then into a long-term client relationship. Here's how to build one for your UAE business.</p>
 
@@ -1440,14 +1579,17 @@ const posts = [
   },
   {
     slug: "rebranding-your-business-when-and-how",
+    metaTitle: "Rebranding Your Business: When and How",
     category: "Branding",
     readTime: "7 min",
     title: "Rebranding Your Business: When to Do It and How to Do It Right",
     excerpt: "A rebrand is one of the highest-stakes decisions a business can make. Here's how to know when it's time, and how to execute a rebrand that drives growth rather than confusion.",
     date: "30 September 2025",
+    datePublished: "2026-03-13",
     image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=630&q=80&auto=format&fit=crop",
     featured: false,
     author: "BGS Marketing Team",
+    authorIsOrganization: true,
     body: `<p>Rebranding is one of the most misunderstood decisions in business. Done right, it can reposition a company for a new market, attract better clients, and signal a leap in quality and credibility. Done wrong, it alienates existing customers, confuses the market, and wastes significant investment on surface-level change that doesn't address the underlying business issues.</p>
 <p>In the UAE's fast-moving business environment, where industries evolve quickly and competition is intensifying across every sector, the question of whether and when to rebrand is one that many founders and marketing leaders are grappling with. Here's a clear-eyed guide to making that decision well.</p>
 
@@ -1491,14 +1633,17 @@ const posts = [
   },
   {
     slug: "ai-tools-marketing-teams-2025",
+    metaTitle: "AI Tools Every Marketing Team Should Use",
     category: "AI & Technology",
     readTime: "7 min",
     title: "AI Tools Every Marketing Team Should Be Using Right Now",
     excerpt: "AI has fundamentally changed what's possible for marketing teams. Here are the tools that are delivering real, measurable value for UAE marketing teams in 2025.",
     date: "23 September 2025",
+    datePublished: "2026-03-04",
     image: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&h=630&q=80&auto=format&fit=crop",
     featured: false,
     author: "BGS Marketing Team",
+    authorIsOrganization: true,
     body: `<p>Two years ago, AI tools in marketing were largely experimental. In 2025, they are a competitive necessity. Teams that have integrated AI into their workflows are producing more content, running better-targeted campaigns, and making faster, more accurate decisions — all with the same or smaller headcounts. Those that haven't are increasingly at a structural disadvantage.</p>
 <p>The challenge is that the AI tool landscape is overwhelming. New tools launch weekly, the claims are often overstated, and it's easy to waste time testing tools that deliver little practical value. This guide focuses on the tools that are generating genuine, measurable returns for marketing teams — with specific relevance to UAE businesses.</p>
 
@@ -1529,14 +1674,17 @@ const posts = [
   },
   {
     slug: "how-to-choose-digital-marketing-agency-dubai",
+    metaTitle: "How to Choose a Marketing Agency in Dubai",
     category: "Agency Insights",
     readTime: "8 min",
     title: "How to Choose a Digital Marketing Agency in Dubai: The Honest Guide",
     excerpt: "Dubai has hundreds of digital marketing agencies. Here's how to cut through the noise, ask the right questions, and choose a partner that actually delivers results.",
     date: "16 September 2025",
+    datePublished: "2026-02-23",
     image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=1200&h=630&q=80&auto=format&fit=crop",
     featured: false,
     author: "BGS Marketing Team",
+    authorIsOrganization: true,
     body: `<p>Dubai has more digital marketing agencies per square kilometre than almost any city in the world. Every free zone business centre is full of them. They all claim to be "results-driven," "data-led," and "passionate about growth." Choosing between them is genuinely difficult — and choosing the wrong one can cost you a year of budget and momentum.</p>
 <p>This is an honest guide to finding the right agency for your UAE business — written by people who are in the industry and have seen what good and bad look like from the inside.</p>
 
@@ -1589,14 +1737,17 @@ const posts = [
   },
   {
     slug: "building-brand-authority-crowded-market",
+    metaTitle: "Building Brand Authority in a Crowded Market",
     category: "Branding",
     readTime: "7 min",
     title: "Building Brand Authority in a Crowded Market: The Long Game",
     excerpt: "In the UAE's hyper-competitive market, brand authority is the most durable competitive advantage. Here's how to build it systematically over the long term.",
     date: "9 September 2025",
+    datePublished: "2026-02-14",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&h=630&q=80&auto=format&fit=crop",
     featured: false,
     author: "BGS Marketing Team",
+    authorIsOrganization: true,
     body: `<p>Brand authority is what happens when the market trusts and respects you enough that you become the obvious choice in your category. When clients choose you without shopping around. When people share your content because it's genuinely useful. When competitors reference you in their own marketing. This level of authority doesn't happen by accident — and it doesn't happen fast. But the businesses that invest in it systematically are the ones that compound their growth in ways that no paid advertising campaign can replicate.</p>
 <p>In the UAE's crowded market — where every sector is contested by local, regional, and international players — brand authority is the ultimate long-term competitive advantage. Here's how to build it.</p>
 
@@ -1636,14 +1787,17 @@ const posts = [
   },
   {
     slug: "getting-started-marketing-automation-beginners-playbook",
+    metaTitle: "Marketing Automation: A Beginner's Playbook",
     category: "Marketing Automation",
     readTime: "8 min",
     title: "Getting Started with Marketing Automation: The Beginner's Playbook",
     excerpt: "Marketing automation can transform your business — but most companies don't know where to start. This beginner's guide shows you how to get up and running fast.",
     date: "2 September 2025",
+    datePublished: "2026-02-05",
     image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&h=630&q=80&auto=format&fit=crop",
     featured: false,
     author: "BGS Marketing Team",
+    authorIsOrganization: true,
     body: `<p>Marketing automation is one of those terms that sounds complex but describes something simple: using software to deliver the right message to the right person at the right time, automatically. Once set up, automation runs 24/7 in the background — following up with leads, nurturing prospects through the sales funnel, onboarding new clients, and re-engaging dormant contacts — without requiring your team to do any of it manually.</p>
 <p>For UAE businesses of any size, this represents a significant competitive advantage. This beginner's playbook shows you exactly how to get started, without getting overwhelmed.</p>
 
@@ -1691,4 +1845,9 @@ const posts = [
 <p>Ready to implement marketing automation in your business? <a href="/contact" style="color:#C9A84C;text-decoration:underline;">Talk to BGS Technologies about building your automation setup</a>, or <a href="/services" style="color:#C9A84C;text-decoration:underline;">explore our marketing automation services</a>.</p>`
   }
 ]
-export default posts;
+// Newest first, so the blog listing and the "featured" pick follow recency.
+const allPosts = [...posts, ...posts2026].sort((a, b) =>
+  (b.datePublished ?? '').localeCompare(a.datePublished ?? '')
+);
+
+export default allPosts;

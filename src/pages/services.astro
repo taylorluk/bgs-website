@@ -1,8 +1,26 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { breadcrumbSchema } from '../lib/schema.js';
 import CTA from '../components/CTA.astro';
 
 const marketing = [
+  {
+    icon: '🗣️',
+    title: 'Arabic SEO',
+    tagline: 'The half of UAE search your competitors ignore.',
+    desc: 'Native Arabic keyword research, pages written rather than translated, reciprocal hreflang and right-to-left layouts done properly — reaching the search audience most UAE businesses have ceded entirely.',
+    deliverables: [
+      'Native Gulf Arabic keyword research',
+      'Arabic content written, never machine-translated',
+      'Reciprocal hreflang (en-AE / ar-AE / x-default)',
+      'RTL layout and Arabic typography engineering',
+      'Separate bilingual performance reporting',
+    ],
+    result: '2x Addressable Search Market',
+    resultColor: 'gold',
+    tag: 'New',
+  },
+
   {
     icon: '📈',
     title: 'Paid Advertising',
@@ -249,6 +267,23 @@ const technology = [
 const ai = [
   {
     icon: '🤖',
+    title: 'AI Search Optimisation',
+    tagline: 'Be the answer, not just a result.',
+    desc: 'Generative Engine Optimisation grounded in what Google actually says works — crawler access, citable passage structure, verifiable claims and entity authority. No llms.txt mythology.',
+    deliverables: [
+      'AI crawler configuration (citation vs training bots)',
+      'Citable passage and question-heading restructuring',
+      'Claim sourcing with as-of dates',
+      'Connected structured-data graph',
+      'Off-site entity and brand-mention building',
+    ],
+    result: '3x Mentions vs Backlinks',
+    resultColor: 'purple',
+    tag: 'New',
+  },
+
+  {
+    icon: '🤖',
     title: 'AI Receptionist & Chatbots',
     tagline: 'Your best employee — available 24/7, never sick.',
     desc: "An AI that answers calls, responds to WhatsApp, qualifies leads with intelligent questions, books calendar appointments, and handles FAQs — all without a human in the loop. Deployed in 24 hours.",
@@ -360,11 +395,21 @@ const resultColors: Record<ResultColor, { text: string; bg: string; border: stri
   pink:   { text: '#f9a8d4',            bg: 'rgba(196,64,128,0.1)',  border: 'rgba(196,64,128,0.25)' },
   purple: { text: '#c4b5fd',            bg: 'rgba(123,63,160,0.12)', border: 'rgba(123,63,160,0.3)' },
 };
+
+const schemas = [
+  breadcrumbSchema([
+    { name: 'Home', path: '/' },
+    { name: 'Services', path: '/services' },
+  ]),
+];
+
 ---
 
 <Layout
   title="Services — Marketing, Technology & AI | BGS Technologies"
   description="Full-service marketing, technology, and AI solutions for ambitious brands. Paid ads, branding, CRM, automation, AI content, and more — all under one roof."
+
+  schemas={schemas}
 >
 
   <!-- ══ HERO ══════════════════════════════════════════════════════════════════ -->

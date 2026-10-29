@@ -79,7 +79,23 @@ const services = [
         q: "Can you run ads in Arabic for the local UAE market?",
         a: "Yes. We produce bilingual campaigns in both English and Arabic, and we localise messaging for UAE cultural nuances rather than just translating copy. This consistently improves performance for campaigns targeting Arabic-speaking audiences.",
       },
-    ],
+          {
+        q: "What does paid advertising cost with BGS?",
+        a: "Full-service engagements start from $5,000/month, covering strategy, creative and execution. Standalone paid advertising is priced below that and depends on scope, market and the number of channels involved. We quote a fixed monthly fee rather than a percentage of your ad spend, so our incentive is your return and not your budget. You will have a written scope and a number before anything starts.",
+      },
+      {
+        q: "Do we own our accounts, data and creative?",
+        a: "Yes, entirely. Ad accounts, analytics properties, CRM records, domains and final approved creative are yours and stay in your name. We work inside your accounts rather than ours. If you ever leave, nothing needs migrating and nothing is held back — a question worth asking any agency before you sign.",
+      },
+      {
+        q: "What is the minimum commitment?",
+        a: "Three months for ongoing work, which is the shortest honest window to build, test and read results. After that we run month to month with 30 days' notice. We do not use twelve-month lock-ins. If something is not working we would rather fix it or end it than hold you to a contract.",
+      },
+      {
+        q: "How will we know the paid advertising is working?",
+        a: "You get a live dashboard tracking the metrics that matter to your business — not impressions — plus a weekly written summary and a monthly review call. We agree the success metrics before we start, and we report the campaigns that underperformed alongside the ones that worked.",
+      },
+],
     cta: "Ready to make every ad dirham work harder?",
   },
 
@@ -163,7 +179,23 @@ const services = [
         q: "How soon will we see follower and engagement growth?",
         a: "Engagement improvements are typically visible within the first 30–60 days as content quality and posting consistency improve. Significant follower growth usually comes at months 3–6, especially when combined with paid boosting or influencer campaigns.",
       },
-    ],
+          {
+        q: "What does social media management cost with BGS?",
+        a: "Full-service engagements start from $5,000/month, covering strategy, creative and execution. Standalone social media management is priced below that and depends on scope, market and the number of channels involved. We quote a fixed monthly fee rather than a percentage of your ad spend, so our incentive is your return and not your budget. You will have a written scope and a number before anything starts.",
+      },
+      {
+        q: "Do we own our accounts, data and creative?",
+        a: "Yes, entirely. Ad accounts, analytics properties, CRM records, domains and final approved creative are yours and stay in your name. We work inside your accounts rather than ours. If you ever leave, nothing needs migrating and nothing is held back — a question worth asking any agency before you sign.",
+      },
+      {
+        q: "What is the minimum commitment?",
+        a: "Three months for ongoing work, which is the shortest honest window to build, test and read results. After that we run month to month with 30 days' notice. We do not use twelve-month lock-ins. If something is not working we would rather fix it or end it than hold you to a contract.",
+      },
+      {
+        q: "How will we know the social media management is working?",
+        a: "You get a live dashboard tracking the metrics that matter to your business — not impressions — plus a weekly written summary and a monthly review call. We agree the success metrics before we start, and we report the campaigns that underperformed alongside the ones that worked.",
+      },
+],
     cta: "Ready to build a social presence that actually converts?",
   },
 
@@ -176,7 +208,7 @@ const services = [
     tagline: "Rank higher. Get found. Convert more.",
     heroHeadline: "Own Page One in Dubai's Most Competitive Searches",
     heroSub: "Technical SEO, content strategy, and local search optimisation that compound over time — turning Google into your highest-value acquisition channel.",
-    metaTitle: "SEO Agency Dubai | Local Search Optimisation | BGS Technologies",
+    metaTitle: "SEO Agency Dubai | Local Search Optimisation",
     metaDesc: "Dubai SEO agency specialising in technical SEO, Google Business Profile & local search. Triple your organic traffic in 6 months. Free audit available.",
     stat1: { value: "3×", label: "Organic Traffic Growth" },
     stat2: { value: "Top 3", label: "Rankings Achieved" },
@@ -247,7 +279,23 @@ const services = [
         q: "Do you write the content or do we need our own writers?",
         a: "We can handle content production end-to-end through our content marketing team, or we can provide detailed briefs for your internal team to execute. Most clients opt for us to write the content as part of an integrated SEO retainer.",
       },
-    ],
+          {
+        q: "What does seo & local search cost with BGS?",
+        a: "Full-service engagements start from $5,000/month, covering strategy, creative and execution. Standalone seo & local search is priced below that and depends on scope, market and the number of channels involved. We quote a fixed monthly fee rather than a percentage of your ad spend, so our incentive is your return and not your budget. You will have a written scope and a number before anything starts.",
+      },
+      {
+        q: "Do we own our accounts, data and creative?",
+        a: "Yes, entirely. Ad accounts, analytics properties, CRM records, domains and final approved creative are yours and stay in your name. We work inside your accounts rather than ours. If you ever leave, nothing needs migrating and nothing is held back — a question worth asking any agency before you sign.",
+      },
+      {
+        q: "What is the minimum commitment?",
+        a: "Three months for ongoing work, which is the shortest honest window to build, test and read results. After that we run month to month with 30 days' notice. We do not use twelve-month lock-ins. If something is not working we would rather fix it or end it than hold you to a contract.",
+      },
+      {
+        q: "How will we know the seo & local search is working?",
+        a: "You get a live dashboard tracking the metrics that matter to your business — not impressions — plus a weekly written summary and a monthly review call. We agree the success metrics before we start, and we report the campaigns that underperformed alongside the ones that worked.",
+      },
+],
     cta: "Ready to own page one in your market?",
   },
 
@@ -331,7 +379,23 @@ const services = [
         q: "What's a typical ROI on email marketing?",
         a: "Industry benchmarks show email delivering AED 35–40 back for every AED 1 spent — making it consistently the highest-ROI digital channel. Results depend on list quality, automation sophistication, and offer strength.",
       },
-    ],
+          {
+        q: "What does email & sms marketing cost with BGS?",
+        a: "Full-service engagements start from $5,000/month, covering strategy, creative and execution. Standalone email & sms marketing is priced below that and depends on scope, market and the number of channels involved. We quote a fixed monthly fee rather than a percentage of your ad spend, so our incentive is your return and not your budget. You will have a written scope and a number before anything starts.",
+      },
+      {
+        q: "Do we own our accounts, data and creative?",
+        a: "Yes, entirely. Ad accounts, analytics properties, CRM records, domains and final approved creative are yours and stay in your name. We work inside your accounts rather than ours. If you ever leave, nothing needs migrating and nothing is held back — a question worth asking any agency before you sign.",
+      },
+      {
+        q: "What is the minimum commitment?",
+        a: "Three months for ongoing work, which is the shortest honest window to build, test and read results. After that we run month to month with 30 days' notice. We do not use twelve-month lock-ins. If something is not working we would rather fix it or end it than hold you to a contract.",
+      },
+      {
+        q: "How will we know the email & sms marketing is working?",
+        a: "You get a live dashboard tracking the metrics that matter to your business — not impressions — plus a weekly written summary and a monthly review call. We agree the success metrics before we start, and we report the campaigns that underperformed alongside the ones that worked.",
+      },
+],
     cta: "Ready to turn your email list into your top revenue channel?",
   },
 
@@ -344,7 +408,7 @@ const services = [
     tagline: "Your brand is your first impression. Make it unforgettable.",
     heroHeadline: "Build a Brand Dubai Remembers",
     heroSub: "From logo to full visual identity — we create brands that command premium pricing, earn instant trust, and look the part in one of the world's most brand-conscious cities.",
-    metaTitle: "Branding Agency Dubai | Visual Identity & Brand Design | BGS Technologies",
+    metaTitle: "Branding Agency Dubai | Visual Identity & Design",
     metaDesc: "Dubai branding agency creating logos, visual identities & brand guidelines for UAE businesses. Premium brand design that commands higher prices. Let's talk.",
     stat1: { value: "Premium", label: "Pricing Power" },
     stat2: { value: "100+", label: "Brands Created" },
@@ -415,7 +479,23 @@ const services = [
         q: "Do you handle printing and production of physical materials?",
         a: "We supply print-ready files optimised for UAE-based printers. We can also manage the production and printing process directly through our trusted local print partners if required.",
       },
-    ],
+          {
+        q: "What does branding & creative cost with BGS?",
+        a: "Full-service engagements start from $5,000/month, covering strategy, creative and execution. Standalone branding & creative is priced below that and depends on scope, market and the number of channels involved. We quote a fixed monthly fee rather than a percentage of your ad spend, so our incentive is your return and not your budget. You will have a written scope and a number before anything starts.",
+      },
+      {
+        q: "Do we own our accounts, data and creative?",
+        a: "Yes, entirely. Ad accounts, analytics properties, CRM records, domains and final approved creative are yours and stay in your name. We work inside your accounts rather than ours. If you ever leave, nothing needs migrating and nothing is held back — a question worth asking any agency before you sign.",
+      },
+      {
+        q: "What is the minimum commitment?",
+        a: "Three months for ongoing work, which is the shortest honest window to build, test and read results. After that we run month to month with 30 days' notice. We do not use twelve-month lock-ins. If something is not working we would rather fix it or end it than hold you to a contract.",
+      },
+      {
+        q: "How will we know the branding & creative is working?",
+        a: "You get a live dashboard tracking the metrics that matter to your business — not impressions — plus a weekly written summary and a monthly review call. We agree the success metrics before we start, and we report the campaigns that underperformed alongside the ones that worked.",
+      },
+],
     cta: "Ready to build a brand that commands premium prices?",
   },
 
@@ -428,7 +508,7 @@ const services = [
     tagline: "Build authority. Attract buyers. Compound over time.",
     heroHeadline: "Become the Authority in Your Industry",
     heroSub: "Strategic content that ranks on Google, positions you as the go-to expert, and pulls in high-intent buyers who are already looking for what you offer.",
-    metaTitle: "Content Marketing Agency Dubai | SEO Content & Thought Leadership | BGS Technologies",
+    metaTitle: "Content Marketing Agency Dubai | BGS",
     metaDesc: "Content marketing for Dubai businesses — SEO blogs, case studies, LinkedIn thought leadership & video scripts. 8× more inbound leads. Talk to us today.",
     stat1: { value: "8×", label: "More Inbound Leads" },
     stat2: { value: "1,500+", label: "Words Per Article" },
@@ -499,7 +579,23 @@ const services = [
         q: "How many articles do you recommend per month?",
         a: "We recommend a minimum of 4 articles per month (one per week) to build Google authority at a meaningful pace. For brands in highly competitive sectors, 8–12 per month accelerates results significantly.",
       },
-    ],
+          {
+        q: "What does content marketing cost with BGS?",
+        a: "Full-service engagements start from $5,000/month, covering strategy, creative and execution. Standalone content marketing is priced below that and depends on scope, market and the number of channels involved. We quote a fixed monthly fee rather than a percentage of your ad spend, so our incentive is your return and not your budget. You will have a written scope and a number before anything starts.",
+      },
+      {
+        q: "Do we own our accounts, data and creative?",
+        a: "Yes, entirely. Ad accounts, analytics properties, CRM records, domains and final approved creative are yours and stay in your name. We work inside your accounts rather than ours. If you ever leave, nothing needs migrating and nothing is held back — a question worth asking any agency before you sign.",
+      },
+      {
+        q: "What is the minimum commitment?",
+        a: "Three months for ongoing work, which is the shortest honest window to build, test and read results. After that we run month to month with 30 days' notice. We do not use twelve-month lock-ins. If something is not working we would rather fix it or end it than hold you to a contract.",
+      },
+      {
+        q: "How will we know the content marketing is working?",
+        a: "You get a live dashboard tracking the metrics that matter to your business — not impressions — plus a weekly written summary and a monthly review call. We agree the success metrics before we start, and we report the campaigns that underperformed alongside the ones that worked.",
+      },
+],
     cta: "Ready to build content that compounds into real business growth?",
   },
 
@@ -583,7 +679,23 @@ const services = [
         q: "What industries do influencer campaigns work best for in the UAE?",
         a: "Hospitality, F&B, beauty, fashion, fitness, real estate, and travel perform exceptionally well. B2B brands also see strong results with LinkedIn influencer and thought leadership campaigns targeting the GCC business community.",
       },
-    ],
+          {
+        q: "What does influencer & pr cost with BGS?",
+        a: "Full-service engagements start from $5,000/month, covering strategy, creative and execution. Standalone influencer & pr is priced below that and depends on scope, market and the number of channels involved. We quote a fixed monthly fee rather than a percentage of your ad spend, so our incentive is your return and not your budget. You will have a written scope and a number before anything starts.",
+      },
+      {
+        q: "Do we own our accounts, data and creative?",
+        a: "Yes, entirely. Ad accounts, analytics properties, CRM records, domains and final approved creative are yours and stay in your name. We work inside your accounts rather than ours. If you ever leave, nothing needs migrating and nothing is held back — a question worth asking any agency before you sign.",
+      },
+      {
+        q: "What is the minimum commitment?",
+        a: "Three months for ongoing work, which is the shortest honest window to build, test and read results. After that we run month to month with 30 days' notice. We do not use twelve-month lock-ins. If something is not working we would rather fix it or end it than hold you to a contract.",
+      },
+      {
+        q: "How will we know the influencer & pr is working?",
+        a: "You get a live dashboard tracking the metrics that matter to your business — not impressions — plus a weekly written summary and a monthly review call. We agree the success metrics before we start, and we report the campaigns that underperformed alongside the ones that worked.",
+      },
+],
     cta: "Ready to put your brand in front of the right audiences?",
   },
 
@@ -596,7 +708,7 @@ const services = [
     tagline: "Your website should convert, not just look good.",
     heroHeadline: "Websites Built to Turn Visitors Into Revenue",
     heroSub: "Custom-designed, performance-optimised websites that look premium, load instantly, and convert browsers into buyers from the moment they land.",
-    metaTitle: "Web Design Agency Dubai | CRO-Optimised Websites | BGS Technologies",
+    metaTitle: "Web Design Agency Dubai | CRO Websites",
     metaDesc: "Dubai web design agency building fast, conversion-optimised websites & Shopify stores. Mobile-first design, CRO landing pages, same-day launch option.",
     stat1: { value: "4×", label: "Conversion Rate" },
     stat2: { value: "< 2s", label: "Average Load Time" },
@@ -667,7 +779,23 @@ const services = [
         q: "What ongoing support do you provide after launch?",
         a: "All projects come with a 30-day post-launch support period. We also offer ongoing hosting, maintenance, and CRO retainer packages for clients who want continuous optimisation after launch.",
       },
-    ],
+          {
+        q: "What does web design & development cost with BGS?",
+        a: "Full-service engagements start from $5,000/month, covering strategy, creative and execution. Standalone web design & development is priced below that and depends on scope, market and the number of channels involved. We quote a fixed monthly fee rather than a percentage of your ad spend, so our incentive is your return and not your budget. You will have a written scope and a number before anything starts.",
+      },
+      {
+        q: "Do we own our accounts, data and creative?",
+        a: "Yes, entirely. Ad accounts, analytics properties, CRM records, domains and final approved creative are yours and stay in your name. We work inside your accounts rather than ours. If you ever leave, nothing needs migrating and nothing is held back — a question worth asking any agency before you sign.",
+      },
+      {
+        q: "What is the minimum commitment?",
+        a: "Three months for ongoing work, which is the shortest honest window to build, test and read results. After that we run month to month with 30 days' notice. We do not use twelve-month lock-ins. If something is not working we would rather fix it or end it than hold you to a contract.",
+      },
+      {
+        q: "How will we know the web design & development is working?",
+        a: "You get a live dashboard tracking the metrics that matter to your business — not impressions — plus a weekly written summary and a monthly review call. We agree the success metrics before we start, and we report the campaigns that underperformed alongside the ones that worked.",
+      },
+],
     cta: "Ready to build a website that works as hard as you do?",
   },
 
@@ -680,7 +808,7 @@ const services = [
     tagline: "Stop losing leads. Start closing them.",
     heroHeadline: "A Sales Pipeline Built to Close Every Opportunity",
     heroSub: "We set up, configure, and automate your CRM so no lead slips through the cracks — and your team spends time selling, not administering.",
-    metaTitle: "CRM Setup & Pipeline Management Dubai | GoHighLevel | BGS Technologies",
+    metaTitle: "CRM Setup & Pipeline Management Dubai",
     metaDesc: "GoHighLevel CRM setup & pipeline configuration for Dubai businesses. Custom pipelines, lead capture, booking automation & team training. 40% more deals closed.",
     stat1: { value: "40%", label: "More Deals Closed" },
     stat2: { value: "100%", label: "Lead Capture Rate" },
@@ -751,7 +879,23 @@ const services = [
         q: "How long does a full CRM setup take?",
         a: "A standard GHL setup for a business with an established sales process takes 3–5 business days. More complex multi-location or multi-team configurations can take 7–10 days.",
       },
-    ],
+          {
+        q: "What does crm & pipeline setup cost with BGS?",
+        a: "Full-service engagements start from $5,000/month, covering strategy, creative and execution. Standalone crm & pipeline setup is priced below that and depends on scope, market and the number of channels involved. We quote a fixed monthly fee rather than a percentage of your ad spend, so our incentive is your return and not your budget. You will have a written scope and a number before anything starts.",
+      },
+      {
+        q: "Do we own our accounts, data and creative?",
+        a: "Yes, entirely. Ad accounts, analytics properties, CRM records, domains and final approved creative are yours and stay in your name. We work inside your accounts rather than ours. If you ever leave, nothing needs migrating and nothing is held back — a question worth asking any agency before you sign.",
+      },
+      {
+        q: "What is the minimum commitment?",
+        a: "Three months for ongoing work, which is the shortest honest window to build, test and read results. After that we run month to month with 30 days' notice. We do not use twelve-month lock-ins. If something is not working we would rather fix it or end it than hold you to a contract.",
+      },
+      {
+        q: "How will we know the crm & pipeline setup is working?",
+        a: "You get a live dashboard tracking the metrics that matter to your business — not impressions — plus a weekly written summary and a monthly review call. We agree the success metrics before we start, and we report the campaigns that underperformed alongside the ones that worked.",
+      },
+],
     cta: "Ready to build a pipeline that closes every opportunity?",
   },
 
@@ -764,7 +908,7 @@ const services = [
     tagline: "Your best salesperson never sleeps.",
     heroHeadline: "Automate Follow-Up. Close More. Work Less.",
     heroSub: "Multi-step automation workflows that engage, nurture, and convert leads automatically — from first enquiry to signed contract, without manual follow-up.",
-    metaTitle: "Marketing Automation Agency Dubai | Lead Nurture & Follow-Up | BGS Technologies",
+    metaTitle: "Marketing Automation Agency Dubai",
     metaDesc: "Marketing automation for Dubai businesses. Lead nurture sequences, trigger workflows, missed call text-back & proposal automation. 60% faster response times.",
     stat1: { value: "60%", label: "Faster Lead Response" },
     stat2: { value: "5×", label: "More Touchpoints Delivered" },
@@ -835,7 +979,23 @@ const services = [
         q: "Do you integrate automation with WhatsApp?",
         a: "Yes. GHL supports WhatsApp Business API integration, allowing automated and manual WhatsApp messages as part of your follow-up workflows — critical for UAE markets where WhatsApp is the dominant communication channel.",
       },
-    ],
+          {
+        q: "What does marketing automation cost with BGS?",
+        a: "Full-service engagements start from $5,000/month, covering strategy, creative and execution. Standalone marketing automation is priced below that and depends on scope, market and the number of channels involved. We quote a fixed monthly fee rather than a percentage of your ad spend, so our incentive is your return and not your budget. You will have a written scope and a number before anything starts.",
+      },
+      {
+        q: "Do we own our accounts, data and creative?",
+        a: "Yes, entirely. Ad accounts, analytics properties, CRM records, domains and final approved creative are yours and stay in your name. We work inside your accounts rather than ours. If you ever leave, nothing needs migrating and nothing is held back — a question worth asking any agency before you sign.",
+      },
+      {
+        q: "What is the minimum commitment?",
+        a: "Three months for ongoing work, which is the shortest honest window to build, test and read results. After that we run month to month with 30 days' notice. We do not use twelve-month lock-ins. If something is not working we would rather fix it or end it than hold you to a contract.",
+      },
+      {
+        q: "How will we know the marketing automation is working?",
+        a: "You get a live dashboard tracking the metrics that matter to your business — not impressions — plus a weekly written summary and a monthly review call. We agree the success metrics before we start, and we report the campaigns that underperformed alongside the ones that worked.",
+      },
+],
     cta: "Ready to build a system that follows up better than any human could?",
   },
 
@@ -848,7 +1008,7 @@ const services = [
     tagline: "Your store, built to sell from day one.",
     heroHeadline: "An Ecommerce Store That Converts Traffic Into Revenue",
     heroSub: "Full-stack ecommerce development — designed for conversion, built for speed, and integrated with every tool your growing UAE brand needs to scale.",
-    metaTitle: "Ecommerce Development Dubai | Shopify & WooCommerce Stores | BGS Technologies",
+    metaTitle: "Ecommerce Development Dubai | Shopify & Woo",
     metaDesc: "Expert ecommerce development for Dubai brands. Shopify, WooCommerce & custom stores with payment gateways, cart recovery & CRO built in. 600% revenue growth.",
     stat1: { value: "600%", label: "Revenue Growth" },
     stat2: { value: "< 1.5s", label: "Store Load Time" },
@@ -919,7 +1079,23 @@ const services = [
         q: "How do you handle VAT requirements for UAE ecommerce?",
         a: "We configure VAT calculations correctly for UAE requirements (5% on applicable goods) and integrate with accounting platforms like Xero or QuickBooks to streamline tax reporting.",
       },
-    ],
+          {
+        q: "What does ecommerce development cost with BGS?",
+        a: "Full-service engagements start from $5,000/month, covering strategy, creative and execution. Standalone ecommerce development is priced below that and depends on scope, market and the number of channels involved. We quote a fixed monthly fee rather than a percentage of your ad spend, so our incentive is your return and not your budget. You will have a written scope and a number before anything starts.",
+      },
+      {
+        q: "Do we own our accounts, data and creative?",
+        a: "Yes, entirely. Ad accounts, analytics properties, CRM records, domains and final approved creative are yours and stay in your name. We work inside your accounts rather than ours. If you ever leave, nothing needs migrating and nothing is held back — a question worth asking any agency before you sign.",
+      },
+      {
+        q: "What is the minimum commitment?",
+        a: "Three months for ongoing work, which is the shortest honest window to build, test and read results. After that we run month to month with 30 days' notice. We do not use twelve-month lock-ins. If something is not working we would rather fix it or end it than hold you to a contract.",
+      },
+      {
+        q: "How will we know the ecommerce development is working?",
+        a: "You get a live dashboard tracking the metrics that matter to your business — not impressions — plus a weekly written summary and a monthly review call. We agree the success metrics before we start, and we report the campaigns that underperformed alongside the ones that worked.",
+      },
+],
     cta: "Ready to build an ecommerce store that sells while you sleep?",
   },
 
@@ -932,7 +1108,7 @@ const services = [
     tagline: "Make your tools talk to each other.",
     heroHeadline: "One Connected Tech Stack. Zero Manual Data Entry.",
     heroSub: "We integrate your CRM, ad platforms, payment systems, and business tools into a seamless ecosystem — eliminating data silos and the manual work that comes with them.",
-    metaTitle: "Systems & API Integration Dubai | CRM & Tech Stack Integration | BGS Technologies",
+    metaTitle: "Systems & API Integration Dubai | BGS",
     metaDesc: "Systems integration for Dubai businesses. CRM ↔ ad platform sync, payment & accounting integrations, Zapier/Make/native API builds. Zero manual entry.",
     stat1: { value: "Zero", label: "Manual Data Entry" },
     stat2: { value: "20+", label: "Platforms Integrated" },
@@ -1003,7 +1179,23 @@ const services = [
         q: "How do you handle sensitive data like customer PII during integrations?",
         a: "All integrations are built with data security best practices — encrypted connections, minimal data exposure, access token rotation, and handling of PII in compliance with UAE data protection requirements.",
       },
-    ],
+          {
+        q: "What does systems & api integration cost with BGS?",
+        a: "Full-service engagements start from $5,000/month, covering strategy, creative and execution. Standalone systems & api integration is priced below that and depends on scope, market and the number of channels involved. We quote a fixed monthly fee rather than a percentage of your ad spend, so our incentive is your return and not your budget. You will have a written scope and a number before anything starts.",
+      },
+      {
+        q: "Do we own our accounts, data and creative?",
+        a: "Yes, entirely. Ad accounts, analytics properties, CRM records, domains and final approved creative are yours and stay in your name. We work inside your accounts rather than ours. If you ever leave, nothing needs migrating and nothing is held back — a question worth asking any agency before you sign.",
+      },
+      {
+        q: "What is the minimum commitment?",
+        a: "Three months for ongoing work, which is the shortest honest window to build, test and read results. After that we run month to month with 30 days' notice. We do not use twelve-month lock-ins. If something is not working we would rather fix it or end it than hold you to a contract.",
+      },
+      {
+        q: "How will we know the systems & api integration is working?",
+        a: "You get a live dashboard tracking the metrics that matter to your business — not impressions — plus a weekly written summary and a monthly review call. We agree the success metrics before we start, and we report the campaigns that underperformed alongside the ones that worked.",
+      },
+],
     cta: "Ready to build a tech stack that runs itself?",
   },
 
@@ -1016,7 +1208,7 @@ const services = [
     tagline: "Know what's working before your competitors do.",
     heroHeadline: "Real-Time Clarity Across Every Marketing Channel",
     heroSub: "Custom dashboards that pull all your data into one place — so you can see exactly what's driving revenue, what's wasting budget, and where to focus next.",
-    metaTitle: "Marketing Analytics & Reporting Dashboards Dubai | BGS Technologies",
+    metaTitle: "Marketing Analytics & Reporting Dubai",
     metaDesc: "Custom Looker Studio & GHL dashboards for Dubai businesses. Cross-channel attribution, ROAS tracking, lead reporting & automated insights. 100% data visibility.",
     stat1: { value: "100%", label: "Data Visibility" },
     stat2: { value: "1", label: "Dashboard for All Channels" },
@@ -1087,7 +1279,23 @@ const services = [
         q: "Do we need to host or maintain the dashboards ourselves?",
         a: "No. Dashboards built in Looker Studio are hosted on Google's infrastructure and are always accessible via browser without any maintenance on your end. We handle all updates and data connection maintenance.",
       },
-    ],
+          {
+        q: "What does analytics & reporting dashboards cost with BGS?",
+        a: "Full-service engagements start from $5,000/month, covering strategy, creative and execution. Standalone analytics & reporting dashboards is priced below that and depends on scope, market and the number of channels involved. We quote a fixed monthly fee rather than a percentage of your ad spend, so our incentive is your return and not your budget. You will have a written scope and a number before anything starts.",
+      },
+      {
+        q: "Do we own our accounts, data and creative?",
+        a: "Yes, entirely. Ad accounts, analytics properties, CRM records, domains and final approved creative are yours and stay in your name. We work inside your accounts rather than ours. If you ever leave, nothing needs migrating and nothing is held back — a question worth asking any agency before you sign.",
+      },
+      {
+        q: "What is the minimum commitment?",
+        a: "Three months for ongoing work, which is the shortest honest window to build, test and read results. After that we run month to month with 30 days' notice. We do not use twelve-month lock-ins. If something is not working we would rather fix it or end it than hold you to a contract.",
+      },
+      {
+        q: "How will we know the analytics & reporting dashboards is working?",
+        a: "You get a live dashboard tracking the metrics that matter to your business — not impressions — plus a weekly written summary and a monthly review call. We agree the success metrics before we start, and we report the campaigns that underperformed alongside the ones that worked.",
+      },
+],
     cta: "Ready to see your entire business in one clear view?",
   },
 
@@ -1171,7 +1379,23 @@ const services = [
         q: "Do you write the copy or do we need to supply it?",
         a: "We write all funnel copy in-house. Effective landing page copy is one of the most critical conversion factors — we include full copywriting as part of every landing page and funnel project.",
       },
-    ],
+          {
+        q: "What does landing pages & funnels cost with BGS?",
+        a: "Full-service engagements start from $5,000/month, covering strategy, creative and execution. Standalone landing pages & funnels is priced below that and depends on scope, market and the number of channels involved. We quote a fixed monthly fee rather than a percentage of your ad spend, so our incentive is your return and not your budget. You will have a written scope and a number before anything starts.",
+      },
+      {
+        q: "Do we own our accounts, data and creative?",
+        a: "Yes, entirely. Ad accounts, analytics properties, CRM records, domains and final approved creative are yours and stay in your name. We work inside your accounts rather than ours. If you ever leave, nothing needs migrating and nothing is held back — a question worth asking any agency before you sign.",
+      },
+      {
+        q: "What is the minimum commitment?",
+        a: "Three months for ongoing work, which is the shortest honest window to build, test and read results. After that we run month to month with 30 days' notice. We do not use twelve-month lock-ins. If something is not working we would rather fix it or end it than hold you to a contract.",
+      },
+      {
+        q: "How will we know the landing pages & funnels is working?",
+        a: "You get a live dashboard tracking the metrics that matter to your business — not impressions — plus a weekly written summary and a monthly review call. We agree the success metrics before we start, and we report the campaigns that underperformed alongside the ones that worked.",
+      },
+],
     cta: "Ready to build a funnel that turns your ad spend into real leads?",
   },
 
@@ -1255,7 +1479,23 @@ const services = [
         q: "What happens to leads captured by the AI when my team is online?",
         a: "All AI-captured leads are immediately visible in your CRM with full conversation history. Your team can pick up any conversation in real time from within the CRM, and the AI can hand off smoothly mid-conversation.",
       },
-    ],
+          {
+        q: "What does ai receptionist & chatbots cost with BGS?",
+        a: "Full-service engagements start from $5,000/month, covering strategy, creative and execution. Standalone ai receptionist & chatbots is priced below that and depends on scope, market and the number of channels involved. We quote a fixed monthly fee rather than a percentage of your ad spend, so our incentive is your return and not your budget. You will have a written scope and a number before anything starts.",
+      },
+      {
+        q: "Do we own our accounts, data and creative?",
+        a: "Yes, entirely. Ad accounts, analytics properties, CRM records, domains and final approved creative are yours and stay in your name. We work inside your accounts rather than ours. If you ever leave, nothing needs migrating and nothing is held back — a question worth asking any agency before you sign.",
+      },
+      {
+        q: "What is the minimum commitment?",
+        a: "Three months for ongoing work, which is the shortest honest window to build, test and read results. After that we run month to month with 30 days' notice. We do not use twelve-month lock-ins. If something is not working we would rather fix it or end it than hold you to a contract.",
+      },
+      {
+        q: "How will we know the ai receptionist & chatbots is working?",
+        a: "You get a live dashboard tracking the metrics that matter to your business — not impressions — plus a weekly written summary and a monthly review call. We agree the success metrics before we start, and we report the campaigns that underperformed alongside the ones that worked.",
+      },
+],
     cta: "Ready to capture and qualify leads around the clock?",
   },
 
@@ -1339,7 +1579,23 @@ const services = [
         q: "Which AI tools do you use?",
         a: "We use a combination of Claude, GPT-4, and specialist fine-tuned models depending on the content type. The specific tools are less important than the system design and brand training layer we build around them.",
       },
-    ],
+          {
+        q: "What does ai content at scale cost with BGS?",
+        a: "Full-service engagements start from $5,000/month, covering strategy, creative and execution. Standalone ai content at scale is priced below that and depends on scope, market and the number of channels involved. We quote a fixed monthly fee rather than a percentage of your ad spend, so our incentive is your return and not your budget. You will have a written scope and a number before anything starts.",
+      },
+      {
+        q: "Do we own our accounts, data and creative?",
+        a: "Yes, entirely. Ad accounts, analytics properties, CRM records, domains and final approved creative are yours and stay in your name. We work inside your accounts rather than ours. If you ever leave, nothing needs migrating and nothing is held back — a question worth asking any agency before you sign.",
+      },
+      {
+        q: "What is the minimum commitment?",
+        a: "Three months for ongoing work, which is the shortest honest window to build, test and read results. After that we run month to month with 30 days' notice. We do not use twelve-month lock-ins. If something is not working we would rather fix it or end it than hold you to a contract.",
+      },
+      {
+        q: "How will we know the ai content at scale is working?",
+        a: "You get a live dashboard tracking the metrics that matter to your business — not impressions — plus a weekly written summary and a monthly review call. We agree the success metrics before we start, and we report the campaigns that underperformed alongside the ones that worked.",
+      },
+],
     cta: "Ready to produce content at a scale your competitors can't match?",
   },
 
@@ -1352,7 +1608,7 @@ const services = [
     tagline: "Find buyers before they know they're buying.",
     heroHeadline: "Reach the Right Buyers With Surgical Precision",
     heroSub: "AI-powered audience intelligence that identifies, segments, and targets your highest-value prospects — before they're actively searching and before your competitors get there.",
-    metaTitle: "Predictive Audience Targeting Dubai | AI Ad Targeting | BGS Technologies",
+    metaTitle: "Predictive Audience Targeting Dubai | AI Ads",
     metaDesc: "AI-powered audience targeting for Dubai advertisers. Intent signals, lookalike modelling, CLV prioritisation & cross-platform sync. 3× match rate vs manual.",
     stat1: { value: "3×", label: "Match Rate vs Manual" },
     stat2: { value: "60%", label: "Lower CPL" },
@@ -1423,7 +1679,23 @@ const services = [
         q: "Does privacy regulation (GDPR, UAE PDPL) affect what data we can use?",
         a: "All our targeting approaches are built on compliant data use — first-party consented data and platform-anonymised signals. We don't use purchased data or PII in ways that violate applicable regulations.",
       },
-    ],
+          {
+        q: "What does predictive audience targeting cost with BGS?",
+        a: "Full-service engagements start from $5,000/month, covering strategy, creative and execution. Standalone predictive audience targeting is priced below that and depends on scope, market and the number of channels involved. We quote a fixed monthly fee rather than a percentage of your ad spend, so our incentive is your return and not your budget. You will have a written scope and a number before anything starts.",
+      },
+      {
+        q: "Do we own our accounts, data and creative?",
+        a: "Yes, entirely. Ad accounts, analytics properties, CRM records, domains and final approved creative are yours and stay in your name. We work inside your accounts rather than ours. If you ever leave, nothing needs migrating and nothing is held back — a question worth asking any agency before you sign.",
+      },
+      {
+        q: "What is the minimum commitment?",
+        a: "Three months for ongoing work, which is the shortest honest window to build, test and read results. After that we run month to month with 30 days' notice. We do not use twelve-month lock-ins. If something is not working we would rather fix it or end it than hold you to a contract.",
+      },
+      {
+        q: "How will we know the predictive audience targeting is working?",
+        a: "You get a live dashboard tracking the metrics that matter to your business — not impressions — plus a weekly written summary and a monthly review call. We agree the success metrics before we start, and we report the campaigns that underperformed alongside the ones that worked.",
+      },
+],
     cta: "Ready to find your best customers before your competitors do?",
   },
 
@@ -1507,7 +1779,23 @@ const services = [
         q: "Can you test video creatives as well as static ads?",
         a: "Yes. We test hook variations on video (the first 3 seconds), thumbnail variations, video length, and CTA timing — all the variables that drive video ad performance on Meta and TikTok.",
       },
-    ],
+          {
+        q: "What does ai creative testing cost with BGS?",
+        a: "Full-service engagements start from $5,000/month, covering strategy, creative and execution. Standalone ai creative testing is priced below that and depends on scope, market and the number of channels involved. We quote a fixed monthly fee rather than a percentage of your ad spend, so our incentive is your return and not your budget. You will have a written scope and a number before anything starts.",
+      },
+      {
+        q: "Do we own our accounts, data and creative?",
+        a: "Yes, entirely. Ad accounts, analytics properties, CRM records, domains and final approved creative are yours and stay in your name. We work inside your accounts rather than ours. If you ever leave, nothing needs migrating and nothing is held back — a question worth asking any agency before you sign.",
+      },
+      {
+        q: "What is the minimum commitment?",
+        a: "Three months for ongoing work, which is the shortest honest window to build, test and read results. After that we run month to month with 30 days' notice. We do not use twelve-month lock-ins. If something is not working we would rather fix it or end it than hold you to a contract.",
+      },
+      {
+        q: "How will we know the ai creative testing is working?",
+        a: "You get a live dashboard tracking the metrics that matter to your business — not impressions — plus a weekly written summary and a monthly review call. We agree the success metrics before we start, and we report the campaigns that underperformed alongside the ones that worked.",
+      },
+],
     cta: "Ready to find your best-performing creatives in days, not months?",
   },
 
@@ -1520,7 +1808,7 @@ const services = [
     tagline: "No more spreadsheets. Just answers.",
     heroHeadline: "Your Marketing Reports, Written and Delivered Automatically",
     heroSub: "AI-generated performance reports that turn raw data into plain-English insights, delivered to your inbox automatically — with zero manual work from your team.",
-    metaTitle: "Automated Marketing Reporting Dubai | AI Insights & Analytics | BGS Technologies",
+    metaTitle: "Automated Marketing Reporting Dubai | AI",
     metaDesc: "Automated reporting & AI insights for Dubai marketers. Natural language summaries, cross-channel attribution, anomaly alerts & executive dashboards. Zero manual work.",
     stat1: { value: "0", label: "Hours on Manual Reports" },
     stat2: { value: "Weekly", label: "Automated Deliveries" },
@@ -1591,7 +1879,23 @@ const services = [
         q: "Do we still need a marketing analyst if reporting is automated?",
         a: "Automated reporting replaces the data gathering and summary writing, not strategic analysis. Your team or ours still interprets the insights and decides what actions to take — the automation just ensures the data is always fresh and always clear.",
       },
-    ],
+          {
+        q: "What does automated reporting & insights cost with BGS?",
+        a: "Full-service engagements start from $5,000/month, covering strategy, creative and execution. Standalone automated reporting & insights is priced below that and depends on scope, market and the number of channels involved. We quote a fixed monthly fee rather than a percentage of your ad spend, so our incentive is your return and not your budget. You will have a written scope and a number before anything starts.",
+      },
+      {
+        q: "Do we own our accounts, data and creative?",
+        a: "Yes, entirely. Ad accounts, analytics properties, CRM records, domains and final approved creative are yours and stay in your name. We work inside your accounts rather than ours. If you ever leave, nothing needs migrating and nothing is held back — a question worth asking any agency before you sign.",
+      },
+      {
+        q: "What is the minimum commitment?",
+        a: "Three months for ongoing work, which is the shortest honest window to build, test and read results. After that we run month to month with 30 days' notice. We do not use twelve-month lock-ins. If something is not working we would rather fix it or end it than hold you to a contract.",
+      },
+      {
+        q: "How will we know the automated reporting & insights is working?",
+        a: "You get a live dashboard tracking the metrics that matter to your business — not impressions — plus a weekly written summary and a monthly review call. We agree the success metrics before we start, and we report the campaigns that underperformed alongside the ones that worked.",
+      },
+],
     cta: "Ready to get perfect reports delivered without lifting a finger?",
   },
 
@@ -1604,7 +1908,7 @@ const services = [
     tagline: "Know your ROI before you spend.",
     heroHeadline: "Predict Campaign Performance Before You Launch",
     heroSub: "AI-powered forecasting models that project ROAS, CAC, and revenue across multiple budget scenarios — so you invest with confidence, not guesswork.",
-    metaTitle: "Campaign Forecasting & ROI Prediction Dubai | BGS Technologies",
+    metaTitle: "Campaign Forecasting & ROI Prediction Dubai",
     metaDesc: "AI campaign forecasting for Dubai advertisers. Pre-launch ROAS modelling, revenue scenarios, budget allocation & seasonal forecasting. 92% forecast accuracy.",
     stat1: { value: "92%", label: "Forecast Accuracy" },
     stat2: { value: "3", label: "Revenue Scenarios Modelled" },
@@ -1675,8 +1979,130 @@ const services = [
         q: "How is this different from the forecast tools built into Meta and Google Ads?",
         a: "Platform-native forecasts only consider their own channel in isolation and are notoriously optimistic. Our models are cross-channel, calibrated against your actual historical data, and incorporate business variables like margin, churn, and CLV that platform tools ignore entirely.",
       },
-    ],
+          {
+        q: "What does campaign forecasting cost with BGS?",
+        a: "Full-service engagements start from $5,000/month, covering strategy, creative and execution. Standalone campaign forecasting is priced below that and depends on scope, market and the number of channels involved. We quote a fixed monthly fee rather than a percentage of your ad spend, so our incentive is your return and not your budget. You will have a written scope and a number before anything starts.",
+      },
+      {
+        q: "Do we own our accounts, data and creative?",
+        a: "Yes, entirely. Ad accounts, analytics properties, CRM records, domains and final approved creative are yours and stay in your name. We work inside your accounts rather than ours. If you ever leave, nothing needs migrating and nothing is held back — a question worth asking any agency before you sign.",
+      },
+      {
+        q: "What is the minimum commitment?",
+        a: "Three months for ongoing work, which is the shortest honest window to build, test and read results. After that we run month to month with 30 days' notice. We do not use twelve-month lock-ins. If something is not working we would rather fix it or end it than hold you to a contract.",
+      },
+      {
+        q: "How will we know the campaign forecasting is working?",
+        a: "You get a live dashboard tracking the metrics that matter to your business — not impressions — plus a weekly written summary and a monthly review call. We agree the success metrics before we start, and we report the campaigns that underperformed alongside the ones that worked.",
+      },
+],
     cta: "Ready to invest in marketing with confidence, not guesswork?",
+  },
+  {
+    slug: "arabic-seo",
+    pillar: "Marketing",
+    pillarColor: "gold",
+    icon: "🗣️",
+    title: "Arabic SEO",
+    tagline: "The half of UAE search your competitors ignore.",
+    heroHeadline: "Rank in Arabic, Not Just English",
+    heroSub: "Most UAE businesses compete for the same English keywords and leave Arabic search completely untouched. We build properly localised Arabic SEO — written, not translated.",
+    metaTitle: "Arabic SEO Agency Dubai | Bilingual Search",
+    metaDesc: "Arabic SEO for UAE businesses — native keyword research, written Arabic content, hreflang and RTL done properly. Reach the search audience your competitors ignore.",
+    stat1: { value: "2x", label: "Addressable Search Market" },
+    stat2: { value: "100%", label: "Natively Written, Never Translated" },
+    stat3: { value: "90", label: "Days to First Rankings" },
+    intro: "English-language search in Dubai is one of the most contested markets in the region. Every agency, every competitor and every aggregator is fighting for the same terms, and the cost of winning keeps climbing.\n\nArabic search for the same commercial intents is a fraction as competitive — and most UAE businesses have ceded it entirely. Not deliberately, but because Arabic SEO looks like a translation job and gets handed to a translation tool. Machine-translated pages published at /ar/ with no hreflang rank for nothing, confirm the suspicion that Arabic does not work, and the opportunity stays open.\n\nWe treat Arabic as a separate market with its own research, its own content and its own technical requirements. That means native keyword research by Gulf Arabic speakers, pages written in Arabic rather than converted into it, correct reciprocal hreflang annotation, and right-to-left layouts that actually work rather than a dir attribute bolted onto a Western template.",
+    features: [
+      { title: "Native Arabic Keyword Research", desc: "Research conducted in Arabic by Gulf dialect speakers — covering Modern Standard Arabic, spoken Gulf Arabic, and the transliterated searches UAE users type in Latin characters." },
+      { title: "Written, Not Translated", desc: "Every Arabic page is written from scratch for Arabic search intent. We never run English pages through translation and publish the output." },
+      { title: "Reciprocal Hreflang Implementation", desc: "Correct en-AE, ar-AE and x-default annotation with full reciprocity, validated in Search Console. The single most common technical failure in bilingual sites." },
+      { title: "RTL Layout Engineering", desc: "Logical CSS properties, mirrored grids, directional icon handling, and mixed-direction strings where Latin brand names sit inside Arabic text." },
+      { title: "Arabic Typography & Font Licensing", desc: "Paired Arabic typefaces tested at real sizes with licences cleared — not a Latin font with fallback glyphs." },
+      { title: "Separate Bilingual Reporting", desc: "Arabic and English performance reported independently. Blending them into one number hides which market is actually working." },
+    ],
+    process: [
+      { step: "01", title: "Opportunity Assessment", desc: "We research Arabic search volume for your category before you commit. If the demand is not there, we will tell you — some categories genuinely do not justify it." },
+      { step: "02", title: "Native Keyword Mapping", desc: "Gulf Arabic speakers build the keyword set and map it to your highest-value commercial pages, starting with five rather than the whole site." },
+      { step: "03", title: "Content & Technical Build", desc: "Arabic pages written natively, hreflang implemented reciprocally, RTL layout corrected, and Arabic typography set properly." },
+      { step: "04", title: "Measure & Expand", desc: "Separate reporting from day one. We expand to further pages only where the first set shows measurable return." },
+    ],
+    faq: [
+      { q: "Can't we just translate our English pages?", a: "You can, and it will almost certainly rank for nothing. Translation converts words; it does not match how Arabic speakers actually search. The gap between Modern Standard Arabic and spoken Gulf Arabic means a term that works in one can be invisible in the other — and machine output rarely matches either. Every Arabic page we build is written natively for Arabic search intent." },
+      { q: "Should Arabic live on a subdirectory, subdomain or separate domain?", a: "For a single-market UAE business, a subdirectory such as bgstech.ae/ar/ wins almost every time. It keeps one domain accumulating authority and is the cheapest to maintain. Subdomains split authority; a separate ccTLD gives the strongest geographic signal but is the most expensive to run. We will recommend based on your market, not a default." },
+      { q: "How do we know if Arabic SEO is worth it for our category?", a: "We check before you commit. Some categories have genuine Arabic search volume and thin competition — that is the ideal case. Others have very little, and we will say so rather than sell you a translation project. The opportunity assessment is the first step and it is deliberately designed to be able to end in a no." },
+      { q: "Do you handle the Arabic content writing, or do we?", a: "We write it. Arabic content produced by native speakers who understand both the dialect and your category is central to this working — it is not a step you can outsource to a translation tool or a generalist. If you have Arabic writers in-house we will brief and work alongside them." },
+          {
+        q: "What does arabic seo cost with BGS?",
+        a: "Full-service engagements start from $5,000/month, covering strategy, creative and execution. Standalone arabic seo is priced below that and depends on scope, market and the number of channels involved. We quote a fixed monthly fee rather than a percentage of your ad spend, so our incentive is your return and not your budget. You will have a written scope and a number before anything starts.",
+      },
+      {
+        q: "Do we own our accounts, data and creative?",
+        a: "Yes, entirely. Ad accounts, analytics properties, CRM records, domains and final approved creative are yours and stay in your name. We work inside your accounts rather than ours. If you ever leave, nothing needs migrating and nothing is held back — a question worth asking any agency before you sign.",
+      },
+      {
+        q: "What is the minimum commitment?",
+        a: "Three months for ongoing work, which is the shortest honest window to build, test and read results. After that we run month to month with 30 days' notice. We do not use twelve-month lock-ins. If something is not working we would rather fix it or end it than hold you to a contract.",
+      },
+      {
+        q: "How will we know the arabic seo is working?",
+        a: "You get a live dashboard tracking the metrics that matter to your business — not impressions — plus a weekly written summary and a monthly review call. We agree the success metrics before we start, and we report the campaigns that underperformed alongside the ones that worked.",
+      },
+],
+    cta: "Ready to compete where your rivals aren't?",
+  },
+  {
+    slug: "ai-search-optimisation",
+    pillar: "AI",
+    pillarColor: "purple",
+    icon: "🤖",
+    title: "AI Search Optimisation",
+    tagline: "Be the answer, not just a result.",
+    heroHeadline: "Get Cited by ChatGPT, Gemini and AI Overviews",
+    heroSub: "AI answers are becoming a discovery channel of their own. We make your content the thing they quote — with honest technical work, not the mythology being sold around GEO.",
+    metaTitle: "AI Search Optimisation Dubai | GEO Agency",
+    metaDesc: "Generative Engine Optimisation for UAE brands — AI crawler access, citable passage structure, entity authority and schema. Get cited in AI Overviews, ChatGPT and Perplexity.",
+    stat1: { value: "3x", label: "Brand Mentions vs Backlinks for AI Citation" },
+    stat2: { value: "5", label: "AI Surfaces Optimised" },
+    stat3: { value: "0", label: "Snake Oil Included" },
+    intro: "A growing share of searches never produce a click. The user asks, an AI answers, and a handful of sources get cited. If you are not among them, you are invisible on that surface regardless of how well you rank in classic search.\n\nThere is a great deal of nonsense being sold around this. Google has stated plainly that optimising for generative AI search is optimising for search — still SEO — and that files like llms.txt are not used by Google Search and neither help nor hurt rankings. Any agency selling llms.txt as a ranking lever is selling something that does not exist.\n\nWhat actually moves the needle is less exotic and more demanding: crawler access configured correctly for the bots that govern citation rather than training, content structured so passages can be lifted out and still make sense, claims that are verifiable rather than merely confident, genuine freshness, and brand presence on the platforms AI systems actually draw from.",
+    features: [
+      { title: "AI Crawler Configuration", desc: "Robots directives that correctly separate citation crawlers (OAI-SearchBot, Claude-SearchBot, PerplexityBot, Googlebot) from training crawlers (GPTBot, ClaudeBot, Google-Extended). Most sites conflate them and make the wrong call." },
+      { title: "Citable Passage Engineering", desc: "Self-contained answers in the opening lines of each section, question-form headings that match query phrasing, and comparative data in tables rather than prose." },
+      { title: "Claim Sourcing & Verification", desc: "Every statistic attributed with a source and an as-of date. Unverifiable confidence is the fastest way to be passed over as a citation." },
+      { title: "Entity & Structured Data", desc: "Organisation, Service, Article, FAQ and Breadcrumb markup in one connected graph, so systems can resolve who you are and what you do." },
+      { title: "Freshness Programme", desc: "Scheduled genuine revision with honest dateModified signals. Content left static loses citation eligibility even while it still ranks." },
+      { title: "Off-Site Entity Presence", desc: "Research across 75,000 brands found mentions correlate roughly three times more strongly with AI citations than backlinks — with YouTube strongest. We build where citations actually come from." },
+    ],
+    process: [
+      { step: "01", title: "AI Readiness Audit", desc: "We score your site across citability, structural readability, authority signals and technical accessibility, and tell you which of the five AI surfaces you are realistically eligible for." },
+      { step: "02", title: "Technical Foundation", desc: "Crawler access corrected, server-side rendering verified, and the structured data graph built. Several AI crawlers do not execute JavaScript." },
+      { step: "03", title: "Content Restructuring", desc: "Your highest-value pages rewritten for extraction — answer-first openings, question headings, tables, sourced claims." },
+      { step: "04", title: "Authority & Monitoring", desc: "Off-site entity building, plus tracking of which surfaces cite you and for what. We report citations, not vanity scores." },
+    ],
+    faq: [
+      { q: "Is GEO actually different from SEO?", a: "Mostly no, and treating it as a separate discipline is how agencies sell packages that do nothing. Google's own guidance says optimising for generative AI search is optimising for search. What genuinely differs is emphasis — self-contained passages, verifiable claims, freshness and brand mentions matter more than they do for classic ranking. We charge for that emphasis, not for a mythology." },
+      { q: "Do we need an llms.txt file?", a: "Not for Google. Google has stated that llms.txt is not used by Google Search and neither helps nor hurts visibility or rankings. We will publish one because it is cheap and may serve other systems, but we will never present it as a ranking lever. If another agency is selling llms.txt as the centrepiece of a GEO package, that tells you what you need to know." },
+      { q: "Which AI platforms can you actually influence?", a: "Google AI Overviews and AI Mode, ChatGPT Search, Perplexity and Bing Copilot — each through different levers. AI Overviews largely cites pages that already rank, so classic SEO is the gate. ChatGPT and Perplexity lean heavily on Wikipedia and Reddit-class sources, which is an off-site entity problem rather than an on-page one. We will be explicit about which we can move and which we cannot." },
+      { q: "How do you measure whether this is working?", a: "By checking which AI surfaces cite you, for which queries, and whether that changes. Not by a proprietary 'GEO score'. Measurement here is genuinely harder than in classic SEO and anyone presenting a single confident number is inventing it. We report what we can observe and say plainly what we cannot." },
+          {
+        q: "What does ai search optimisation cost with BGS?",
+        a: "Full-service engagements start from $5,000/month, covering strategy, creative and execution. Standalone ai search optimisation is priced below that and depends on scope, market and the number of channels involved. We quote a fixed monthly fee rather than a percentage of your ad spend, so our incentive is your return and not your budget. You will have a written scope and a number before anything starts.",
+      },
+      {
+        q: "Do we own our accounts, data and creative?",
+        a: "Yes, entirely. Ad accounts, analytics properties, CRM records, domains and final approved creative are yours and stay in your name. We work inside your accounts rather than ours. If you ever leave, nothing needs migrating and nothing is held back — a question worth asking any agency before you sign.",
+      },
+      {
+        q: "What is the minimum commitment?",
+        a: "Three months for ongoing work, which is the shortest honest window to build, test and read results. After that we run month to month with 30 days' notice. We do not use twelve-month lock-ins. If something is not working we would rather fix it or end it than hold you to a contract.",
+      },
+      {
+        q: "How will we know the ai search optimisation is working?",
+        a: "You get a live dashboard tracking the metrics that matter to your business — not impressions — plus a weekly written summary and a monthly review call. We agree the success metrics before we start, and we report the campaigns that underperformed alongside the ones that worked.",
+      },
+],
+    cta: "Ready to be the answer AI gives?",
   },
 ];
 

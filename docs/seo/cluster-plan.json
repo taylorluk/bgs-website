@@ -1,0 +1,1078 @@
+{
+  "generated": "2026-10-29",
+  "method": "SERP-overlap tested, service-page-anchored hub-and-spoke",
+  "serpTests": [
+    {
+      "a": "local SEO / Google Business Profile",
+      "b": "getting more Google reviews",
+      "shared": 0,
+      "verdict": "separate"
+    },
+    {
+      "a": "marketing automation (beginner)",
+      "b": "email automation sequences",
+      "shared": 0,
+      "verdict": "separate"
+    },
+    {
+      "a": "ecommerce CRO",
+      "b": "landing page design",
+      "shared": 0,
+      "verdict": "separate"
+    },
+    {
+      "a": "landing page design",
+      "b": "marketing funnel stages",
+      "shared": 0,
+      "verdict": "separate"
+    },
+    {
+      "a": "ecommerce CRO",
+      "b": "marketing funnel stages",
+      "shared": 0,
+      "verdict": "separate"
+    }
+  ],
+  "clusters": [
+    {
+      "id": "paid-ads",
+      "name": "Paid Advertising",
+      "color": "#C9A84C",
+      "hub": {
+        "url": "/services/paid-advertising",
+        "title": "Paid Advertising"
+      },
+      "spokeCount": 6,
+      "defensible": true,
+      "gap": 0,
+      "spokes": [
+        {
+          "url": "/blog/complete-meta-ads-strategy-uae-brands-2026",
+          "title": "The Complete Meta Ads Strategy for UAE Brands in 2026",
+          "date": "2026-03-31"
+        },
+        {
+          "url": "/blog/tiktok-advertising-uae-complete-2026-guide",
+          "title": "TikTok Advertising in the UAE: The Complete 2026 Guide",
+          "date": "2026-03-17"
+        },
+        {
+          "url": "/blog/4x-meta-ads-roas-without-increasing-budget",
+          "title": "How to 4× Your Meta Ads ROAS Without Increasing Your Budget",
+          "date": "2026-01-27"
+        },
+        {
+          "url": "/blog/google-ads-vs-meta-ads-uae-business-2026",
+          "title": "Google Ads vs. Meta Ads: Which Should Your UAE Business Use in 2026?",
+          "date": "2025-12-16"
+        },
+        {
+          "url": "/blog/google-ads-smart-bidding-strategies-uae",
+          "title": "Google Ads Smart Bidding Strategies for UAE Businesses",
+          "date": "2025-12-16"
+        },
+        {
+          "url": "/blog/performance-marketing-metrics-uae-business-owners",
+          "title": "Performance Marketing Metrics Every UAE Business Owner Should Track",
+          "date": "2025-10-21"
+        }
+      ]
+    },
+    {
+      "id": "social",
+      "name": "Social & Video",
+      "color": "#C44080",
+      "hub": {
+        "url": "/services/social-media-management",
+        "title": "Social Media Management"
+      },
+      "spokeCount": 4,
+      "defensible": true,
+      "gap": 0,
+      "spokes": [
+        {
+          "url": "/blog/2026-social-media-playbook-uae-businesses",
+          "title": "The 2026 Social Media Playbook for UAE Businesses",
+          "date": "2026-01-06"
+        },
+        {
+          "url": "/blog/linkedin-advertising-uae-b2b-brands-complete-guide",
+          "title": "The Complete Guide to LinkedIn Advertising for UAE B2B Brands",
+          "date": "2026-01-20"
+        },
+        {
+          "url": "/blog/linkedin-b2b-lead-generation-uae",
+          "title": "How to Use LinkedIn for B2B Lead Generation in the UAE",
+          "date": "2025-12-02"
+        },
+        {
+          "url": "/blog/video-marketing-strategy-uae-2025",
+          "title": "Video Marketing Strategy for UAE Brands in 2025",
+          "date": "2025-11-04"
+        }
+      ]
+    },
+    {
+      "id": "ai",
+      "name": "AI Marketing",
+      "color": "#9B59D4",
+      "hub": {
+        "url": "/services/ai-receptionist-chatbots",
+        "title": "AI Receptionist & Chatbots"
+      },
+      "spokeCount": 3,
+      "defensible": true,
+      "gap": 0,
+      "spokes": [
+        {
+          "url": "/blog/ai-receptionists-transforming-customer-service-dubai",
+          "title": "How AI Receptionists Are Transforming Customer Service in Dubai",
+          "date": "2026-03-24"
+        },
+        {
+          "url": "/blog/ai-generated-content-use-without-destroying-brand",
+          "title": "AI-Generated Content: How to Use It Without Destroying Your Brand",
+          "date": "2026-01-13"
+        },
+        {
+          "url": "/blog/ai-tools-marketing-teams-2025",
+          "title": "AI Tools Every Marketing Team Should Be Using Right Now",
+          "date": "2025-09-23"
+        }
+      ]
+    },
+    {
+      "id": "branding",
+      "name": "Branding",
+      "color": "#D4704A",
+      "hub": {
+        "url": "/services/branding-creative",
+        "title": "Branding & Creative"
+      },
+      "spokeCount": 3,
+      "defensible": true,
+      "gap": 0,
+      "spokes": [
+        {
+          "url": "/blog/brand-identity-mistakes-costing-you-customers",
+          "title": "7 Brand Identity Mistakes That Are Costing You Customers (And How to Fix Them)",
+          "date": "2026-03-03"
+        },
+        {
+          "url": "/blog/rebranding-your-business-when-and-how",
+          "title": "Rebranding Your Business: When to Do It and How to Do It Right",
+          "date": "2025-09-30"
+        },
+        {
+          "url": "/blog/building-brand-authority-crowded-market",
+          "title": "Building Brand Authority in a Crowded Market: The Long Game",
+          "date": "2025-09-09"
+        }
+      ]
+    },
+    {
+      "id": "automation",
+      "name": "CRM & Automation",
+      "color": "#1E4DB7",
+      "hub": {
+        "url": "/services/marketing-automation",
+        "title": "Marketing Automation"
+      },
+      "spokeCount": 3,
+      "defensible": true,
+      "gap": 0,
+      "spokes": [
+        {
+          "url": "/blog/crm-automation-playbook-stop-losing-leads",
+          "title": "The CRM Automation Playbook: How to Stop Losing Leads and Start Closing More",
+          "date": "2026-02-24"
+        },
+        {
+          "url": "/blog/getting-started-marketing-automation-beginners-playbook",
+          "title": "Getting Started with Marketing Automation: The Beginner's Playbook",
+          "date": "2025-09-02"
+        },
+        {
+          "url": "/blog/email-marketing-automation-sequences",
+          "title": "Email Marketing Automation: Building Sequences That Nurture and Convert",
+          "date": "2025-11-18"
+        }
+      ]
+    },
+    {
+      "id": "conversion",
+      "name": "Conversion & Funnels",
+      "color": "#7B3FA0",
+      "hub": {
+        "url": "/services/landing-pages-funnels",
+        "title": "Landing Pages & Funnels"
+      },
+      "spokeCount": 4,
+      "defensible": true,
+      "gap": 0,
+      "spokes": [
+        {
+          "url": "/blog/landing-page-design-principles-uae",
+          "title": "Landing Page Design Principles That Convert in the UAE Market",
+          "date": "2025-11-25"
+        },
+        {
+          "url": "/blog/funnel-design-customer-journey-awareness-to-sale",
+          "title": "Funnel Design: Mapping the Customer Journey from Awareness to Sale",
+          "date": "2025-10-07"
+        },
+        {
+          "url": "/blog/ecommerce-store-conversion-rate-1-percent-to-4-percent",
+          "title": "Why Your Ecommerce Store Converts at 1% — And How to Get to 4%",
+          "date": "2026-02-10"
+        },
+        {
+          "url": "/blog/social-proof-reviews-testimonials-strategy",
+          "title": "Social Proof Strategies: How to Generate and Use Reviews and Testimonials",
+          "date": "2025-10-28"
+        }
+      ]
+    },
+    {
+      "id": "local-seo",
+      "name": "Local SEO & Reputation",
+      "color": "#2FA8A0",
+      "hub": {
+        "url": "/services/seo-local-search",
+        "title": "SEO & Local Search"
+      },
+      "spokeCount": 2,
+      "defensible": false,
+      "gap": 1,
+      "spokes": [
+        {
+          "url": "/blog/local-seo-dubai-google-my-business",
+          "title": "How to Win at Local SEO in Dubai: Google My Business and Beyond",
+          "date": "2025-11-11"
+        },
+        {
+          "url": "/blog/restaurant-google-reviews-3-4-to-4-9-stars-8-weeks",
+          "title": "How We Took a Restaurant From 3.4 to 4.9 Stars on Google in 8 Weeks",
+          "date": "2026-02-03"
+        }
+      ]
+    },
+    {
+      "id": "strategy",
+      "name": "Strategy & Market",
+      "color": "#8A9CC2",
+      "hub": {
+        "url": "/services/content-marketing",
+        "title": "Content Marketing"
+      },
+      "spokeCount": 7,
+      "defensible": true,
+      "gap": 0,
+      "spokes": [
+        {
+          "url": "/blog/digital-marketing-dubai-what-actually-works-2026",
+          "title": "Digital Marketing in Dubai: What Actually Works in 2026",
+          "date": "2026-02-17"
+        },
+        {
+          "url": "/blog/how-to-build-marketing-budget-uae",
+          "title": "How to Build a Marketing Budget (And What to Actually Spend It On)",
+          "date": "2025-10-14"
+        },
+        {
+          "url": "/blog/how-to-choose-digital-marketing-agency-dubai",
+          "title": "How to Choose a Digital Marketing Agency in Dubai: The Honest Guide",
+          "date": "2025-09-16"
+        },
+        {
+          "url": "/blog/ramadan-marketing-uae-strategy-that-converts",
+          "title": "Ramadan Marketing in the UAE: The Strategy That Actually Converts",
+          "date": "2025-12-23"
+        },
+        {
+          "url": "/blog/digital-marketing-trends-2025-year-in-review",
+          "title": "Year in Review: The Digital Marketing Trends That Defined 2025",
+          "date": "2025-12-30"
+        },
+        {
+          "url": "/blog/content-marketing-strategy-dubai-smes",
+          "title": "Building a Content Marketing Strategy from Zero for Dubai SMEs",
+          "date": "2025-12-09"
+        },
+        {
+          "url": "/blog/whatsapp-business-marketing-conversations-to-customers",
+          "title": "WhatsApp Business Marketing: How to Turn Conversations into Customers",
+          "date": "2026-03-10"
+        }
+      ]
+    }
+  ],
+  "unassigned": [],
+  "links": [
+    {
+      "from": "/services/paid-advertising",
+      "to": "/blog/complete-meta-ads-strategy-uae-brands-2026",
+      "type": "hub-to-spoke",
+      "cluster": "paid-ads"
+    },
+    {
+      "from": "/blog/complete-meta-ads-strategy-uae-brands-2026",
+      "to": "/services/paid-advertising",
+      "type": "spoke-to-hub",
+      "cluster": "paid-ads"
+    },
+    {
+      "from": "/services/paid-advertising",
+      "to": "/blog/tiktok-advertising-uae-complete-2026-guide",
+      "type": "hub-to-spoke",
+      "cluster": "paid-ads"
+    },
+    {
+      "from": "/blog/tiktok-advertising-uae-complete-2026-guide",
+      "to": "/services/paid-advertising",
+      "type": "spoke-to-hub",
+      "cluster": "paid-ads"
+    },
+    {
+      "from": "/services/paid-advertising",
+      "to": "/blog/4x-meta-ads-roas-without-increasing-budget",
+      "type": "hub-to-spoke",
+      "cluster": "paid-ads"
+    },
+    {
+      "from": "/blog/4x-meta-ads-roas-without-increasing-budget",
+      "to": "/services/paid-advertising",
+      "type": "spoke-to-hub",
+      "cluster": "paid-ads"
+    },
+    {
+      "from": "/services/paid-advertising",
+      "to": "/blog/google-ads-vs-meta-ads-uae-business-2026",
+      "type": "hub-to-spoke",
+      "cluster": "paid-ads"
+    },
+    {
+      "from": "/blog/google-ads-vs-meta-ads-uae-business-2026",
+      "to": "/services/paid-advertising",
+      "type": "spoke-to-hub",
+      "cluster": "paid-ads"
+    },
+    {
+      "from": "/services/paid-advertising",
+      "to": "/blog/google-ads-smart-bidding-strategies-uae",
+      "type": "hub-to-spoke",
+      "cluster": "paid-ads"
+    },
+    {
+      "from": "/blog/google-ads-smart-bidding-strategies-uae",
+      "to": "/services/paid-advertising",
+      "type": "spoke-to-hub",
+      "cluster": "paid-ads"
+    },
+    {
+      "from": "/services/paid-advertising",
+      "to": "/blog/performance-marketing-metrics-uae-business-owners",
+      "type": "hub-to-spoke",
+      "cluster": "paid-ads"
+    },
+    {
+      "from": "/blog/performance-marketing-metrics-uae-business-owners",
+      "to": "/services/paid-advertising",
+      "type": "spoke-to-hub",
+      "cluster": "paid-ads"
+    },
+    {
+      "from": "/blog/complete-meta-ads-strategy-uae-brands-2026",
+      "to": "/blog/tiktok-advertising-uae-complete-2026-guide",
+      "type": "spoke-to-spoke",
+      "cluster": "paid-ads"
+    },
+    {
+      "from": "/blog/complete-meta-ads-strategy-uae-brands-2026",
+      "to": "/blog/4x-meta-ads-roas-without-increasing-budget",
+      "type": "spoke-to-spoke",
+      "cluster": "paid-ads"
+    },
+    {
+      "from": "/blog/tiktok-advertising-uae-complete-2026-guide",
+      "to": "/blog/4x-meta-ads-roas-without-increasing-budget",
+      "type": "spoke-to-spoke",
+      "cluster": "paid-ads"
+    },
+    {
+      "from": "/blog/tiktok-advertising-uae-complete-2026-guide",
+      "to": "/blog/google-ads-vs-meta-ads-uae-business-2026",
+      "type": "spoke-to-spoke",
+      "cluster": "paid-ads"
+    },
+    {
+      "from": "/blog/4x-meta-ads-roas-without-increasing-budget",
+      "to": "/blog/google-ads-vs-meta-ads-uae-business-2026",
+      "type": "spoke-to-spoke",
+      "cluster": "paid-ads"
+    },
+    {
+      "from": "/blog/4x-meta-ads-roas-without-increasing-budget",
+      "to": "/blog/google-ads-smart-bidding-strategies-uae",
+      "type": "spoke-to-spoke",
+      "cluster": "paid-ads"
+    },
+    {
+      "from": "/blog/google-ads-vs-meta-ads-uae-business-2026",
+      "to": "/blog/google-ads-smart-bidding-strategies-uae",
+      "type": "spoke-to-spoke",
+      "cluster": "paid-ads"
+    },
+    {
+      "from": "/blog/google-ads-vs-meta-ads-uae-business-2026",
+      "to": "/blog/performance-marketing-metrics-uae-business-owners",
+      "type": "spoke-to-spoke",
+      "cluster": "paid-ads"
+    },
+    {
+      "from": "/blog/google-ads-smart-bidding-strategies-uae",
+      "to": "/blog/performance-marketing-metrics-uae-business-owners",
+      "type": "spoke-to-spoke",
+      "cluster": "paid-ads"
+    },
+    {
+      "from": "/blog/google-ads-smart-bidding-strategies-uae",
+      "to": "/blog/complete-meta-ads-strategy-uae-brands-2026",
+      "type": "spoke-to-spoke",
+      "cluster": "paid-ads"
+    },
+    {
+      "from": "/blog/performance-marketing-metrics-uae-business-owners",
+      "to": "/blog/complete-meta-ads-strategy-uae-brands-2026",
+      "type": "spoke-to-spoke",
+      "cluster": "paid-ads"
+    },
+    {
+      "from": "/blog/performance-marketing-metrics-uae-business-owners",
+      "to": "/blog/tiktok-advertising-uae-complete-2026-guide",
+      "type": "spoke-to-spoke",
+      "cluster": "paid-ads"
+    },
+    {
+      "from": "/services/social-media-management",
+      "to": "/blog/2026-social-media-playbook-uae-businesses",
+      "type": "hub-to-spoke",
+      "cluster": "social"
+    },
+    {
+      "from": "/blog/2026-social-media-playbook-uae-businesses",
+      "to": "/services/social-media-management",
+      "type": "spoke-to-hub",
+      "cluster": "social"
+    },
+    {
+      "from": "/services/social-media-management",
+      "to": "/blog/linkedin-advertising-uae-b2b-brands-complete-guide",
+      "type": "hub-to-spoke",
+      "cluster": "social"
+    },
+    {
+      "from": "/blog/linkedin-advertising-uae-b2b-brands-complete-guide",
+      "to": "/services/social-media-management",
+      "type": "spoke-to-hub",
+      "cluster": "social"
+    },
+    {
+      "from": "/services/social-media-management",
+      "to": "/blog/linkedin-b2b-lead-generation-uae",
+      "type": "hub-to-spoke",
+      "cluster": "social"
+    },
+    {
+      "from": "/blog/linkedin-b2b-lead-generation-uae",
+      "to": "/services/social-media-management",
+      "type": "spoke-to-hub",
+      "cluster": "social"
+    },
+    {
+      "from": "/services/social-media-management",
+      "to": "/blog/video-marketing-strategy-uae-2025",
+      "type": "hub-to-spoke",
+      "cluster": "social"
+    },
+    {
+      "from": "/blog/video-marketing-strategy-uae-2025",
+      "to": "/services/social-media-management",
+      "type": "spoke-to-hub",
+      "cluster": "social"
+    },
+    {
+      "from": "/blog/2026-social-media-playbook-uae-businesses",
+      "to": "/blog/linkedin-advertising-uae-b2b-brands-complete-guide",
+      "type": "spoke-to-spoke",
+      "cluster": "social"
+    },
+    {
+      "from": "/blog/2026-social-media-playbook-uae-businesses",
+      "to": "/blog/linkedin-b2b-lead-generation-uae",
+      "type": "spoke-to-spoke",
+      "cluster": "social"
+    },
+    {
+      "from": "/blog/linkedin-advertising-uae-b2b-brands-complete-guide",
+      "to": "/blog/linkedin-b2b-lead-generation-uae",
+      "type": "spoke-to-spoke",
+      "cluster": "social"
+    },
+    {
+      "from": "/blog/linkedin-advertising-uae-b2b-brands-complete-guide",
+      "to": "/blog/video-marketing-strategy-uae-2025",
+      "type": "spoke-to-spoke",
+      "cluster": "social"
+    },
+    {
+      "from": "/blog/linkedin-b2b-lead-generation-uae",
+      "to": "/blog/video-marketing-strategy-uae-2025",
+      "type": "spoke-to-spoke",
+      "cluster": "social"
+    },
+    {
+      "from": "/blog/linkedin-b2b-lead-generation-uae",
+      "to": "/blog/2026-social-media-playbook-uae-businesses",
+      "type": "spoke-to-spoke",
+      "cluster": "social"
+    },
+    {
+      "from": "/blog/video-marketing-strategy-uae-2025",
+      "to": "/blog/2026-social-media-playbook-uae-businesses",
+      "type": "spoke-to-spoke",
+      "cluster": "social"
+    },
+    {
+      "from": "/blog/video-marketing-strategy-uae-2025",
+      "to": "/blog/linkedin-advertising-uae-b2b-brands-complete-guide",
+      "type": "spoke-to-spoke",
+      "cluster": "social"
+    },
+    {
+      "from": "/services/ai-receptionist-chatbots",
+      "to": "/blog/ai-receptionists-transforming-customer-service-dubai",
+      "type": "hub-to-spoke",
+      "cluster": "ai"
+    },
+    {
+      "from": "/blog/ai-receptionists-transforming-customer-service-dubai",
+      "to": "/services/ai-receptionist-chatbots",
+      "type": "spoke-to-hub",
+      "cluster": "ai"
+    },
+    {
+      "from": "/services/ai-receptionist-chatbots",
+      "to": "/blog/ai-generated-content-use-without-destroying-brand",
+      "type": "hub-to-spoke",
+      "cluster": "ai"
+    },
+    {
+      "from": "/blog/ai-generated-content-use-without-destroying-brand",
+      "to": "/services/ai-receptionist-chatbots",
+      "type": "spoke-to-hub",
+      "cluster": "ai"
+    },
+    {
+      "from": "/services/ai-receptionist-chatbots",
+      "to": "/blog/ai-tools-marketing-teams-2025",
+      "type": "hub-to-spoke",
+      "cluster": "ai"
+    },
+    {
+      "from": "/blog/ai-tools-marketing-teams-2025",
+      "to": "/services/ai-receptionist-chatbots",
+      "type": "spoke-to-hub",
+      "cluster": "ai"
+    },
+    {
+      "from": "/blog/ai-receptionists-transforming-customer-service-dubai",
+      "to": "/blog/ai-generated-content-use-without-destroying-brand",
+      "type": "spoke-to-spoke",
+      "cluster": "ai"
+    },
+    {
+      "from": "/blog/ai-receptionists-transforming-customer-service-dubai",
+      "to": "/blog/ai-tools-marketing-teams-2025",
+      "type": "spoke-to-spoke",
+      "cluster": "ai"
+    },
+    {
+      "from": "/blog/ai-generated-content-use-without-destroying-brand",
+      "to": "/blog/ai-tools-marketing-teams-2025",
+      "type": "spoke-to-spoke",
+      "cluster": "ai"
+    },
+    {
+      "from": "/blog/ai-generated-content-use-without-destroying-brand",
+      "to": "/blog/ai-receptionists-transforming-customer-service-dubai",
+      "type": "spoke-to-spoke",
+      "cluster": "ai"
+    },
+    {
+      "from": "/blog/ai-tools-marketing-teams-2025",
+      "to": "/blog/ai-receptionists-transforming-customer-service-dubai",
+      "type": "spoke-to-spoke",
+      "cluster": "ai"
+    },
+    {
+      "from": "/blog/ai-tools-marketing-teams-2025",
+      "to": "/blog/ai-generated-content-use-without-destroying-brand",
+      "type": "spoke-to-spoke",
+      "cluster": "ai"
+    },
+    {
+      "from": "/services/branding-creative",
+      "to": "/blog/brand-identity-mistakes-costing-you-customers",
+      "type": "hub-to-spoke",
+      "cluster": "branding"
+    },
+    {
+      "from": "/blog/brand-identity-mistakes-costing-you-customers",
+      "to": "/services/branding-creative",
+      "type": "spoke-to-hub",
+      "cluster": "branding"
+    },
+    {
+      "from": "/services/branding-creative",
+      "to": "/blog/rebranding-your-business-when-and-how",
+      "type": "hub-to-spoke",
+      "cluster": "branding"
+    },
+    {
+      "from": "/blog/rebranding-your-business-when-and-how",
+      "to": "/services/branding-creative",
+      "type": "spoke-to-hub",
+      "cluster": "branding"
+    },
+    {
+      "from": "/services/branding-creative",
+      "to": "/blog/building-brand-authority-crowded-market",
+      "type": "hub-to-spoke",
+      "cluster": "branding"
+    },
+    {
+      "from": "/blog/building-brand-authority-crowded-market",
+      "to": "/services/branding-creative",
+      "type": "spoke-to-hub",
+      "cluster": "branding"
+    },
+    {
+      "from": "/blog/brand-identity-mistakes-costing-you-customers",
+      "to": "/blog/rebranding-your-business-when-and-how",
+      "type": "spoke-to-spoke",
+      "cluster": "branding"
+    },
+    {
+      "from": "/blog/brand-identity-mistakes-costing-you-customers",
+      "to": "/blog/building-brand-authority-crowded-market",
+      "type": "spoke-to-spoke",
+      "cluster": "branding"
+    },
+    {
+      "from": "/blog/rebranding-your-business-when-and-how",
+      "to": "/blog/building-brand-authority-crowded-market",
+      "type": "spoke-to-spoke",
+      "cluster": "branding"
+    },
+    {
+      "from": "/blog/rebranding-your-business-when-and-how",
+      "to": "/blog/brand-identity-mistakes-costing-you-customers",
+      "type": "spoke-to-spoke",
+      "cluster": "branding"
+    },
+    {
+      "from": "/blog/building-brand-authority-crowded-market",
+      "to": "/blog/brand-identity-mistakes-costing-you-customers",
+      "type": "spoke-to-spoke",
+      "cluster": "branding"
+    },
+    {
+      "from": "/blog/building-brand-authority-crowded-market",
+      "to": "/blog/rebranding-your-business-when-and-how",
+      "type": "spoke-to-spoke",
+      "cluster": "branding"
+    },
+    {
+      "from": "/services/marketing-automation",
+      "to": "/blog/crm-automation-playbook-stop-losing-leads",
+      "type": "hub-to-spoke",
+      "cluster": "automation"
+    },
+    {
+      "from": "/blog/crm-automation-playbook-stop-losing-leads",
+      "to": "/services/marketing-automation",
+      "type": "spoke-to-hub",
+      "cluster": "automation"
+    },
+    {
+      "from": "/services/marketing-automation",
+      "to": "/blog/getting-started-marketing-automation-beginners-playbook",
+      "type": "hub-to-spoke",
+      "cluster": "automation"
+    },
+    {
+      "from": "/blog/getting-started-marketing-automation-beginners-playbook",
+      "to": "/services/marketing-automation",
+      "type": "spoke-to-hub",
+      "cluster": "automation"
+    },
+    {
+      "from": "/services/marketing-automation",
+      "to": "/blog/email-marketing-automation-sequences",
+      "type": "hub-to-spoke",
+      "cluster": "automation"
+    },
+    {
+      "from": "/blog/email-marketing-automation-sequences",
+      "to": "/services/marketing-automation",
+      "type": "spoke-to-hub",
+      "cluster": "automation"
+    },
+    {
+      "from": "/blog/crm-automation-playbook-stop-losing-leads",
+      "to": "/blog/getting-started-marketing-automation-beginners-playbook",
+      "type": "spoke-to-spoke",
+      "cluster": "automation"
+    },
+    {
+      "from": "/blog/crm-automation-playbook-stop-losing-leads",
+      "to": "/blog/email-marketing-automation-sequences",
+      "type": "spoke-to-spoke",
+      "cluster": "automation"
+    },
+    {
+      "from": "/blog/getting-started-marketing-automation-beginners-playbook",
+      "to": "/blog/email-marketing-automation-sequences",
+      "type": "spoke-to-spoke",
+      "cluster": "automation"
+    },
+    {
+      "from": "/blog/getting-started-marketing-automation-beginners-playbook",
+      "to": "/blog/crm-automation-playbook-stop-losing-leads",
+      "type": "spoke-to-spoke",
+      "cluster": "automation"
+    },
+    {
+      "from": "/blog/email-marketing-automation-sequences",
+      "to": "/blog/crm-automation-playbook-stop-losing-leads",
+      "type": "spoke-to-spoke",
+      "cluster": "automation"
+    },
+    {
+      "from": "/blog/email-marketing-automation-sequences",
+      "to": "/blog/getting-started-marketing-automation-beginners-playbook",
+      "type": "spoke-to-spoke",
+      "cluster": "automation"
+    },
+    {
+      "from": "/services/landing-pages-funnels",
+      "to": "/blog/landing-page-design-principles-uae",
+      "type": "hub-to-spoke",
+      "cluster": "conversion"
+    },
+    {
+      "from": "/blog/landing-page-design-principles-uae",
+      "to": "/services/landing-pages-funnels",
+      "type": "spoke-to-hub",
+      "cluster": "conversion"
+    },
+    {
+      "from": "/services/landing-pages-funnels",
+      "to": "/blog/funnel-design-customer-journey-awareness-to-sale",
+      "type": "hub-to-spoke",
+      "cluster": "conversion"
+    },
+    {
+      "from": "/blog/funnel-design-customer-journey-awareness-to-sale",
+      "to": "/services/landing-pages-funnels",
+      "type": "spoke-to-hub",
+      "cluster": "conversion"
+    },
+    {
+      "from": "/services/landing-pages-funnels",
+      "to": "/blog/ecommerce-store-conversion-rate-1-percent-to-4-percent",
+      "type": "hub-to-spoke",
+      "cluster": "conversion"
+    },
+    {
+      "from": "/blog/ecommerce-store-conversion-rate-1-percent-to-4-percent",
+      "to": "/services/landing-pages-funnels",
+      "type": "spoke-to-hub",
+      "cluster": "conversion"
+    },
+    {
+      "from": "/services/landing-pages-funnels",
+      "to": "/blog/social-proof-reviews-testimonials-strategy",
+      "type": "hub-to-spoke",
+      "cluster": "conversion"
+    },
+    {
+      "from": "/blog/social-proof-reviews-testimonials-strategy",
+      "to": "/services/landing-pages-funnels",
+      "type": "spoke-to-hub",
+      "cluster": "conversion"
+    },
+    {
+      "from": "/blog/landing-page-design-principles-uae",
+      "to": "/blog/funnel-design-customer-journey-awareness-to-sale",
+      "type": "spoke-to-spoke",
+      "cluster": "conversion"
+    },
+    {
+      "from": "/blog/landing-page-design-principles-uae",
+      "to": "/blog/ecommerce-store-conversion-rate-1-percent-to-4-percent",
+      "type": "spoke-to-spoke",
+      "cluster": "conversion"
+    },
+    {
+      "from": "/blog/funnel-design-customer-journey-awareness-to-sale",
+      "to": "/blog/ecommerce-store-conversion-rate-1-percent-to-4-percent",
+      "type": "spoke-to-spoke",
+      "cluster": "conversion"
+    },
+    {
+      "from": "/blog/funnel-design-customer-journey-awareness-to-sale",
+      "to": "/blog/social-proof-reviews-testimonials-strategy",
+      "type": "spoke-to-spoke",
+      "cluster": "conversion"
+    },
+    {
+      "from": "/blog/ecommerce-store-conversion-rate-1-percent-to-4-percent",
+      "to": "/blog/social-proof-reviews-testimonials-strategy",
+      "type": "spoke-to-spoke",
+      "cluster": "conversion"
+    },
+    {
+      "from": "/blog/ecommerce-store-conversion-rate-1-percent-to-4-percent",
+      "to": "/blog/landing-page-design-principles-uae",
+      "type": "spoke-to-spoke",
+      "cluster": "conversion"
+    },
+    {
+      "from": "/blog/social-proof-reviews-testimonials-strategy",
+      "to": "/blog/landing-page-design-principles-uae",
+      "type": "spoke-to-spoke",
+      "cluster": "conversion"
+    },
+    {
+      "from": "/blog/social-proof-reviews-testimonials-strategy",
+      "to": "/blog/funnel-design-customer-journey-awareness-to-sale",
+      "type": "spoke-to-spoke",
+      "cluster": "conversion"
+    },
+    {
+      "from": "/services/seo-local-search",
+      "to": "/blog/local-seo-dubai-google-my-business",
+      "type": "hub-to-spoke",
+      "cluster": "local-seo"
+    },
+    {
+      "from": "/blog/local-seo-dubai-google-my-business",
+      "to": "/services/seo-local-search",
+      "type": "spoke-to-hub",
+      "cluster": "local-seo"
+    },
+    {
+      "from": "/services/seo-local-search",
+      "to": "/blog/restaurant-google-reviews-3-4-to-4-9-stars-8-weeks",
+      "type": "hub-to-spoke",
+      "cluster": "local-seo"
+    },
+    {
+      "from": "/blog/restaurant-google-reviews-3-4-to-4-9-stars-8-weeks",
+      "to": "/services/seo-local-search",
+      "type": "spoke-to-hub",
+      "cluster": "local-seo"
+    },
+    {
+      "from": "/blog/local-seo-dubai-google-my-business",
+      "to": "/blog/restaurant-google-reviews-3-4-to-4-9-stars-8-weeks",
+      "type": "spoke-to-spoke",
+      "cluster": "local-seo"
+    },
+    {
+      "from": "/blog/restaurant-google-reviews-3-4-to-4-9-stars-8-weeks",
+      "to": "/blog/local-seo-dubai-google-my-business",
+      "type": "spoke-to-spoke",
+      "cluster": "local-seo"
+    },
+    {
+      "from": "/services/content-marketing",
+      "to": "/blog/digital-marketing-dubai-what-actually-works-2026",
+      "type": "hub-to-spoke",
+      "cluster": "strategy"
+    },
+    {
+      "from": "/blog/digital-marketing-dubai-what-actually-works-2026",
+      "to": "/services/content-marketing",
+      "type": "spoke-to-hub",
+      "cluster": "strategy"
+    },
+    {
+      "from": "/services/content-marketing",
+      "to": "/blog/how-to-build-marketing-budget-uae",
+      "type": "hub-to-spoke",
+      "cluster": "strategy"
+    },
+    {
+      "from": "/blog/how-to-build-marketing-budget-uae",
+      "to": "/services/content-marketing",
+      "type": "spoke-to-hub",
+      "cluster": "strategy"
+    },
+    {
+      "from": "/services/content-marketing",
+      "to": "/blog/how-to-choose-digital-marketing-agency-dubai",
+      "type": "hub-to-spoke",
+      "cluster": "strategy"
+    },
+    {
+      "from": "/blog/how-to-choose-digital-marketing-agency-dubai",
+      "to": "/services/content-marketing",
+      "type": "spoke-to-hub",
+      "cluster": "strategy"
+    },
+    {
+      "from": "/services/content-marketing",
+      "to": "/blog/ramadan-marketing-uae-strategy-that-converts",
+      "type": "hub-to-spoke",
+      "cluster": "strategy"
+    },
+    {
+      "from": "/blog/ramadan-marketing-uae-strategy-that-converts",
+      "to": "/services/content-marketing",
+      "type": "spoke-to-hub",
+      "cluster": "strategy"
+    },
+    {
+      "from": "/services/content-marketing",
+      "to": "/blog/digital-marketing-trends-2025-year-in-review",
+      "type": "hub-to-spoke",
+      "cluster": "strategy"
+    },
+    {
+      "from": "/blog/digital-marketing-trends-2025-year-in-review",
+      "to": "/services/content-marketing",
+      "type": "spoke-to-hub",
+      "cluster": "strategy"
+    },
+    {
+      "from": "/services/content-marketing",
+      "to": "/blog/content-marketing-strategy-dubai-smes",
+      "type": "hub-to-spoke",
+      "cluster": "strategy"
+    },
+    {
+      "from": "/blog/content-marketing-strategy-dubai-smes",
+      "to": "/services/content-marketing",
+      "type": "spoke-to-hub",
+      "cluster": "strategy"
+    },
+    {
+      "from": "/services/content-marketing",
+      "to": "/blog/whatsapp-business-marketing-conversations-to-customers",
+      "type": "hub-to-spoke",
+      "cluster": "strategy"
+    },
+    {
+      "from": "/blog/whatsapp-business-marketing-conversations-to-customers",
+      "to": "/services/content-marketing",
+      "type": "spoke-to-hub",
+      "cluster": "strategy"
+    },
+    {
+      "from": "/blog/digital-marketing-dubai-what-actually-works-2026",
+      "to": "/blog/how-to-build-marketing-budget-uae",
+      "type": "spoke-to-spoke",
+      "cluster": "strategy"
+    },
+    {
+      "from": "/blog/digital-marketing-dubai-what-actually-works-2026",
+      "to": "/blog/how-to-choose-digital-marketing-agency-dubai",
+      "type": "spoke-to-spoke",
+      "cluster": "strategy"
+    },
+    {
+      "from": "/blog/how-to-build-marketing-budget-uae",
+      "to": "/blog/how-to-choose-digital-marketing-agency-dubai",
+      "type": "spoke-to-spoke",
+      "cluster": "strategy"
+    },
+    {
+      "from": "/blog/how-to-build-marketing-budget-uae",
+      "to": "/blog/ramadan-marketing-uae-strategy-that-converts",
+      "type": "spoke-to-spoke",
+      "cluster": "strategy"
+    },
+    {
+      "from": "/blog/how-to-choose-digital-marketing-agency-dubai",
+      "to": "/blog/ramadan-marketing-uae-strategy-that-converts",
+      "type": "spoke-to-spoke",
+      "cluster": "strategy"
+    },
+    {
+      "from": "/blog/how-to-choose-digital-marketing-agency-dubai",
+      "to": "/blog/digital-marketing-trends-2025-year-in-review",
+      "type": "spoke-to-spoke",
+      "cluster": "strategy"
+    },
+    {
+      "from": "/blog/ramadan-marketing-uae-strategy-that-converts",
+      "to": "/blog/digital-marketing-trends-2025-year-in-review",
+      "type": "spoke-to-spoke",
+      "cluster": "strategy"
+    },
+    {
+      "from": "/blog/ramadan-marketing-uae-strategy-that-converts",
+      "to": "/blog/content-marketing-strategy-dubai-smes",
+      "type": "spoke-to-spoke",
+      "cluster": "strategy"
+    },
+    {
+      "from": "/blog/digital-marketing-trends-2025-year-in-review",
+      "to": "/blog/content-marketing-strategy-dubai-smes",
+      "type": "spoke-to-spoke",
+      "cluster": "strategy"
+    },
+    {
+      "from": "/blog/digital-marketing-trends-2025-year-in-review",
+      "to": "/blog/whatsapp-business-marketing-conversations-to-customers",
+      "type": "spoke-to-spoke",
+      "cluster": "strategy"
+    },
+    {
+      "from": "/blog/content-marketing-strategy-dubai-smes",
+      "to": "/blog/whatsapp-business-marketing-conversations-to-customers",
+      "type": "spoke-to-spoke",
+      "cluster": "strategy"
+    },
+    {
+      "from": "/blog/content-marketing-strategy-dubai-smes",
+      "to": "/blog/digital-marketing-dubai-what-actually-works-2026",
+      "type": "spoke-to-spoke",
+      "cluster": "strategy"
+    },
+    {
+      "from": "/blog/whatsapp-business-marketing-conversations-to-customers",
+      "to": "/blog/digital-marketing-dubai-what-actually-works-2026",
+      "type": "spoke-to-spoke",
+      "cluster": "strategy"
+    },
+    {
+      "from": "/blog/whatsapp-business-marketing-conversations-to-customers",
+      "to": "/blog/how-to-build-marketing-budget-uae",
+      "type": "spoke-to-spoke",
+      "cluster": "strategy"
+    }
+  ],
+  "meta": {
+    "totalPosts": 32,
+    "totalClusters": 8,
+    "totalLinks": 126,
+    "defensibleClusters": 7,
+    "thinClusters": [
+      "local-seo"
+    ]
+  }
+}
