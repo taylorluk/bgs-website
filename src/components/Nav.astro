@@ -4,11 +4,11 @@ import { marketing, technology, ai } from '../data/services.js';
 
 const navLinks = [
   { label: 'Home', href: '/' },
-  { label: 'Work', href: '/work' },
-  { label: 'Offers', href: '/offers', highlight: true },
-  { label: 'About', href: '/about' },
-  { label: 'Blog', href: '/blog' },
-  { label: 'Contact', href: '/contact' },
+  { label: 'Work', href: '/work/' },
+  { label: 'Offers', href: '/offers/', highlight: true },
+  { label: 'About', href: '/about/' },
+  { label: 'Blog', href: '/blog/' },
+  { label: 'Contact', href: '/contact/' },
 ];
 
 ---
@@ -51,7 +51,7 @@ const navLinks = [
     </ul>
 
     <!-- CTA -->
-    <a href="/contact" class="btn-gold nav-cta">Book a Call</a>
+    <a href="/contact/" class="btn-gold nav-cta">Book a Call</a>
 
     <!-- Mobile Hamburger -->
     <button id="menu-toggle" class="menu-toggle" aria-label="Open menu" aria-expanded="false">
@@ -72,7 +72,7 @@ const navLinks = [
         <ul role="list" class="mega-list">
           {marketing.map(svc => (
             <li>
-              <a href={`/services/${svc.slug}`} class="mega-link">
+              <a href={`/services/${svc.slug}/`} class="mega-link">
                 <span class="mega-icon" aria-hidden="true">{svc.icon}</span>
                 <span class="mega-link-text">
                   <span class="mega-link-title">{svc.title}</span>
@@ -93,7 +93,7 @@ const navLinks = [
         <ul role="list" class="mega-list">
           {technology.map(svc => (
             <li>
-              <a href={`/services/${svc.slug}`} class="mega-link">
+              <a href={`/services/${svc.slug}/`} class="mega-link">
                 <span class="mega-icon" aria-hidden="true">{svc.icon}</span>
                 <span class="mega-link-text">
                   <span class="mega-link-title">{svc.title}</span>
@@ -114,7 +114,7 @@ const navLinks = [
         <ul role="list" class="mega-list">
           {ai.map(svc => (
             <li>
-              <a href={`/services/${svc.slug}`} class="mega-link">
+              <a href={`/services/${svc.slug}/`} class="mega-link">
                 <span class="mega-icon" aria-hidden="true">{svc.icon}</span>
                 <span class="mega-link-text">
                   <span class="mega-link-title">{svc.title}</span>
@@ -131,7 +131,7 @@ const navLinks = [
     <!-- Footer bar -->
     <div class="mega-footer">
       <div class="container">
-        <a href="/services" class="mega-all-link">
+        <a href="/services/" class="mega-all-link">
           View all 20 services
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
@@ -152,7 +152,7 @@ const navLinks = [
           <div class="mobile-svc-group">
             <p class="mobile-svc-group-label mobile-svc-group-label--gold">01 · Marketing</p>
             {marketing.map(svc => (
-              <a href={`/services/${svc.slug}`} class="mobile-svc-link">
+              <a href={`/services/${svc.slug}/`} class="mobile-svc-link">
                 <span aria-hidden="true">{svc.icon}</span> {svc.title}
               </a>
             ))}
@@ -160,7 +160,7 @@ const navLinks = [
           <div class="mobile-svc-group">
             <p class="mobile-svc-group-label mobile-svc-group-label--blue">02 · Technology</p>
             {technology.map(svc => (
-              <a href={`/services/${svc.slug}`} class="mobile-svc-link">
+              <a href={`/services/${svc.slug}/`} class="mobile-svc-link">
                 <span aria-hidden="true">{svc.icon}</span> {svc.title}
               </a>
             ))}
@@ -168,12 +168,12 @@ const navLinks = [
           <div class="mobile-svc-group">
             <p class="mobile-svc-group-label mobile-svc-group-label--purple">03 · AI</p>
             {ai.map(svc => (
-              <a href={`/services/${svc.slug}`} class="mobile-svc-link">
+              <a href={`/services/${svc.slug}/`} class="mobile-svc-link">
                 <span aria-hidden="true">{svc.icon}</span> {svc.title}
               </a>
             ))}
           </div>
-          <a href="/services" class="mobile-svc-all">View all services →</a>
+          <a href="/services/" class="mobile-svc-all">View all services →</a>
         </div>
       </li>
       {navLinks.map(link => (
@@ -181,7 +181,7 @@ const navLinks = [
           {link.label}{link.highlight && <span class="mobile-offers-badge">Free Offers</span>}
         </a></li>
       ))}
-      <li><a href="/contact" class="btn-gold" style="width: 100%; justify-content: center; margin-top: 1rem;">Book a Call</a></li>
+      <li><a href="/contact/" class="btn-gold" style="width: 100%; justify-content: center; margin-top: 1rem;">Book a Call</a></li>
     </ul>
   </div>
 </header>

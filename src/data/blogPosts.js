@@ -42,7 +42,7 @@
 <p>Website Custom Audiences are smaller than they used to be, but engagement-based retargeting — people who watched 75% of your video, engaged with your Instagram, or messaged your page — remains highly effective and is unaffected by iOS restrictions. Build a retargeting stack from your Meta-native signals first, then layer in website visitors as a secondary pool.</p>
 <p>For high-ticket UAE services (real estate, luxury goods, B2B), lead form retargeting — showing ads to people who opened but didn't submit an Instant Form — is an underused tactic with extremely low CPMs and high intent.</p>
 
-<p>If you want a Meta strategy built specifically for your brand, audience, and budget, <a href="/contact" style="color:#C9A84C;text-decoration:underline;">talk to the team at BGS Technologies</a>. We manage Meta campaigns for UAE brands across retail, hospitality, real estate, and professional services — and we don't run cookie-cutter setups.</p>`
+<p>If you want a Meta strategy built specifically for your brand, audience, and budget, <a href="/contact/" style="color:#C9A84C;text-decoration:underline;">talk to the team at BGS Technologies</a>. We manage Meta campaigns for UAE brands across retail, hospitality, real estate, and professional services — and we don't run cookie-cutter setups.</p>`
   },
   {
     slug: "ai-receptionists-transforming-customer-service-dubai",
@@ -94,7 +94,7 @@
 <p>The setup process typically takes 1–2 weeks. The first week is training: feeding the AI your service information, FAQs, pricing, and any specific routing logic. The second week is testing — calling the number dozens of times with different question types to catch edge cases. After launch, you'll review transcripts weekly for the first month to refine responses.</p>
 <p>Most clients see measurable impact within the first 30 days: response time drops to zero, missed call rates fall dramatically, and lead qualification improves because every enquiry gets the same consistent set of discovery questions.</p>
 
-<p>BGS Technologies builds and deploys AI receptionist systems for Dubai businesses as part of our <a href="/services" style="color:#C9A84C;text-decoration:underline;">AI and automation services</a>. If you're losing leads to missed calls or spending too much on front-desk staffing, <a href="/contact" style="color:#C9A84C;text-decoration:underline;">get in touch</a> — we'll show you exactly what it would look like for your business.</p>`
+<p>BGS Technologies builds and deploys AI receptionist systems for Dubai businesses as part of our <a href="/services/" style="color:#C9A84C;text-decoration:underline;">AI and automation services</a>. If you're losing leads to missed calls or spending too much on front-desk staffing, <a href="/contact/" style="color:#C9A84C;text-decoration:underline;">get in touch</a> — we'll show you exactly what it would look like for your business.</p>`
   },
   {
     slug: "tiktok-advertising-uae-complete-2026-guide",
@@ -140,7 +140,7 @@
 <p>On TikTok, video completion rate and engagement rate are leading indicators of creative quality. If your completion rate (the percentage of users who watch your full ad) is under 15%, the creative needs work before you scale budget. CTR benchmarks vary by objective — for conversion campaigns in the UAE, a CTR above 1.2% is solid; above 2% is excellent.</p>
 <p>Attribution note: TikTok has a view-through attribution window that can significantly inflate reported ROAS. Use post-purchase surveys and last-click data alongside TikTok's native reporting to get a true picture of performance.</p>
 
-<p>BGS Technologies runs TikTok ad campaigns for UAE brands across multiple verticals. If you're ready to test the channel seriously or want to improve results on existing TikTok campaigns, <a href="/contact" style="color:#C9A84C;text-decoration:underline;">reach out to our team</a> for a strategy session.</p>`
+<p>BGS Technologies runs TikTok ad campaigns for UAE brands across multiple verticals. If you're ready to test the channel seriously or want to improve results on existing TikTok campaigns, <a href="/contact/" style="color:#C9A84C;text-decoration:underline;">reach out to our team</a> for a strategy session.</p>`
   },
   {
     slug: "whatsapp-business-marketing-conversations-to-customers",
@@ -195,7 +195,7 @@
 </ul>
 <p>Keep broadcasts to a maximum of twice per month unless the content is genuinely valuable or time-sensitive. The moment contacts start feeling spammed, opt-outs and quality scores suffer.</p>
 
-<p>At BGS Technologies, we build complete WhatsApp marketing systems — from API setup and automation flows to broadcast strategy and CRM integration. <a href="/contact" style="color:#C9A84C;text-decoration:underline;">Contact us</a> to find out how we can turn WhatsApp into your highest-converting marketing channel.</p>`
+<p>At BGS Technologies, we build complete WhatsApp marketing systems — from API setup and automation flows to broadcast strategy and CRM integration. <a href="/contact/" style="color:#C9A84C;text-decoration:underline;">Contact us</a> to find out how we can turn WhatsApp into your highest-converting marketing channel.</p>`
   },
   {
     slug: "brand-identity-mistakes-costing-you-customers",
@@ -237,7 +237,7 @@
 <p>Look at the three businesses closest to yours in Dubai. Now look at your brand. If someone were to swap your logo onto their materials, or their logo onto yours, would anything feel obviously wrong? If the answer is no, you have a differentiation problem.</p>
 <p><strong>The fix:</strong> Do a formal competitive audit before any brand refresh. Map the colours, visual styles, and tones used across your competitive set, then deliberately choose to occupy a different space. Be the one using a distinctive colour when everyone else uses the same palette. Own a visual territory that's yours.</p>
 
-<p>If any of these mistakes resonated, it's worth having a fresh set of expert eyes on your brand. BGS Technologies offers brand audits and full brand identity design for UAE businesses ready to compete at the highest level. <a href="/contact" style="color:#C9A84C;text-decoration:underline;">Get in touch</a> to start the conversation.</p>`
+<p>If any of these mistakes resonated, it's worth having a fresh set of expert eyes on your brand. BGS Technologies offers brand audits and full brand identity design for UAE businesses ready to compete at the highest level. <a href="/contact/" style="color:#C9A84C;text-decoration:underline;">Get in touch</a> to start the conversation.</p>`
   },
   {
     slug: "crm-automation-playbook-stop-losing-leads",
@@ -289,7 +289,7 @@
   <li><strong>Revenue per lead source</strong> — which channels are sending leads that actually close, not just leads that look good on a spreadsheet.</li>
 </ul>
 
-<p>BGS Technologies builds end-to-end CRM automation systems for UAE businesses using GoHighLevel. If your lead follow-up is manual, slow, or inconsistent, <a href="/contact" style="color:#C9A84C;text-decoration:underline;">let's talk</a> — we'll audit your current pipeline and show you exactly where automation can make the biggest difference.</p>`
+<p>BGS Technologies builds end-to-end CRM automation systems for UAE businesses using GoHighLevel. If your lead follow-up is manual, slow, or inconsistent, <a href="/contact/" style="color:#C9A84C;text-decoration:underline;">let's talk</a> — we'll audit your current pipeline and show you exactly where automation can make the biggest difference.</p>`
   },
   {
     slug: "digital-marketing-dubai-what-actually-works-2026",
@@ -327,7 +327,7 @@
 <p>The brands growing fastest in Dubai in 2026 are not those with the biggest budgets on any single channel — they're the ones with the tightest integration between channels. Paid ads drive traffic to landing pages that capture WhatsApp opt-ins. Email nurtures those leads. Retargeting brings back non-converters. CRM automation ensures every lead gets followed up within minutes. SEO content builds organic reach that reduces paid media dependency over time.</p>
 <p>Each channel reinforces the others. Running any one of them in isolation produces mediocre results. Running them as an integrated system produces compounding growth.</p>
 
-<p>BGS Technologies is a full-service digital marketing agency built specifically for the Dubai and UAE market. If you want a clear, honest view of what's working for businesses in your category right now, <a href="/contact" style="color:#C9A84C;text-decoration:underline;">get in touch</a>. No generic strategy slides — just a real conversation about your growth.</p>`
+<p>BGS Technologies is a full-service digital marketing agency built specifically for the Dubai and UAE market. If you want a clear, honest view of what's working for businesses in your category right now, <a href="/contact/" style="color:#C9A84C;text-decoration:underline;">get in touch</a>. No generic strategy slides — just a real conversation about your growth.</p>`
   },
   {
     slug: "ecommerce-store-conversion-rate-1-percent-to-4-percent",
@@ -391,7 +391,7 @@
   <li>Exit-intent offers — a 10% discount triggered when a user shows signs of leaving, for first-time visitors only</li>
 </ul>
 
-<p>BGS Technologies works with UAE ecommerce brands on conversion rate optimisation alongside paid media and SEO. If you're driving traffic but not seeing the returns you expect, <a href="/contact" style="color:#C9A84C;text-decoration:underline;">get in touch</a> — a conversion audit often reveals quick wins worth far more than additional ad spend.</p>`
+<p>BGS Technologies works with UAE ecommerce brands on conversion rate optimisation alongside paid media and SEO. If you're driving traffic but not seeing the returns you expect, <a href="/contact/" style="color:#C9A84C;text-decoration:underline;">get in touch</a> — a conversion audit often reveals quick wins worth far more than additional ad spend.</p>`
   },
   {
     slug: "restaurant-google-reviews-3-4-to-4-9-stars-8-weeks",
@@ -441,7 +441,7 @@
   <li>Make it permanent: the system runs continuously, not as a campaign</li>
 </ul>
 
-<p>BGS Technologies offers reputation management and local SEO services for UAE businesses. If your Google rating is costing you customers, <a href="/contact" style="color:#C9A84C;text-decoration:underline;">contact us</a> — we'll audit your current position and show you exactly what's possible.</p>`
+<p>BGS Technologies offers reputation management and local SEO services for UAE businesses. If your Google rating is costing you customers, <a href="/contact/" style="color:#C9A84C;text-decoration:underline;">contact us</a> — we'll audit your current position and show you exactly what's possible.</p>`
   },
   {
     slug: "4x-meta-ads-roas-without-increasing-budget",
@@ -493,7 +493,7 @@
 <p>For most campaigns, Lowest Cost (automatic bidding) outperforms manual bid caps, particularly in markets with high auction variability like the UAE. The exception: if you have a hard CPA ceiling (e.g., you cannot pay more than AED 50 per lead), use Cost Cap to enforce it — but set it realistically, not aspirationally. Cost caps set too low throttle delivery and starve the algorithm.</p>
 <p>Budget allocation principle: 70% of your budget should go to your proven, scaling campaigns. 20% to testing new creative and audiences. 10% to retargeting your warm audiences. Adjust quarterly based on what the data shows is working.</p>
 
-<p>BGS Technologies manages Meta advertising for UAE brands across multiple industries, consistently delivering ROAS improvements through systematic optimisation rather than budget inflation. <a href="/contact" style="color:#C9A84C;text-decoration:underline;">Contact us</a> if you want an expert audit of your current Meta setup.</p>`
+<p>BGS Technologies manages Meta advertising for UAE brands across multiple industries, consistently delivering ROAS improvements through systematic optimisation rather than budget inflation. <a href="/contact/" style="color:#C9A84C;text-decoration:underline;">Contact us</a> if you want an expert audit of your current Meta setup.</p>`
   },
   {
     slug: "linkedin-advertising-uae-b2b-brands-complete-guide",
@@ -538,7 +538,7 @@
 <h2>Organic LinkedIn as a Force Multiplier</h2>
 <p>LinkedIn advertising works best when amplified by strong organic presence. Companies and founders with engaged, growing LinkedIn followings see lower CPMs on paid campaigns (the algorithm rewards relevance), higher organic reach on promoted posts, and warmer audiences for retargeting. Investing in consistent, high-value organic LinkedIn content — not just company updates but genuine insights and perspectives — compounds the paid media investment significantly.</p>
 
-<p>BGS Technologies builds and manages LinkedIn advertising programmes for UAE B2B brands. If you're selling into enterprises and need to build qualified pipeline, <a href="/services" style="color:#C9A84C;text-decoration:underline;">explore our B2B marketing services</a> or <a href="/contact" style="color:#C9A84C;text-decoration:underline;">contact us directly</a> for a strategy conversation.</p>`
+<p>BGS Technologies builds and manages LinkedIn advertising programmes for UAE B2B brands. If you're selling into enterprises and need to build qualified pipeline, <a href="/services/" style="color:#C9A84C;text-decoration:underline;">explore our B2B marketing services</a> or <a href="/contact/" style="color:#C9A84C;text-decoration:underline;">contact us directly</a> for a strategy conversation.</p>`
   },
   {
     slug: "ai-generated-content-use-without-destroying-brand",
@@ -593,7 +593,7 @@
 <h2>The SEO Consideration</h2>
 <p>Google's stance on AI content is clear: they don't penalise AI-generated content as such, but they do penalise low-quality, unhelpful content. The flood of AI-generated content has, if anything, raised the bar for what Google considers high-quality — pages with genuine expertise, first-hand experience, and original perspectives are rewarded more than before. Using AI to produce volume without quality is a fast path to ranking nowhere.</p>
 
-<p>At BGS Technologies, our content team uses AI tools as part of our workflow — but every piece that goes out under a client's name has been shaped, directed, and edited by a human expert. If you want content that actually builds your brand and performs in search, <a href="/contact" style="color:#C9A84C;text-decoration:underline;">talk to us</a> about our content marketing services.</p>`
+<p>At BGS Technologies, our content team uses AI tools as part of our workflow — but every piece that goes out under a client's name has been shaped, directed, and edited by a human expert. If you want content that actually builds your brand and performs in search, <a href="/contact/" style="color:#C9A84C;text-decoration:underline;">talk to us</a> about our content marketing services.</p>`
   },
   {
     slug: "2026-social-media-playbook-uae-businesses",
@@ -651,7 +651,7 @@
   <li><strong>Follower growth rate</strong> — is your audience growing month-on-month, and is it growing from your target demographic?</li>
 </ul>
 
-<p>BGS Technologies manages social media for UAE businesses across multiple verticals, combining strategy, content creation, and community management. If your social presence isn't generating the engagement or commercial results you need, <a href="/contact" style="color:#C9A84C;text-decoration:underline;">let's talk</a> about building a proper strategy.</p>`
+<p>BGS Technologies manages social media for UAE businesses across multiple verticals, combining strategy, content creation, and community management. If your social presence isn't generating the engagement or commercial results you need, <a href="/contact/" style="color:#C9A84C;text-decoration:underline;">let's talk</a> about building a proper strategy.</p>`
   },
   {
     slug: "digital-marketing-trends-2025-year-in-review",
@@ -690,7 +690,7 @@
 <p>The macro theme of 2025 was bifurcation: the gap between marketing-sophisticated businesses and marketing-naive businesses got significantly wider. The tools, platforms, and knowledge needed to compete have become more complex and more specialised, while the cost of doing it badly has increased.</p>
 <p>For UAE brands entering 2026, the priorities are clear: invest in first-party data, invest in video content production capability, leverage AI tools intelligently rather than ignoring or over-relying on them, and build integrated marketing systems rather than running isolated channel experiments.</p>
 
-<p>BGS Technologies has been at the forefront of each of these shifts for our UAE clients. If you want to build a marketing strategy that's genuinely ready for 2026, <a href="/contact" style="color:#C9A84C;text-decoration:underline;">get in touch</a> — we'll show you what's working and build you a plan to capture it.</p>`
+<p>BGS Technologies has been at the forefront of each of these shifts for our UAE clients. If you want to build a marketing strategy that's genuinely ready for 2026, <a href="/contact/" style="color:#C9A84C;text-decoration:underline;">get in touch</a> — we'll show you what's working and build you a plan to capture it.</p>`
   },
   {
     slug: "ramadan-marketing-uae-strategy-that-converts",
@@ -748,7 +748,7 @@
 <p><strong>Influencer partnerships:</strong> Ramadan content from relevant influencers — Iftar spreads, brand experiences, gifting unboxings — has among the highest engagement rates of any content category during the month. Plan and contract these at least 4 weeks out.</p>
 <p><strong>Email:</strong> Subject lines that acknowledge Ramadan without being generic. Personalised offers based on purchase history. Timing optimised for evening hours.</p>
 
-<p>BGS Technologies has built Ramadan campaigns for UAE clients across hospitality, retail, professional services, and FMCG. If you want to make this Ramadan your highest-performing season yet, <a href="/contact" style="color:#C9A84C;text-decoration:underline;">get in touch early</a> — the brands that win Ramadan are the ones that plan for it months in advance.</p>`
+<p>BGS Technologies has built Ramadan campaigns for UAE clients across hospitality, retail, professional services, and FMCG. If you want to make this Ramadan your highest-performing season yet, <a href="/contact/" style="color:#C9A84C;text-decoration:underline;">get in touch early</a> — the brands that win Ramadan are the ones that plan for it months in advance.</p>`
   },
   {
     slug: "google-ads-vs-meta-ads-uae-business-2026",
@@ -804,6 +804,6 @@
   <li><strong>AED 25,000+/month:</strong> Full dual-platform strategy with both channels running prospecting and retargeting, with a unified CRM capturing all leads from all sources.</li>
 </ul>
 
-<p>BGS Technologies runs paid advertising across Google, Meta, TikTok, and LinkedIn for UAE clients. If you want a clear, data-backed recommendation on where to put your advertising budget for maximum return, <a href="/contact" style="color:#C9A84C;text-decoration:underline;">get in touch for a free strategy consultation</a>. We'll audit your current situation and tell you exactly what we'd do.</p>`
+<p>BGS Technologies runs paid advertising across Google, Meta, TikTok, and LinkedIn for UAE clients. If you want a clear, data-backed recommendation on where to put your advertising budget for maximum return, <a href="/contact/" style="color:#C9A84C;text-decoration:underline;">get in touch for a free strategy consultation</a>. We'll audit your current situation and tell you exactly what we'd do.</p>`
   }
 ]

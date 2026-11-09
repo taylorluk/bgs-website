@@ -68,7 +68,7 @@ const posts2026 = [
   <li><strong>Measure separately.</strong> Arabic and English performance should never be reported as one number.</li>
 </ol>
 
-<p>If you want an honest assessment of whether Arabic search is worth pursuing for your category, <a href="/contact">talk to the team at BGS Technologies</a>. For some businesses the volume genuinely is not there — and we will tell you that rather than sell you a translation project. See also our <a href="/services/seo-local-search">SEO and local search service</a>.</p>`,
+<p>If you want an honest assessment of whether Arabic search is worth pursuing for your category, <a href="/contact/">talk to the team at BGS Technologies</a>. For some businesses the volume genuinely is not there — and we will tell you that rather than sell you a translation project. See also our <a href="/services/seo-local-search/">SEO and local search service</a>.</p>`,
   },
   {
     slug: "dubai-seo-how-to-rank-local-searches",
@@ -101,7 +101,7 @@ const posts2026 = [
     <tr><td>Services &amp; attributes</td><td>Medium</td><td>Left at defaults</td></tr>
   </tbody>
 </table>
-<p>The primary category is the highest-leverage single field on the profile. Choose the most specific category that genuinely describes the business, not the broadest one that might capture more. The full profile walkthrough is in <a href="/blog/local-seo-dubai-google-my-business">how to win at local SEO in Dubai</a>.</p>
+<p>The primary category is the highest-leverage single field on the profile. Choose the most specific category that genuinely describes the business, not the broadest one that might capture more. The full profile walkthrough is in <a href="/blog/local-seo-dubai-google-my-business/">how to win at local SEO in Dubai</a>.</p>
 
 <h2>Why does NAP consistency matter so much here?</h2>
 <p>Name, address and phone number need to match everywhere they appear. The UAE makes this unusually hard: addresses are written inconsistently, many buildings have multiple accepted names, and phone numbers appear variously as <code>+971 4</code>, <code>04</code>, and <code>971-4</code>.</p>
@@ -109,7 +109,7 @@ const posts2026 = [
 
 <h2>How do reviews actually affect rankings?</h2>
 <p>There is no threshold that unlocks anything. What matters is a steady flow rather than a burst, and responses to all of them. Twenty reviews accumulated gradually with replies outperform sixty collected in one week and ignored.</p>
-<p>Ask after a genuinely good interaction, make it one tap with a short link, and never incentivise — Google's review policies prohibit it, and purchased reviews are increasingly easy to detect and remove. A worked example of moving a rating in eight weeks is in <a href="/blog/restaurant-google-reviews-3-4-to-4-9-stars-8-weeks">how we took a restaurant from 3.4 to 4.9 stars</a>.</p>
+<p>Ask after a genuinely good interaction, make it one tap with a short link, and never incentivise — Google's review policies prohibit it, and purchased reviews are increasingly easy to detect and remove. A worked example of moving a rating in eight weeks is in <a href="/blog/restaurant-google-reviews-3-4-to-4-9-stars-8-weeks/">how we took a restaurant from 3.4 to 4.9 stars</a>.</p>
 <p>Worth knowing: reviews and local SEO are related commercially but are different search topics. Ranking for "best restaurant Dubai Marina" and ranking for "how to get more Google reviews" are separate problems with separate content.</p>
 
 <h2>What technical foundations do UAE sites get wrong?</h2>
@@ -119,7 +119,7 @@ const posts2026 = [
   <li><strong>LocalBusiness schema absent or incomplete.</strong> Address, phone, opening hours and geo coordinates should all be marked up.</li>
   <li><strong>Thin location pages.</strong> One page per area with the area name swapped in is a doorway page, not local content.</li>
   <li><strong>Slow mobile pages.</strong> Most UAE local search is mobile, often on cellular.</li>
-  <li><strong>English only.</strong> Arabic search for the same intents is far less contested — see <a href="/blog/arabic-seo-uae-ranking-both-languages">Arabic SEO in the UAE</a>.</li>
+  <li><strong>English only.</strong> Arabic search for the same intents is far less contested — see <a href="/blog/arabic-seo-uae-ranking-both-languages/">Arabic SEO in the UAE</a>.</li>
 </ul>
 
 <h2>What should a location page actually contain?</h2>
@@ -159,7 +159,7 @@ const posts2026 = [
   <li><strong>Then</strong> consider content and Arabic.</li>
 </ol>
 
-<p>Want a specific read on your local visibility? <a href="/contact">Book a free strategy call</a> and we will audit your profile, your citations and your technical foundations before recommending anything. More detail on our <a href="/services/seo-local-search">SEO and local search service</a>.</p>`,
+<p>Want a specific read on your local visibility? <a href="/contact/">Book a free strategy call</a> and we will audit your profile, your citations and your technical foundations before recommending anything. More detail on our <a href="/services/seo-local-search/">SEO and local search service</a>.</p>`,
   },
   {
     slug: "ai-search-optimisation-uae-brands-geo",
@@ -222,7 +222,7 @@ const posts2026 = [
   <li><strong>Build off-site presence</strong> where citations actually come from.</li>
 </ol>
 
-<p>We publish our own robots and structured-data configuration openly, and we are happy to walk through yours. <a href="/contact">Book a strategy call</a> or read more about our <a href="/services/ai-content-at-scale">AI content</a> and <a href="/services/seo-local-search">SEO</a> services.</p>`,
+<p>We publish our own robots and structured-data configuration openly, and we are happy to walk through yours. <a href="/contact/">Book a strategy call</a> or read more about our <a href="/services/ai-content-at-scale/">AI content</a> and <a href="/services/seo-local-search/">SEO</a> services.</p>`,
   },
   {
     slug: "ai-chatbots-vs-human-agents-uae",
@@ -281,7 +281,7 @@ const posts2026 = [
   <li><strong>Review transcripts weekly</strong> for the first two months and expand only what you have evidence for.</li>
 </ol>
 
-<p>Our <a href="/services/ai-receptionist-chatbots">AI receptionist and chatbot service</a> is built around exactly this split, and we will tell you which of your contacts should stay human. <a href="/contact">Book a call</a> to talk it through.</p>`,
+<p>Our <a href="/services/ai-receptionist-chatbots/">AI receptionist and chatbot service</a> is built around exactly this split, and we will tell you which of your contacts should stay human. <a href="/contact/">Book a call</a> to talk it through.</p>`,
   },
   {
     slug: "marketing-agency-cost-dubai-pricing-guide",
@@ -338,7 +338,7 @@ const posts2026 = [
 <h2>When is an agency the wrong answer?</h2>
 <p>If your offer does not convert, if you cannot service more demand, or if nobody internally can approve work quickly, an agency will amplify an existing problem rather than fix it. The honest answer in those cases is to fix the underlying issue first — which is cheaper than paying someone to drive traffic at it.</p>
 
-<p>We publish our engagement ranges on the <a href="/contact">contact page</a> and will tell you during the first call if we are not the right fit. You can also <a href="/offers">start with a free trial</a> rather than a retainer.</p>`,
+<p>We publish our engagement ranges on the <a href="/contact/">contact page</a> and will tell you during the first call if we are not the right fit. You can also <a href="/offers/">start with a free trial</a> rather than a retainer.</p>`,
   },
   {
     slug: "gohighlevel-vs-hubspot-uae-smes",
@@ -399,7 +399,7 @@ const posts2026 = [
 <h2>What does migration actually involve?</h2>
 <p>More than exporting contacts. Budget for pipeline and stage mapping, rebuilding automations from scratch, re-authenticating every channel, retraining the team, and running both systems in parallel briefly. Most failed migrations fail on automations, which never port cleanly.</p>
 
-<p>We run <a href="/services/crm-pipeline-setup">CRM and pipeline setup</a> on GoHighLevel and will say plainly when HubSpot is the better fit for a business. <a href="/contact">Book a call</a> to work through it. See also <a href="/services/marketing-automation">marketing automation</a>.</p>`,
+<p>We run <a href="/services/crm-pipeline-setup/">CRM and pipeline setup</a> on GoHighLevel and will say plainly when HubSpot is the better fit for a business. <a href="/contact/">Book a call</a> to work through it. See also <a href="/services/marketing-automation/">marketing automation</a>.</p>`,
   },
   {
     slug: "whatsapp-automation-uae-businesses",
@@ -461,7 +461,7 @@ const posts2026 = [
 </table>
 <p>Open rates are widely quoted for WhatsApp and widely inflated. Judge the channel on completed conversations and booked outcomes instead.</p>
 
-<p>We build WhatsApp flows as part of <a href="/services/marketing-automation">marketing automation</a> and <a href="/services/crm-pipeline-setup">CRM setup</a>, with consent capture and handover designed in. <a href="/contact">Book a call</a> to scope it.</p>`,
+<p>We build WhatsApp flows as part of <a href="/services/marketing-automation/">marketing automation</a> and <a href="/services/crm-pipeline-setup/">CRM setup</a>, with consent capture and handover designed in. <a href="/contact/">Book a call</a> to scope it.</p>`,
   },
   {
     slug: "brand-guidelines-uae-business-documentation",
@@ -510,7 +510,7 @@ const posts2026 = [
 <h2>When should you revisit them?</h2>
 <p>Annually, and whenever you add a channel. Guidelines written before you were on TikTok will not cover vertical video, and the gap gets filled by whoever is improvising that week.</p>
 
-<p>We build brand systems with bilingual and RTL rules included as standard — see <a href="/services/branding-creative">branding and creative</a>, or <a href="/contact">book a call</a> to review what you already have.</p>`,
+<p>We build brand systems with bilingual and RTL rules included as standard — see <a href="/services/branding-creative/">branding and creative</a>, or <a href="/contact/">book a call</a> to review what you already have.</p>`,
   },
   {
     slug: "paid-advertising-uae-complete-guide",
@@ -538,7 +538,7 @@ const posts2026 = [
     <tr><td>Buy physical products online</td><td>Google Shopping + Meta</td><td>Catalogue-driven, strong retargeting</td></tr>
   </tbody>
 </table>
-<p>Most UAE businesses should start with one channel, not three. Splitting a modest budget across platforms gives none of them enough data to optimise, and you learn nothing about any of them. We cover the head-to-head in detail in <a href="/blog/google-ads-vs-meta-ads-uae-business-2026">Google Ads vs Meta Ads for UAE businesses</a>.</p>
+<p>Most UAE businesses should start with one channel, not three. Splitting a modest budget across platforms gives none of them enough data to optimise, and you learn nothing about any of them. We cover the head-to-head in detail in <a href="/blog/google-ads-vs-meta-ads-uae-business-2026/">Google Ads vs Meta Ads for UAE businesses</a>.</p>
 
 <h3>What about Snapchat and X?</h3>
 <p>Snapchat has genuine reach among younger UAE audiences and is routinely overlooked, which keeps costs low. X has collapsed as a performance channel for most categories. Neither belongs in a first campaign.</p>
@@ -555,7 +555,7 @@ const posts2026 = [
     <tr><td>AED 30,000+</td><td>Full-funnel across channels with dedicated creative production.</td></tr>
   </tbody>
 </table>
-<p>Published guidance from agencies in this market puts typical Google Ads spend anywhere from AED 3,000 to AED 50,000+ monthly depending on category competitiveness, which matches what we see. Separately, remember that agency fees and ad spend are different numbers — we break down the market in <a href="/blog/marketing-agency-cost-dubai-pricing-guide">what a marketing agency costs in Dubai</a>.</p>
+<p>Published guidance from agencies in this market puts typical Google Ads spend anywhere from AED 3,000 to AED 50,000+ monthly depending on category competitiveness, which matches what we see. Separately, remember that agency fees and ad spend are different numbers — we break down the market in <a href="/blog/marketing-agency-cost-dubai-pricing-guide/">what a marketing agency costs in Dubai</a>.</p>
 
 <h2>How should campaigns be structured?</h2>
 <p>The old instinct was to segment heavily: many ad sets, tight audiences, granular control. Platform algorithms have moved decisively the other way. Consolidation now outperforms segmentation in most accounts because it concentrates conversion signal.</p>
@@ -565,7 +565,7 @@ const posts2026 = [
   <li><strong>Three to five creatives per ad set.</strong> Variety is what the algorithm optimises against. One creative gives it nothing to choose between.</li>
   <li><strong>Separate prospecting from retargeting.</strong> Different audiences, different messages, different success metrics.</li>
 </ul>
-<p>Channel-specific structure differs. For Meta, see <a href="/blog/complete-meta-ads-strategy-uae-brands-2026">the complete Meta Ads strategy for UAE brands</a>. For Google's automated bidding, see <a href="/blog/google-ads-smart-bidding-strategies-uae">smart bidding strategies for UAE businesses</a>.</p>
+<p>Channel-specific structure differs. For Meta, see <a href="/blog/complete-meta-ads-strategy-uae-brands-2026/">the complete Meta Ads strategy for UAE brands</a>. For Google's automated bidding, see <a href="/blog/google-ads-smart-bidding-strategies-uae/">smart bidding strategies for UAE businesses</a>.</p>
 
 <h2>Why is creative the real targeting lever now?</h2>
 <p>As platforms have automated audience selection, creative has become the primary mechanism by which you reach the right person. The right creative finds your buyer; the wrong creative wastes budget on someone who was never going to buy.</p>
@@ -574,9 +574,9 @@ const posts2026 = [
   <li><strong>Arabic and English both matter.</strong> Not translated — localised. Tone differs between Gulf Arabic and Modern Standard Arabic, and audiences notice.</li>
   <li><strong>Hook in the first two seconds.</strong> UAE users scroll fast. Open with the strongest visual or claim, not a branded intro.</li>
   <li><strong>Local social proof outperforms generic.</strong> UGC filmed in recognisable Dubai locations, reviews from UAE customers, and local case numbers.</li>
-  <li><strong>Seasonality is not optional.</strong> Ramadan, Eid and National Day drive enormous engagement shifts. Generic evergreen creative underperforms badly in those windows — see <a href="/blog/ramadan-marketing-uae-strategy-that-converts">Ramadan marketing in the UAE</a>.</li>
+  <li><strong>Seasonality is not optional.</strong> Ramadan, Eid and National Day drive enormous engagement shifts. Generic evergreen creative underperforms badly in those windows — see <a href="/blog/ramadan-marketing-uae-strategy-that-converts/">Ramadan marketing in the UAE</a>.</li>
 </ul>
-<p>Creative fatigue arrives faster than most teams expect. Plan for refresh cycles measured in weeks, not quarters. The tactical detail of squeezing more from existing spend is in <a href="/blog/4x-meta-ads-roas-without-increasing-budget">how to 4× your Meta Ads ROAS without increasing budget</a>.</p>
+<p>Creative fatigue arrives faster than most teams expect. Plan for refresh cycles measured in weeks, not quarters. The tactical detail of squeezing more from existing spend is in <a href="/blog/4x-meta-ads-roas-without-increasing-budget/">how to 4× your Meta Ads ROAS without increasing budget</a>.</p>
 
 <h2>How do you measure paid media properly?</h2>
 <p>Platform-reported numbers are not neutral. Each platform attributes generously to itself, which is why the sum of your platform dashboards usually exceeds your actual revenue. Three things fix most of it:</p>
@@ -585,7 +585,7 @@ const posts2026 = [
   <li><strong>A shorter attribution window.</strong> Seven-day click with one-day view is a more honest default than 28-day click, which inflates apparent performance and distorts optimisation decisions.</li>
   <li><strong>One source of truth outside the platforms.</strong> Your CRM or analytics should be where you judge performance. Platforms are for optimisation, not for reporting.</li>
 </ol>
-<p>Which metrics matter depends on your model, but vanity metrics are consistent across all of them: impressions, reach and engagement tell you nothing about revenue. <a href="/blog/performance-marketing-metrics-uae-business-owners">Performance marketing metrics every UAE business owner should track</a> covers the set worth reporting.</p>
+<p>Which metrics matter depends on your model, but vanity metrics are consistent across all of them: impressions, reach and engagement tell you nothing about revenue. <a href="/blog/performance-marketing-metrics-uae-business-owners/">Performance marketing metrics every UAE business owner should track</a> covers the set worth reporting.</p>
 
 <h3>What about offline conversions?</h3>
 <p>A great deal of UAE business closes over WhatsApp or on the phone rather than on a website. If that is you, uploading offline conversion events back to the platforms is the single highest-value measurement improvement available — it closes the loop and materially improves targeting.</p>
@@ -607,7 +607,7 @@ const posts2026 = [
 <ol>
   <li><strong>Budget below the learning threshold.</strong> The most common and most expensive mistake. Spread too thin across channels, no channel optimises.</li>
   <li><strong>Judging too early.</strong> Campaigns changed every three days never leave the learning phase. Give structural changes two weeks.</li>
-  <li><strong>Sending paid traffic to a weak page.</strong> Ads cannot fix a landing page that does not convert — see <a href="/blog/landing-page-design-principles-uae">landing page design principles that convert in the UAE</a>.</li>
+  <li><strong>Sending paid traffic to a weak page.</strong> Ads cannot fix a landing page that does not convert — see <a href="/blog/landing-page-design-principles-uae/">landing page design principles that convert in the UAE</a>.</li>
   <li><strong>No retargeting.</strong> The cheapest conversions available, routinely skipped.</li>
   <li><strong>Optimising for the wrong event.</strong> Optimising for clicks or form-fills when revenue is the goal trains the algorithm to find the wrong people.</li>
   <li><strong>One creative, run to death.</strong> Fatigue is real and arrives quickly.</li>
@@ -628,7 +628,7 @@ const posts2026 = [
 <h2>Should you run paid media in-house or with an agency?</h2>
 <p>In-house makes sense when you have consistent volume, someone whose actual job this is, and creative production capacity. Agencies make sense when you need senior experience applied part-time, cross-channel breadth, or creative throughput you cannot staff. Neither fixes a weak offer — if your product does not convert or you cannot service demand, paid media amplifies the problem rather than solving it.</p>
 
-<p>If you want a specific read on which channel and budget suit your business, <a href="/contact">book a free strategy call</a> — we will tell you if paid media is the wrong answer for where you are. More on our <a href="/services/paid-advertising">paid advertising service</a>.</p>`,
+<p>If you want a specific read on which channel and budget suit your business, <a href="/contact/">book a free strategy call</a> — we will tell you if paid media is the wrong answer for where you are. More on our <a href="/services/paid-advertising/">paid advertising service</a>.</p>`,
   },
   {
     slug: "marketing-automation-crm-uae-complete-guide",
@@ -647,7 +647,7 @@ const posts2026 = [
 <h2>What problem does automation actually solve?</h2>
 <p>Almost always the same one: leads arrive, somebody means to follow up, and then they do not. Not through negligence — because follow-up is tedious, unscheduled, and invisible until revenue drops.</p>
 <p>Automation fixes that by making follow-up a property of the system rather than of someone's memory. It is not primarily a volume play or a headcount reduction. It is a consistency play.</p>
-<p>A useful test before buying anything: can you say, right now, how many enquiries you received last month and what happened to each one? If not, your problem is visibility before it is automation. The full diagnosis is in <a href="/blog/crm-automation-playbook-stop-losing-leads">the CRM automation playbook</a>.</p>
+<p>A useful test before buying anything: can you say, right now, how many enquiries you received last month and what happened to each one? If not, your problem is visibility before it is automation. The full diagnosis is in <a href="/blog/crm-automation-playbook-stop-losing-leads/">the CRM automation playbook</a>.</p>
 
 <h2>What is the difference between a CRM and a marketing automation platform?</h2>
 <table>
@@ -662,7 +662,7 @@ const posts2026 = [
 <p>Most modern platforms bundle both, which is why the distinction gets lost. It still matters, because the two fail differently. A CRM dies from neglect; automation dies from accumulated complexity nobody understands.</p>
 
 <h2>Which platform should a UAE business choose?</h2>
-<p>The decision usually comes down to where your conversations happen and how many brands or locations you run. We compare the two most common choices in detail in <a href="/blog/gohighlevel-vs-hubspot-uae-smes">GoHighLevel vs HubSpot for UAE SMEs</a>, but the short version:</p>
+<p>The decision usually comes down to where your conversations happen and how many brands or locations you run. We compare the two most common choices in detail in <a href="/blog/gohighlevel-vs-hubspot-uae-smes/">GoHighLevel vs HubSpot for UAE SMEs</a>, but the short version:</p>
 <ul>
   <li><strong>Native WhatsApp handling is the deciding factor</strong> for most UAE service businesses. A platform that treats WhatsApp as a bolt-on produces a split record — conversations in one place, deal history in another — which defeats the purpose of a CRM.</li>
   <li><strong>Per-seat pricing escalates.</strong> Platforms that look affordable at 1,000 contacts become significant at 10,000, and features you assumed were included often sit one tier up.</li>
@@ -686,7 +686,7 @@ const posts2026 = [
 <p>Most businesses attempt number six first, because it is the one that looks like marketing. It is the one with the longest payback and the highest maintenance burden. Start at the top.</p>
 
 <h3>What makes an email sequence actually convert?</h3>
-<p>One goal per sequence, segmentation by behaviour rather than demographics, and pacing that keeps you visible without becoming a nuisance. The structural pattern that works most reliably is problem, agitate, solve — early messages name the pain, later ones present the answer. Detail in <a href="/blog/email-marketing-automation-sequences">email marketing automation: building sequences that nurture and convert</a>.</p>
+<p>One goal per sequence, segmentation by behaviour rather than demographics, and pacing that keeps you visible without becoming a nuisance. The structural pattern that works most reliably is problem, agitate, solve — early messages name the pain, later ones present the answer. Detail in <a href="/blog/email-marketing-automation-sequences/">email marketing automation: building sequences that nurture and convert</a>.</p>
 
 <h2>How does WhatsApp change the design?</h2>
 <p>Fundamentally, because WhatsApp has rules email does not. Two in particular govern everything you can build:</p>
@@ -694,7 +694,7 @@ const posts2026 = [
   <li><strong>The 24-hour session window.</strong> When a customer messages you, a window opens in which you can reply freely. Outside it, you cannot.</li>
   <li><strong>Pre-approved templates.</strong> Anything sent outside that window must use a template submitted and approved in advance.</li>
 </ul>
-<p>Every WhatsApp automation has to declare which side of that line it lives on, and this is where most WhatsApp projects stall after build. Quality rating, block rates and opt-in consent are not optional details either — they determine whether your number keeps working. Full treatment in <a href="/blog/whatsapp-automation-uae-businesses">WhatsApp automation for UAE businesses</a>, with the strategic case in <a href="/blog/whatsapp-business-marketing-conversations-to-customers">WhatsApp Business marketing</a>.</p>
+<p>Every WhatsApp automation has to declare which side of that line it lives on, and this is where most WhatsApp projects stall after build. Quality rating, block rates and opt-in consent are not optional details either — they determine whether your number keeps working. Full treatment in <a href="/blog/whatsapp-automation-uae-businesses/">WhatsApp automation for UAE businesses</a>, with the strategic case in <a href="/blog/whatsapp-business-marketing-conversations-to-customers/">WhatsApp Business marketing</a>.</p>
 
 <h2>How much should you automate?</h2>
 <p>Less than the software encourages. The failure mode of automation is not too little — it is a sprawl of workflows nobody fully understands, firing in combinations nobody designed, that slowly degrade the customer experience while looking busy in the dashboard.</p>
@@ -704,7 +704,7 @@ const posts2026 = [
   <li><strong>Every automated path needs a human exit.</strong> A customer who wants a person should always be able to reach one, on any contact type.</li>
   <li><strong>Review quarterly and delete.</strong> Workflows accumulate. Pruning is maintenance, not failure.</li>
 </ol>
-<p>Where to draw the automation line specifically is covered in <a href="/blog/ai-chatbots-vs-human-agents-uae">AI chatbots vs human agents</a> — the short version is that complexity, negotiation and anything emotionally loaded should stay human.</p>
+<p>Where to draw the automation line specifically is covered in <a href="/blog/ai-chatbots-vs-human-agents-uae/">AI chatbots vs human agents</a> — the short version is that complexity, negotiation and anything emotionally loaded should stay human.</p>
 
 <h2>What does implementation actually involve?</h2>
 <table>
@@ -720,7 +720,7 @@ const posts2026 = [
 <p>The data phase is routinely underestimated. Contacts scattered across a phone, three inboxes and a spreadsheet take real work to consolidate, and automation built on bad data produces confidently wrong behaviour at scale.</p>
 
 <h3>Why do migrations fail?</h3>
-<p>Almost never on contacts — those export cleanly. They fail on automations, which never port between platforms, and on adoption, when the team keeps working the old way in parallel. Budget for rebuilding every workflow from scratch and for running both systems briefly. Getting started from zero is covered in <a href="/blog/getting-started-marketing-automation-beginners-playbook">the beginner's playbook</a>.</p>
+<p>Almost never on contacts — those export cleanly. They fail on automations, which never port between platforms, and on adoption, when the team keeps working the old way in parallel. Budget for rebuilding every workflow from scratch and for running both systems briefly. Getting started from zero is covered in <a href="/blog/getting-started-marketing-automation-beginners-playbook/">the beginner's playbook</a>.</p>
 
 <h2>What should you measure?</h2>
 <table>
@@ -737,9 +737,9 @@ const posts2026 = [
 <p>Open and click rates are the metrics platforms put on the front page and the ones least connected to revenue. Judge sequences on booked outcomes.</p>
 
 <h2>What does this cost?</h2>
-<p>Platform licensing is usually the smaller number. The larger costs are implementation and the ongoing ownership of keeping workflows current — which is exactly the cost most businesses fail to budget for, and the reason automation projects go stale within a year. Agency pricing in this market is broken down in <a href="/blog/marketing-agency-cost-dubai-pricing-guide">what a marketing agency costs in Dubai</a>.</p>
+<p>Platform licensing is usually the smaller number. The larger costs are implementation and the ongoing ownership of keeping workflows current — which is exactly the cost most businesses fail to budget for, and the reason automation projects go stale within a year. Agency pricing in this market is broken down in <a href="/blog/marketing-agency-cost-dubai-pricing-guide/">what a marketing agency costs in Dubai</a>.</p>
 
-<p>If you want an honest view of whether automation is your bottleneck — it often is not — <a href="/contact">book a free strategy call</a>. See also <a href="/services/marketing-automation">marketing automation</a> and <a href="/services/crm-pipeline-setup">CRM and pipeline setup</a>.</p>`,
+<p>If you want an honest view of whether automation is your bottleneck — it often is not — <a href="/contact/">book a free strategy call</a>. See also <a href="/services/marketing-automation/">marketing automation</a> and <a href="/services/crm-pipeline-setup/">CRM and pipeline setup</a>.</p>`,
   },
 ];
 

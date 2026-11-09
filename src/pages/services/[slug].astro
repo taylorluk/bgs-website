@@ -20,14 +20,14 @@ const meta = pillarColors[svc.pillar as keyof typeof pillarColors];
 const pillarNum: Record<string, string> = { Marketing: '01', Technology: '02', AI: '03' };
 const num = pillarNum[svc.pillar] ?? '01';
 
-const path = `/services/${svc.slug}`;
+const path = `/services/${svc.slug}/`;
 const relatedArticles = postsForService(svc, allPosts, 3);
 
 const schemas = [
   serviceSchema(svc, path),
   breadcrumbSchema([
     { name: 'Home', path: '/' },
-    { name: 'Services', path: '/services' },
+    { name: 'Services', path: '/services/' },
     { name: svc.title, path },
   ]),
   ...(svc.faq?.length ? [faqSchema(svc.faq)] : []),
@@ -47,7 +47,7 @@ const schemas = [
     <div class="container sp-hero-inner reveal">
       <!-- Breadcrumb -->
       <nav class="sp-breadcrumb" aria-label="Breadcrumb">
-        <a href="/services">Services</a>
+        <a href="/services/">Services</a>
         <span aria-hidden="true">›</span>
         <span class={`sp-pillar-tag sp-pillar-tag--${meta.accent}`}>
           {num} {svc.pillar}
@@ -83,7 +83,7 @@ const schemas = [
           </div>
         )}
 
-        <a href="/contact" class="btn-gold sp-hero-cta">
+        <a href="/contact/" class="btn-gold sp-hero-cta">
           Get Started
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
@@ -165,11 +165,11 @@ const schemas = [
           <p class="sp-cta-sub">Book a free strategy call — no pitch decks, no fluff. Just a clear plan for your business.</p>
         </div>
         <div class="sp-cta-actions">
-          <a href="/contact" class="btn-gold">
+          <a href="/contact/" class="btn-gold">
             Book a Strategy Call
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
-          <a href="/services" class="sp-btn-secondary">View All Services</a>
+          <a href="/services/" class="sp-btn-secondary">View All Services</a>
         </div>
       </div>
     </div>
@@ -205,7 +205,7 @@ const schemas = [
         <p class="sp-related-eyebrow">More {svc.pillar} Services</p>
         <div class="sp-related-grid stagger-children">
           {related.map((r: any) => (
-            <a href={`/services/${r.slug}`} class={`sp-rel-card sp-rel-card--${pillarColors[r.pillar as keyof typeof pillarColors].accent}`}>
+            <a href={`/services/${r.slug}/`} class={`sp-rel-card sp-rel-card--${pillarColors[r.pillar as keyof typeof pillarColors].accent}`}>
               <div class="sp-rel-head">
                 <span class="sp-rel-icon" aria-hidden="true">{r.icon}</span>
                 <div>
@@ -236,7 +236,7 @@ const schemas = [
         <p class="sp-related-eyebrow">Insights on {svc.title}</p>
         <div class="sp-reading-grid">
           {relatedArticles.map((a: any) => (
-            <a href={`/blog/${a.slug}`} class="sp-reading-card">
+            <a href={`/blog/${a.slug}/`} class="sp-reading-card">
               <span class="sp-reading-cat">{a.category}</span>
               <span class="sp-reading-title">{a.title}</span>
               <span class="sp-reading-meta">
@@ -245,7 +245,7 @@ const schemas = [
             </a>
           ))}
         </div>
-        <a href="/blog" class="sp-reading-all">Read all insights →</a>
+        <a href="/blog/" class="sp-reading-all">Read all insights →</a>
       </div>
     </section>
   )}
